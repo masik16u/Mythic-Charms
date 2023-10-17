@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACA",
+    "B B",
+    "BCB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "B": {
+      "item": "minecraft:chiseled_stone_bricks"
+    },
+    "C": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": {
+    "item": "mythic_charms:resonance_table",
+    "count": 1
+  }
+}

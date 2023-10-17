@@ -8,27 +8,25 @@ import net.minecraft.util.Identifier;
 
 public class ModLootTableModifiers {
 
-    /*private static Identifier buildInjectionRoute(Identifier id) {
+    private static Identifier buildInjectionRoute(Identifier id) {
         return new Identifier(MythicCharms.MOD_ID, "injections/" + id.getNamespace() + "/" + id.getPath());
     }
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((resourceManager, manager, id, supplier, setter) -> {
-            LootTable table = manager.getLootTable(buildInjectionRoute(id));
-            if (table != LootTable.EMPTY) {
-                LootPool[] pools = table.pools;
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            LootTable lootTable = lootManager.getLootTable(buildInjectionRoute(id));
+            if (lootTable != LootTable.EMPTY) {
+                LootPool[] pools = lootTable.pools.toArray(new LootPool[0]);
 
-                if (pools != null)
-                    supplyPools(supplier, pools);
+                supplyPools(tableBuilder, pools);
             }
-
         });
     }
 
-    private static void supplyPools(LootTable.Builder supplier, LootPool[] pools) {
+    private static void supplyPools(LootTable.Builder tableBuilder, LootPool[] pools) {
         for (LootPool pool: pools) {
-            supplier.pool(pool);
+            tableBuilder.pool(pool);
         }
-    }*/
+    }
 
 }

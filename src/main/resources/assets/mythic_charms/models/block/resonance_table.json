@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mythic_charms:block/resonance_table_top",
+    "east": "mythic_charms:block/resonance_table_side",
+    "north": "mythic_charms:block/resonance_table_side",
+    "particle": "mythic_charms:block/resonance_table_side",
+    "south": "mythic_charms:block/resonance_table_side",
+    "up": "mythic_charms:block/resonance_table_top",
+    "west": "mythic_charms:block/resonance_table_side"
+  }
+}

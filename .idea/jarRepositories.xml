@@ -12,11 +12,6 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="LoomLocalRemappedMods" />
-      <option name="name" value="LoomLocalRemappedMods" />
-      <option name="url" value="file:/$PROJECT_DIR$/../Masik's%20Puzzle%20Dungeon%20Fabric/.gradle/loom-cache/remapped_mods/" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="MavenRepo" />
       <option name="name" value="MavenRepo" />
       <option name="url" value="https://repo.maven.apache.org/maven2/" />
@@ -39,27 +34,12 @@
     <remote-repository>
       <option name="id" value="LoomLocalMinecraft" />
       <option name="name" value="LoomLocalMinecraft" />
-      <option name="url" value="file:/$PROJECT_DIR$/../Masik's%20Puzzle%20Dungeon%20Fabric/.gradle/loom-cache/minecraftMaven/" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../no%20split/Mythic-Charms/.gradle/loom-cache/minecraftMaven/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="LoomLocalRemappedMods" />
       <option name="name" value="LoomLocalRemappedMods" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../More%20Armor%20Trims/More%20Armor%20Trims%20Fabric/.gradle/loom-cache/remapped_mods/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="LoomLocalMinecraft" />
-      <option name="name" value="LoomLocalMinecraft" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../More%20Armor%20Trims/More%20Armor%20Trims%20Fabric/.gradle/loom-cache/minecraftMaven/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="LoomLocalRemappedMods" />
-      <option name="name" value="LoomLocalRemappedMods" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../More%20Armor%20Trims/Mythic%20Charms/.gradle/loom-cache/remapped_mods/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="LoomLocalMinecraft" />
-      <option name="name" value="LoomLocalMinecraft" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../More%20Armor%20Trims/Mythic%20Charms/.gradle/loom-cache/minecraftMaven/" />
+      <option name="url" value="file:/$PROJECT_DIR$/../../no%20split/Mythic-Charms/.gradle/loom-cache/remapped_mods/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="TerraformersMC" />
@@ -70,6 +50,26 @@
       <option name="id" value="Ladysnake Libs" />
       <option name="name" value="Ladysnake Libs" />
       <option name="url" value="https://maven.ladysnake.org/releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://server.bbkr.space/artifactory/libs-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://maven.shedaniel.me" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://maven.wispforest.io" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="https://maven.blamejared.com" />
     </remote-repository>
   </component>
 </project>

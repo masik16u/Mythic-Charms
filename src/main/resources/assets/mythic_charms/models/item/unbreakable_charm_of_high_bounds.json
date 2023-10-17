@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "mythic_charms:item/unbreakable_charm_of_high_bounds"
+	}
+}

@@ -1,78 +1,149 @@
 package net.masik.mythiccharms.mixin;
 
-import dev.emi.trinkets.api.SlotReference;
+import com.mojang.authlib.GameProfile;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.item.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.block.CropBlock;
+import net.minecraft.block.StemBlock;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.passive.BeeEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ElytraItem;
-import net.minecraft.item.Item;
+import net.minecraft.item.BannerPatternItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.Pair;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Mixin(ServerPlayerEntity.class)
-public class ServerPlayerMixin {
+public abstract class ServerPlayerMixin {
 
+    @Unique
     private int ticksInAir = 0;
-    private boolean isOnFire = false;
 
-    @Inject(method = "tick", at = @At("HEAD"))
-    public void tick(CallbackInfo info){
+    @Unique
+    private int cropGrowTimer = 0;
+
+    @Inject(method = "playerTick", at = @At("HEAD"))
+    private void charmsTick(CallbackInfo info){
+
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
 
-        if (TrinketsApi.getTrinketComponent(player).get().isEquipped(Items.IRON_INGOT)) {
-            if (!player.isOnGround() && !player.isClimbing() && !player.isInsideWaterOrBubbleColumn() && !player.isFallFlying() && player.getVelocity().y < 0) {
+        //featheredGrace
+        if (TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE) ||
+                TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FEATHERED_GRACE)) {
+
+            if (!player.isOnGround() && !player.isClimbing() && !player.isInsideWaterOrBubbleColumn() &&
+                    !player.isFallFlying() && player.getVelocity().y < 0) {
+
                 ticksInAir += 1;
+
             } else {
+
                 ticksInAir = 0;
+
             }
 
-            if (ticksInAir >= 8 && ticksInAir < 60 && !player.isSneaking()) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 4, 0, false, false, false));
+            int ticksInAirCap = 40;
+
+            //highBounds combo
+            if (TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.FRAGILE_CHARM_OF_HIGH_BOUNDS) ||
+                    TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_HIGH_BOUNDS)) {
+
+                ticksInAirCap = 60;
+
             }
+
+            if (ticksInAir >= 8 && ticksInAir < ticksInAirCap && (!player.isSneaking() ||
+                    (TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) ||
+                    TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_WEIGHTLESS_FLOW)))) {
+
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 4, 0,
+                        false, false, false));
+
+            }
+
         }
 
-        if (TrinketsApi.getTrinketComponent(player).get().isEquipped(Items.GOLD_INGOT)) {
-            if (player.isOnFire() && !isOnFire) {
-                isOnFire = true;
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 410, 0, false, false, true));
-            }
-            if (!player.isOnFire()) {
-                isOnFire = false;
-            }
+        //collectorsGift
+        if (TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.FRAGILE_CHARM_OF_COLLECTORS_GIFT) ||
+                TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_COLLECTORS_GIFT)) {
+
+            Box box = Box.from(player.getPos()).expand(4);
+
+            List<Entity> entities = new ArrayList<>(player.getWorld().getEntitiesByType(EntityType.ITEM, box, item -> true));
+
+            entities.forEach(item -> {
+
+                item.setVelocity(item.getVelocity().add(player.getPos().subtract(item.getPos()).multiply(0.03F)));
+
+                item.velocityModified = true;
+
+            });
+
         }
 
-        player.removeStatusEffect(StatusEffects.SLOWNESS);
+        java.util.Random rand = new java.util.Random();
 
-    }
+        //botanicBlessing
+        if ((TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.FRAGILE_CHARM_OF_BOTANIC_BLESSING) ||
+                TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BOTANIC_BLESSING)) &&
+                cropGrowTimer > 20) {
 
-    /*private List<ItemStack> getCharms(LivingEntity player, Item charm) {
-        List<ItemStack> list = new ArrayList<>();
+            cropGrowTimer = 0;
 
-        if (TrinketsApi.getTrinketComponent(player).isPresent()) {
-            List<Pair<SlotReference, ItemStack>> slots = TrinketsApi.getTrinketComponent(player).get().getEquipped(charm);
-            slots.forEach(slot -> list.add(slot.getRight()));
+            for (int i = 0; i < 5; i++) {
+
+                for (int k = 0; k < 5; k++) {
+
+                    for (int j = 0; j < 5; j++) {
+
+                        if (rand.nextInt(10) < 4) {
+                            BlockPos blockPos = player.getBlockPos().add(-2 + i, -1 + j, -2 + k);
+
+                            BlockState blockState = player.getWorld().getBlockState(blockPos);
+
+                            Block block = blockState.getBlock();
+
+                            if (block instanceof CropBlock cropBlock) {
+
+                                if (!cropBlock.isMature(blockState)) {
+
+                                    player.getWorld().setBlockState(blockPos, cropBlock.withAge(cropBlock.getAge(blockState) + 1));
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
         }
-        return list;
-    }*/
 
-    private boolean wearingUsableElytra(ServerPlayerEntity player) {
-        ItemStack chestItemStack = player.getEquippedStack(EquipmentSlot.CHEST);
-        return chestItemStack.getItem() == Items.ELYTRA && ElytraItem.isUsable(chestItemStack);
+        cropGrowTimer++;
+
     }
 
 }

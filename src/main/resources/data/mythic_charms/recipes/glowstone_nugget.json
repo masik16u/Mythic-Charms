@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "result": "mythic_charms:glowstone_nugget",
+  "experience": 0.1,
+  "cookingtime": 400
+}

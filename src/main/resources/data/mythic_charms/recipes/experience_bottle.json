@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    },
+    {
+      "item": "mythic_charms:experience_nugget"
+    }
+  ],
+  "result": {
+    "item": "minecraft:experience_bottle",
+    "count": 1
+  }
+}

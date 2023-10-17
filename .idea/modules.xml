@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mythic_Charms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Mythic_Charms.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mythic_Charms.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Mythic_Charms.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mythic-Charms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Mythic-Charms.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mythic-Charms.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Mythic-Charms.test.iml" />
     </modules>
   </component>
 </project>

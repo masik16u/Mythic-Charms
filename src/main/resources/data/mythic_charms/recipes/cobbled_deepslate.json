@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "mythic_charms:deepslate_fragment"
+    }
+  },
+  "result": {
+    "item": "minecraft:cobbled_deepslate",
+    "count": 1
+  }
+}
