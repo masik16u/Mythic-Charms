@@ -68,7 +68,8 @@
 	"item.mythic_charms.fleeting_strides.tooltip1": "and running, but adds additional exhaustion",
 
 	"item.mythic_charms.nights_guardian.tooltip0": "Prevents phantoms from spawning only for",
-	"item.mythic_charms.nights_guardian.tooltip1": "the wearer alone",
+	"item.mythic_charms.nights_guardian.tooltip1": "the wearer alone, even if there are phantoms",
+	"item.mythic_charms.nights_guardian.tooltip2": "nearby, they will ignore the wearer",
 
 	"item.mythic_charms.high_bounds.tooltip0": "Enhances wearer's jump height and a safe",
 	"item.mythic_charms.high_bounds.tooltip1": "height from which they remain unharmed, but",
