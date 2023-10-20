@@ -160,5 +160,10 @@
 	"category.mythic_charms.resonance.trinket": "Trinket",
 	"category.mythic_charms.resonance.output": "Result",
 
-	"util.mythic_charms.shift_tooltip": "Hold §eSHIFT§r for more Information"
+	"util.mythic_charms.shift_tooltip": "Hold §eSHIFT§r for more Information",
+
+	"tag.item.mythic_charms.fragile_charms": "Fragile Charms",
+	"emi.category.mythic_charms.resonance_table": "Resonance Table",
+	"tag.item.trinkets.hand.ring": "Ring Trinket",
+	"tag.item.trinkets.mythic_charms.mythic_charm": "Mythic Charm"
 }
