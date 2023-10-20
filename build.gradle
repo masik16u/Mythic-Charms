@@ -46,10 +46,6 @@ dependencies {
 	modImplementation "io.wispforest:owo-lib:${project.owo_version}"
 }
 
-loom {
-	accessWidenerPath = file("src/main/resources/mythiccharms.accesswidener")
-}
-
 processResources {
 	inputs.property "version", project.version
 

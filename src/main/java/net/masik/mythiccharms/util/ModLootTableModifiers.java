@@ -16,7 +16,7 @@ public class ModLootTableModifiers {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             LootTable lootTable = lootManager.getLootTable(buildInjectionRoute(id));
             if (lootTable != LootTable.EMPTY) {
-                LootPool[] pools = lootTable.pools.toArray(new LootPool[0]);
+                LootPool[] pools = lootTable.pools;
 
                 supplyPools(tableBuilder, pools);
             }
