@@ -8,14 +8,12 @@ import net.masik.mythiccharms.recipe.CharmRecipe;
 import net.masik.mythiccharms.recipe.ModRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ExperienceBottleEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.HitResult;
@@ -30,6 +28,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Mixin(ExperienceBottleEntity.class)
 public class ExperienceBottleEntityMixin {
@@ -46,17 +46,19 @@ public class ExperienceBottleEntityMixin {
         if (trinket.isEmpty() || !trinket.get().isEquipped(ModItems.RESONANCE_RING)) return;
 
         World world = bottle.getWorld();
-        if (checkResonanceTable(bottle.getBlockPos(), world)) return;
+        if (!checkResonanceTable(bottle.getBlockPos(), world)) return;
 
         Box box = Box.from(bottle.getPos()).expand(1);
         List<ItemEntity> entities = bottle.getWorld().getEntitiesByType(EntityType.ITEM, box, item -> true);
-        List<ItemStack> items = entities.stream().map(ItemEntity::getStack).toList();
+        Set<Item> items = entities.stream().map(entity -> entity.getStack().getItem()).collect(Collectors.toSet());
+        System.out.println("Provided " + items);
 
         for (Item key : ModRecipes.RESONATE_TABLE.keySet()) {
             CharmRecipe recipe = ModRecipes.RESONATE_TABLE.get(key);
-            if (!items.equals(recipe.inputStacks)) continue;
+            System.out.println("Recipe " + recipe.inputSet);
+            if (!items.equals(recipe.inputSet)) continue;
 
-            entities.forEach(Entity::discard);
+            entities.forEach(entity -> entity.getStack().decrement(1));
             ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(),
                     key.getDefaultStack());
             world.spawnEntity(result);
