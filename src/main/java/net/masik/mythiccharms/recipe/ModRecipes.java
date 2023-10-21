@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ModRecipes {
-    public static final Map<Item, CharmRecipe> RESONATE_TABLE = new HashMap<>();
+    public static final Map<Item, CharmRecipe> RESONANCE_TABLE = new HashMap<>();
 
     static {
         /* Fragile Charms */
@@ -248,10 +248,6 @@ public class ModRecipes {
     }
 
     private static void add(CharmRecipe recipe) {
-        RESONATE_TABLE.put(recipe.output, recipe);
-    }
-
-    public static void bootstrap() {
-        //no-op
+        RESONANCE_TABLE.put(recipe.output, recipe);
     }
 }

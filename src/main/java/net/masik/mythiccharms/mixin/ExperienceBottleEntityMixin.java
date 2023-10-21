@@ -51,11 +51,9 @@ public class ExperienceBottleEntityMixin {
         Box box = Box.from(bottle.getPos()).expand(1);
         List<ItemEntity> entities = bottle.getWorld().getEntitiesByType(EntityType.ITEM, box, item -> true);
         Set<Item> items = entities.stream().map(entity -> entity.getStack().getItem()).collect(Collectors.toSet());
-        System.out.println("Provided " + items);
 
-        for (Item key : ModRecipes.RESONATE_TABLE.keySet()) {
-            CharmRecipe recipe = ModRecipes.RESONATE_TABLE.get(key);
-            System.out.println("Recipe " + recipe.inputSet);
+        for (Item key : ModRecipes.RESONANCE_TABLE.keySet()) {
+            CharmRecipe recipe = ModRecipes.RESONANCE_TABLE.get(key);
             if (!items.equals(recipe.inputSet)) continue;
 
             entities.forEach(entity -> entity.getStack().decrement(1));

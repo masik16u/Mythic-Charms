@@ -38,7 +38,7 @@ public class MythicCharmsEmiPlugin implements EmiPlugin {
         registry.addCategory(CharmEmiRecipe.CATEGORY);
         registry.addWorkstation(CharmEmiRecipe.CATEGORY, RESONANCE_TABLE);
         EMI_ITEMS.forEach((item, emiStack) -> registry.addEmiStack(emiStack));
-        ModRecipes.RESONATE_TABLE.forEach(((item, recipe) -> {
+        ModRecipes.RESONANCE_TABLE.forEach(((item, recipe) -> {
             EmiStack emiStack = EMI_ITEMS.get(item);
             if (emiStack == null) {
                 MythicCharms.LOGGER.error("Failed to find EMI item for " + item);

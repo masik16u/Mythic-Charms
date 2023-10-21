@@ -21,6 +21,6 @@ public class MythicCharmsReiPlugin implements REIClientPlugin {
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
-        ModRecipes.RESONATE_TABLE.forEach((item, recipe) -> registry.add(new ResonanceTableDisplay(recipe)));
+        ModRecipes.RESONANCE_TABLE.forEach((item, recipe) -> registry.add(new ResonanceTableDisplay(recipe)));
     }
 }

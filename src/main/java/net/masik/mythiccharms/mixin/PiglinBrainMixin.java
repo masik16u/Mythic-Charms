@@ -1,5 +1,6 @@
 package net.masik.mythiccharms.mixin;
 
+import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
 import net.minecraft.entity.mob.PiglinBrain;
@@ -10,6 +11,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Optional;
+
 @Mixin(PiglinBrain.class)
 public class PiglinBrainMixin {
 
@@ -18,13 +21,16 @@ public class PiglinBrainMixin {
 
         java.util.Random rand = new java.util.Random();
 
-        if (TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.FRAGILE_CHARM_OF_BARTERS_PACT) ||
-                TrinketsApi.getTrinketComponent(player).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BARTERS_PACT) &&
-                        rand.nextInt(10) < 7) {
+        if (rand.nextInt(10) >= 7) return;
 
-            ci.cancel();
+        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
+        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BARTERS_PACT) &&
+                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BARTERS_PACT))) {
+            return;
         }
+
+        ci.cancel();
 
     }
 

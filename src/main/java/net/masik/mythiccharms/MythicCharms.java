@@ -5,7 +5,6 @@ import net.fabricmc.api.ModInitializer;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 
-import net.masik.mythiccharms.recipe.ModRecipes;
 import net.masik.mythiccharms.util.ModLootTableModifiers;
 import net.masik.mythiccharms.util.ModRegistries;
 import org.slf4j.Logger;
@@ -22,6 +21,5 @@ public class MythicCharms implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModLootTableModifiers.modifyLootTables();
 		ModRegistries.registerRegistries();
-		ModRecipes.bootstrap();
 	}
 }

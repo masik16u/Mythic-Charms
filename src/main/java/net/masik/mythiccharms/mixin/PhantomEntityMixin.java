@@ -1,8 +1,11 @@
 package net.masik.mythiccharms.mixin;
 
+import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PhantomEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -10,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
+import java.util.Optional;
 
 @Mixin(PhantomEntity.class)
 public class PhantomEntityMixin {
@@ -19,16 +23,20 @@ public class PhantomEntityMixin {
 
         PhantomEntity phantomEntity = (PhantomEntity) (Object) this;
 
-        if (phantomEntity.getTarget() != null) {
+        LivingEntity phantomTarget = phantomEntity.getTarget();
 
-            if (TrinketsApi.getTrinketComponent(phantomEntity.getTarget()).get().isEquipped(ModItems.FRAGILE_CHARM_OF_NIGHTS_GUARDIAN) ||
-                    TrinketsApi.getTrinketComponent(phantomEntity.getTarget()).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_NIGHTS_GUARDIAN)) {
+        if (phantomTarget == null) return;
 
-                cir.setReturnValue(false);
+        if (!phantomTarget.isPlayer()) return;
 
-            }
+        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(phantomTarget);
 
+        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_NIGHTS_GUARDIAN) &&
+                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_NIGHTS_GUARDIAN))) {
+            return;
         }
+
+        cir.setReturnValue(false);
 
     }
 
