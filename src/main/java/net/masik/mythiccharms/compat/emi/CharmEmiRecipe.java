@@ -20,8 +20,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class CharmEmiRecipe implements EmiRecipe {
-    public static final EmiRecipeCategory CATEGORY = new EmiRecipeCategory(new Identifier(MythicCharms.MOD_ID, "resonance_table"), MythicCharmsEmiPlugin.RESONANCE_TABLE);
-    public static final EmiTexture ARROW = new EmiTexture(new Identifier(MythicCharms.MOD_ID, "textures/gui/widgets.png"), 0, 0, 31, 15);
+
+    public static final EmiTexture RESONANCE_RECIPE_TREE = new EmiTexture(new Identifier(MythicCharms.MOD_ID, "textures/gui/resonance_recipe_texture.png"), 0, 0, 16, 16, 16, 16, 16, 16);
+    public static final EmiRecipeCategory CATEGORY = new EmiRecipeCategory(new Identifier(MythicCharms.MOD_ID, "resonance_table"),
+            MythicCharmsEmiPlugin.RESONANCE_TABLE, RESONANCE_RECIPE_TREE);
+    public static final EmiTexture ARROW = new EmiTexture(new Identifier(MythicCharms.MOD_ID, "textures/gui/arrow.png"), 0, 0, 17, 15, 17, 15, 17, 15);
     public static final EmiIngredient EXPERIENCE_BOTTLE = EmiStack.of(Items.EXPERIENCE_BOTTLE);
     public static final EmiIngredient RESONANCE_RING = EmiStack.of(ModItems.RESONANCE_RING);
     private final Identifier id;
@@ -82,7 +85,7 @@ public class CharmEmiRecipe implements EmiRecipe {
      */
     @Override
     public int getDisplayWidth() {
-        return 150;
+        return 120;
     }
 
     /**
@@ -91,7 +94,7 @@ public class CharmEmiRecipe implements EmiRecipe {
      */
     @Override
     public int getDisplayHeight() {
-        return 100;
+        return 90;
     }
 
     /**
@@ -108,25 +111,25 @@ public class CharmEmiRecipe implements EmiRecipe {
     @Override
     public void addWidgets(WidgetHolder widgets) {
         // These numbers are completely magic, defined by a spell called "Trys-Errorus"
-        widgets.addTexture(ARROW, 90, 33);
-        widgets.addSlot(inputs.get(0), 30, 10);
-        widgets.addSlot(inputs.get(1), 51, 10);
-        widgets.addSlot(inputs.get(2), 72, 10);
-        widgets.addSlot(inputs.get(3), 41, 31);
-        widgets.addSlot(inputs.get(4), 62, 31);
-        widgets.addSlot(EXPERIENCE_BOTTLE, 96, 10);
+        widgets.addTexture(ARROW, 75, 28);
+        widgets.addSlot(inputs.get(0), 15, 5);
+        widgets.addSlot(inputs.get(1), 36, 5);
+        widgets.addSlot(inputs.get(2), 57, 5);
+        widgets.addSlot(inputs.get(3), 26, 26);
+        widgets.addSlot(inputs.get(4), 47, 26);
+        widgets.addSlot(EXPERIENCE_BOTTLE, 81, 5);
 
-        widgets.addTexture(EmiTexture.EMPTY_ARROW, 83, 60);
-        widgets.addSlot(RESONANCE_RING, 22, 60);
-        widgets.addSlot(output.get(0), 111, 60);
+        widgets.addTexture(EmiTexture.EMPTY_ARROW, 68, 55);
+        widgets.addSlot(RESONANCE_RING, 7, 55);
+        widgets.addSlot(output.get(0), 96, 55);
 
-        widgets.add(new DrawableWidget(50, 68, 60, 60, (context, $, $$, $$$) -> {
+        widgets.add(new DrawableWidget(33, 63, 60, 60, (context, $, $$, $$$) -> {
             context.push();
             context.scale(1.5F,1.5F,1.5F);
             context.drawItem(Items.LAPIS_BLOCK.getDefaultStack(), 0, 0, 0, 1);
             context.pop();
         }));
-        widgets.add(new DrawableWidget(50, 52, 60, 60, (context, $, $$, $$$) -> {
+        widgets.add(new DrawableWidget(33, 47, 60, 60, (context, $, $$, $$$) -> {
             context.push();
             context.scale(1.5F,1.5F,1.5F);
             context.drawItem(ModBlocks.RESONANCE_TABLE.asItem().getDefaultStack(), 0, 0, 0, 2);

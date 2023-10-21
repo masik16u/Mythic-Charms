@@ -123,28 +123,19 @@ public abstract class ServerPlayerMixin {
 
             cropGrowTimer = 0;
 
-            for (int i = 0; i < 5; i++) {
+            for (BlockPos pos : BlockPos.iterate(new BlockPos(-2, 0, -2), new BlockPos(2, 1, 2))) {
 
-                for (int k = 0; k < 5; k++) {
+                if (rand.nextInt(10) < 4) {
 
-                    for (int j = 0; j < 5; j++) {
+                    BlockPos blockPos = player.getBlockPos().add(pos);
 
-                        if (rand.nextInt(10) < 4) {
-                            BlockPos blockPos = player.getBlockPos().add(-2 + i, -1 + j, -2 + k);
+                    BlockState blockState = player.getWorld().getBlockState(blockPos);
 
-                            BlockState blockState = player.getWorld().getBlockState(blockPos);
+                    if (blockState.getBlock() instanceof CropBlock cropBlock) {
 
-                            Block block = blockState.getBlock();
+                        if (!cropBlock.isMature(blockState)) {
 
-                            if (block instanceof CropBlock cropBlock) {
-
-                                if (!cropBlock.isMature(blockState)) {
-
-                                    player.getWorld().setBlockState(blockPos, cropBlock.withAge(cropBlock.getAge(blockState) + 1));
-
-                                }
-
-                            }
+                            player.getWorld().setBlockState(blockPos, cropBlock.withAge(cropBlock.getAge(blockState) + 1));
 
                         }
 
