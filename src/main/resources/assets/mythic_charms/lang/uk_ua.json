@@ -160,5 +160,10 @@
 	"category.mythic_charms.resonance.trinket": "Дрібничка",
 	"category.mythic_charms.resonance.output": "Результат",
 
-	"util.mythic_charms.shift_tooltip": "Утримуйте §eSHIFT§r для додаткової інформації"
+	"util.mythic_charms.shift_tooltip": "Утримуйте §eSHIFT§r для додаткової інформації",
+
+	"tag.item.mythic_charms.fragile_charms": "Крихкі талісмани",
+	"emi.category.mythic_charms.resonance_table": "Стіл резонансу",
+	"tag.item.trinkets.hand.ring": "Перстень",
+	"tag.item.trinkets.mythic_charms.mythic_charm": "Міфічний талісман"
 }
