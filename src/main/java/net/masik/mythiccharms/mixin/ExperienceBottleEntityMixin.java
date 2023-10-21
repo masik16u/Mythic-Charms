@@ -61,9 +61,9 @@ public class ExperienceBottleEntityMixin {
                     key.getDefaultStack());
             world.spawnEntity(result);
 
-            player.getWorld().playSound((PlayerEntity) null, player.getX(), player.getY(), player.getZ(),
+            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, player.getSoundCategory(), 40.0F, 1.0F);
-            player.getWorld().playSound((PlayerEntity) null, player.getX(), player.getY(), player.getZ(),
+            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 10.0F, 1.0F);
 
             if (player.getServer() != null) {

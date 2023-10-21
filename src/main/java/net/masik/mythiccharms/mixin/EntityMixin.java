@@ -1,16 +1,12 @@
 package net.masik.mythiccharms.mixin;
 
-import com.google.common.collect.Iterables;
+import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
-import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.BlockView;
@@ -18,12 +14,11 @@ import net.minecraft.world.explosion.Explosion;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Mixin(Entity.class)
 public class EntityMixin {
@@ -34,16 +29,16 @@ public class EntityMixin {
 
         Entity entity = (Entity) (Object) this;
 
-        if (entity.isPlayer()) {
+        if (!entity.isPlayer()) return;
 
-            if (TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) ||
-                    TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_DROWNED_FREEDOM)) {
+        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-                cir.setReturnValue(false);
-
-            }
-
+        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) &&
+                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_DROWNED_FREEDOM))) {
+            return;
         }
+
+        cir.setReturnValue(false);
 
     }
 
@@ -52,16 +47,16 @@ public class EntityMixin {
 
         Entity entity = (Entity) (Object) this;
 
-        if (entity.isPlayer()) {
+        if (!entity.isPlayer()) return;
 
-            if (TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) ||
-                    TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_DROWNED_FREEDOM)) {
+        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-                cir.setReturnValue(false);
-
-            }
-
+        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) &&
+                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_DROWNED_FREEDOM))) {
+            return;
         }
+
+        cir.setReturnValue(false);
 
     }
 
@@ -71,17 +66,18 @@ public class EntityMixin {
 
         Entity entity = (Entity) (Object) this;
 
-        if (entity.isPlayer()) {
+        if (!entity.isPlayer()) return;
 
-            if ((TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) ||
-                    TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_WEIGHTLESS_FLOW)) &&
-                    !entity.isSneaking()) {
+        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-                cir.setReturnValue(true);
-
-            }
-
+        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) &&
+                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_WEIGHTLESS_FLOW))) {
+            return;
         }
+
+        if (entity.isSneaking()) return;
+
+        cir.setReturnValue(true);
 
     }
 
@@ -97,12 +93,14 @@ public class EntityMixin {
 
         players.forEach(player -> {
 
-            if (TrinketsApi.getTrinketComponent((LivingEntity) player).get().isEquipped(ModItems.FRAGILE_CHARM_OF_SAFE_TERRITORY) ||
-                    TrinketsApi.getTrinketComponent((LivingEntity) player).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_SAFE_TERRITORY)) {
+            Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) player);
 
-                cir.setReturnValue(false);
-
+            if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_SAFE_TERRITORY) &&
+                    !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_SAFE_TERRITORY))) {
+                return;
             }
+
+            cir.setReturnValue(false);
 
         });
 
@@ -114,20 +112,24 @@ public class EntityMixin {
 
         Entity entity = (Entity) (Object) this;
 
-        if (entity.isPlayer()) {
+        if (!entity.isPlayer()) return;
 
-            //featheredGrace combo somewhere here
-            if ((TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.FRAGILE_CHARM_OF_QUIET_PRESENCE) ||
-                    TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_QUIET_PRESENCE)) &&
-                    !entity.isSprinting() && (entity.isOnGround() ||
-                    (TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE) ||
-                            TrinketsApi.getTrinketComponent((LivingEntity) entity).get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FEATHERED_GRACE)))) {
+        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-                cir.setReturnValue(true);
-
-            }
-
+        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_QUIET_PRESENCE) &&
+                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_QUIET_PRESENCE))) {
+            return;
         }
+
+        if (entity.isSprinting()) return;
+
+        //featheredGrace combo
+        if (!entity.isOnGround() && !trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE) &&
+                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FEATHERED_GRACE)) {
+            return;
+        }
+
+        cir.setReturnValue(true);
 
     }
 
