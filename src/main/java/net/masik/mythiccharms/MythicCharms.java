@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MythicCharms implements ModInitializer {
-
 	public static final String MOD_ID = "mythic_charms";
     public static final Logger LOGGER = LoggerFactory.getLogger("mythic_charms");
 

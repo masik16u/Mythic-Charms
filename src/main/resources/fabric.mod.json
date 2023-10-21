@@ -8,11 +8,12 @@
 		"Masik16u"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/mythic-charms",
+		"sources": "https://github.com/masik16u/Mythic-Charms",
+		"issues": "https://github.com/masik16u/Mythic-Charms/issues"
 	},
 	"license": "GNU General Public License v3.0",
-	"icon": "icon.png",
+	"icon": "assets/mythic_charms/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -22,7 +23,10 @@
 			"net.masik.mythiccharms.MythicCharmsClient"
 		],
 		"rei_client": [
-			"net.masik.mythiccharms.rei.MythicCharmsPlugin"
+			"net.masik.mythiccharms.compat.rei.MythicCharmsReiPlugin"
+		],
+		"emi": [
+			"net.masik.mythiccharms.compat.emi.MythicCharmsEmiPlugin"
 		]
 	},
 	"mixins": [
@@ -32,9 +36,12 @@
 		"fabricloader": ">=0.14.22",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": ">=0.83.0",
+		"owo": ">=0.11.0",
+		"trinkets": ">=0.7.1"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"roughlyenoughitems": ">=12.0",
+		"emi": "1.0"
 	}
 }

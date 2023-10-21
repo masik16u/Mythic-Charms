@@ -1,4 +1,4 @@
-package net.masik.mythiccharms.rei;
+package net.masik.mythiccharms.compat.rei;
 
 import io.wispforest.owo.compat.rei.ReiUIAdapter;
 import io.wispforest.owo.ui.component.Components;
@@ -50,7 +50,7 @@ public class ResonanceTableCategory implements DisplayCategory<ResonanceTableDis
                         .child(Containers.verticalFlow(Sizing.content(), Sizing.content())
                                 .child(adapter.wrap(Widgets::createSlot, slot -> slot.entries(display.getInputEntries().get(5))))
                                 .gap(5)
-                                .child(Components.texture(new Identifier(MythicCharms.MOD_ID, "textures/gui/arrow.png"), 0,0, 31, 15, 31, 15))
+                                .child(Components.texture(new Identifier(MythicCharms.MOD_ID, "textures/gui/widgets.png"), 0,0, 31, 15, 256, 256))
                                 .horizontalAlignment(HorizontalAlignment.CENTER))
                         .verticalAlignment(VerticalAlignment.CENTER))
                 .child(Containers.horizontalFlow(Sizing.content(), Sizing.content())
@@ -81,7 +81,7 @@ public class ResonanceTableCategory implements DisplayCategory<ResonanceTableDis
     @Override
     public CategoryIdentifier<? extends ResonanceTableDisplay> getCategoryIdentifier() {
 
-        return MythicCharmsPlugin.RESONANCE_INFUSING;
+        return MythicCharmsReiPlugin.RESONANCE_INFUSING;
 
     }
 
