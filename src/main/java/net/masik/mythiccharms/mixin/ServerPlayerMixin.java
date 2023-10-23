@@ -3,6 +3,7 @@ package net.masik.mythiccharms.mixin;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
 import net.minecraft.entity.Entity;
@@ -37,12 +38,9 @@ public abstract class ServerPlayerMixin {
 
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FEATHERED_GRACE))) {
-            return;
-        }
+        if (!CharmHelper.charmFeatheredGraceEquipped(player)) return;
+
 
         if (!player.isOnGround() && !player.isClimbing() && !player.isInsideWaterOrBubbleColumn() &&
                 !player.isFallFlying() && player.getVelocity().y < 0) {
@@ -58,16 +56,17 @@ public abstract class ServerPlayerMixin {
         int ticksInAirCap = 40;
 
         //highBounds combo
-        if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_HIGH_BOUNDS) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_HIGH_BOUNDS)) {
+        if (CharmHelper.charmHighBoundsEquipped(player) &&
+                CharmHelper.charmCombinationFeatheredGraceAndHighBoundsEnabled(player)) ticksInAirCap = 60;
 
-            ticksInAirCap = 60;
-
+        //weightlessFlow combo
+        if (player.isSneaking() && (!CharmHelper.charmCombinationWeightlessFlowAndFeatheredGraceEnabled(player) ||
+                (!CharmHelper.charmWeightlessFlowEquipped(player) &&
+                        CharmHelper.charmCombinationWeightlessFlowAndFeatheredGraceEnabled(player)))) {
+            return;
         }
 
-        if (ticksInAir >= 8 && ticksInAir < ticksInAirCap && (!player.isSneaking() ||
-                (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) ||
-                        trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_WEIGHTLESS_FLOW)))) {
+        if (ticksInAir >= 8 && ticksInAir < ticksInAirCap) {
 
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 4, 0,
                     false, false, false));
@@ -82,12 +81,9 @@ public abstract class ServerPlayerMixin {
 
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_COLLECTORS_GIFT) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_COLLECTORS_GIFT))) {
-            return;
-        }
+        if (!CharmHelper.charmCollectorsGiftEquipped(player)) return;
+
 
         Box box = Box.from(player.getPos()).expand(4);
 
@@ -111,12 +107,9 @@ public abstract class ServerPlayerMixin {
 
         java.util.Random rand = new java.util.Random();
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BOTANIC_BLESSING) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BOTANIC_BLESSING))) {
-            return;
-        }
+        if (!CharmHelper.charmBotanicBlessingEquipped(player)) return;
+
 
         if (cropGrowTimer > 20) {
 

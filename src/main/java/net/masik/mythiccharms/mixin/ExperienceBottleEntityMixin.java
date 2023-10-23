@@ -57,8 +57,8 @@ public class ExperienceBottleEntityMixin {
             if (!items.equals(recipe.inputSet)) continue;
 
             entities.forEach(entity -> entity.getStack().decrement(1));
-            ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(),
-                    key.getDefaultStack());
+            ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(), key.getDefaultStack());
+            result.setVelocity(0, 0.4, 0);
             world.spawnEntity(result);
 
             player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
@@ -79,9 +79,12 @@ public class ExperienceBottleEntityMixin {
 
     @Unique
     private boolean checkResonanceTable(BlockPos bottlePos, World world) {
-        Block oneDown = world.getBlockState(bottlePos.down()).getBlock();
-        Block twoDown = world.getBlockState(bottlePos.down(2)).getBlock();
-        return oneDown.equals(ModBlocks.RESONANCE_TABLE) && twoDown.equals(Blocks.LAPIS_BLOCK);
+        for (BlockPos pos : BlockPos.iterate(new BlockPos(-1, -1, -1), new BlockPos(1, 1, 1))) {
+            Block oneDown = world.getBlockState(bottlePos.add(pos)).getBlock();
+            Block twoDown = world.getBlockState(bottlePos.add(pos).down(1)).getBlock();
+            if (oneDown.equals(ModBlocks.RESONANCE_TABLE) && twoDown.equals(Blocks.LAPIS_BLOCK)) return true;
+        }
+        return false;
     }
 
 }

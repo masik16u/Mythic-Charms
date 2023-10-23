@@ -23,19 +23,19 @@ public final class CharmRecipe {
     }
 
     public static CharmRecipe fragile(Item output, Item... input) {
-        Item[] ingr = new Item[INPUT_SIZE];
-        Arrays.fill(ingr, Items.AIR);
-        ingr[0] = ModItems.FRAGILE_CHARM_BASE;
-        System.arraycopy(input, 0, ingr, 1, Math.min(input.length, INPUT_SIZE));
-        return new CharmRecipe(output, Arrays.asList(ingr));
+        Item[] ingredient = new Item[INPUT_SIZE];
+        Arrays.fill(ingredient, Items.AIR);
+        ingredient[0] = ModItems.FRAGILE_CHARM_BASE;
+        System.arraycopy(input, 0, ingredient, 1, Math.min(input.length, INPUT_SIZE));
+        return new CharmRecipe(output, Arrays.asList(ingredient));
     }
 
     public static CharmRecipe unbreakable(Item output, Item charm) {
-        Item[] ingr = new Item[INPUT_SIZE];
-        Arrays.fill(ingr, Items.AIR);
-        ingr[0] = charm;
-        ingr[1] = Items.NETHERITE_INGOT;
-        ingr[2] = ModItems.DEEPSLATE_FRAGMENT;
-        return new CharmRecipe(output, Arrays.asList(ingr));
+        Item[] ingredient = new Item[INPUT_SIZE];
+        Arrays.fill(ingredient, Items.AIR);
+        ingredient[0] = charm;
+        ingredient[1] = Items.NETHERITE_INGOT;
+        ingredient[2] = ModItems.DEEPSLATE_FRAGMENT;
+        return new CharmRecipe(output, Arrays.asList(ingredient));
     }
 }

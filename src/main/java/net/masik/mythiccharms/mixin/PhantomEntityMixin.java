@@ -3,6 +3,7 @@ package net.masik.mythiccharms.mixin;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PhantomEntity;
@@ -28,12 +29,9 @@ public class PhantomEntityMixin {
 
         if (!phantomTarget.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(phantomTarget);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_NIGHTS_GUARDIAN) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_NIGHTS_GUARDIAN))) {
-            return;
-        }
+        if (!CharmHelper.charmNightsGuardianEquipped(phantomTarget)) return;
+
 
         cir.setReturnValue(false);
 

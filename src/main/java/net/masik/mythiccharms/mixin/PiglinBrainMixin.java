@@ -3,6 +3,7 @@ package net.masik.mythiccharms.mixin;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
@@ -23,12 +24,9 @@ public class PiglinBrainMixin {
 
         if (rand.nextInt(10) >= 7) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BARTERS_PACT) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BARTERS_PACT))) {
-            return;
-        }
+        if (!CharmHelper.charmBartersPactEquipped(player)) return;
+
 
         ci.cancel();
 

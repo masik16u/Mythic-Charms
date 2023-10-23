@@ -42,6 +42,7 @@
 	},
 	"suggests": {
 		"roughlyenoughitems": ">=12.0",
-		"emi": "1.0"
+		"emi": "1.0",
+		"modmenu": ">=7.0.0"
 	}
 }

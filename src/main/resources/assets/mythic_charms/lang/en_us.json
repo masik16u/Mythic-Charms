@@ -154,16 +154,62 @@
 	"item.mythic_charms.resonance_table.tooltip2": "to work",
 
 
+	"util.mythic_charms.shift_tooltip": "Hold §eSHIFT§r for more Information",
+
+
 	"category.mythic_charms.resonance": "Resonance Infusing",
 	"category.mythic_charms.resonance.ingredient": "Ingredient",
 	"category.mythic_charms.resonance.catalyst": "Catalyst",
 	"category.mythic_charms.resonance.trinket": "Trinket",
 	"category.mythic_charms.resonance.output": "Result",
 
-	"util.mythic_charms.shift_tooltip": "Hold §eSHIFT§r for more Information",
 
 	"tag.item.mythic_charms.fragile_charms": "Fragile Charms",
+	"tag.item.mythic_charms.resonance_ingredients": "Resonance Ingredients",
+
 	"emi.category.mythic_charms.resonance_table": "Resonance Infusing",
+
 	"tag.item.trinkets.hand.ring": "Ring Trinket",
-	"tag.item.trinkets.mythic_charms.mythic_charm": "Mythic Charm"
+	"tag.item.trinkets.mythic_charms.mythic_charm": "Mythic Charm",
+
+
+	"text.config.mythic-charms-config.title": "Mythic Charms Config",
+	"text.config.mythic-charms-config.category.charmsEnabled": "Charms Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmFeatheredGraceEnabled": "Charm Feathered Grace Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBlazingEmbraceEnabled": "Charm Blazing Embrace Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEarthsOrderEnabled": "Charm Earth's Order Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmGazeSerenityEnabled": "Charm Gaze Serenity Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBotanicBlessingEnabled": "Charm Botanic Blessing Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmFleetingStridesEnabled": "Charm Fleeting Strides Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmNightsGuardianEnabled": "Charm Night's Guardian Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmHighBoundsEnabled": "Charm High Bounds Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmDrownedFreedomEnabled": "Charm Drowned Freedom Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmWeightlessFlowEnabled": "Charm Weightless Flow Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmCollectorsGiftEnabled": "Charm Collector's Gift Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmClimbersPathEnabled": "Charm Climber's Path Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmNaturesCallEnabled": "Charm Nature's Call Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBartersPactEnabled": "Charm Barter's Pact Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBattleFuryEnabled": "Charm Battle Fury Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEchoingWrathEnabled": "Charm Echoing Wrath Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEnchantedWhispersEnabled": "Charm Enchanted Whispers Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmArrowDanceEnabled": "Charm Arrow Dance Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmMountainsStrengthEnabled": "Charm Mountain's Strength Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmSafeTerritoryEnabled": "Charm Safe Territory Enabled",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmQuietPresenceEnabled": "Charm Quiet Presence Enabled",
+
+	"text.config.mythic-charms-config.category.charmCombinationsEnabled": "Charm Combinations Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFeatheredGraceAndHighBoundsEnabled": "Charm Combination Feathered Grace And High Bounds Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationBlazingEmbraceAndBattleFuryEnabled": "Charm Combination Blazing Embrace And Battle Fury Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBlazingEmbraceEnabled": "Charm Combination Earths Order And Blazing Embrace Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndDrownedFreedomEnabled": "Charm Combination Earths Order And Drowned Freedom Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndWeightlessFlowEnabled": "Charm Combination Earths Order And Weightless Flow Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBattleFuryEnabled": "Charm Combination Earths Order And Battle Fury Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationBotanicBlessingAndFeatheredGraceEnabled": "Charm Combination Botanic Blessing And Feathered Grace Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFleetingStridesAndHighBoundsEnabled": "Charm Combination Fleeting Strides And High Bounds Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFleetingStridesAndBattleFuryEnabled": "Charm Combination Fleeting Strides And Battle Fury Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationWeightlessFlowAndFeatheredGraceEnabled": "Charm Combination Weightless Flow And Feathered Grace Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationClimbersPathAndHighBoundsEnabled": "Charm Combination Climbers Path And High Bounds Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBlazingEmbraceEnabled": "Charm Combination Echoing Wrath And Blazing Embrace Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Charm Combination Echoing Wrath And Battle Fury Enabled",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Charm Combination Quiet Presence And Feathered Grace Enabled"
 }

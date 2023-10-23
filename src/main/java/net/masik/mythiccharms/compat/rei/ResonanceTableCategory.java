@@ -50,7 +50,7 @@ public class ResonanceTableCategory implements DisplayCategory<ResonanceTableDis
                         .child(Containers.verticalFlow(Sizing.content(), Sizing.content())
                                 .child(adapter.wrap(Widgets::createSlot, slot -> slot.entries(display.getInputEntries().get(5))))
                                 .gap(5)
-                                .child(Components.texture(new Identifier(MythicCharms.MOD_ID, "textures/gui/widgets.png"), 0,0, 31, 15, 256, 256))
+                                .child(Components.texture(new Identifier(MythicCharms.MOD_ID, "textures/gui/rei_arrow.png"), 0,0, 31, 15, 256, 256))
                                 .horizontalAlignment(HorizontalAlignment.CENTER))
                         .verticalAlignment(VerticalAlignment.CENTER))
                 .child(Containers.horizontalFlow(Sizing.content(), Sizing.content())

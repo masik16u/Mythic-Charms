@@ -3,6 +3,7 @@ package net.masik.mythiccharms.mixin;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -31,12 +32,9 @@ public class EntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_DROWNED_FREEDOM))) {
-            return;
-        }
+        if (!CharmHelper.charmDrownedFreedomEquipped((LivingEntity) entity)) return;
+
 
         cir.setReturnValue(false);
 
@@ -49,12 +47,9 @@ public class EntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_DROWNED_FREEDOM))) {
-            return;
-        }
+        if (!CharmHelper.charmDrownedFreedomEquipped((LivingEntity) entity)) return;
+
 
         cir.setReturnValue(false);
 
@@ -68,12 +63,9 @@ public class EntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_WEIGHTLESS_FLOW))) {
-            return;
-        }
+        if (!CharmHelper.charmWeightlessFlowEquipped((LivingEntity) entity)) return;
+
 
         if (entity.isSneaking()) return;
 
@@ -93,12 +85,9 @@ public class EntityMixin {
 
         players.forEach(player -> {
 
-            Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) player);
 
-            if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_SAFE_TERRITORY) &&
-                    !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_SAFE_TERRITORY))) {
-                return;
-            }
+            if (!CharmHelper.charmSafeTerritoryEquipped((LivingEntity) player)) return;
+
 
             cir.setReturnValue(false);
 
@@ -114,20 +103,16 @@ public class EntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_QUIET_PRESENCE) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_QUIET_PRESENCE))) {
-            return;
-        }
+        if (!CharmHelper.charmQuietPresenceEquipped((LivingEntity) entity)) return;
+
 
         if (entity.isSprinting()) return;
 
         //featheredGrace combo
-        if (!entity.isOnGround() && !trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FEATHERED_GRACE)) {
-            return;
-        }
+        if (!entity.isOnGround() && (!CharmHelper.charmCombinationQuietPresenceAndFeatheredGraceEnabled((LivingEntity) entity) ||
+                (!CharmHelper.charmFeatheredGraceEquipped((LivingEntity) entity) &&
+                        CharmHelper.charmCombinationQuietPresenceAndFeatheredGraceEnabled((LivingEntity) entity)))) return;
 
         cir.setReturnValue(true);
 

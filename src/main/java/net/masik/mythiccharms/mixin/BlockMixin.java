@@ -3,6 +3,7 @@ package net.masik.mythiccharms.mixin;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -34,17 +35,11 @@ public class BlockMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent((LivingEntity) entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_EARTHS_ORDER))) {
-            return;
-        }
+        if (!CharmHelper.charmEarthsOrderEquipped((LivingEntity) entity) ||
+                !CharmHelper.charmBlazingEmbraceEquipped((LivingEntity) entity) ||
+                !CharmHelper.charmCombinationEarthsOrderAndBlazingEmbraceEnabled((LivingEntity) entity)) return;
 
-        if (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BLAZING_EMBRACE) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BLAZING_EMBRACE)) {
-            return;
-        }
 
         if (!((LivingEntity) entity).getMainHandStack().isOf(Items.AIR)) return;
 

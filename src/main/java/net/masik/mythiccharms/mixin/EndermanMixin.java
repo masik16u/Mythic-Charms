@@ -3,6 +3,7 @@ package net.masik.mythiccharms.mixin;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
@@ -19,12 +20,9 @@ public class EndermanMixin {
     @Inject(method = "isPlayerStaring", at = @At("RETURN"), cancellable = true)
     private void gazeSerenityEffect(PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_GAZE_SERENITY) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_GAZE_SERENITY))) {
-            return;
-        }
+        if (!CharmHelper.charmGazeSerenityEquipped(player)) return;
+
 
         cir.setReturnValue(false);
 
