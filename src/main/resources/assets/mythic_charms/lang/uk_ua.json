@@ -154,16 +154,20 @@
 	"item.mythic_charms.resonance_table.tooltip2": "лазуриту під ним",
 
 
+	"util.mythic_charms.shift_tooltip": "Утримуйте §eSHIFT§r для додаткової інформації",
+
+
 	"category.mythic_charms.resonance": "Об'єднання резонансом",
 	"category.mythic_charms.resonance.ingredient": "Інгредієнт",
 	"category.mythic_charms.resonance.catalyst": "Каталізатор",
 	"category.mythic_charms.resonance.trinket": "Дрібничка",
 	"category.mythic_charms.resonance.output": "Результат",
 
-	"util.mythic_charms.shift_tooltip": "Утримуйте §eSHIFT§r для додаткової інформації",
-
 	"tag.item.mythic_charms.fragile_charms": "Крихкі талісмани",
+	"tag.item.mythic_charms.resonance_ingredients": "Інгредієнти резонансу",
 	"emi.category.mythic_charms.resonance_table": "Об'єднання резонансом",
 	"tag.item.trinkets.hand.ring": "Перстень",
-	"tag.item.trinkets.mythic_charms.mythic_charm": "Міфічний талісман"
+	"tag.item.trinkets.mythic_charms.mythic_charm": "Міфічний талісман",
+
+
 }

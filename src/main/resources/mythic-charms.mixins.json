@@ -9,6 +9,8 @@
     "ExperienceBottleEntityMixin",
     "ExperienceOrbEntityMixin",
     "FarmlandBlockMixin",
+    "ItemEntityMixin",
+    "ItemMixin",
     "LivingEntityMixin",
     "PhantomEntityMixin",
     "PhantomSpawnerMixin",

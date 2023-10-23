@@ -1,23 +1,14 @@
 package net.masik.mythiccharms.mixin;
 
-import dev.emi.trinkets.api.TrinketComponent;
-import dev.emi.trinkets.api.TrinketsApi;
-import net.masik.mythiccharms.MythicCharms;
-import net.masik.mythiccharms.item.ModItems;
-import net.minecraft.entity.Entity;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Items;
-import net.minecraft.particle.ParticleTypes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import java.util.Optional;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
@@ -30,23 +21,16 @@ public class LivingEntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_HIGH_BOUNDS) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_HIGH_BOUNDS))) {
-            return;
-        }
+        if (!CharmHelper.charmHighBoundsEquipped(entity)) return;
+
 
         ((PlayerEntity) entity).addExhaustion(0.1F);
 
         float high = 0.6F;
 
-        if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FLEETING_STRIDES) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FLEETING_STRIDES)) {
-
-            high += 0.05F;
-
-        }
+        if (CharmHelper.charmFeatheredGraceEquipped(entity) &&
+                CharmHelper.charmCombinationFeatheredGraceAndHighBoundsEnabled(entity)) high += 0.05F;
 
         cir.setReturnValue(entity.getJumpBoostVelocityModifier() + high);
 
@@ -59,12 +43,9 @@ public class LivingEntityMixin {
 
         if (!entity.isPlayer()) return value;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_HIGH_BOUNDS) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_HIGH_BOUNDS))) {
-            return value;
-        }
+        if (!CharmHelper.charmHighBoundsEquipped(entity)) return value;
+
 
         return value - 2;
 
@@ -78,21 +59,13 @@ public class LivingEntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_CLIMBERS_PATH) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_CLIMBERS_PATH))) {
-            return;
-        }
+        if (!CharmHelper.charmClimbersPathEquipped(entity)) return;
+
 
         float height = 1.1F;
 
-        if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_HIGH_BOUNDS) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_HIGH_BOUNDS)) {
-
-            height += 0.5F;
-
-        }
+        if (CharmHelper.charmHighBoundsEquipped(entity)) height += 0.5F;
 
         cir.setReturnValue(height);
 
@@ -106,12 +79,9 @@ public class LivingEntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_MOUNTAINS_STRENGTH) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_MOUNTAINS_STRENGTH))) {
-            return;
-        }
+        if (!CharmHelper.charmMountainsStrengthEquipped(entity)) return;
+
 
         ci.cancel();
 
@@ -124,12 +94,9 @@ public class LivingEntityMixin {
 
         if (!entity.isPlayer()) return;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_MOUNTAINS_STRENGTH) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_MOUNTAINS_STRENGTH))) {
-            return;
-        }
+        if (!CharmHelper.charmMountainsStrengthEquipped(entity)) return;
+
 
         cir.setReturnValue(false);
 

@@ -45,7 +45,7 @@ dependencies {
 	modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
 	modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
 
-	modImplementation "io.wispforest:owo-lib:${project.owo_version}"
+	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
 }
 
 loom {

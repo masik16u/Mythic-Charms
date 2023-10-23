@@ -1,27 +1,26 @@
 package net.masik.mythiccharms.mixin;
 
 import dev.emi.trinkets.api.*;
+import dev.emi.trinkets.api.event.TrinketDropCallback;
 import net.masik.mythiccharms.MythicCharms;
-import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
@@ -40,7 +39,7 @@ import java.util.Optional;
 public class PlayerMixin {
 
     //fragile charms
-    @Inject(method = "dropInventory",  at = @At("RETURN"))
+    @Inject(method = "dropInventory",  at = @At("HEAD"))
     private void destroyFragileCharms(CallbackInfo info){
 
         PlayerEntity player = (PlayerEntity) (Object) this;
@@ -66,12 +65,9 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_EARTHS_ORDER))) {
-            return;
-        }
+        if (!CharmHelper.charmEarthsOrderEquipped(player)) return;
+
 
         if (!player.getMainHandStack().isOf(Items.AIR)) return;
 
@@ -84,37 +80,34 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_EARTHS_ORDER))) {
-            return;
-        }
+        if (!CharmHelper.charmEarthsOrderEquipped(player)) return;
+
 
         if (!player.getMainHandStack().isOf(Items.AIR)) return;
 
         float speedModifier = 1.5F;
 
         //battleFury combo
-        if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BATTLE_FURY) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BATTLE_FURY)) {
+        if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationEarthsOrderAndBattleFuryEnabled(player)) {
 
             speedModifier *= 1 + 2 * (((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20;
 
         }
 
         //drownedFreedom combo
-        if ((trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_DROWNED_FREEDOM)) &&
-                player.isSubmergedIn(FluidTags.WATER) && !EnchantmentHelper.hasAquaAffinity(player)) {
+        if (CharmHelper.charmDrownedFreedomEquipped(player) &&
+                CharmHelper.charmCombinationEarthsOrderAndDrownedFreedomEnabled(player) &&
+                player.isSubmergedIn(FluidTags.WATER) &&
+                !EnchantmentHelper.hasAquaAffinity(player)) {
 
             speedModifier += 5;
 
         }
 
         //weightlessFlow combo
-        if ((trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_WEIGHTLESS_FLOW)) &&
+        if (CharmHelper.charmWeightlessFlowEquipped(player) &&
+                CharmHelper.charmCombinationEarthsOrderAndWeightlessFlowEnabled(player) &&
                 !player.isOnGround()) {
 
             speedModifier += 5;
@@ -131,12 +124,9 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FLEETING_STRIDES) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FLEETING_STRIDES))) {
-            return;
-        }
+        if (!CharmHelper.charmFleetingStridesEquipped(player)) return;
+
 
         if (!player.isSprinting()) return;
 
@@ -144,15 +134,11 @@ public class PlayerMixin {
 
         float speed = 0.035F;
 
-        if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_HIGH_BOUNDS) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_HIGH_BOUNDS)) {
+        //highBounds combo
+        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(player)) speed += 0.01F;
 
-            speed += 0.01F;
-
-        }
-
-        if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BATTLE_FURY) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BATTLE_FURY)) {
+        //battleFury combo
+        if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndBattleFuryEnabled(player)) {
 
             speed += 0.02F * (((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20;
             player.addExhaustion(0.1F * (((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20);
@@ -169,20 +155,16 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BLAZING_EMBRACE) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BLAZING_EMBRACE))) {
-            return;
-        }
+        if (!CharmHelper.charmBlazingEmbraceEquipped(player)) return;
+
 
         if (!player.isOnFire()) {
 
             float duration = 410;
 
             //battleFury combo
-            if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BATTLE_FURY) ||
-                    trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BATTLE_FURY)) {
+            if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationBlazingEmbraceAndBattleFuryEnabled(player)) {
 
                 duration *= ((((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20);
 
@@ -201,16 +183,11 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BATTLE_FURY) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BATTLE_FURY))) {
+        if (!CharmHelper.charmBattleFuryEquipped(player)) return amount;
 
-            return amount * (1 + 2 * (((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20);
 
-        }
-
-        return amount;
+        return amount * (1 + 2 * (((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20);
 
     }
 
@@ -220,12 +197,9 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ECHOING_WRATH) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_ECHOING_WRATH))) {
-            return;
-        }
+        if (!CharmHelper.charmEchoingWrathEquipped(player)) return;
+
 
         Box box = Box.from(player.getPos()).expand(3);
 
@@ -236,16 +210,14 @@ public class PlayerMixin {
             float damageMultiplier = 1;
 
             //battleFury combo
-            if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BATTLE_FURY) ||
-                    trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BATTLE_FURY)) {
+            if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationEchoingWrathAndBattleFuryEnabled(player)) {
 
                 damageMultiplier += 2 * (((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20;
 
             }
 
             //blazingEmbrace combo
-            if (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BLAZING_EMBRACE) ||
-                    trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_BLAZING_EMBRACE)) {
+            if (CharmHelper.charmBlazingEmbraceEquipped(player) && CharmHelper.charmCombinationEchoingWrathAndBlazingEmbraceEnabled(player)) {
 
                 damageMultiplier *= 0.5F;
 
@@ -265,14 +237,9 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_MOUNTAINS_STRENGTH) ||
-                trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_MOUNTAINS_STRENGTH))) {
+        if (!CharmHelper.charmMountainsStrengthEquipped(player)) return amount;
 
-            return amount;
-
-        }
 
         return (float) (amount + 0.25 * amount);
 
@@ -284,13 +251,11 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ENCHANTED_WHISPERS) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_ENCHANTED_WHISPERS)) ||
-                        player.experienceLevel <= 1) {
-            return;
-        }
+        if (!CharmHelper.charmEnchantedWhispersEquipped(player)) return;
+
+
+        if (player.experienceLevel <= 1) return;
 
         Random random = Random.create();
 
@@ -310,12 +275,9 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ARROW_DANCE) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_ARROW_DANCE))) {
-            return;
-        }
+        if (!CharmHelper.charmArrowDanceEquipped(player)) return;
+
 
         cir.setReturnValue(false);
 
@@ -327,13 +289,11 @@ public class PlayerMixin {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(player);
 
-        if (trinket.isEmpty() || (!trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_CLIMBERS_PATH) &&
-                !trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_CLIMBERS_PATH)) ||
-                !player.isSprinting()) {
-            return;
-        }
+        if (!CharmHelper.charmClimbersPathEquipped(player)) return;
+
+
+        if (!player.isSprinting()) return;
 
         player.addExhaustion(0.05F);
 
@@ -353,7 +313,7 @@ public class PlayerMixin {
             return pickupDelay;
         }
 
-        return 80;
+        return 120;
 
     }
 

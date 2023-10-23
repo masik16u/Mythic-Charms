@@ -57,15 +57,18 @@ public class ExperienceBottleEntityMixin {
             if (!items.equals(recipe.inputSet)) continue;
 
             entities.forEach(entity -> entity.getStack().decrement(1));
-            ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(),
-                    key.getDefaultStack());
+            ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(), key.getDefaultStack());
+            result.setVelocity(0, 0.4, 0);
             world.spawnEntity(result);
 
-            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, player.getSoundCategory(), 40.0F, 1.0F);
-            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 10.0F, 1.0F);
+            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, player.getSoundCategory(), 40.0F, 1.0F);
+            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 10.0F, 1.0F);
 
             if (player.getServer() != null) {
-                player.getServer().getWorld(player.getWorld().getRegistryKey()).spawnParticles(ParticleTypes.WAX_OFF, bottle.getX(), bottle.getY(), bottle.getZ(), 50, 0.3, 0.5, 0.3, 3);
+                player.getServer().getWorld(player.getWorld().getRegistryKey()).spawnParticles(ParticleTypes.WAX_OFF,
+                        bottle.getX(), bottle.getY(), bottle.getZ(), 50, 0.3, 0.5, 0.3, 3);
             }
         }
 
@@ -73,8 +76,11 @@ public class ExperienceBottleEntityMixin {
 
     @Unique
     private boolean checkResonanceTable(BlockPos bottlePos, World world) {
-        Block oneDown = world.getBlockState(bottlePos.down()).getBlock();
-        Block twoDown = world.getBlockState(bottlePos.down(2)).getBlock();
-        return oneDown.equals(ModBlocks.RESONANCE_TABLE) && twoDown.equals(Blocks.LAPIS_BLOCK);
+        for (BlockPos pos : BlockPos.iterate(new BlockPos(-1, -1, -1), new BlockPos(1, 1, 1))) {
+            Block oneDown = world.getBlockState(bottlePos.add(pos)).getBlock();
+            Block twoDown = world.getBlockState(bottlePos.add(pos).down(1)).getBlock();
+            if (oneDown.equals(ModBlocks.RESONANCE_TABLE) && twoDown.equals(Blocks.LAPIS_BLOCK)) return true;
+        }
+        return false;
     }
 }
