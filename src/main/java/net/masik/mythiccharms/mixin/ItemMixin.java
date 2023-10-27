@@ -2,6 +2,7 @@ package net.masik.mythiccharms.mixin;
 
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
+import net.fabricmc.loader.api.FabricLoader;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
@@ -49,6 +50,7 @@ public class ItemMixin {
 
         context.getStack().decrement(1);
         player.swingHand(context.getHand());
+        MythicCharms.LOGGER.info(String.valueOf(FabricLoader.getInstance().getGameDir()));
     }
 
 }

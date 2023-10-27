@@ -73,7 +73,7 @@ public class ModItems {
                     "item.mythic_charms.echoing_wrath.tooltip1", "item.mythic_charms.echoing_wrath.tooltip2"), true));
     public static final Item FRAGILE_CHARM_OF_ENCHANTED_WHISPERS = registerItem("fragile_charm_of_enchanted_whispers",
             new TooltipItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE), List.of("item.mythic_charms.enchanted_whispers.tooltip0",
-                    "item.mythic_charms.enchanted_whispers.tooltip1"), true));
+                    "item.mythic_charms.enchanted_whispers.tooltip1", "item.mythic_charms.enchanted_whispers.tooltip2"), true));
     public static final Item FRAGILE_CHARM_OF_ARROW_DANCE = registerItem("fragile_charm_of_arrow_dance",
             new TooltipItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE), List.of("item.mythic_charms.arrow_dance.tooltip0",
                     "item.mythic_charms.arrow_dance.tooltip1"), true));
@@ -139,7 +139,7 @@ public class ModItems {
                     "item.mythic_charms.echoing_wrath.tooltip1", "item.mythic_charms.echoing_wrath.tooltip2"), true));
     public static final Item UNBREAKABLE_CHARM_OF_ENCHANTED_WHISPERS = registerItem("unbreakable_charm_of_enchanted_whispers",
             new TooltipItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).fireproof(), List.of("item.mythic_charms.enchanted_whispers.tooltip0",
-                    "item.mythic_charms.enchanted_whispers.tooltip1"), true));
+                    "item.mythic_charms.enchanted_whispers.tooltip1", "item.mythic_charms.enchanted_whispers.tooltip2"), true));
     public static final Item UNBREAKABLE_CHARM_OF_ARROW_DANCE = registerItem("unbreakable_charm_of_arrow_dance",
             new TooltipItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).fireproof(), List.of("item.mythic_charms.arrow_dance.tooltip0",
                     "item.mythic_charms.arrow_dance.tooltip1"), true));

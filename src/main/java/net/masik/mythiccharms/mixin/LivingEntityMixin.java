@@ -29,6 +29,7 @@ public class LivingEntityMixin {
 
         float high = 0.6F;
 
+        //featheredGrace combo
         if (CharmHelper.charmFeatheredGraceEquipped(entity) &&
                 CharmHelper.charmCombinationFeatheredGraceAndHighBoundsEnabled(entity)) high += 0.05F;
 
@@ -65,7 +66,9 @@ public class LivingEntityMixin {
 
         float height = 1.1F;
 
-        if (CharmHelper.charmHighBoundsEquipped(entity)) height += 0.5F;
+        //highBounds combo
+        if (CharmHelper.charmHighBoundsEquipped(entity) &&
+                CharmHelper.charmCombinationClimbersPathAndHighBoundsEnabled(entity)) height += 0.5F;
 
         cir.setReturnValue(height);
 
