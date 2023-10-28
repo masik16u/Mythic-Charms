@@ -2,12 +2,8 @@ package net.masik.mythiccharms.mixin;
 
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
-import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
-import net.masik.mythiccharms.recipe.CharmRecipe;
-import net.masik.mythiccharms.recipe.ModRecipes;
-import net.masik.mythiccharms.recipe.NewModRecipes;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -17,10 +13,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ExperienceBottleEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.RecipeEntry;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
@@ -40,6 +36,7 @@ import java.util.stream.Collectors;
 @Mixin(ExperienceBottleEntity.class)
 public class ExperienceBottleEntityMixin {
 
+    @SuppressWarnings("unchecked")
     @Inject(method = "onCollision", at = @At("RETURN"))
     private void onCollision(HitResult hitResult, CallbackInfo ci) {
 
@@ -55,57 +52,36 @@ public class ExperienceBottleEntityMixin {
         if (!checkResonanceTable(bottle.getBlockPos(), world)) return;
 
         Box box = Box.from(bottle.getPos()).expand(1);
-        List<ItemEntity> entities = bottle.getWorld().getEntitiesByType(EntityType.ITEM, box, item -> true);
-        Set<Item> items = entities.stream().map(entity -> entity.getStack().getItem()).collect(Collectors.toSet());
+        List<ItemEntity> entities = world.getEntitiesByType(EntityType.ITEM, box, item -> true);
+        Set<ItemStack> stacks = entities.stream().map(ItemEntity::getStack).collect(Collectors.toSet());
+        SimpleInventory inventory = new SimpleInventory(stacks.toArray(stacks.toArray(new ItemStack[0])));
 
-        SimpleInventory inv = new SimpleInventory(items.size());
-        for (Item item: items) {
-            inv.addStack(item.getDefaultStack());
-            MythicCharms.LOGGER.info(String.valueOf(inv));
-        }
-
-        MythicCharms.LOGGER.info(String.valueOf(inv.getStack(0)));
-        MythicCharms.LOGGER.info(String.valueOf(player.getWorld().getRecipeManager().getFirstMatch(ResonanceRecipe.Type.INSTANCE, inv, player.getWorld())));
-
-        Optional<RecipeEntry<ResonanceRecipe>> recipeEntry = player.getWorld().getRecipeManager().getFirstMatch(ResonanceRecipe.Type.INSTANCE, inv, player.getWorld());
-
-        if (recipeEntry.isPresent()) {
-            entities.forEach(entity -> entity.getStack().decrement(1));
-            ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(), recipeEntry.get().value().getResult(null));
+        // Runs only if all detected item entities match a recipe
+        world.getRecipeManager().getFirstMatch(
+                ResonanceRecipe.Type.INSTANCE,
+                inventory,
+                world
+        ).ifPresent(it -> {
+            ResonanceRecipe recipe = ((RecipeEntry<ResonanceRecipe>) it).value();
+            ItemEntity result = new ItemEntity(world,
+                    bottle.getX(),
+                    bottle.getY(),
+                    bottle.getZ(),
+                    recipe.getResult(null));
             result.setVelocity(0, 0.4, 0);
             world.spawnEntity(result);
 
-            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
+            world.playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, player.getSoundCategory(), 40.0F, 1.0F);
-            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
+            world.playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 10.0F, 1.0F);
-
-            if (player.getServer() != null) {
-                player.getServer().getWorld(player.getWorld().getRegistryKey()).spawnParticles(ParticleTypes.WAX_OFF,
+            if (world instanceof ServerWorld serverWorld) {
+                serverWorld.spawnParticles(ParticleTypes.WAX_OFF,
                         bottle.getX(), bottle.getY(), bottle.getZ(), 50, 0.3, 0.5, 0.3, 3);
             }
-        }
-
-        for (Item key : ModRecipes.RESONANCE_TABLE.keySet()) {
-            CharmRecipe recipe = ModRecipes.RESONANCE_TABLE.get(key);
-            if (!items.equals(recipe.inputSet)) continue;
 
             entities.forEach(entity -> entity.getStack().decrement(1));
-            ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(), key.getDefaultStack());
-            result.setVelocity(0, 0.4, 0);
-            world.spawnEntity(result);
-
-            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
-                    SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, player.getSoundCategory(), 40.0F, 1.0F);
-            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
-                    SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 10.0F, 1.0F);
-
-            if (player.getServer() != null) {
-                player.getServer().getWorld(player.getWorld().getRegistryKey()).spawnParticles(ParticleTypes.WAX_OFF,
-                        bottle.getX(), bottle.getY(), bottle.getZ(), 50, 0.3, 0.5, 0.3, 3);
-            }
-        }
-
+        });
     }
 
     @Unique

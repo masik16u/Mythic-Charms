@@ -1,0 +1,17 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "resonance_infusing": {
+    "ingredients": [
+      {
+        "item": "mythic_charms:fragile_charm_of_weightless_flow"
+      },
+      {
+        "item": "minecraft:netherite_ingot"
+      },
+      {
+        "item": "mythic_charms:deepslate_fragment"
+      }
+    ],
+    "result": "mythic_charms:unbreakable_charm_of_weightless_flow"
+  }
+}

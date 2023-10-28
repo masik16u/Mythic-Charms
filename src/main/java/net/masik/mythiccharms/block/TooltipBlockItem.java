@@ -1,7 +1,6 @@
 package net.masik.mythiccharms.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
@@ -14,20 +13,20 @@ import java.util.List;
 
 public class TooltipBlockItem extends BlockItem {
 
-    private List<String> tooltipKeys;
+    private final List<String> tooltipKeys;
 
     public TooltipBlockItem(Block block, Settings settings, List<String> tooltips) {
 
         super(block, settings);
 
-        tooltipKeys = tooltips;
+        this.tooltipKeys = tooltips;
 
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if(Screen.hasShiftDown()) {
-            for (String tooltipKey: tooltipKeys) {
+        if (true) {
+            for (String tooltipKey : this.tooltipKeys) {
                 tooltip.add(Text.translatable(tooltipKey).formatted(Formatting.DARK_PURPLE).formatted(Formatting.ITALIC));
             }
         } else {

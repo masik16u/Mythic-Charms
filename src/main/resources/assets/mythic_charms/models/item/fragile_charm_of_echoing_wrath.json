@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "mythic_charms:item/fragile_charm_of_echoing_wrath"
-	}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mythic_charms:item/fragile_charm_of_echoing_wrath"
+  }
 }

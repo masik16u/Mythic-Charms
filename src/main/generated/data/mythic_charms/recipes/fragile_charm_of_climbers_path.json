@@ -1,0 +1,23 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "resonance_infusing": {
+    "ingredients": [
+      {
+        "item": "mythic_charms:fragile_charm_base"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      },
+      {
+        "item": "minecraft:rabbit_foot"
+      },
+      {
+        "item": "minecraft:slime_ball"
+      },
+      {
+        "item": "mythic_charms:glowstone_nugget"
+      }
+    ],
+    "result": "mythic_charms:fragile_charm_of_climbers_path"
+  }
+}

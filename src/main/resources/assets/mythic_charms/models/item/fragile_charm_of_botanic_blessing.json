@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "mythic_charms:item/fragile_charm_of_botanic_blessing"
-	}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mythic_charms:item/fragile_charm_of_botanic_blessing"
+  }
 }

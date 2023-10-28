@@ -1,0 +1,23 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "resonance_infusing": {
+    "ingredients": [
+      {
+        "item": "mythic_charms:fragile_charm_base"
+      },
+      {
+        "item": "minecraft:ender_eye"
+      },
+      {
+        "item": "minecraft:glistering_melon_slice"
+      },
+      {
+        "item": "minecraft:raw_gold"
+      },
+      {
+        "item": "mythic_charms:glowstone_nugget"
+      }
+    ],
+    "result": "mythic_charms:fragile_charm_of_barters_pact"
+  }
+}

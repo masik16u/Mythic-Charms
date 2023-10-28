@@ -1,0 +1,202 @@
+apply plugin: "maven-publish"
+apply plugin: "fabric-loom"
+apply plugin: "com.replaymod.preprocess"
+apply plugin: "me.fallenbreath.yamlang"
+//apply plugin: "me.modmuss50.mod-publish-plugin"
+
+int mcVersion = project.mcVersion
+
+preprocess {
+    tabIndentation = false
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "mythic_charms" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs += [
+                    'src/main/generated'
+            ]
+        }
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Curseforge"
+                url = "https://www.cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+    maven {
+        name = "Gradle Plugin Portal"
+        url = "https://plugins.gradle.org/m2/"
+    }
+	maven {
+		name = "TerraformersMC"
+		url "https://maven.terraformersmc.com/releases/"
+	}
+    maven {
+        name = "Ladysnake Libs"
+        url = 'https://maven.ladysnake.org/releases'
+    }
+    maven { url "https://maven.shedaniel.me" }
+    maven { url 'https://maven.wispforest.io' }
+}
+
+// https://github.com/FabricMC/fabric-loader/issues/783
+configurations {
+    modRuntimeOnly.exclude group: "net.fabricmc", module: "fabric-loader"
+}
+
+dependencies {
+    // loom
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+    modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+    modApi "dev.emi:trinkets:${trinkets_version}"
+    modApi include("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}")
+    modApi include("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}")
+
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
+    modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
+    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+
+    annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+    clientAnnotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+
+    // Uncomment for cooler mixins
+// 	include api(annotationProcessor("com.github.LlamaLad7.mixinextras:mixinextras-fabric:${project.mixin_extras_version}"))
+// 	include api(clientAnnotationProcessor("com.github.LlamaLad7.mixinextras:mixinextras-fabric:${project.mixin_extras_version}"))
+}
+
+loom {
+    runConfigs.all {
+        // to make sure it generates all "Minecraft Client (:subproject_name)" applications
+        ideConfigGenerated = true
+        runDir "../../run"
+        vmArgs "-Dmixin.debug.export=true"
+    }
+}
+
+remapJar {
+    remapperIsolation = true
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+version = project.mod_version
+group = project.maven_group
+archivesBaseName = project.archives_base_name + "-" + project.mod_version + "+" + project.title_version
+
+// See https://youtrack.jetbrains.com/issue/IDEA-296490
+// if IDEA complains about "Cannot resolve resource filtering of MatchingCopyAction" and you want to know why
+processResources {
+    inputs.property "version", project.mod_version
+    inputs.property "id", project.mod_id
+    inputs.property "name", project.mod_name
+    inputs.property "minecraft_dependency", project.minecraft_dependency
+
+    filesMatching("fabric.mod.json") {
+        def valueMap = [
+                "id"                  : project.mod_id,
+                "name"                : project.mod_name,
+                "version"             : project.mod_version,
+                "minecraft_dependency": project.minecraft_dependency,
+        ]
+        expand valueMap
+    }
+}
+
+yamlang {
+    targetSourceSets = [sourceSets.main]
+    inputDir = "assets/${project.mod_id}/lang"
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+	options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+}
+
+java {
+    withSourcesJar()
+}
+
+jar {
+    from(rootProject.file("LICENSE")) {
+        rename { "${it}_${project.archivesBaseName}" }
+    }
+}
+
+publishMods {
+    file = remapJar.archiveFile
+    version = "${project.mod_version}+${project.minecraft_version}"
+    displayName = "${project.mod_name} ${project.mod_version} for ${project.title_version}"
+    changelog = rootProject.file("CHANGELOG.md").text
+    type = ReleaseType.of(project.release_type)
+    modLoaders.add("fabric")
+    additionalFiles.from(sourcesJar.archiveFile)
+
+    curseforge {
+        projectId = project.project_id
+        projectSlug = "mythic-charms"
+        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+        for (String version : project.release_versions.split(" ")) {
+            minecraftVersions.add(version)
+        }
+
+        requires {
+            // TODO
+        }
+    }
+    modrinth {
+        projectId = "mythic-charms"
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        for (String version : project.release_versions.split(" ")) {
+            minecraftVersions.add(version)
+        }
+
+        requires {
+            // TODO
+        }
+    }
+}
+

@@ -1,3 +1,4 @@
 accessWidener v2 named
 
 accessible field net/minecraft/loot/LootTable pools Ljava/util/List;
+accessible field net/minecraft/recipe/RecipeCodecs CRAFTING_RESULT_ITEM Lcom/mojang/serialization/Codec;

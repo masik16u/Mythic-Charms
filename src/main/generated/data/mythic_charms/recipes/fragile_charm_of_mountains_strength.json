@@ -1,0 +1,23 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "resonance_infusing": {
+    "ingredients": [
+      {
+        "item": "mythic_charms:fragile_charm_base"
+      },
+      {
+        "item": "minecraft:glistering_melon_slice"
+      },
+      {
+        "item": "minecraft:nautilus_shell"
+      },
+      {
+        "item": "minecraft:quartz"
+      },
+      {
+        "item": "mythic_charms:glowstone_nugget"
+      }
+    ],
+    "result": "mythic_charms:fragile_charm_of_mountains_strength"
+  }
+}

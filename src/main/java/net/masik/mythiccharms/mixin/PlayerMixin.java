@@ -1,14 +1,13 @@
 package net.masik.mythiccharms.mixin;
 
-import dev.emi.trinkets.api.*;
-import dev.emi.trinkets.api.event.TrinketDropCallback;
+import dev.emi.trinkets.api.TrinketComponent;
+import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -39,8 +38,8 @@ import java.util.Optional;
 public class PlayerMixin {
 
     //fragile charms
-    @Inject(method = "dropInventory",  at = @At("HEAD"))
-    private void destroyFragileCharms(CallbackInfo info){
+    @Inject(method = "dropInventory", at = @At("HEAD"))
+    private void destroyFragileCharms(CallbackInfo info) {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
@@ -135,7 +134,8 @@ public class PlayerMixin {
         float speed = 0.035F;
 
         //highBounds combo
-        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(player)) speed += 0.01F;
+        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(player))
+            speed += 0.01F;
 
         //battleFury combo
         if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndBattleFuryEnabled(player)) {

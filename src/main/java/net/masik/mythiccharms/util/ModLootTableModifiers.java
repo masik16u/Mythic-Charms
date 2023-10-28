@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 public class ModLootTableModifiers {
 
     private static Identifier buildInjectionRoute(Identifier id) {
-        return new Identifier(MythicCharms.MOD_ID, "injections/" + id.getNamespace() + "/" + id.getPath());
+        return MythicCharms.id("injections/" + id.getNamespace() + "/" + id.getPath());
     }
 
     public static void modifyLootTables() {
@@ -24,7 +24,7 @@ public class ModLootTableModifiers {
     }
 
     private static void supplyPools(LootTable.Builder tableBuilder, LootPool[] pools) {
-        for (LootPool pool: pools) {
+        for (LootPool pool : pools) {
             tableBuilder.pool(pool);
         }
     }

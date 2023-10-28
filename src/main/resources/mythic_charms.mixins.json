@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "package": "net.masik.mythiccharms.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BlockMixin",
+    "EndermanMixin",
+    "EntityMixin",
+    "ExperienceBottleEntityMixin",
+    "ExperienceOrbEntityMixin",
+    "FarmlandBlockMixin",
+    "ItemEntityMixin",
+    "ItemMixin",
+    "LivingEntityMixin",
+    "PhantomEntityMixin",
+    "PhantomSpawnerMixin",
+    "PiglinBrainMixin",
+    "PlayerMixin",
+    "ServerPlayerMixin",
+    "TemptGoalMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

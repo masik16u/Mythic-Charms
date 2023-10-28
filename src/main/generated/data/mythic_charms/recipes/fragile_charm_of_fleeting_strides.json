@@ -1,0 +1,23 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "resonance_infusing": {
+    "ingredients": [
+      {
+        "item": "mythic_charms:fragile_charm_base"
+      },
+      {
+        "item": "minecraft:blaze_powder"
+      },
+      {
+        "item": "minecraft:rabbit_hide"
+      },
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "mythic_charms:glowstone_nugget"
+      }
+    ],
+    "result": "mythic_charms:fragile_charm_of_fleeting_strides"
+  }
+}

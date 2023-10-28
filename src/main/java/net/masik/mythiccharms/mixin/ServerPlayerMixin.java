@@ -41,18 +41,19 @@ public abstract class ServerPlayerMixin {
         if (!player.isOnGround() && !player.isClimbing() && !player.isInsideWaterOrBubbleColumn() &&
                 !player.isFallFlying() && player.getVelocity().y < 0) {
 
-            ticksInAir += 1;
+            this.ticksInAir += 1;
 
         } else {
 
-            ticksInAir = 0;
+            this.ticksInAir = 0;
 
         }
 
         int ticksInAirCap = 40;
 
         //highBounds combo
-        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFeatheredGraceAndHighBoundsEnabled(player)) ticksInAirCap = 60;
+        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFeatheredGraceAndHighBoundsEnabled(player))
+            ticksInAirCap = 60;
 
         //weightlessFlow combo
         if (player.isSneaking() && (!CharmHelper.charmCombinationWeightlessFlowAndFeatheredGraceEnabled(player) ||
@@ -62,7 +63,7 @@ public abstract class ServerPlayerMixin {
         }
 
 
-        if (ticksInAir >= 8 && ticksInAir < ticksInAirCap) {
+        if (this.ticksInAir >= 8 && this.ticksInAir < ticksInAirCap) {
 
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 4, 0,
                     false, false, false));
@@ -97,7 +98,7 @@ public abstract class ServerPlayerMixin {
 
     //botanicBlessing
     @Inject(method = "playerTick", at = @At("RETURN"))
-    private void botanicBlessingEffect(CallbackInfo info){
+    private void botanicBlessingEffect(CallbackInfo info) {
 
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
 
@@ -107,9 +108,9 @@ public abstract class ServerPlayerMixin {
         if (!CharmHelper.charmBotanicBlessingEquipped(player)) return;
 
 
-        if (cropGrowTimer > 20) {
+        if (this.cropGrowTimer > 20) {
 
-            cropGrowTimer = 0;
+            this.cropGrowTimer = 0;
 
             for (BlockPos pos : BlockPos.iterate(new BlockPos(-2, 0, -2), new BlockPos(2, 1, 2))) {
 
@@ -135,7 +136,7 @@ public abstract class ServerPlayerMixin {
 
         }
 
-        cropGrowTimer++;
+        this.cropGrowTimer++;
 
     }
 
