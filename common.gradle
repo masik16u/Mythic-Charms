@@ -1,8 +1,9 @@
+import me.modmuss50.mpp.ReleaseType
 apply plugin: "maven-publish"
 apply plugin: "fabric-loom"
 apply plugin: "com.replaymod.preprocess"
 apply plugin: "me.fallenbreath.yamlang"
-//apply plugin: "me.modmuss50.mod-publish-plugin"
+apply plugin: "me.modmuss50.mod-publish-plugin"
 
 int mcVersion = project.mcVersion
 
@@ -83,7 +84,7 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
 
     modApi "dev.emi:trinkets:${trinkets_version}"
@@ -103,6 +104,21 @@ dependencies {
 }
 
 loom {
+    accessWidenerPath = getRootProject().file("src/main/resources/mythiccharms.accesswidener")
+
+    runs {
+        // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
+        datagen {
+            inherit server
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=${project.mod_id}"
+
+            runDir "build/datagen"
+        }
+    }
+
     runConfigs.all {
         // to make sure it generates all "Minecraft Client (:subproject_name)" applications
         ideConfigGenerated = true

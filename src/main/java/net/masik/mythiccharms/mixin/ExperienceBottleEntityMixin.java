@@ -39,7 +39,6 @@ public class ExperienceBottleEntityMixin {
     @SuppressWarnings("unchecked")
     @Inject(method = "onCollision", at = @At("RETURN"))
     private void onCollision(HitResult hitResult, CallbackInfo ci) {
-
         ThrownItemEntity bottle = (ThrownItemEntity) (Object) this;
 
         PlayerEntity player = bottle.getWorld().getClosestPlayer(bottle, 10);
@@ -62,7 +61,7 @@ public class ExperienceBottleEntityMixin {
                 inventory,
                 world
         ).ifPresent(it -> {
-            ResonanceRecipe recipe = ((RecipeEntry<ResonanceRecipe>) it).value();
+            ResonanceRecipe recipe = it.value();
             ItemEntity result = new ItemEntity(world,
                     bottle.getX(),
                     bottle.getY(),

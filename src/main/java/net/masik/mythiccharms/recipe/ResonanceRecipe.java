@@ -1,5 +1,6 @@
 package net.masik.mythiccharms.recipe;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
@@ -10,6 +11,7 @@ import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.util.SafeDefaultedList;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
@@ -26,8 +28,9 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Consumer;
 
-public class ResonanceRecipe implements Recipe<StackSet>, RecipeJsonProvider {
+public class ResonanceRecipe implements Recipe<SimpleInventory>, RecipeJsonProvider {
     public final Item result;
     public final Set<Item> ingredients;
     public final List<ItemStack> stacks;
@@ -50,15 +53,26 @@ public class ResonanceRecipe implements Recipe<StackSet>, RecipeJsonProvider {
     }
 
     @Override
-    public boolean matches(StackSet items, World world) {
+    public boolean matches(SimpleInventory items, World world) {
         if (world.isClient()) {
             return false;
         }
-        return items.matches(this.stacks);
+        RecipeMatcher recipeMatcher = new RecipeMatcher();
+        int i = 0;
+
+        for (int j = 0; j < items.size(); ++j) {
+            ItemStack itemStack = items.getStack(j);
+            if (!itemStack.isEmpty()) {
+                ++i;
+                recipeMatcher.addInput(itemStack, 1);
+            }
+        }
+
+        return i == this.ingredients.size() && recipeMatcher.match(this, null);
     }
 
     @Override
-    public ItemStack craft(StackSet items, DynamicRegistryManager registryManager) {
+    public ItemStack craft(SimpleInventory items, DynamicRegistryManager registryManager) {
         return this.result.getDefaultStack();
     }
 
@@ -94,7 +108,10 @@ public class ResonanceRecipe implements Recipe<StackSet>, RecipeJsonProvider {
     @Override
     public void serialize(JsonObject json) {
         JsonOps jsonOps = JsonOps.INSTANCE;
-        json.add(Serializer.ID, Serializer.CODEC.encodeStart(jsonOps, this).getOrThrow(false, error -> MythicCharms.LOGGER.error("Failed to serialize recipe for %s".formatted(this.result), error)));
+        Consumer<String> logger = error -> MythicCharms.LOGGER.error("Failed to serialize ingredients %s".formatted(this.result), error);
+
+        json.add("ingredients", Serializer.validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 5).encodeStart(jsonOps, getIngredients()).getOrThrow(false, logger));
+        json.add("result", RecipeCodecs.CRAFTING_RESULT_ITEM.encodeStart(jsonOps, this.result).getOrThrow(false, logger));
     }
 
     @Override
@@ -114,7 +131,7 @@ public class ResonanceRecipe implements Recipe<StackSet>, RecipeJsonProvider {
     }
 
     public static class Type implements RecipeType<ResonanceRecipe> {
-        public static final RecipeType INSTANCE = new Type();
+        public static final RecipeType<ResonanceRecipe> INSTANCE = new Type();
         public static final String ID = "resonance_infusing";
     }
 

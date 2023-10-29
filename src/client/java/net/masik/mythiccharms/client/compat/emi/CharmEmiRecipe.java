@@ -11,6 +11,7 @@ import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
+import net.masik.mythiccharms.util.SafeDefaultedList;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
@@ -20,9 +21,8 @@ import java.util.List;
 
 public class CharmEmiRecipe implements EmiRecipe {
 
-    public static final EmiTexture RESONANCE_RECIPE_TREE = new EmiTexture(new Identifier(MythicCharms.MOD_ID, "textures/gui/resonance_recipe_texture.png"), 0, 0, 16, 16, 16, 16, 16, 16);
-    public static final EmiRecipeCategory CATEGORY = new EmiRecipeCategory(new Identifier(MythicCharms.MOD_ID, "resonance_table"),
-            MythicCharmsEmiPlugin.RESONANCE_TABLE, RESONANCE_RECIPE_TREE);
+    public static final EmiTexture RESONANCE_RECIPE_TREE = new EmiTexture(MythicCharms.id("textures/gui/resonance_recipe_texture.png"), 0, 0, 16, 16, 16, 16, 16, 16);
+    public static final EmiRecipeCategory CATEGORY = new EmiRecipeCategory(MythicCharms.id(ResonanceRecipe.Type.ID), MythicCharmsEmiPlugin.RESONANCE_TABLE, RESONANCE_RECIPE_TREE);
     public static final EmiTexture ARROW = new EmiTexture(new Identifier(MythicCharms.MOD_ID, "textures/gui/arrow.png"), 0, 0, 17, 15, 17, 15, 17, 15);
     public static final EmiIngredient EXPERIENCE_BOTTLE = EmiStack.of(Items.EXPERIENCE_BOTTLE);
     public static final EmiIngredient RESONANCE_RING = EmiStack.of(ModItems.RESONANCE_RING);
@@ -30,9 +30,9 @@ public class CharmEmiRecipe implements EmiRecipe {
     private final List<? extends EmiIngredient> inputs;
     private final List<EmiStack> output;
 
-    public CharmEmiRecipe(Identifier id, ResonanceRecipe recipe) {
-        this.id = id;
-        this.inputs = recipe.stacks.stream().map(EmiStack::of).toList();
+    public CharmEmiRecipe(ResonanceRecipe recipe) {
+        this.id = recipe.id();
+        this.inputs = new SafeDefaultedList<>(recipe.stacks.stream().map(EmiStack::of).toList(), EmiStack.EMPTY);
         this.output = Collections.singletonList(EmiStack.of(recipe.result));
     }
 

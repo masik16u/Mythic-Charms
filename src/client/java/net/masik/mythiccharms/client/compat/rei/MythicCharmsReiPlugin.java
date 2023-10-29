@@ -8,9 +8,11 @@ import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.recipe.ModRecipes;
+import net.masik.mythiccharms.recipe.ResonanceRecipe;
+import net.minecraft.recipe.RecipeEntry;
 
 public class MythicCharmsReiPlugin implements REIClientPlugin {
-    public static final CategoryIdentifier<ResonanceTableDisplay> RESONANCE_INFUSING = CategoryIdentifier.of(MythicCharms.MOD_ID, "resonance");
+    public static final CategoryIdentifier<ResonanceTableDisplay> RESONANCE_INFUSING = CategoryIdentifier.of(MythicCharms.MOD_ID, ResonanceRecipe.Type.ID);
 
     @Override
     public void registerCategories(CategoryRegistry registry) {
@@ -21,6 +23,8 @@ public class MythicCharmsReiPlugin implements REIClientPlugin {
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
-        ModRecipes.RESONANCE_TABLE.forEach((item, recipe) -> registry.add(new ResonanceTableDisplay(recipe)));
+        for (RecipeEntry<ResonanceRecipe> recipe : registry.getRecipeManager().listAllOfType(ResonanceRecipe.Type.INSTANCE)) {
+            registry.add(new ResonanceTableDisplay(recipe.value()));
+        }
     }
 }
