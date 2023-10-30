@@ -59,17 +59,18 @@ item:
     drowned_freedom:
       tooltip: |
         Grants the wearer the ability to move
-        underwater as if on the surface, but not
-        the ability to breathe underwater 
+        underwater as if on the surface, but 
+        adds additional exhaustion
     earths_order:
       tooltip: |
         Grants the wearer the ability to break any
         breakable block using only their bare hand 
     echoing_wrath:
       tooltip: |
-        Inflicts damage upon nearby mobs, when the
-        wearer is harmed, at half the intensity, up
-        to a maximum of three hearts of damage 
+        Damages nearby mobs, when the wearer is 
+        harmed, at half the intensity, up to a 
+        maximum of three hearts of damage, but the 
+        wearer receive slightly increased damage
     enchanted_whispers:
       tooltip: |
         Makes enchantments random every time the
@@ -126,11 +127,12 @@ item:
       tooltip: |
         Grants the wearer an immunity to knockback
         or being pushed, but they receive slightly
-        increased damage 
+        increased damage
     natures_call:
       tooltip: |
         Draws animals around the wearer, as if they
-        were holding the creatures favorite food 
+        were holding the creatures favorite food, 
+        while the wearer is not sneaking
     nights_guardian:
       tooltip: |
         Prevents phantoms from spawning only for
@@ -152,8 +154,8 @@ item:
         to work 
     safe_territory:
       tooltip: |
-        Creepers around the wearer will no longer
-        break blocks 
+        Creepers in three-block radius around the 
+        wearer will no longer break blocks
     unbreakable_charm_of_arrow_dance: Unbreakable Charm of Arrow Dance
     unbreakable_charm_of_barters_pact: Unbreakable Charm of Barters Pact
     unbreakable_charm_of_battle_fury: Unbreakable Charm of Battle Fury
@@ -179,7 +181,8 @@ item:
       tooltip: |
         Preserves the wearers gravity, allowing
         them to stand in the air or leap into the
-        sky, while the wearer is not sneaking 
+        sky, while the wearer is not sneaking, but 
+        adds additional exhaustion
 tag:
   item:
     mythic_charms:

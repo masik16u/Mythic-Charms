@@ -1,13 +1,17 @@
 package net.masik.mythiccharms.mixin;
 
+import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,11 +20,18 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Mixin(ExperienceOrbEntity.class)
 public class ExperienceOrbEntityMixin {
 
     @Inject(method = "spawn", at = @At("RETURN"))
     private static void spawnExperienceNugget(ServerWorld world, Vec3d pos, int amount, CallbackInfo ci) {
+
+        Box box = Box.from(pos).expand(3);
+        List<Entity> entities = new ArrayList<>(world.getEntitiesByClass(LivingEntity.class, box, orb -> true));
+        if (entities.size() > MythicCharms.CONFIG.experienceNuggetMobCap()) return;
 
         if (checkResonanceTable(BlockPos.ofFloored(pos), world)) return;
 

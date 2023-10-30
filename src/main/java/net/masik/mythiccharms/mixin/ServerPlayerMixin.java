@@ -70,6 +70,12 @@ public abstract class ServerPlayerMixin {
 
         }
 
+        if (this.ticksInAir >= 40 && this.ticksInAir < ticksInAirCap) {
+
+            player.addExhaustion(0.05F);
+
+        }
+
     }
 
     //collectorsGift
