@@ -20,7 +20,7 @@ public class ModItems {
     public static final Item BROKEN_CHARM = registerItem("broken_charm", new Item(new FabricItemSettings()));
     public static final Item FRAGILE_CHARM_BASE = registerItem("fragile_charm_base", new Item(new FabricItemSettings()));
     public static final Item DEEPSLATE_FRAGMENT = registerItem("deepslate_fragment", new Item(new FabricItemSettings()));
-    public static final Item EXPERIENCE_NUGGET = registerItem("experience_nugget", new Item(new FabricItemSettings()));
+    public static final Item EXPERIENCE_NUGGET = registerItem("experience_nugget", new ExperienceNuggetItem(new FabricItemSettings()));
     public static final Item GLOWSTONE_NUGGET = registerItem("glowstone_nugget", new Item(new FabricItemSettings()));
     public static final Map<Identifier, Item> FRAGILE_CHARMS = new LinkedHashMap<>();
     public static final Item FRAGILE_CHARM_OF_FEATHERED_GRACE = registerFragileCharm("fragile_charm_of_feathered_grace",
