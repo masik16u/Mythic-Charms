@@ -13,6 +13,7 @@ import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
 import net.masik.mythiccharms.util.SafeDefaultedList;
 import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
@@ -31,78 +32,42 @@ public class CharmEmiRecipe implements EmiRecipe {
     private final List<EmiStack> output;
 
     public CharmEmiRecipe(ResonanceRecipe recipe) {
-        this.id = recipe.id();
+        this.id = Registries.ITEM.getId(recipe.result);
         this.inputs = new SafeDefaultedList<>(recipe.stacks.stream().map(EmiStack::of).toList(), EmiStack.EMPTY);
         this.output = Collections.singletonList(EmiStack.of(recipe.result));
     }
 
-    /**
-     * @return The recipe category this recipe should be displayed under.
-     * This is used for grouping in the recipe screen, as well as category display in the recipe tree.
-     */
     @Override
     public EmiRecipeCategory getCategory() {
         return CATEGORY;
     }
 
-    /**
-     * @return The unique id of the recipe, or null. If null, the recipe cannot be serialized.
-     */
     @Override
     public @Nullable Identifier getId() {
         return this.id;
     }
 
-    /**
-     * @return A list of ingredients required for the recipe.
-     * Inputs will consider this recipe a use when exploring recipes.
-     */
     @SuppressWarnings("unchecked")
     @Override
     public List<EmiIngredient> getInputs() {
         return (List<EmiIngredient>) this.inputs;
     }
 
-    /**
-     * @return A list of stacks that are created after a craft.
-     * Outputs will consider this recipe a source when exploring recipes.
-     */
     @Override
     public List<EmiStack> getOutputs() {
         return this.output;
     }
 
-    /**
-     * @return The width taken up by the recipe's widgets
-     * EMI will grow to accomodate requested width.
-     * To fit within the default width, recipes should request a width of 134.
-     * If a recipe does not support the recipe tree or recipe filling, EMI
-     * will not need to add buttons, and it will have space for a width of 160.
-     */
     @Override
     public int getDisplayWidth() {
         return 120;
     }
 
-    /**
-     * @return The maximum height taken up by the recipe's widgets.
-     * Vertical screen space is capped, however, and EMI may opt to provide less vertical space.
-     */
     @Override
     public int getDisplayHeight() {
         return 90;
     }
 
-    /**
-     * Called to add widgets that display the recipe.
-     * Can be used in several places, including the main recipe screen, and tooltips.
-     * It is worth noting that EMI cannot grow vertically, so recipes with large heights
-     * may be provided less space than requested if they span more than the entire vertical
-     * space available in the recipe scren.
-     * In the case of very large heights, recipes should respect {@link WidgetHolder#getHeight()}.
-     *
-     * @param widgets
-     */
     @SuppressWarnings("UnstableApiUsage")
     @Override
     public void addWidgets(WidgetHolder widgets) {

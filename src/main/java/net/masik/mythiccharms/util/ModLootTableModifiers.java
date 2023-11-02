@@ -15,18 +15,10 @@ public class ModLootTableModifiers {
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             LootTable lootTable = lootManager.getLootTable(buildInjectionRoute(id));
-            if (lootTable != LootTable.EMPTY) {
-                LootPool[] pools = lootTable.pools.toArray(new LootPool[0]);
-
-                supplyPools(tableBuilder, pools);
+            if (lootTable == LootTable.EMPTY) return;
+            for (LootPool pool : lootTable.pools) {
+                tableBuilder.pool(pool);
             }
         });
     }
-
-    private static void supplyPools(LootTable.Builder tableBuilder, LootPool[] pools) {
-        for (LootPool pool : pools) {
-            tableBuilder.pool(pool);
-        }
-    }
-
 }

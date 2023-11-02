@@ -1,4 +1,5 @@
 import me.modmuss50.mpp.ReleaseType
+
 apply plugin: "maven-publish"
 apply plugin: "fabric-loom"
 apply plugin: "com.replaymod.preprocess"
@@ -61,10 +62,10 @@ repositories {
         name = "Gradle Plugin Portal"
         url = "https://plugins.gradle.org/m2/"
     }
-	maven {
-		name = "TerraformersMC"
-		url "https://maven.terraformersmc.com/releases/"
-	}
+    maven {
+        name = "TerraformersMC"
+        url "https://maven.terraformersmc.com/releases/"
+    }
     maven {
         name = "Ladysnake Libs"
         url = 'https://maven.ladysnake.org/releases'
@@ -95,8 +96,14 @@ dependencies {
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
     modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
 
-    annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
-    clientAnnotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+    // owo-lib 1.11.2 is not on the maven
+    annotationProcessor modImplementation(
+            mcVersion > 12001 ?
+                    "io.wispforest:owo-lib:${project.owo_version}" :
+                    "maven.modrinth:owo-lib:${project.owo_version}")
+
+    // Fix for 1.20.1 local runtime
+    implementation "blue.endless:jankson:1.2.2"
 
     // Uncomment for cooler mixins
 // 	include api(annotationProcessor("com.github.LlamaLad7.mixinextras:mixinextras-fabric:${project.mixin_extras_version}"))
@@ -104,7 +111,7 @@ dependencies {
 }
 
 loom {
-    accessWidenerPath = getRootProject().file("src/main/resources/mythiccharms.accesswidener")
+    accessWidenerPath = file("src/main/resources/mythiccharms.accesswidener")
 
     runs {
         // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
@@ -169,7 +176,7 @@ tasks.withType(AbstractArchiveTask).configureEach {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = "UTF-8"
-	options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+    options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
 }
 
 java {
@@ -199,9 +206,11 @@ publishMods {
             minecraftVersions.add(version)
         }
 
-        requires {
-            // TODO
-        }
+        requires { slug = "fabric-api" }
+        requires { slug = "trinkets" }
+        requires { slug = "owo-lib" }
+        optional { slug = "emi" }
+        optional { slug = "rei" }
     }
     modrinth {
         projectId = "mythic-charms"
@@ -210,9 +219,11 @@ publishMods {
             minecraftVersions.add(version)
         }
 
-        requires {
-            // TODO
-        }
+        requires { slug = "fabric-api" }
+        requires { slug = "trinkets" }
+        requires { slug = "owo-lib" }
+        optional { slug = "emi" }
+        optional { slug = "roughly-enough-items" }
     }
 }
 

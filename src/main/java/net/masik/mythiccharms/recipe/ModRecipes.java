@@ -213,8 +213,8 @@ public class ModRecipes {
 
     public static void registerRecipes() {
         Registry.register(Registries.RECIPE_SERIALIZER,
-                MythicCharms.id(ResonanceRecipe.Serializer.ID),
-                ResonanceRecipe.Serializer.INSTANCE);
+                MythicCharms.id(ResonanceRecipeSerializer.ID),
+                ResonanceRecipeSerializer.INSTANCE);
         Registry.register(Registries.RECIPE_TYPE,
                 MythicCharms.id(ResonanceRecipe.Type.ID),
                 ResonanceRecipe.Type.INSTANCE);

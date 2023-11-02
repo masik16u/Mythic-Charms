@@ -1,36 +1,24 @@
 package net.masik.mythiccharms.recipe;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.JsonOps;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.util.SafeDefaultedList;
-import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Consumer;
+import java.util.*;
 
 public class ResonanceRecipe implements Recipe<SimpleInventory>, RecipeJsonProvider {
+    public final Identifier id;
     public final Item result;
     public final Set<Item> ingredients;
     public final List<ItemStack> stacks;
@@ -39,6 +27,7 @@ public class ResonanceRecipe implements Recipe<SimpleInventory>, RecipeJsonProvi
         this.result = result;
         this.ingredients = new LinkedHashSet<>(ingredients);
         this.stacks = new SafeDefaultedList<>(this.ingredients.stream().map(ItemStack::new).toList(), ItemStack.EMPTY);
+        this.id = Registries.ITEM.getId(result);
     }
 
     public static ResonanceRecipe forCodec(Collection<Ingredient> ingredients, Item result) {
@@ -97,7 +86,7 @@ public class ResonanceRecipe implements Recipe<SimpleInventory>, RecipeJsonProvi
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return Serializer.INSTANCE;
+        return ResonanceRecipeSerializer.INSTANCE;
     }
 
     @Override
@@ -107,72 +96,50 @@ public class ResonanceRecipe implements Recipe<SimpleInventory>, RecipeJsonProvi
 
     @Override
     public void serialize(JsonObject json) {
-        JsonOps jsonOps = JsonOps.INSTANCE;
-        Consumer<String> logger = error -> MythicCharms.LOGGER.error("Failed to serialize ingredients %s".formatted(this.result), error);
-
-        json.add("ingredients", Serializer.validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 5).encodeStart(jsonOps, getIngredients()).getOrThrow(false, logger));
-        json.add("result", RecipeCodecs.CRAFTING_RESULT_ITEM.encodeStart(jsonOps, this.result).getOrThrow(false, logger));
+        ResonanceRecipeSerializer.INSTANCE.write(this, json);
     }
 
     @Override
-    public Identifier id() {
-        return Registries.ITEM.getId(this.result);
+    //#if MC >= 12002
+    public Identifier id()
+    //#else
+    //$$ public Identifier getRecipeId()
+    //#endif
+    {
+        return this.id;
     }
 
+    //#if MC >= 12002
     @Override
     public RecipeSerializer<?> serializer() {
-        return Serializer.INSTANCE;
+        return ResonanceRecipeSerializer.INSTANCE;
     }
 
     @Nullable
     @Override
-    public AdvancementEntry advancement() {
+    public net.minecraft.advancement.AdvancementEntry advancement() {
         return null;
     }
+    //#else
+    //$$ @Nullable
+    //$$ @Override
+    //$$ public JsonObject toAdvancementJson() {
+    //$$     return null;
+    //$$ }
+    //$$ @Nullable
+    //$$ @Override
+    //$$ public Identifier getAdvancementId() {
+    //$$     return null;
+    //$$ }
+    //$$ @Override
+    //$$ public Identifier getId() {
+    //$$    return this.id;
+    //$$ }
+    //#endif
 
     public static class Type implements RecipeType<ResonanceRecipe> {
         public static final RecipeType<ResonanceRecipe> INSTANCE = new Type();
         public static final String ID = "resonance_infusing";
     }
 
-    public static class Serializer implements RecipeSerializer<ResonanceRecipe> {
-        public static final Serializer INSTANCE = new Serializer();
-        public static final String ID = "resonance_infusing";
-
-        public static final Codec<ResonanceRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
-                validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 5).fieldOf("ingredients").forGetter(ResonanceRecipe::getIngredients),
-                RecipeCodecs.CRAFTING_RESULT_ITEM.fieldOf("result").forGetter(r -> r.result)
-        ).apply(in, ResonanceRecipe::forCodec));
-
-        private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
-            return Codecs.validate(Codecs.validate(
-                    delegate.listOf(), list -> list.size() > max ? DataResult.error(() -> "Recipe has too many ingredients!") : DataResult.success(list)
-            ), list -> list.isEmpty() ? DataResult.error(() -> "Recipe has no ingredients!") : DataResult.success(list));
-        }
-
-        @Override
-        public Codec<ResonanceRecipe> codec() {
-            return CODEC;
-        }
-
-        @Override
-        public ResonanceRecipe read(PacketByteBuf buf) {
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
-            inputs.replaceAll(ignored -> Ingredient.fromPacket(buf));
-
-            Item output = buf.readItemStack().getItem();
-            return ResonanceRecipe.forCodec(inputs, output);
-        }
-
-        @Override
-        public void write(PacketByteBuf buf, ResonanceRecipe recipe) {
-            buf.writeInt(recipe.getIngredients().size());
-
-            for (Ingredient ingredient : recipe.getIngredients()) {
-                ingredient.write(buf);
-            }
-
-            buf.writeItemStack(recipe.getResult(null));
-        }
-    }
 }

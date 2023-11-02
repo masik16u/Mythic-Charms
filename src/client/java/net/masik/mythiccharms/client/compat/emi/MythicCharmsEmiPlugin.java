@@ -6,10 +6,9 @@ import dev.emi.emi.api.stack.EmiStack;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
-import net.masik.mythiccharms.recipe.ModRecipes;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
+import net.masik.mythiccharms.util.RecipeUtils;
 import net.minecraft.item.Item;
-import net.minecraft.recipe.RecipeEntry;
 
 import java.lang.reflect.Field;
 import java.util.LinkedHashMap;
@@ -40,8 +39,7 @@ public class MythicCharmsEmiPlugin implements EmiPlugin {
         registry.addCategory(CharmEmiRecipe.CATEGORY);
         registry.addWorkstation(CharmEmiRecipe.CATEGORY, RESONANCE_TABLE);
         EMI_ITEMS.forEach((item, emiStack) -> registry.addEmiStack(emiStack));
-        for (RecipeEntry<ResonanceRecipe> recipe : registry.getRecipeManager().listAllOfType(ResonanceRecipe.Type.INSTANCE)) {
-            registry.addRecipe(new CharmEmiRecipe(recipe.value()));
-        }
+        registry.getRecipeManager().listAllOfType(ResonanceRecipe.Type.INSTANCE).forEach(entry ->
+                registry.addRecipe(new CharmEmiRecipe(RecipeUtils.get(entry))));
     }
 }

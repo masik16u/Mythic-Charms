@@ -7,9 +7,8 @@ import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
-import net.masik.mythiccharms.recipe.ModRecipes;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
-import net.minecraft.recipe.RecipeEntry;
+import net.masik.mythiccharms.util.RecipeUtils;
 
 public class MythicCharmsReiPlugin implements REIClientPlugin {
     public static final CategoryIdentifier<ResonanceTableDisplay> RESONANCE_INFUSING = CategoryIdentifier.of(MythicCharms.MOD_ID, ResonanceRecipe.Type.ID);
@@ -23,8 +22,7 @@ public class MythicCharmsReiPlugin implements REIClientPlugin {
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
-        for (RecipeEntry<ResonanceRecipe> recipe : registry.getRecipeManager().listAllOfType(ResonanceRecipe.Type.INSTANCE)) {
-            registry.add(new ResonanceTableDisplay(recipe.value()));
-        }
+        registry.getRecipeManager().listAllOfType(ResonanceRecipe.Type.INSTANCE).forEach(entry ->
+                registry.add(new ResonanceTableDisplay(RecipeUtils.get(entry))));
     }
 }

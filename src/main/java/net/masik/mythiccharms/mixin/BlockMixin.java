@@ -1,6 +1,7 @@
 package net.masik.mythiccharms.mixin;
 
 import net.masik.mythiccharms.util.CharmHelper;
+import net.masik.mythiccharms.util.RecipeUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -9,7 +10,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.recipe.SmeltingRecipe;
 import net.minecraft.server.world.ServerWorld;
@@ -45,14 +45,12 @@ public class BlockMixin {
 
         for (ItemStack item : cir.getReturnValue()) {
 
-            Optional<RecipeEntry<SmeltingRecipe>> recipe = world.getRecipeManager().getFirstMatch(RecipeType.SMELTING, new SimpleInventory(item), world);
+            Optional<SmeltingRecipe> recipe = RecipeUtils.getOptional(world.getRecipeManager().getFirstMatch(RecipeType.SMELTING, new SimpleInventory(item), world));
 
-            itemStacks.add(recipe.isPresent() ? recipe.get().value().getResult(world.getRegistryManager()) : item);
-
+            itemStacks.add(recipe.isPresent() ? recipe.get().getResult(world.getRegistryManager()) : item);
         }
 
         cir.setReturnValue(itemStacks);
-
     }
 
 }

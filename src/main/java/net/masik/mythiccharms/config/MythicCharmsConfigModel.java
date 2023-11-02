@@ -69,5 +69,4 @@ public class MythicCharmsConfigModel {
 
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
     public int experienceNuggetMobCap = 10;
-
 }

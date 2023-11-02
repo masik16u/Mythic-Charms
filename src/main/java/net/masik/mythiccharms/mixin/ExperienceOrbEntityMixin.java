@@ -22,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Mixin(ExperienceOrbEntity.class)
 public class ExperienceOrbEntityMixin {
@@ -29,13 +30,13 @@ public class ExperienceOrbEntityMixin {
     @Inject(method = "spawn", at = @At("RETURN"))
     private static void spawnExperienceNugget(ServerWorld world, Vec3d pos, int amount, CallbackInfo ci) {
 
+        if (checkResonanceTable(BlockPos.ofFloored(pos), world)) return;
+
         Box box = Box.from(pos).expand(3);
         List<Entity> entities = new ArrayList<>(world.getEntitiesByClass(LivingEntity.class, box, orb -> true));
         if (entities.size() > MythicCharms.CONFIG.experienceNuggetMobCap()) return;
 
-        if (checkResonanceTable(BlockPos.ofFloored(pos), world)) return;
-
-        java.util.Random rand = new java.util.Random();
+        Random rand = new Random();
 
         if (rand.nextInt(10) >= 3) return;
 

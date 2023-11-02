@@ -5,6 +5,7 @@ import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
+import net.masik.mythiccharms.util.RecipeUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
@@ -15,7 +16,6 @@ import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.HitResult;
@@ -36,7 +36,6 @@ import java.util.stream.Collectors;
 @Mixin(ExperienceBottleEntity.class)
 public class ExperienceBottleEntityMixin {
 
-    @SuppressWarnings("unchecked")
     @Inject(method = "onCollision", at = @At("RETURN"))
     private void onCollision(HitResult hitResult, CallbackInfo ci) {
         ThrownItemEntity bottle = (ThrownItemEntity) (Object) this;
@@ -61,7 +60,7 @@ public class ExperienceBottleEntityMixin {
                 inventory,
                 world
         ).ifPresent(it -> {
-            ResonanceRecipe recipe = it.value();
+            ResonanceRecipe recipe = RecipeUtils.get(it);
             ItemEntity result = new ItemEntity(world,
                     bottle.getX(),
                     bottle.getY(),

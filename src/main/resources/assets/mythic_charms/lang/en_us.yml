@@ -18,26 +18,26 @@ item:
     arrow_dance:
       tooltip: |
         Grants the wearer the ability to evade
-        incoming projectiles with a high chance 
+        incoming projectiles with a high chance
     barters_pact:
       tooltip: |
         The wearer may open a chest with a high
         likelihood that it wont trigger aggression
-        from piglins 
+        from piglins
     battle_fury:
       tooltip: |
         Increases the wearers attack damage as their
         health decreases, peaking at three times the normal
-        damage output when they have only half a heart left 
+        damage output when they have only half a heart left
     blazing_embrace:
       tooltip: |
         Grants the wearer permanent effect of
         fire resistance, but the duration renews
-        only when the wearer is not on fire 
+        only when the wearer is not on fire
     botanic_blessing:
       tooltip: |
         Accelerates the growth of crops within a
-        two-block radius around the wearer 
+        two-block radius around the wearer
     broken_charm:
       .: Broken Charm
       tooltip: |
@@ -46,16 +46,16 @@ item:
       tooltip: |
         Enhances the wearers step height, allowing
         them to ascend obstacles with ease, but
-        adds additional exhaustion 
+        adds additional exhaustion
     collectors_gift:
       tooltip: |
         Draws items to the wearer within a
-        two-block radius around 
+        two-block radius around
     deepslate_fragment:
       .: Deepslate Fragment
       tooltip: |
         Drops from deepslate
-        with a small chance 
+        with a small chance
     drowned_freedom:
       tooltip: |
         Grants the wearer the ability to move
@@ -64,7 +64,7 @@ item:
     earths_order:
       tooltip: |
         Grants the wearer the ability to break any
-        breakable block using only their bare hand 
+        breakable block using only their bare hand
     echoing_wrath:
       tooltip: |
         Damages nearby mobs, when the wearer is 
@@ -75,21 +75,21 @@ item:
       tooltip: |
         Makes enchantments random every time the
         wearer interacts with an enchanting table,
-        in exchange for one level 
+        in exchange for one level
     experience_nugget:
       .: Experience Nugget
       tooltip: |
         Appears with experience orbs
-        with a small chance 
+        with a small chance
     feathered_grace:
       tooltip: |
         Grants the wearer a slow falling effect
         after a brief half-second fall and ends after
-        two seconds, while the wearer is not sneaking 
+        two seconds, while the wearer is not sneaking
     fleeting_strides:
       tooltip: |
         Enhances the wearers speed when jumping
-        and running, but adds additional exhaustion 
+        and running, but adds additional exhaustion
     fragile_charm_base: Fragile Charm Base
     fragile_charm_of_arrow_dance: Fragile Charm of Arrow Dance
     fragile_charm_of_barters_pact: Fragile Charm of Barters Pact
@@ -116,13 +116,13 @@ item:
       tooltip: |
         Grants the wearer the ability to look at an
         enderman without triggering aggression and during
-        combat without triggering random teleportation 
+        combat without triggering random teleportation
     glowstone_nugget: Glowstone Nugget
     high_bounds:
       tooltip: |
         Enhances wearers jump height and a safe
         height from which they remain unharmed, but
-        adds additional exhaustion 
+        adds additional exhaustion
     mountains_strength:
       tooltip: |
         Grants the wearer an immunity to knockback
@@ -137,21 +137,21 @@ item:
       tooltip: |
         Prevents phantoms from spawning only for
         the wearer alone, even if there are phantoms
-        nearby, they will ignore the wearer 
+        nearby, they will ignore the wearer
     quiet_presence:
       tooltip: |
         Grants the wearer the ability to move
-        without triggering Sculk Sensors when walking 
+        without triggering Sculk Sensors when walking
     resonance_ring:
       .: Resonance Ring
       tooltip: |
         Allows the wearer to use a Resonance Table
-        and increases pickup delay of thrown items 
+        and increases pickup delay of thrown items
     resonance_table:
       tooltip: |
         Requires a Resonance Ring and
         a Block of Lapis Lazuli beneath it
-        to work 
+        to work
     safe_territory:
       tooltip: |
         Creepers in three-block radius around the 
@@ -258,4 +258,4 @@ trinkets:
       mythic_charm: Mythic Charm
 util:
   mythic_charms:
-    shift_tooltip: Hold §eSHIFT§r for more information 
+    shift_tooltip: Hold §eSHIFT§r for more information
