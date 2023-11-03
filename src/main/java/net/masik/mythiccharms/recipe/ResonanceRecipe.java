@@ -1,52 +1,68 @@
 package net.masik.mythiccharms.recipe;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.masik.mythiccharms.MythicCharms;
+import com.google.gson.JsonObject;
+import net.masik.mythiccharms.block.ModBlocks;
+import net.masik.mythiccharms.util.SafeDefaultedList;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.*;
 
-public class ResonanceRecipe implements Recipe<SimpleInventory> {
-    private final ItemStack output;
-    private final List<Ingredient> recipeItems;
+public class ResonanceRecipe implements Recipe<SimpleInventory>, RecipeJsonProvider {
+    public final Identifier id;
+    public final Item result;
+    public final Set<Item> ingredients;
+    public final List<ItemStack> stacks;
 
-    public ResonanceRecipe(List<Ingredient> ingredients, ItemStack itemStack) {
-        this.output = itemStack;
-        this.recipeItems = ingredients;
+    public ResonanceRecipe(Collection<Item> ingredients, Item result) {
+        this.result = result;
+        this.ingredients = new LinkedHashSet<>(ingredients);
+        this.stacks = new SafeDefaultedList<>(this.ingredients.stream().map(ItemStack::new).toList(), ItemStack.EMPTY);
+        this.id = Registries.ITEM.getId(result);
+    }
+
+    public static ResonanceRecipe forCodec(Collection<Ingredient> ingredients, Item result) {
+        return new ResonanceRecipe(ingredients.stream().map(
+                ingredient -> ingredient.getMatchingStacks()[0].getItem()).toList(),
+                result);
     }
 
     @Override
-    public boolean matches(SimpleInventory inventory, World world) {
-        if(world.isClient()) {
+    public ItemStack createIcon() {
+        return ModBlocks.RESONANCE_TABLE.asItem().getDefaultStack();
+    }
+
+    @Override
+    public boolean matches(SimpleInventory items, World world) {
+        if (world.isClient()) {
             return false;
         }
+        RecipeMatcher recipeMatcher = new RecipeMatcher();
+        int i = 0;
 
-        Collection<Ingredient> ingredients = inventory.stacks.stream().map(Ingredient::ofStacks).collect(Collectors.toSet());
+        for (int j = 0; j < items.size(); ++j) {
+            ItemStack itemStack = items.getStack(j);
+            if (!itemStack.isEmpty()) {
+                ++i;
+                recipeMatcher.addInput(itemStack, 1);
+            }
+        }
 
-        MythicCharms.LOGGER.info(ingredients.toString());
-        MythicCharms.LOGGER.info(recipeItems.toString());
-
-        return recipeItems.containsAll(ingredients);
-
-        //recipeItems.get(0).test(inventory.getStack(0));
-
+        return i == this.ingredients.size() && recipeMatcher.match(this, null);
     }
 
     @Override
-    public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) {
-        return output;
+    public ItemStack craft(SimpleInventory items, DynamicRegistryManager registryManager) {
+        return this.result.getDefaultStack();
     }
 
     @Override
@@ -56,19 +72,21 @@ public class ResonanceRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public ItemStack getResult(DynamicRegistryManager registryManager) {
-        return output;
+        return this.result.getDefaultStack();
     }
 
     @Override
     public DefaultedList<Ingredient> getIngredients() {
-        DefaultedList<Ingredient> list = DefaultedList.ofSize(this.recipeItems.size());
-        list.addAll(recipeItems);
-        return list;
+        Ingredient[] ingredients = new Ingredient[this.ingredients.size()];
+        for (int i = 0; i < ingredients.length; i++) {
+            ingredients[i] = Ingredient.ofStacks(this.stacks.get(i));
+        }
+        return DefaultedList.copyOf(Ingredient.EMPTY, ingredients);
     }
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return Serializer.INSTANCE;
+        return ResonanceRecipeSerializer.INSTANCE;
     }
 
     @Override
@@ -76,52 +94,52 @@ public class ResonanceRecipe implements Recipe<SimpleInventory> {
         return Type.INSTANCE;
     }
 
+    @Override
+    public void serialize(JsonObject json) {
+        ResonanceRecipeSerializer.INSTANCE.write(this, json);
+    }
+
+    @Override
+    //#if MC >= 12002
+    public Identifier id()
+    //#else
+    //$$ public Identifier getRecipeId()
+    //#endif
+    {
+        return this.id;
+    }
+
+    //#if MC >= 12002
+    @Override
+    public RecipeSerializer<?> serializer() {
+        return ResonanceRecipeSerializer.INSTANCE;
+    }
+
+    @Nullable
+    @Override
+    public net.minecraft.advancement.AdvancementEntry advancement() {
+        return null;
+    }
+    //#else
+    //$$ @Nullable
+    //$$ @Override
+    //$$ public JsonObject toAdvancementJson() {
+    //$$     return null;
+    //$$ }
+    //$$ @Nullable
+    //$$ @Override
+    //$$ public Identifier getAdvancementId() {
+    //$$     return null;
+    //$$ }
+    //$$ @Override
+    //$$ public Identifier getId() {
+    //$$    return this.id;
+    //$$ }
+    //#endif
+
     public static class Type implements RecipeType<ResonanceRecipe> {
-        public static final Type INSTANCE = new Type();
+        public static final RecipeType<ResonanceRecipe> INSTANCE = new Type();
         public static final String ID = "resonance_infusing";
     }
 
-    public static class Serializer implements RecipeSerializer<ResonanceRecipe> {
-        public static final Serializer INSTANCE = new Serializer();
-        public static final String ID = "resonance_infusing";
-
-        public static final Codec<ResonanceRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
-                validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 9).fieldOf("ingredients").forGetter(ResonanceRecipe::getIngredients),
-                RecipeCodecs.CRAFTING_RESULT.fieldOf("output").forGetter(r -> r.output)
-        ).apply(in, ResonanceRecipe::new));
-
-        private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
-            return Codecs.validate(Codecs.validate(
-                    delegate.listOf(), list -> list.size() > max ? DataResult.error(() -> "Recipe has too many ingredients!") : DataResult.success(list)
-            ), list -> list.isEmpty() ? DataResult.error(() -> "Recipe has no ingredients!") : DataResult.success(list));
-        }
-
-        @Override
-        public Codec<ResonanceRecipe> codec() {
-            return CODEC;
-        }
-
-        @Override
-        public ResonanceRecipe read(PacketByteBuf buf) {
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
-
-            for(int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromPacket(buf));
-            }
-
-            ItemStack output = buf.readItemStack();
-            return new ResonanceRecipe(inputs, output);
-        }
-
-        @Override
-        public void write(PacketByteBuf buf, ResonanceRecipe recipe) {
-            buf.writeInt(recipe.getIngredients().size());
-
-            for (Ingredient ingredient : recipe.getIngredients()) {
-                ingredient.write(buf);
-            }
-
-            buf.writeItemStack(recipe.getResult(null));
-        }
-    }
 }

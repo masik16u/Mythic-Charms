@@ -1,0 +1,261 @@
+block:
+  mythic_charms:
+    resonance_table: Resonance Table
+category:
+  mythic_charms:
+    resonance:
+      .: Resonance Infusing
+      catalyst: Catalyst
+      ingredient: Ingredient
+      output: Result
+      trinket: Trinket
+emi:
+  category:
+    mythic_charms:
+      resonance_table: Resonance Infusing
+item:
+  mythic_charms:
+    arrow_dance:
+      tooltip: |
+        Grants the wearer the ability to evade
+        incoming projectiles with a high chance
+    barters_pact:
+      tooltip: |
+        The wearer may open a chest with a high
+        likelihood that it wont trigger aggression
+        from piglins
+    battle_fury:
+      tooltip: |
+        Increases the wearers attack damage as their
+        health decreases, peaking at three times the normal
+        damage output when they have only half a heart left
+    blazing_embrace:
+      tooltip: |
+        Grants the wearer permanent effect of
+        fire resistance, but the duration renews
+        only when the wearer is not on fire
+    botanic_blessing:
+      tooltip: |
+        Accelerates the growth of crops within a
+        two-block radius around the wearer
+    broken_charm:
+      .: Broken Charm
+      tooltip: |
+        Once was a usable charm
+    climbers_path:
+      tooltip: |
+        Enhances the wearers step height, allowing
+        them to ascend obstacles with ease, but
+        adds additional exhaustion
+    collectors_gift:
+      tooltip: |
+        Draws items to the wearer within a
+        two-block radius around
+    deepslate_fragment:
+      .: Deepslate Fragment
+      tooltip: |
+        Drops from deepslate
+        with a small chance
+    drowned_freedom:
+      tooltip: |
+        Grants the wearer the ability to move
+        underwater as if on the surface, but 
+        adds additional exhaustion
+    earths_order:
+      tooltip: |
+        Grants the wearer the ability to break any
+        breakable block using only their bare hand
+    echoing_wrath:
+      tooltip: |
+        Damages nearby mobs, when the wearer is 
+        harmed, at half the intensity, up to a 
+        maximum of three hearts of damage, but the 
+        wearer receive slightly increased damage
+    enchanted_whispers:
+      tooltip: |
+        Makes enchantments random every time the
+        wearer interacts with an enchanting table,
+        in exchange for one level
+    experience_nugget:
+      .: Experience Nugget
+      tooltip: |
+        Appears with experience orbs
+        with a small chance
+    feathered_grace:
+      tooltip: |
+        Grants the wearer a slow falling effect
+        after a brief half-second fall and ends after
+        two seconds, while the wearer is not sneaking
+    fleeting_strides:
+      tooltip: |
+        Enhances the wearers speed when jumping
+        and running, but adds additional exhaustion
+    fragile_charm_base: Fragile Charm Base
+    fragile_charm_of_arrow_dance: Fragile Charm of Arrow Dance
+    fragile_charm_of_barters_pact: Fragile Charm of Barters Pact
+    fragile_charm_of_battle_fury: Fragile Charm of Battle Fury
+    fragile_charm_of_blazing_embrace: Fragile Charm of Blazing Embrace
+    fragile_charm_of_botanic_blessing: Fragile Charm of Botanic Blessing
+    fragile_charm_of_climbers_path: Fragile Charm of Climbers Path
+    fragile_charm_of_collectors_gift: Fragile Charm of Collectors Gift
+    fragile_charm_of_drowned_freedom: Fragile Charm of Drowned Freedom
+    fragile_charm_of_earths_order: Fragile Charm of Earths Order
+    fragile_charm_of_echoing_wrath: Fragile Charm of Echoing Wrath
+    fragile_charm_of_enchanted_whispers: Fragile Charm of Enchanted Whispers
+    fragile_charm_of_feathered_grace: Fragile Charm of Feathered Grace
+    fragile_charm_of_fleeting_strides: Fragile Charm of Fleeting Strides
+    fragile_charm_of_gaze_serenity: Fragile Charm of Gaze Serenity
+    fragile_charm_of_high_bounds: Fragile Charm of High Bounds
+    fragile_charm_of_mountains_strength: Fragile Charm of Mountains Strength
+    fragile_charm_of_natures_call: Fragile Charm of Natures Call
+    fragile_charm_of_nights_guardian: Fragile Charm of Nights Guardian
+    fragile_charm_of_quiet_presence: Fragile Charm of Quiet Presence
+    fragile_charm_of_safe_territory: Fragile Charm of Safe Territory
+    fragile_charm_of_weightless_flow: Fragile Charm of Weightless Flow
+    gaze_serenity:
+      tooltip: |
+        Grants the wearer the ability to look at an
+        enderman without triggering aggression and during
+        combat without triggering random teleportation
+    glowstone_nugget: Glowstone Nugget
+    high_bounds:
+      tooltip: |
+        Enhances wearers jump height and a safe
+        height from which they remain unharmed, but
+        adds additional exhaustion
+    mountains_strength:
+      tooltip: |
+        Grants the wearer an immunity to knockback
+        or being pushed, but they receive slightly
+        increased damage
+    natures_call:
+      tooltip: |
+        Draws animals around the wearer, as if they
+        were holding the creatures favorite food, 
+        while the wearer is not sneaking
+    nights_guardian:
+      tooltip: |
+        Prevents phantoms from spawning only for
+        the wearer alone, even if there are phantoms
+        nearby, they will ignore the wearer
+    quiet_presence:
+      tooltip: |
+        Grants the wearer the ability to move
+        without triggering Sculk Sensors when walking
+    resonance_ring:
+      .: Resonance Ring
+      tooltip: |
+        Allows the wearer to use a Resonance Table
+        and increases pickup delay of thrown items
+    resonance_table:
+      tooltip: |
+        Requires a Resonance Ring and
+        a Block of Lapis Lazuli beneath it
+        to work
+    safe_territory:
+      tooltip: |
+        Creepers in three-block radius around the 
+        wearer will no longer break blocks
+    unbreakable_charm_of_arrow_dance: Unbreakable Charm of Arrow Dance
+    unbreakable_charm_of_barters_pact: Unbreakable Charm of Barters Pact
+    unbreakable_charm_of_battle_fury: Unbreakable Charm of Battle Fury
+    unbreakable_charm_of_blazing_embrace: Unbreakable Charm of Blazing Embrace
+    unbreakable_charm_of_botanic_blessing: Unbreakable Charm of Botanic Blessing
+    unbreakable_charm_of_climbers_path: Unbreakable Charm of Climbers Path
+    unbreakable_charm_of_collectors_gift: Unbreakable Charm of Collectors Gift
+    unbreakable_charm_of_drowned_freedom: Unbreakable Charm of Drowned Freedom
+    unbreakable_charm_of_earths_order: Unbreakable Charm of Earths Order
+    unbreakable_charm_of_echoing_wrath: Unbreakable Charm of Echoing Wrath
+    unbreakable_charm_of_enchanted_whispers: Unbreakable Charm of Enchanted Whispers
+    unbreakable_charm_of_feathered_grace: Unbreakable Charm of Feathered Grace
+    unbreakable_charm_of_fleeting_strides: Unbreakable Charm of Fleeting Strides
+    unbreakable_charm_of_gaze_serenity: Unbreakable Charm of Gaze Serenity
+    unbreakable_charm_of_high_bounds: Unbreakable Charm of High Bounds
+    unbreakable_charm_of_mountains_strength: Unbreakable Charm of Mountains Strength
+    unbreakable_charm_of_natures_call: Unbreakable Charm of Natures Call
+    unbreakable_charm_of_nights_guardian: Unbreakable Charm of Nights Guardian
+    unbreakable_charm_of_quiet_presence: Unbreakable Charm of Quiet Presence
+    unbreakable_charm_of_safe_territory: Unbreakable Charm of Safe Territory
+    unbreakable_charm_of_weightless_flow: Unbreakable Charm of Weightless Flow
+    weightless_flow:
+      tooltip: |
+        Preserves the wearers gravity, allowing
+        them to stand in the air or leap into the
+        sky, while the wearer is not sneaking, but 
+        adds additional exhaustion
+tag:
+  item:
+    mythic_charms:
+      fragile_charms: Fragile Charms
+      resonance_ingredients: Resonance Ingredients
+    trinkets:
+      hand:
+        ring: Ring Trinket
+      mythic_charms:
+        mythic_charm: Mythic Charm
+text:
+  config:
+    mythic-charms-config:
+      category:
+        charmCombinationsEnabled: Charm Combinations enabled
+        charmsEnabled: Charms enabled
+      option:
+        charmCombinationsEnabled:
+          charmCombinationBlazingEmbraceAndBattleFuryEnabled: Charm Combination
+            Blazing Embrace and Battle Fury enabled
+          charmCombinationBotanicBlessingAndFeatheredGraceEnabled: Charm Combination
+            Botanic Blessing and Feathered Grace enabled
+          charmCombinationClimbersPathAndHighBoundsEnabled: Charm Combination Climbers
+            Path and High Bounds enabled
+          charmCombinationEarthsOrderAndBattleFuryEnabled: Charm Combination Earths
+            Order and Battle Fury enabled
+          charmCombinationEarthsOrderAndBlazingEmbraceEnabled: Charm Combination
+            Earths Order and Blazing Embrace enabled
+          charmCombinationEarthsOrderAndDrownedFreedomEnabled: Charm Combination
+            Earths Order and Drowned Freedom enabled
+          charmCombinationEarthsOrderAndWeightlessFlowEnabled: Charm Combination
+            Earths Order and Weightless Flow enabled
+          charmCombinationEchoingWrathAndBattleFuryEnabled: Charm Combination Echoing
+            Wrath and Battle Fury enabled
+          charmCombinationEchoingWrathAndBlazingEmbraceEnabled: Charm Combination
+            Echoing Wrath and Blazing Embrace enabled
+          charmCombinationFeatheredGraceAndHighBoundsEnabled: Charm Combination
+            Feathered Grace and High Bounds enabled
+          charmCombinationFleetingStridesAndBattleFuryEnabled: Charm Combination
+            Fleeting Strides and Battle Fury enabled
+          charmCombinationFleetingStridesAndHighBoundsEnabled: Charm Combination
+            Fleeting Strides and High Bounds enabled
+          charmCombinationQuietPresenceAndFeatheredGraceEnabled: Charm Combination
+            Quiet Presence and Feathered Grace enabled
+          charmCombinationWeightlessFlowAndFeatheredGraceEnabled: Charm Combination
+            Weightless Flow and Feathered Grace enabled
+        charmsEnabled:
+          charmArrowDanceEnabled: Charm Arrow Dance enabled
+          charmBartersPactEnabled: Charm Barters Pact enabled
+          charmBattleFuryEnabled: Charm Battle Fury enabled
+          charmBlazingEmbraceEnabled: Charm Blazing Embrace enabled
+          charmBotanicBlessingEnabled: Charm Botanic Blessing enabled
+          charmClimbersPathEnabled: Charm Climbers Path enabled
+          charmCollectorsGiftEnabled: Charm Collectors Gift enabled
+          charmDrownedFreedomEnabled: Charm Drowned Freedom enabled
+          charmEarthsOrderEnabled: Charm Earths Order enabled
+          charmEchoingWrathEnabled: Charm Echoing Wrath enabled
+          charmEnchantedWhispersEnabled: Charm Enchanted Whispers enabled
+          charmFeatheredGraceEnabled: Charm Feathered Grace enabled
+          charmFleetingStridesEnabled: Charm Fleeting Strides enabled
+          charmGazeSerenityEnabled: Charm Gaze Serenity enabled
+          charmHighBoundsEnabled: Charm High Bounds enabled
+          charmMountainsStrengthEnabled: Charm Mountains Strength enabled
+          charmNaturesCallEnabled: Charm Natures Call enabled
+          charmNightsGuardianEnabled: Charm Nights Guardian enabled
+          charmQuietPresenceEnabled: Charm Quiet Presence enabled
+          charmSafeTerritoryEnabled: Charm Safe Territory enabled
+          charmWeightlessFlowEnabled: Charm Weightless Flow enabled
+      title: Mythic Charms Config
+trinkets:
+  slot:
+    mythic_charms:
+      mythic_charm: Mythic Charm
+util:
+  mythic_charms:
+    shift_tooltip: Hold §eSHIFT§r for more information

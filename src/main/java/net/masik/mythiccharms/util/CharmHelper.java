@@ -3,19 +3,58 @@ package net.masik.mythiccharms.util;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.config.MythicCharmsConfig;
 import net.masik.mythiccharms.item.ModItems;
 import net.minecraft.entity.LivingEntity;
-import net.masik.mythiccharms.util.MythicCharmsConfig;
 
 import java.util.Optional;
 
 public class CharmHelper {
-
     private static final MythicCharmsConfig config = MythicCharms.CONFIG;
+
+    // In the end I decided that im at home and probably a kid
+    /*
+    private static final Map<Identifier, Supplier<Boolean>> ITEM_TO_CONFIG = new HashMap<>();
+
+    static {
+        ModItems.FRAGILE_CHARMS.forEach((id, item) -> addItem(id));
+        ModItems.UNBREAKABLE_CHARMS.forEach((id, item) -> addItem(id));
+    }
+
+    private static void addItem(Identifier id) {
+        Class<? extends MythicCharmsConfig> configClass = config.getClass();
+        String methodName = transformName(id);
+
+        // Reflection, don't try this at home, kids
+        try {
+            Method option = configClass.getMethod(methodName);
+            if (!option.canAccess(configClass)) {
+                MythicCharms.LOGGER.warn("Option %s is not accessible".formatted(methodName));
+                return;
+            }
+
+            ITEM_TO_CONFIG.put(id, () -> {
+                try {
+                    return (Boolean) option.invoke(configClass);
+                } catch (IllegalAccessException | InvocationTargetException e) {
+                    MythicCharms.LOGGER.error("Failed to get value for option %s".formatted(methodName));
+                    return true;
+                }
+            });
+        } catch (NoSuchMethodException e) {
+            MythicCharms.LOGGER.warn("Couldn't find config value %s".formatted(methodName), e);
+        }
+    }
+
+    private static String transformName(Identifier id) {
+        // Wtf
+        return "charm%sEnabled".formatted(StringUtils.capitalize(id.getNamespace().replace("fragile_charm_of_", "").replace("_", " ")).replace(" ", ""));
+    }
+     */
 
     public static boolean charmFeatheredGraceEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmFeatheredGraceEnabled( )) return false;
+        if (!config.charmsEnabled.charmFeatheredGraceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE) ||
@@ -25,7 +64,7 @@ public class CharmHelper {
 
     public static boolean charmBlazingEmbraceEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmBlazingEmbraceEnabled( )) return false;
+        if (!config.charmsEnabled.charmBlazingEmbraceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BLAZING_EMBRACE) ||
@@ -35,7 +74,7 @@ public class CharmHelper {
 
     public static boolean charmEarthsOrderEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmEarthsOrderEnabled( )) return false;
+        if (!config.charmsEnabled.charmEarthsOrderEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) ||
@@ -45,7 +84,7 @@ public class CharmHelper {
 
     public static boolean charmGazeSerenityEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmGazeSerenityEnabled( )) return false;
+        if (!config.charmsEnabled.charmGazeSerenityEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_GAZE_SERENITY) ||
@@ -55,7 +94,7 @@ public class CharmHelper {
 
     public static boolean charmBotanicBlessingEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmBotanicBlessingEnabled( )) return false;
+        if (!config.charmsEnabled.charmBotanicBlessingEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BOTANIC_BLESSING) ||
@@ -65,7 +104,7 @@ public class CharmHelper {
 
     public static boolean charmFleetingStridesEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmFleetingStridesEnabled( )) return false;
+        if (!config.charmsEnabled.charmFleetingStridesEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FLEETING_STRIDES) ||
@@ -75,7 +114,7 @@ public class CharmHelper {
 
     public static boolean charmNightsGuardianEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmNightsGuardianEnabled( )) return false;
+        if (!config.charmsEnabled.charmNightsGuardianEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_NIGHTS_GUARDIAN) ||
@@ -85,7 +124,7 @@ public class CharmHelper {
 
     public static boolean charmHighBoundsEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmHighBoundsEnabled( )) return false;
+        if (!config.charmsEnabled.charmHighBoundsEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_HIGH_BOUNDS) ||
@@ -95,7 +134,7 @@ public class CharmHelper {
 
     public static boolean charmDrownedFreedomEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmDrownedFreedomEnabled( )) return false;
+        if (!config.charmsEnabled.charmDrownedFreedomEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_DROWNED_FREEDOM) ||
@@ -105,7 +144,7 @@ public class CharmHelper {
 
     public static boolean charmWeightlessFlowEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmWeightlessFlowEnabled( )) return false;
+        if (!config.charmsEnabled.charmWeightlessFlowEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) ||
@@ -115,7 +154,7 @@ public class CharmHelper {
 
     public static boolean charmCollectorsGiftEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmCollectorsGiftEnabled( )) return false;
+        if (!config.charmsEnabled.charmCollectorsGiftEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_COLLECTORS_GIFT) ||
@@ -125,7 +164,7 @@ public class CharmHelper {
 
     public static boolean charmClimbersPathEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmClimbersPathEnabled( )) return false;
+        if (!config.charmsEnabled.charmClimbersPathEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_CLIMBERS_PATH) ||
@@ -135,7 +174,7 @@ public class CharmHelper {
 
     public static boolean charmNaturesCallEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmNaturesCallEnabled( )) return false;
+        if (!config.charmsEnabled.charmNaturesCallEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_NATURES_CALL) ||
@@ -145,7 +184,7 @@ public class CharmHelper {
 
     public static boolean charmBartersPactEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmBartersPactEnabled( )) return false;
+        if (!config.charmsEnabled.charmBartersPactEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BARTERS_PACT) ||
@@ -155,7 +194,7 @@ public class CharmHelper {
 
     public static boolean charmBattleFuryEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmBattleFuryEnabled( )) return false;
+        if (!config.charmsEnabled.charmBattleFuryEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BATTLE_FURY) ||
@@ -165,7 +204,7 @@ public class CharmHelper {
 
     public static boolean charmEchoingWrathEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmEchoingWrathEnabled( )) return false;
+        if (!config.charmsEnabled.charmEchoingWrathEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ECHOING_WRATH) ||
@@ -175,7 +214,7 @@ public class CharmHelper {
 
     public static boolean charmEnchantedWhispersEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmEnchantedWhispersEnabled( )) return false;
+        if (!config.charmsEnabled.charmEnchantedWhispersEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ENCHANTED_WHISPERS) ||
@@ -185,7 +224,7 @@ public class CharmHelper {
 
     public static boolean charmArrowDanceEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmArrowDanceEnabled( )) return false;
+        if (!config.charmsEnabled.charmArrowDanceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ARROW_DANCE) ||
@@ -195,7 +234,7 @@ public class CharmHelper {
 
     public static boolean charmMountainsStrengthEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmMountainsStrengthEnabled( )) return false;
+        if (!config.charmsEnabled.charmMountainsStrengthEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_MOUNTAINS_STRENGTH) ||
@@ -205,7 +244,7 @@ public class CharmHelper {
 
     public static boolean charmSafeTerritoryEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmSafeTerritoryEnabled( )) return false;
+        if (!config.charmsEnabled.charmSafeTerritoryEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_SAFE_TERRITORY) ||
@@ -215,7 +254,7 @@ public class CharmHelper {
 
     public static boolean charmQuietPresenceEquipped(LivingEntity entity) {
 
-        if (!config.charmsEnabled.CharmQuietPresenceEnabled( )) return false;
+        if (!config.charmsEnabled.charmQuietPresenceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_QUIET_PRESENCE) ||
@@ -224,12 +263,9 @@ public class CharmHelper {
     }
 
 
-
-
-
     public static boolean charmCombinationFeatheredGraceAndHighBoundsEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationFeatheredGraceAndHighBoundsEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationFeatheredGraceAndHighBoundsEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE) ||
@@ -241,7 +277,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationBlazingEmbraceAndBattleFuryEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationBlazingEmbraceAndBattleFuryEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationBlazingEmbraceAndBattleFuryEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BLAZING_EMBRACE) ||
@@ -253,7 +289,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationEarthsOrderAndBlazingEmbraceEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBlazingEmbraceEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationEarthsOrderAndBlazingEmbraceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) ||
@@ -265,7 +301,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationEarthsOrderAndDrownedFreedomEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationEarthsOrderAndDrownedFreedomEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationEarthsOrderAndDrownedFreedomEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) ||
@@ -277,7 +313,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationEarthsOrderAndWeightlessFlowEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationEarthsOrderAndWeightlessFlowEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationEarthsOrderAndWeightlessFlowEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) ||
@@ -289,7 +325,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationEarthsOrderAndBattleFuryEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBattleFuryEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationEarthsOrderAndBattleFuryEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER) ||
@@ -301,7 +337,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationBotanicBlessingAndFeatheredGraceEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationBotanicBlessingAndFeatheredGraceEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationBotanicBlessingAndFeatheredGraceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_BOTANIC_BLESSING) ||
@@ -313,7 +349,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationFleetingStridesAndHighBoundsEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationFleetingStridesAndHighBoundsEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationFleetingStridesAndHighBoundsEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FLEETING_STRIDES) ||
@@ -325,7 +361,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationFleetingStridesAndBattleFuryEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationFleetingStridesAndBattleFuryEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationFleetingStridesAndBattleFuryEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_FLEETING_STRIDES) ||
@@ -337,7 +373,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationWeightlessFlowAndFeatheredGraceEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationWeightlessFlowAndFeatheredGraceEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationWeightlessFlowAndFeatheredGraceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_WEIGHTLESS_FLOW) ||
@@ -349,7 +385,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationClimbersPathAndHighBoundsEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationClimbersPathAndHighBoundsEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationClimbersPathAndHighBoundsEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_CLIMBERS_PATH) ||
@@ -361,7 +397,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationEchoingWrathAndBlazingEmbraceEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBlazingEmbraceEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationEchoingWrathAndBlazingEmbraceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ECHOING_WRATH) ||
@@ -373,7 +409,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationEchoingWrathAndBattleFuryEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationEchoingWrathAndBattleFuryEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_ECHOING_WRATH) ||
@@ -385,7 +421,7 @@ public class CharmHelper {
 
     public static boolean charmCombinationQuietPresenceAndFeatheredGraceEnabled(LivingEntity entity) {
 
-        if (!config.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled( )) return false;
+        if (!config.charmCombinationsEnabled.charmCombinationQuietPresenceAndFeatheredGraceEnabled()) return false;
 
         Optional<TrinketComponent> trinket = TrinketsApi.getTrinketComponent(entity);
         return trinket.isPresent() && (trinket.get().isEquipped(ModItems.FRAGILE_CHARM_OF_QUIET_PRESENCE) ||

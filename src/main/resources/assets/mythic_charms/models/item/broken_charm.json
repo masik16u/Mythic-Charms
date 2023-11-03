@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "mythic_charms:item/broken_charm"
-	}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mythic_charms:item/broken_charm"
+  }
 }

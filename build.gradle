@@ -1,98 +1,59 @@
 plugins {
-	id 'fabric-loom' version '1.4-SNAPSHOT'
-	id 'maven-publish'
+    id "maven-publish"
+    id "fabric-loom" version "1.4-SNAPSHOT" apply false
+
+    // https://github.com/ReplayMod/preprocessor
+    // https://github.com/Fallen-Breath/preprocessor
+    id "com.replaymod.preprocess" version "20c7ec554a"
+
+    // https://github.com/Fallen-Breath/yamlang
+    id "me.fallenbreath.yamlang" version "1.3.+" apply false
+
+    // https://github.com/modmuss50/mod-publish-plugin
+    id "me.modmuss50.mod-publish-plugin" version "0.4.+" apply false
 }
 
-version = project.mod_version
-group = project.maven_group
+preprocess {
+//    def mc19 = createNode("1.19.4", 1_19_04, "yarn")
+    def mc20 = createNode("1.20.1", 1_20_01, "yarn")
+    def mc202 = createNode("1.20.2", 1_20_02, "yarn")
 
-base {
-	archivesName = project.archives_base_name
+    mc202.link(mc20, null)
+//    mc20.link(mc19, null)
 }
 
-repositories {
-	maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/"
-	}
-	maven {
-		name = "Ladysnake Libs"
-		url = 'https://maven.ladysnake.org/releases'
-	}
-	maven { url "https://maven.shedaniel.me" }
-	maven { url 'https://maven.wispforest.io' }
+tasks.register("buildAndGather") {
+    group "build"
+    subprojects {
+        dependsOn project.name + ":build"
+    }
+    doFirst {
+        println "Gathering builds"
+        delete fileTree(project.projectDir.toPath().resolve("build/libs")) {
+            include "*"
+        }
+        copy {
+            subprojects {
+                def libDir = project.projectDir.toPath().resolve("build/libs")
+                from(libDir) {
+                    include "*.jar"
+                    exclude "*-dev.jar", "*-sources.jar"
+                }
+                into "build/libs/"
+                duplicatesStrategy DuplicatesStrategy.INCLUDE
+            }
+        }
+    }
 }
 
-dependencies {
-	// To change the versions see the gradle.properties file
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+tasks.register("cleanPreprocessSources") {
+    doFirst {
+        subprojects {
+            def path = project.projectDir.toPath().resolve("build/preprocessed")
+            path.toFile().deleteDir()
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
-
-	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
-	modApi "dev.emi:trinkets:${trinkets_version}"
-	modApi include("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}")
-	modApi include("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}")
-
-	// modImplementation combines CompileOnly and RuntimeOnly. Unless you run REI code outside of compat/rei it won't be required to be installed
-	modCompileOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
-	modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
-	modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
-
-	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
-}
-
-loom {
-	accessWidenerPath = file("src/main/resources/mythiccharms.accesswidener")
-}
-
-processResources {
-	inputs.property "version", project.version
-
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
-}
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
-}
-
-java {
-	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-	// if it is present.
-	// If you remove this line, sources will not be generated.
-	withSourcesJar()
-
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
-}
-
-jar {
-	from("LICENSE") {
-		rename { "${it}_${project.base.archivesName.get()}"}
-	}
-}
-
-// configure the maven publication
-publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			from components.java
-		}
-	}
-
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
-	}
+            def resPath = project.projectDir.toPath().resolve("build/resources")
+            resPath.toFile().deleteDir()
+        }
+    }
 }

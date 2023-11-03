@@ -5,17 +5,14 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.access.ExtendedTooltipAccessor;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.enums.Instrument;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -31,11 +28,11 @@ public class ModBlocks {
 
     }
 
+    @SuppressWarnings("DataFlowIssue")
     private static Item registerBlockItem(String name, Block block) {
-
-        return Registry.register(Registries.ITEM, new Identifier(MythicCharms.MOD_ID, name), new TooltipBlockItem(block,
-                new FabricItemSettings(), List.of("item.mythic_charms.resonance_table.tooltip0", "item.mythic_charms.resonance_table.tooltip1",
-                "item.mythic_charms.resonance_table.tooltip2")));
+        Item item = new BlockItem(block, new FabricItemSettings());
+        ((ExtendedTooltipAccessor) item).setHiddenTooltip("item.mythic_charms.%s.tooltip".formatted(name));
+        return Registry.register(Registries.ITEM, new Identifier(MythicCharms.MOD_ID, name), item);
 
     }
 
@@ -44,9 +41,7 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(ModBlocks::addItemsToToolsTabItemGroup);
-
     }
 
 }

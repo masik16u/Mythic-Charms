@@ -1,14 +1,13 @@
 package net.masik.mythiccharms.mixin;
 
-import dev.emi.trinkets.api.*;
-import dev.emi.trinkets.api.event.TrinketDropCallback;
+import dev.emi.trinkets.api.TrinketComponent;
+import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -39,8 +38,8 @@ import java.util.Optional;
 public class PlayerMixin {
 
     //fragile charms
-    @Inject(method = "dropInventory",  at = @At("HEAD"))
-    private void destroyFragileCharms(CallbackInfo info){
+    @Inject(method = "dropInventory", at = @At("HEAD"))
+    private void destroyFragileCharms(CallbackInfo info) {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
@@ -135,7 +134,12 @@ public class PlayerMixin {
         float speed = 0.035F;
 
         //highBounds combo
-        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(player)) speed += 0.01F;
+        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(player)) {
+
+            speed += 0.01F;
+            player.addExhaustion(0.05F);
+
+        }
 
         //battleFury combo
         if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndBattleFuryEnabled(player)) {
@@ -227,21 +231,34 @@ public class PlayerMixin {
 
             entity.damage(source, amount / 2 > 6 ? 3 * damageMultiplier : amount / 2 * damageMultiplier);
 
+            entity.setVelocity(entity.getVelocity().add(player.getPos().subtract(entity.getPos()).multiply(-0.03F)));
+            entity.velocityModified = true;
+
         });
 
     }
 
-    //mountainsStrength
+    //mountainsStrength and echoingWrath
     @ModifyArg(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), index = 1)
-    private float mountainsStrengthNegativeEffect(float amount) {
+    private float receiveMoreDamage(float amount) {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
 
-        if (!CharmHelper.charmMountainsStrengthEquipped(player)) return amount;
+        if (!CharmHelper.charmMountainsStrengthEquipped(player) &&
+                !CharmHelper.charmEchoingWrathEquipped(player) &&
+                !CharmHelper.charmArrowDanceEquipped(player)) return amount;
 
 
-        return (float) (amount + 0.25 * amount);
+        double multiplier = 0;
+
+        if (CharmHelper.charmMountainsStrengthEquipped(player)) multiplier += 0.25;
+
+        if (CharmHelper.charmEchoingWrathEquipped(player)) multiplier += 0.25;
+
+        if (CharmHelper.charmArrowDanceEquipped(player)) multiplier += 0.5;
+
+        return (float) (amount + multiplier * amount);
 
     }
 
@@ -283,19 +300,29 @@ public class PlayerMixin {
 
     }
 
-    //climbersPath
+    //climbersPath, weightlessFlow and drownedFreedom
     @Inject(method = "travel", at = @At("RETURN"))
-    private void climbersPathGiveHunger(Vec3d movementInput, CallbackInfo ci) {
+    private void hungerWhileRunning(Vec3d movementInput, CallbackInfo ci) {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
 
 
-        if (!CharmHelper.charmClimbersPathEquipped(player)) return;
+        if (!CharmHelper.charmClimbersPathEquipped(player) &&
+                !CharmHelper.charmDrownedFreedomEquipped(player) &&
+                !CharmHelper.charmWeightlessFlowEquipped(player)) return;
 
 
         if (!player.isSprinting()) return;
 
-        player.addExhaustion(0.05F);
+        float exhaustion = 0;
+
+        if (CharmHelper.charmClimbersPathEquipped(player)) exhaustion += 0.05F;
+
+        if (CharmHelper.charmDrownedFreedomEquipped(player)) exhaustion += 0.05F;
+
+        if (CharmHelper.charmWeightlessFlowEquipped(player)) exhaustion += 0.05F;
+
+        player.addExhaustion(exhaustion);
 
     }
 
@@ -318,4 +345,3 @@ public class PlayerMixin {
     }
 
 }
-

@@ -10,7 +10,6 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.item.ThrowablePotionItem;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.ActionResult;
@@ -40,11 +39,12 @@ public class ItemMixin {
 
         if (!world.getBlockState(blockPos).getBlock().equals(ModBlocks.RESONANCE_TABLE)) return;
 
-        if (!context.getStack().isIn(TagKey.of(RegistryKeys.ITEM, new Identifier(MythicCharms.MOD_ID, "resonance_ingredients")))) return;
+        if (!context.getStack().isIn(TagKey.of(RegistryKeys.ITEM, new Identifier(MythicCharms.MOD_ID, "resonance_ingredients"))))
+            return;
 
         ItemEntity itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1, blockPos.getZ() + 0.5,
                 context.getStack().getItem().getDefaultStack());
-        itemEntity.setVelocity(0,0,0);
+        itemEntity.setVelocity(0, 0, 0);
         itemEntity.setPickupDelay(120);
         world.spawnEntity(itemEntity);
 

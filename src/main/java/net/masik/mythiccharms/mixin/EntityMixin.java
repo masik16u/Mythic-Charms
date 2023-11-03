@@ -1,7 +1,5 @@
 package net.masik.mythiccharms.mixin;
 
-import dev.emi.trinkets.api.TrinketComponent;
-import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -18,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Mixin(Entity.class)
 public class EntityMixin {
@@ -78,7 +75,7 @@ public class EntityMixin {
 
         Entity entity = (Entity) (Object) this;
 
-        Box box = Box.from(entity.getPos()).expand(4);
+        Box box = Box.from(entity.getPos()).expand(3);
 
         List<Entity> players = new ArrayList<>(entity.getWorld().getEntitiesByClass(PlayerEntity.class, box, player -> true));
 
@@ -111,7 +108,7 @@ public class EntityMixin {
         //featheredGrace combo
         if (!entity.isOnGround() && (!CharmHelper.charmCombinationQuietPresenceAndFeatheredGraceEnabled((LivingEntity) entity) ||
                 (!CharmHelper.charmFeatheredGraceEquipped((LivingEntity) entity) &&
-                CharmHelper.charmCombinationQuietPresenceAndFeatheredGraceEnabled((LivingEntity) entity)))) {
+                        CharmHelper.charmCombinationQuietPresenceAndFeatheredGraceEnabled((LivingEntity) entity)))) {
             return;
         }
 
