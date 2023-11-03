@@ -4,6 +4,7 @@ import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.fabricmc.loader.api.FabricLoader;
 import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.access.ExtendedTooltipAccessor;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 import net.minecraft.entity.ItemEntity;
@@ -12,10 +13,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
+import net.minecraft.text.MutableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -24,7 +27,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Optional;
 
 @Mixin(Item.class)
-public class ItemMixin {
+public class ItemMixin implements ExtendedTooltipAccessor {
 
     @Inject(method = "useOnBlock", at = @At("RETURN"))
     private void useOnResonanceTable(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
@@ -52,5 +55,14 @@ public class ItemMixin {
         player.swingHand(context.getHand());
         MythicCharms.LOGGER.info(String.valueOf(FabricLoader.getInstance().getGameDir()));
     }
+    /* Dummy implementation to make server-side work. This is overridden by the client-side mixin. */
+    @Override
+    public @Nullable MutableText getHiddenTooltip() {
+        return null;
+    }
 
+    @Override
+    public void setHiddenTooltip(String key) {
+
+    }
 }
