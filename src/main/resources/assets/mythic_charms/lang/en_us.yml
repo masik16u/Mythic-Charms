@@ -12,7 +12,7 @@ category:
 emi:
   category:
     mythic_charms:
-      resonance_table: Resonance Infusing
+      resonance_infusing: Resonance Infusing
 item:
   mythic_charms:
     arrow_dance:

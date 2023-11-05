@@ -6,6 +6,6 @@
     "defaultRequire": 1
   },
   "mixins": [
-    "ItemMixin"
+    "client.ItemMixin"
   ]
 }
