@@ -79,7 +79,7 @@ public class EntityMixin {
 
         Entity entity = (Entity) (Object) this;
 
-        Box box = Box.from(entity.getPos()).expand(4);
+        Box box = Box.from(entity.getPos()).expand(3);
 
         List<Entity> players = new ArrayList<>(entity.getWorld().getEntitiesByClass(PlayerEntity.class, box, player -> true));
 

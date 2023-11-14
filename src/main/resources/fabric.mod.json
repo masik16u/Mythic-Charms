@@ -13,7 +13,7 @@
 		"issues": "https://github.com/masik16u/Mythic-Charms/issues"
 	},
 	"license": "GNU General Public License v3.0",
-	"icon": "assets/mythic_charms/icon.png",
+	"icon": "assets/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

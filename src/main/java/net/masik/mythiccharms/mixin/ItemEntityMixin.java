@@ -28,7 +28,7 @@ public class ItemEntityMixin {
         BlockPos blockPos = itemEntity.getBlockPos();
         Vec3d v2 = new Vec3d(blockPos.getX() + 0.495, blockPos.getY() + 1, blockPos.getZ() + 0.5);
 
-        itemEntity.setVelocity(itemEntity.getVelocity().add(v1.add(v2.subtract(itemEntity.getPos()).multiply(0.03F))));
+        itemEntity.setVelocity(itemEntity.getVelocity().add(v1.add(v2.subtract(itemEntity.getPos()).multiply(0.04F))));
         itemEntity.velocityModified = true;
 
         angle += 1;

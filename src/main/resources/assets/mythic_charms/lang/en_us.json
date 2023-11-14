@@ -46,112 +46,73 @@
 	"item.mythic_charms.unbreakable_charm_of_quiet_presence": "Unbreakable Charm of Quiet Presence",
 
 
-	"item.mythic_charms.feathered_grace.tooltip0": "Grants the wearer a slow falling effect",
-	"item.mythic_charms.feathered_grace.tooltip1": "after a brief half-second fall and ends after",
-	"item.mythic_charms.feathered_grace.tooltip2": "two seconds, while the wearer is not sneaking",
+	"item.mythic_charms.feathered_grace.tooltip": "Grants the wearer a slow falling effect after a brief half-second fall and ends after two seconds, while the wearer is not sneaking",
 
-	"item.mythic_charms.blazing_embrace.tooltip0": "Grants the wearer permanent effect of",
-	"item.mythic_charms.blazing_embrace.tooltip1": "fire resistance, but the duration renews",
-	"item.mythic_charms.blazing_embrace.tooltip2": "only when the wearer is not on fire",
+	"item.mythic_charms.blazing_embrace.tooltip": "Grants the wearer permanent effect of fire resistance, but the duration renews only when the wearer is not on fire",
 
-	"item.mythic_charms.earths_order.tooltip0": "Grants the wearer the ability to break any",
-	"item.mythic_charms.earths_order.tooltip1": "breakable block using only their bare hand",
+	"item.mythic_charms.earths_order.tooltip": "Grants the wearer the ability to break any breakable block using only their bare hand",
 
-	"item.mythic_charms.gaze_serenity.tooltip0": "Grants the wearer the ability to look at an",
-	"item.mythic_charms.gaze_serenity.tooltip1": "enderman without triggering aggression and during",
-	"item.mythic_charms.gaze_serenity.tooltip2": "combat without triggering random teleportation",
+	"item.mythic_charms.gaze_serenity.tooltip": "Grants the wearer the ability to look at an enderman without triggering aggression and during combat without triggering random teleportation",
 
-	"item.mythic_charms.botanic_blessing.tooltip0": "Accelerates the growth of crops within a",
-	"item.mythic_charms.botanic_blessing.tooltip1": "two-block radius around the wearer",
+	"item.mythic_charms.botanic_blessing.tooltip": "Accelerates the growth of crops within a two-block radius around the wearer",
 
-	"item.mythic_charms.fleeting_strides.tooltip0": "Enhances the wearer's speed when jumping",
-	"item.mythic_charms.fleeting_strides.tooltip1": "and running, but adds additional exhaustion",
+	"item.mythic_charms.fleeting_strides.tooltip": "Enhances the wearer's speed when jumping and running, but adds additional exhaustion",
 
-	"item.mythic_charms.nights_guardian.tooltip0": "Prevents phantoms from spawning only for",
-	"item.mythic_charms.nights_guardian.tooltip1": "the wearer alone, even if there are phantoms",
-	"item.mythic_charms.nights_guardian.tooltip2": "nearby, they will ignore the wearer",
+	"item.mythic_charms.nights_guardian.tooltip": "Prevents phantoms from spawning only for the wearer alone, even if there are phantoms nearby, they will ignore the wearer",
 
-	"item.mythic_charms.high_bounds.tooltip0": "Enhances wearer's jump height and a safe",
-	"item.mythic_charms.high_bounds.tooltip1": "height from which they remain unharmed, but",
-	"item.mythic_charms.high_bounds.tooltip2": "adds additional exhaustion",
+	"item.mythic_charms.high_bounds.tooltip": "Enhances wearer's jump height and a safe height from which they remain unharmed by one block, but adds additional exhaustion",
 
-	"item.mythic_charms.drowned_freedom.tooltip0": "Grants the wearer the ability to move",
-	"item.mythic_charms.drowned_freedom.tooltip1": "underwater as if on the surface, but not",
-	"item.mythic_charms.drowned_freedom.tooltip2": "the ability to breathe underwater",
+	"item.mythic_charms.drowned_freedom.tooltip": "Grants the wearer the ability to move underwater as if on the surface, but adds additional exhaustion",
 
-	"item.mythic_charms.weightless_flow.tooltip0": "Preserves the wearer's gravity, allowing",
-	"item.mythic_charms.weightless_flow.tooltip1": "them to stand in the air or leap into the",
-	"item.mythic_charms.weightless_flow.tooltip2": "sky, while the wearer is not sneaking",
+	"item.mythic_charms.weightless_flow.tooltip": "Preserves the wearer's gravity, allowing them to stand in the air or leap into the sky, while the wearer is not sneaking",
 
-	"item.mythic_charms.collectors_gift.tooltip0": "Draws items to the wearer within a",
-	"item.mythic_charms.collectors_gift.tooltip1": "two-block radius around",
+	"item.mythic_charms.collectors_gift.tooltip": "Draws items to the wearer within a two-block radius around",
 
-	"item.mythic_charms.climbers_path.tooltip0": "Enhances the wearer's step height, allowing",
-	"item.mythic_charms.climbers_path.tooltip1": "them to ascend obstacles with ease, but",
-	"item.mythic_charms.climbers_path.tooltip2": "adds additional exhaustion",
+	"item.mythic_charms.climbers_path.tooltip": "Enhances the wearer's step height to one block, allowing them to ascend obstacles with ease, but adds additional exhaustion",
 
-	"item.mythic_charms.natures_call.tooltip0": "Draws animals around the wearer, as if they",
-	"item.mythic_charms.natures_call.tooltip1": "were holding the creatures' favorite food",
+	"item.mythic_charms.natures_call.tooltip": "Draws animals around the wearer, as if they were holding the creatures' favorite food, while the wearer is not sneaking",
 
-	"item.mythic_charms.barters_pact.tooltip0": "The wearer may open a chest with a high",
-	"item.mythic_charms.barters_pact.tooltip1": "likelihood that it won't trigger aggression",
-	"item.mythic_charms.barters_pact.tooltip2": "from piglins",
+	"item.mythic_charms.barters_pact.tooltip": "The wearer may open a chest with a seventy percent chance that it won't trigger aggression from piglins",
 
-	"item.mythic_charms.battle_fury.tooltip0": "Increases the wearer's attack damage as their",
-	"item.mythic_charms.battle_fury.tooltip1": "health decreases, peaking at three times the normal",
-	"item.mythic_charms.battle_fury.tooltip2": "damage output when they have only half a heart left",
+	"item.mythic_charms.battle_fury.tooltip": "Increases the wearer's attack damage as their health decreases, peaking at three times the normal damage output when they have only half a heart left",
 
-	"item.mythic_charms.echoing_wrath.tooltip0": "Inflicts damage upon nearby mobs, when the",
-	"item.mythic_charms.echoing_wrath.tooltip1": "wearer is harmed, at half the intensity, up",
-	"item.mythic_charms.echoing_wrath.tooltip2": "to a maximum of three hearts of damage",
+	"item.mythic_charms.echoing_wrath.tooltip": "Damages nearby mobs, when the wearer is harmed, at half the intensity, up to a maximum of three hearts of damage, but the wearer receives an additional quarter of the damage",
 
-	"item.mythic_charms.enchanted_whispers.tooltip0": "Makes enchantments random every time the",
-	"item.mythic_charms.enchanted_whispers.tooltip1": "wearer interacts with an enchanting table,",
-	"item.mythic_charms.enchanted_whispers.tooltip2": "in exchange for one level",
+	"item.mythic_charms.enchanted_whispers.tooltip": "Makes enchantments random every time the wearer interacts with an enchanting table, in exchange for one level",
 
-	"item.mythic_charms.arrow_dance.tooltip0": "Grants the wearer the ability to evade",
-	"item.mythic_charms.arrow_dance.tooltip1": "incoming projectiles with a high chance",
+	"item.mythic_charms.arrow_dance.tooltip": "Grants the wearer the ability to evade incoming projectiles with a seventy percent chance, but they receive an additional quarter of the damage",
 
-	"item.mythic_charms.mountains_strength.tooltip0": "Grants the wearer an immunity to knockback",
-	"item.mythic_charms.mountains_strength.tooltip1": "or being pushed, but they receive slightly",
-	"item.mythic_charms.mountains_strength.tooltip2": "increased damage",
+	"item.mythic_charms.mountains_strength.tooltip": "Grants the wearer an immunity to knockback or being pushed, but they receive an additional quarter of the damage",
 
-	"item.mythic_charms.safe_territory.tooltip0": "Creepers around the wearer will no longer",
-	"item.mythic_charms.safe_territory.tooltip1": "break blocks",
+	"item.mythic_charms.safe_territory.tooltip": "Creepers in three-block radius around the wearer will no longer break blocks",
 
-	"item.mythic_charms.quiet_presence.tooltip0": "Grants the wearer the ability to move",
-	"item.mythic_charms.quiet_presence.tooltip1": "without triggering Sculk Sensors when walking",
+	"item.mythic_charms.quiet_presence.tooltip": "Grants the wearer the ability to move without triggering Sculk Sensors when walking",
 
 
 	"item.mythic_charms.broken_charm": "Broken Charm",
-	"item.mythic_charms.broken_charm.tooltip0": "Once was a usable charm",
+	"item.mythic_charms.broken_charm.tooltip": "Once was a usable charm",
 
 
 	"item.mythic_charms.fragile_charm_base": "Fragile Charm Base",
 
 
 	"item.mythic_charms.resonance_ring": "Resonance Ring",
-	"item.mythic_charms.resonance_ring.tooltip0": "Allows the wearer to use a Resonance Table",
-	"item.mythic_charms.resonance_ring.tooltip1": "and increases pickup delay of thrown items",
+	"item.mythic_charms.resonance_ring.tooltip": "Allows the wearer to use a Resonance Table and increases pickup delay of thrown items",
 
 
 	"item.mythic_charms.deepslate_fragment": "Deepslate Fragment",
-	"item.mythic_charms.deepslate_fragment.tooltip0": "Drops from deepslate",
-	"item.mythic_charms.deepslate_fragment.tooltip1": "with a small chance",
+	"item.mythic_charms.deepslate_fragment.tooltip": "Drops from deepslate with a small chance",
 
 
 	"item.mythic_charms.experience_nugget": "Experience Nugget",
-	"item.mythic_charms.experience_nugget.tooltip0": "Appears with experience orbs",
-	"item.mythic_charms.experience_nugget.tooltip1": "with a small chance",
+	"item.mythic_charms.experience_nugget.tooltip": "Appears with experience orbs with a small chance",
 
 
 	"item.mythic_charms.glowstone_nugget": "Glowstone Nugget",
 
 
 	"block.mythic_charms.resonance_table": "Resonance Table",
-	"item.mythic_charms.resonance_table.tooltip0": "Requires a Resonance Ring and",
-	"item.mythic_charms.resonance_table.tooltip1": "a Block of Lapis Lazuli beneath it",
-	"item.mythic_charms.resonance_table.tooltip2": "to work",
+	"item.mythic_charms.resonance_table.tooltip": "Requires a Resonance Ring and a Block of Lapis Lazuli beneath it to work",
 
 
 	"util.mythic_charms.shift_tooltip": "Hold §eSHIFT§r for more Information",
@@ -211,5 +172,7 @@
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationClimbersPathAndHighBoundsEnabled": "Charm Combination Climbers Path And High Bounds Enabled",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBlazingEmbraceEnabled": "Charm Combination Echoing Wrath And Blazing Embrace Enabled",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Charm Combination Echoing Wrath And Battle Fury Enabled",
-	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Charm Combination Quiet Presence And Feathered Grace Enabled"
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Charm Combination Quiet Presence And Feathered Grace Enabled",
+
+	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Number of mobs around, after which the experience nugget won't drop"
 }

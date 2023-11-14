@@ -34,8 +34,7 @@ public class ModBlocks {
     private static Item registerBlockItem(String name, Block block) {
 
         return Registry.register(Registries.ITEM, new Identifier(MythicCharms.MOD_ID, name), new TooltipBlockItem(block,
-                new FabricItemSettings(), List.of("item.mythic_charms.resonance_table.tooltip0", "item.mythic_charms.resonance_table.tooltip1",
-                "item.mythic_charms.resonance_table.tooltip2")));
+                new FabricItemSettings(), "item.mythic_charms.resonance_table.tooltip"));
 
     }
 

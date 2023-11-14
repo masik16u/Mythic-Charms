@@ -46,112 +46,73 @@
 	"item.mythic_charms.unbreakable_charm_of_quiet_presence": "Незламний талісман Тихої Присутності",
 
 
-	"item.mythic_charms.feathered_grace.tooltip0": "Надає власнику ефект повільного падіння після",
-	"item.mythic_charms.feathered_grace.tooltip1": "півсекундного падіння та закінчується через",
-	"item.mythic_charms.feathered_grace.tooltip2": "дві секунди, якщо власник не крадеться",
+	"item.mythic_charms.feathered_grace.tooltip": "Надає власнику ефект повільного падіння після півсекундного падіння та закінчується через дві секунди, якщо власник не крадеться",
 
-	"item.mythic_charms.blazing_embrace.tooltip0": "Надає власнику постійний ефект вогнестійкості,",
-	"item.mythic_charms.blazing_embrace.tooltip1": "але тривалість поновлюється лише тоді, коли",
-	"item.mythic_charms.blazing_embrace.tooltip2": "власник не горить",
+	"item.mythic_charms.blazing_embrace.tooltip": "Надає власнику постійний ефект вогнестійкості, але тривалість поновлюється лише тоді, коли власник не горить",
 
-	"item.mythic_charms.earths_order.tooltip0": "Надає власнику можливість зламати будь-який",
-	"item.mythic_charms.earths_order.tooltip1": "блок, який можна зламати, лише голими кулаками",
+	"item.mythic_charms.earths_order.tooltip": "Надає власнику можливість зламати будь-який блок, який можна зламати, лише голими кулаками",
 
-	"item.mythic_charms.gaze_serenity.tooltip0": "Надає власнику можливість дивитися на",
-	"item.mythic_charms.gaze_serenity.tooltip1": "ендермена, не викликаючи агресії та під час",
-	"item.mythic_charms.gaze_serenity.tooltip2": "бою, не викликаючи випадкової телепортації",
+	"item.mythic_charms.gaze_serenity.tooltip": "Надає власнику можливість дивитися на ендермена, не викликаючи агресії, та під час бою не викликати випадкову телепортацію",
 
-	"item.mythic_charms.botanic_blessing.tooltip0": "Прискорює ріст культур у радіусі двох блоків",
-	"item.mythic_charms.botanic_blessing.tooltip1": "навколо власника",
+	"item.mythic_charms.botanic_blessing.tooltip": "Прискорює ріст культур у радіусі двох блоків навколо власника",
 
-	"item.mythic_charms.fleeting_strides.tooltip0": "Підвищує швидкість власника під час бігу зі",
-	"item.mythic_charms.fleeting_strides.tooltip1": "стрибками, але додає додаткового виснаження",
+	"item.mythic_charms.fleeting_strides.tooltip": "Підвищує швидкість власника під час бігу зі стрибками, але дає додаткового виснаження",
 
-	"item.mythic_charms.nights_guardian.tooltip0": "Запобігає появі фантомів, але лише для",
-	"item.mythic_charms.nights_guardian.tooltip1": "власника, навіть якщо фантоми будуть біля",
-	"item.mythic_charms.nights_guardian.tooltip2": "власника, вони ігноруватимуть його",
+	"item.mythic_charms.nights_guardian.tooltip": "Запобігає появі фантомів, але лише для власника, навіть якщо фантоми будуть біля власника, вони ігноруватимуть його",
 
-	"item.mythic_charms.high_bounds.tooltip0": "Збільшує висоту стрибка власника та безпечну",
-	"item.mythic_charms.high_bounds.tooltip1": "висоту, з якої вони залишаються неушкодженими,",
-	"item.mythic_charms.high_bounds.tooltip2": "але додає додаткове виснаження",
+	"item.mythic_charms.high_bounds.tooltip": "Збільшує висоту стрибка власника та безпечну висоту, з якої вони залишаються неушкодженими, на один блок, але дає додаткове виснаження",
 
-	"item.mythic_charms.drowned_freedom.tooltip0": "Надає власнику можливість пересуватися",
-	"item.mythic_charms.drowned_freedom.tooltip1": "під водою, як на поверхні, але не здатність",
-	"item.mythic_charms.drowned_freedom.tooltip2": "дихати під водою",
+	"item.mythic_charms.drowned_freedom.tooltip": "Надає власнику можливість пересуватися під водою, як на поверхні, але дає додаткового виснаження",
 
-	"item.mythic_charms.weightless_flow.tooltip0": "Зберігає силу тяжіння власника, дозволяючи",
-	"item.mythic_charms.weightless_flow.tooltip1": "йому стояти в повітрі або поринути в небо,",
-	"item.mythic_charms.weightless_flow.tooltip2": "якщо власник не крадеться",
+	"item.mythic_charms.weightless_flow.tooltip": "Зберігає силу тяжіння власника, дозволяючи йому стояти в повітрі або поринути в небо, якщо власник не крадеться, але дає додаткового виснаження",
 
-	"item.mythic_charms.collectors_gift.tooltip0": "Притягує предмети до власника в радіусі",
-	"item.mythic_charms.collectors_gift.tooltip1": "двох блоків",
+	"item.mythic_charms.collectors_gift.tooltip": "Притягує предмети до власника в радіусі двох блоків",
 
-	"item.mythic_charms.climbers_path.tooltip0": "Збільшує висоту кроку власника, дозволяючи",
-	"item.mythic_charms.climbers_path.tooltip1": "йому з легкістю долати перешкоди, але додає",
-	"item.mythic_charms.climbers_path.tooltip2": "додаткового виснаження",
+	"item.mythic_charms.climbers_path.tooltip": "Збільшує висоту кроку власника до одного блоку, дозволяючи йому з легкістю долати перешкоди, але дає додаткового виснаження",
 
-	"item.mythic_charms.natures_call.tooltip0": "Приманює тварин навколо власника, ніби він",
-	"item.mythic_charms.natures_call.tooltip1": "тримає їх улюблену їжу",
+	"item.mythic_charms.natures_call.tooltip": "Приманює тварин навколо власника, ніби він тримає їх улюблену їжу, якщо власник не крадеться",
 
-	"item.mythic_charms.barters_pact.tooltip0": "Власник може відкрити скриню і з високою",
-	"item.mythic_charms.barters_pact.tooltip1": "ймовірністю, це не викличе агресію з боку",
-	"item.mythic_charms.barters_pact.tooltip2": "піґлінів",
+	"item.mythic_charms.barters_pact.tooltip": "Власник може відкрити скриню і з ймовірністю сімдесят відсотків, це не викличе агресію з боку піґлінів",
 
-	"item.mythic_charms.battle_fury.tooltip0": "Збільшує урон від атаки власника, коли його",
-	"item.mythic_charms.battle_fury.tooltip1": "здоров’я знижується, максимально втричі, коли",
-	"item.mythic_charms.battle_fury.tooltip2": "у нього залишається лише половина серця",
+	"item.mythic_charms.battle_fury.tooltip": "Збільшує урон від атаки власника, коли його здоров’я знижується, максимально втричі, коли у нього залишається лише половина серця",
 
-	"item.mythic_charms.echoing_wrath.tooltip0": "Завдає урон мобам навколо, коли власник",
-	"item.mythic_charms.echoing_wrath.tooltip1": "отримує урон, з половиною інтенсивності,",
-	"item.mythic_charms.echoing_wrath.tooltip2": "щонайбільше до трьох сердець урону",
+	"item.mythic_charms.echoing_wrath.tooltip": "Завдає урон мобам навколо, коли власник отримує урон, з половиною інтенсивності, щонайбільше до трьох сердець урону, але власник отримує додаткову чверть урону",
 
-	"item.mythic_charms.enchanted_whispers.tooltip0": "Робить чари випадковими кожного разу, коли",
-	"item.mythic_charms.enchanted_whispers.tooltip1": "власник взаємодіє зі столом зачарування,",
-	"item.mythic_charms.enchanted_whispers.tooltip2": "в обмін на один рівень",
+	"item.mythic_charms.enchanted_whispers.tooltip": "Робить чари випадковими кожного разу, коли власник взаємодіє зі столом зачарування, в обмін на один рівень",
 
-	"item.mythic_charms.arrow_dance.tooltip0": "Надає власнику можливість ухилитися від",
-	"item.mythic_charms.arrow_dance.tooltip1": "снарядів із високим шансом",
+	"item.mythic_charms.arrow_dance.tooltip": "Надає власнику можливість ухилитися від снарядів із ймовірністю сімдесят відсотків, але власник отримує додаткову чверть урону",
 
-	"item.mythic_charms.mountains_strength.tooltip0": "Надає власнику імунітет до відкидання",
-	"item.mythic_charms.mountains_strength.tooltip1": "або штовхання, але він отримує дещо",
-	"item.mythic_charms.mountains_strength.tooltip2": "збільшений урон",
+	"item.mythic_charms.mountains_strength.tooltip": "Надає власнику імунітет до відкидання або штовхання, але він отримує додаткову чверть урону",
 
-	"item.mythic_charms.safe_territory.tooltip0": "Вибухи кріпера навколо власника більше не",
-	"item.mythic_charms.safe_territory.tooltip1": "зможуть ламати блоки",
+	"item.mythic_charms.safe_territory.tooltip": "Вибухи кріпера у радіусі двох блоків навколо власника більше не зможуть ламати блоки",
 
-	"item.mythic_charms.quiet_presence.tooltip0": "Надає власнику можливість рухатися без",
-	"item.mythic_charms.quiet_presence.tooltip1": "активації скалковоно сенсору під час ходьби",
+	"item.mythic_charms.quiet_presence.tooltip": "Надає власнику можливість рухатися без активації скалкового сенсору під час ходьби",
 
 
 	"item.mythic_charms.broken_charm": "Зламаний талісман",
-	"item.mythic_charms.broken_charm.tooltip0": "Колись був придатним талісманом",
+	"item.mythic_charms.broken_charm.tooltip": "Колись був придатним талісманом",
 
 
 	"item.mythic_charms.fragile_charm_base": "База крихкого талісману",
 
 
 	"item.mythic_charms.resonance_ring": "Перстень резонансу",
-	"item.mythic_charms.resonance_ring.tooltip0": "Дозволяє власнику використовувати стіл резонансу",
-	"item.mythic_charms.resonance_ring.tooltip1": "та збільшує затримку підбору кинутих предметів",
+	"item.mythic_charms.resonance_ring.tooltip": "Дозволяє власнику використовувати стіл резонансу та збільшує затримку підбору кинутих предметів",
 
 
 	"item.mythic_charms.deepslate_fragment": "Фрагмент глибосланцю",
-	"item.mythic_charms.deepslate_fragment.tooltip0": "Випадає з глибосланцю",
-	"item.mythic_charms.deepslate_fragment.tooltip1": "з невеликим шансом",
+	"item.mythic_charms.deepslate_fragment.tooltip": "Випадає з глибосланцю з невеликим шансом",
 
 
 	"item.mythic_charms.experience_nugget": "Самородок досвіду",
-	"item.mythic_charms.experience_nugget.tooltip0": "З'являється з кулями досвіду",
-	"item.mythic_charms.experience_nugget.tooltip1": "з невеликим шансом",
+	"item.mythic_charms.experience_nugget.tooltip": "З'являється з кулями досвіду з невеликим шансом",
 
 
 	"item.mythic_charms.glowstone_nugget": "Самородок світлокаменю",
 
 
 	"block.mythic_charms.resonance_table": "Стіл резонансу",
-	"item.mythic_charms.resonance_table.tooltip0": "Для використання потрібен",
-	"item.mythic_charms.resonance_table.tooltip1": "перстень резонансу та блок",
-	"item.mythic_charms.resonance_table.tooltip2": "лазуриту під ним",
+	"item.mythic_charms.resonance_table.tooltip": "Для використання потрібен перстень резонансу та блок лазуриту під ним",
 
 
 	"util.mythic_charms.shift_tooltip": "Утримуйте §eSHIFT§r для додаткової інформації",
@@ -211,5 +172,7 @@
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationClimbersPathAndHighBoundsEnabled": "Комбінація талісманів Шляху Альпініста і Високих Меж увімкнено",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBlazingEmbraceEnabled": "Комбінація талісманів Відлуння Гніву і Палаючих Обіймів увімкнено",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Комбінація талісманів Відлуння Гніву і Бойової Люті увімкнено",
-	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Комбінація талісманів Тихої Присутності і Крилатої Грації увімкнено"
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Комбінація талісманів Тихої Присутності і Крилатої Грації увімкнено",
+
+	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Кількість мобів навколо, після якої самородок досвіду не випаде"
 }
