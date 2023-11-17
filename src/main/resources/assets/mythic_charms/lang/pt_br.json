@@ -1,0 +1,178 @@
+{
+	"trinkets.slot.mythic_charms.mythic_charm": "Mythic Charms",
+
+	"item.mythic_charms.fragile_charm_of_feathered_grace": "Amuleto Frágil da Divindade Alada",
+	"item.mythic_charms.fragile_charm_of_blazing_embrace": "Amuleto Frágil do Abraço das Chamas",
+	"item.mythic_charms.fragile_charm_of_gaze_serenity": "Amuleto Frágil do Olhar Calmo",
+	"item.mythic_charms.fragile_charm_of_earths_order": "Amuleto Frágil da Ordem da Terra",
+	"item.mythic_charms.fragile_charm_of_botanic_blessing": "Amuleto Frágil do Deus das Plantações",
+	"item.mythic_charms.fragile_charm_of_fleeting_strides": "Amuleto Frágil dos Passos Rápidos",
+	"item.mythic_charms.fragile_charm_of_nights_guardian": "Amuleto Frágil do Guardião da Noite",
+	"item.mythic_charms.fragile_charm_of_high_bounds": "Amuleto Frágil das Fronteiras Elevadas",
+	"item.mythic_charms.fragile_charm_of_drowned_freedom": "Amuleto Frágil da Liberdade Submersa",
+	"item.mythic_charms.fragile_charm_of_weightless_flow": "Amuleto Frágil do Leve Fluxo",
+	"item.mythic_charms.fragile_charm_of_collectors_gift": "Amuleto Frágil do Colecionador",
+	"item.mythic_charms.fragile_charm_of_climbers_path": "Amuleto Frágil do Caminho do Viajante",
+	"item.mythic_charms.fragile_charm_of_natures_call": "Amuleto Frágil do Chamado da Natureza",
+	"item.mythic_charms.fragile_charm_of_barters_pact": "Amuleto Frágil do Pacto do Comércio",
+	"item.mythic_charms.fragile_charm_of_battle_fury": "Amuleto Frágil da Fúria dos Guerreiros",
+	"item.mythic_charms.fragile_charm_of_echoing_wrath": "Amuleto Frágil da Ira Ecoante",
+	"item.mythic_charms.fragile_charm_of_enchanted_whispers": "Amuleto Frágil dos Encantamentos Sussurrantes",
+	"item.mythic_charms.fragile_charm_of_arrow_dance": "Amuleto Frágil da Dança das Flechas",
+	"item.mythic_charms.fragile_charm_of_mountains_strength": "Amuleto Frágil da Força da Montanha",
+	"item.mythic_charms.fragile_charm_of_safe_territory": "Amuleto Frágil do Território Seguro",
+	"item.mythic_charms.fragile_charm_of_quiet_presence": "Amuleto Frágil da Presença Silenciosa",
+
+	"item.mythic_charms.unbreakable_charm_of_feathered_grace": "Amuleto Inquebrável da Divindade Alada",
+	"item.mythic_charms.unbreakable_charm_of_blazing_embrace": "Amuleto Inquebrável do Abraço das Chamas",
+	"item.mythic_charms.unbreakable_charm_of_earths_order": "Amuleto Inquebrável da Ordem da Terra",
+	"item.mythic_charms.unbreakable_charm_of_gaze_serenity": "Amuleto Inquebrável do Olhar Calmo",
+	"item.mythic_charms.unbreakable_charm_of_botanic_blessing": "Amuleto Inquebrável do Deus das Plantações",
+	"item.mythic_charms.unbreakable_charm_of_fleeting_strides": "Amuleto Inquebrável dos Passos Rápidos",
+	"item.mythic_charms.unbreakable_charm_of_nights_guardian": "Amuleto Inquebrável do Guardião da Noite",
+	"item.mythic_charms.unbreakable_charm_of_high_bounds": "Amuleto Inquebrável das Fronteiras Elevadas",
+	"item.mythic_charms.unbreakable_charm_of_drowned_freedom": "Amuleto Inquebrável da Liberdade Submersa",
+	"item.mythic_charms.unbreakable_charm_of_weightless_flow": "Amuleto Inquebrável do Leve Fluxo",
+	"item.mythic_charms.unbreakable_charm_of_collectors_gift": "Amuleto Inquebrável do Colecionador",
+	"item.mythic_charms.unbreakable_charm_of_climbers_path": "Amuleto Inquebrável do Caminho do Viajante",
+	"item.mythic_charms.unbreakable_charm_of_natures_call": "Amuleto Inquebrável do Chamado da Natureza",
+	"item.mythic_charms.unbreakable_charm_of_barters_pact": "Amuleto Inquebrável do Pacto do Comércio",
+	"item.mythic_charms.unbreakable_charm_of_battle_fury": "Amuleto Inquebrável da Fúria dos Guerreiros",
+	"item.mythic_charms.unbreakable_charm_of_echoing_wrath": "Amuleto Inquebrável da Ira Ecoante",
+	"item.mythic_charms.unbreakable_charm_of_enchanted_whispers": "Amuleto Inquebrável dos Encantamentos Sussurrantes",
+	"item.mythic_charms.unbreakable_charm_of_arrow_dance": "Amuleto Inquebrável da Dança das Flechas",
+	"item.mythic_charms.unbreakable_charm_of_mountains_strength": "Amuleto Inquebrável da Força da Montanha",
+	"item.mythic_charms.unbreakable_charm_of_safe_territory": "Amuleto Inquebrável do Território Seguro",
+	"item.mythic_charms.unbreakable_charm_of_quiet_presence": "Amuleto Inquebrável da Presença Silenciosa",
+
+
+	"item.mythic_charms.feathered_grace.tooltip": "Concede ao portador um efeito de queda lenta após uma queda de meio segundo e termina depois de dois segundos, funciona enquanto o portador não estiver agachando",
+
+	"item.mythic_charms.blazing_embrace.tooltip": "Concede ao portador efeito permanente de resistência ao fogo, mas a duração só é renovada quando o portador não está pegando fogo",
+
+	"item.mythic_charms.earths_order.tooltip": "Concede ao portador a capacidade de quebrar qualquer bloco quebrável sem ferramentas",
+
+	"item.mythic_charms.gaze_serenity.tooltip": "Concede ao portador a capacidade de olhar para um enderman sem o deixar agressivo, durante combate o enderman não consegue teleportar",
+
+	"item.mythic_charms.botanic_blessing.tooltip": "Acelera o crescimento das plantações em um raio de dois blocos ao redor do portador",
+
+	"item.mythic_charms.fleeting_strides.tooltip": "Melhora a velocidade do portador enquanto está pulando e correndo, mas adiciona exaustão",
+
+	"item.mythic_charms.nights_guardian.tooltip": "Impede que phantoms ataquem o portador, mesmo se tiverem phantoms por perto, eles irão ignorar o portador",
+
+	"item.mythic_charms.high_bounds.tooltip": "Aumenta a altura do pulo e a segurança da queda que o portador se salva por um bloco, mas adiciona exaustão",
+
+	"item.mythic_charms.drowned_freedom.tooltip": "Concede o portador a abilidade de ear embaixo da àgua como se fosse na superfície, mas adiciona exaustão",
+
+	"item.mythic_charms.weightless_flow.tooltip": "Mantém a gravidade do portador, permitindo ficar de pé no ar e saltar para o céu, funciona enquanto o portador não estiver agachado",
+
+	"item.mythic_charms.collectors_gift.tooltip": "Trás itens ao portador se estiverem à dois blocos de distância",
+
+	"item.mythic_charms.climbers_path.tooltip": "Aumenta a altura de caminhada por um bloco, permitindo subir blocos fácilmente, mas adiciona exaustão",
+
+	"item.mythic_charms.natures_call.tooltip": "Chama os animais para perto do portador, como se estivesse segurando sua comida favorita, funciona enquanto não está agachado",
+
+	"item.mythic_charms.barters_pact.tooltip": "O portador pode abrir um baú com setenta por cento de chance de não tornar os piglins agressivos",
+
+	"item.mythic_charms.battle_fury.tooltip": "Quando próximo a morte, a força do portador irá aumentar, limitando à três vezes o ataque normal quando só tem meio coração faltando",
+
+	"item.mythic_charms.echoing_wrath.tooltip": "Quando dano é recebido, também machuca inimigos próximos na metade da intensidade e até três corações de dano, mas o portador perde um quarto a mais de vida",
+
+	"item.mythic_charms.enchanted_whispers.tooltip": "Muda os encantamentos aleatóriamente toda vez que o portador interage com uma mesa de encantamentos em troca de um nível",
+
+	"item.mythic_charms.arrow_dance.tooltip": "Concede ao portador setenta por cento de chance de esquivar de um projétil, porém, recebe um quarto a mais de dano",
+
+	"item.mythic_charms.mountains_strength.tooltip": "Concede ao portador imunidade à repulsão ou à ser empurrado, mas recebe um quarto a mais de dano",
+
+	"item.mythic_charms.safe_territory.tooltip": "Creeper três blocos de distância do portador não quebram blocos",
+
+	"item.mythic_charms.quiet_presence.tooltip": "Concede ao portador a abilidade de se mover sem ativar Sensores de sculk ao ear",
+
+
+	"item.mythic_charms.broken_charm": "Amuleto Quebrado",
+	"item.mythic_charms.broken_charm.tooltip": "Este Amuleto se quebrou, e o poder de seu interior foi silenciado. Não pode ser equipado.",
+
+
+	"item.mythic_charms.fragile_charm_base": "Base do Amuleto Frágil",
+	
+
+	"item.mythic_charms.resonance_ring": "Anel de ressonância",
+	"item.mythic_charms.resonance_ring.tooltip": "Permite o portador usar uma Mesa de ressonância e aumenta o delay para pegar itens do chão",
+
+
+	"item.mythic_charms.deepslate_fragment": "Fragmento de Ardósia",
+	"item.mythic_charms.deepslate_fragment.tooltip": "Tem uma pequena chance de vir ao quebrar uma ardósia",
+
+
+	"item.mythic_charms.experience_nugget": "Pepita de experiência",
+	"item.mythic_charms.experience_nugget.tooltip": "Aparece com orbs de experiência de vez em quando",
+
+
+	"item.mythic_charms.glowstone_nugget": "Pepita de pedra luminosa",
+
+
+	"block.mythic_charms.resonance_table": "Mesa de ressonância",
+	"item.mythic_charms.resonance_table.tooltip": "Requer um Anel de ressonância e precisa estar em cima de um Bloco de lápis-lazúli para funcionar",
+
+
+	"util.mythic_charms.shift_tooltip": "Segure §eSHIFT§r para mais informações",
+
+
+	"category.mythic_charms.resonance": "Infusão de ressonância",
+	"category.mythic_charms.resonance.ingredient": "Ingrediente",
+	"category.mythic_charms.resonance.catalyst": "Catalisador",
+	"category.mythic_charms.resonance.trinket": "Jóias",
+	"category.mythic_charms.resonance.output": "Resultado",
+
+
+	"tag.item.mythic_charms.fragile_charms": "Amuletos Frágeis",
+	"tag.item.mythic_charms.resonance_ingredients": "Ingredientes para ressonância",
+
+	"emi.category.mythic_charms.resonance_table": "Infusão de ressonância",
+
+	"tag.item.trinkets.hand.ring": "Anel",
+	"tag.item.trinkets.mythic_charms.mythic_charm": "Amuleto Mítico",
+
+
+	"text.config.mythic-charms-config.title": "Configurações do Mythic Charms",
+	"text.config.mythic-charms-config.category.charmsEnabled": "Amuleto s ativos",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmFeatheredGraceEnabled": "Amuleto Divindade Alada Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBlazingEmbraceEnabled": "Amuleto Abraço das Chamas Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEarthsOrderEnabled": "Amuleto Ordem da Terra Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmGazeSerenityEnabled": "Amuleto Olhar Calmo Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBotanicBlessingEnabled": "Amuleto Deus das Plantações Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmFleetingStridesEnabled": "Amuleto Passos Rápidos Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmNightsGuardianEnabled": "Amuleto Guardião da Noite Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmHighBoundsEnabled": "Amuleto Fronteiras Elevadas Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmDrownedFreedomEnabled": "Amuleto  Liberdade Submersa Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmWeightlessFlowEnabled": "Amuleto Leve Fluxo Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmCollectorsGiftEnabled": "Amuleto Colecionador Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmClimbersPathEnabled": "Amuleto Caminho do Viajante Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmNaturesCallEnabled": "Amuleto Chamado da Natureza Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBartersPactEnabled": "Amuleto Pacto do Comércio Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBattleFuryEnabled": "Amuleto Fúria dos Guerreiros Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEchoingWrathEnabled": "Amuleto Ira Ecoante Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEnchantedWhispersEnabled": "Amuleto Encantamentos Sussurrantes Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmArrowDanceEnabled": "Amuleto Dança das Flechas Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmMountainsStrengthEnabled": "Amuleto Força da Montanha Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmSafeTerritoryEnabled": "Amuleto Território Seguro Ativo",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmQuietPresenceEnabled": "Amuleto Presença Silenciosa Ativo",
+
+	"text.config.mythic-charms-config.category.charmCombinationsEnabled": "Combinações ativas",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFeatheredGraceAndHighBoundsEnabled": "Amuleto Combinação Divindade Alada e Fronteiras Elevadas Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationBlazingEmbraceAndBattleFuryEnabled": "Amuleto Combinação Abraço das Chamas e Fúria dos Guerreiros Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBlazingEmbraceEnabled": "Amuleto Combinação Earths Order e Abraço das Chamas Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndDrownedFreedomEnabled": "Amuleto Combinação Earths Order e  Liberdade Submersa Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndWeightlessFlowEnabled": "Amuleto Combinação Earths Order e Leve Fluxo Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBattleFuryEnabled": "Amuleto Combinação Earths Order e Fúria dos Guerreiros Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationBotanicBlessingAndFeatheredGraceEnabled": "Amuleto Combinação Deus das Plantações e Divindade Alada Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFleetingStridesAndHighBoundsEnabled": "Amuleto Combinação Passos Rápidos e Fronteiras Elevadas Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFleetingStridesAndBattleFuryEnabled": "Amuleto Combinação Passos Rápidos e Fúria dos Guerreiros Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationWeightlessFlowAndFeatheredGraceEnabled": "Amuleto Combinação Leve Fluxo e Divindade Alada Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationClimbersPathAndHighBoundsEnabled": "Amuleto Combinação Climbers Path e Fronteiras Elevadas Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBlazingEmbraceEnabled": "Amuleto Combinação Ira Ecoante e Abraço das Chamas Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Amuleto Combinação Ira Ecoante e Fúria dos Guerreiros Ativo",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Amuleto Combinação Presença Silenciosa e Divindade Alada Ativo",
+
+	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Número de mobs em volta, depois disso, não virá mais pepitas"
+}
