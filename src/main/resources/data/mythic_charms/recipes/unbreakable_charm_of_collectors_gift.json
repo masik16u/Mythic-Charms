@@ -1,0 +1,18 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "ingredients": [
+    {
+      "item": "mythic_charms:fragile_charm_of_collectors_gift"
+    },
+    {
+      "item": "mythic_charms:deepslate_fragment"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "result": {
+    "item": "mythic_charms:unbreakable_charm_of_collectors_gift",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "ingredients": [
+    {
+      "item": "mythic_charms:fragile_charm_base"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "mythic_charms:glowstone_nugget"
+    }
+  ],
+  "result": {
+    "item": "mythic_charms:fragile_charm_of_quiet_presence",
+    "count": 1
+  }
+}

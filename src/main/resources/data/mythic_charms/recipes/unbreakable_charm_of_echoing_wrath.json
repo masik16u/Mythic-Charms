@@ -1,0 +1,18 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "ingredients": [
+    {
+      "item": "mythic_charms:fragile_charm_of_echoing_wrath"
+    },
+    {
+      "item": "mythic_charms:deepslate_fragment"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "result": {
+    "item": "mythic_charms:unbreakable_charm_of_echoing_wrath",
+    "count": 1
+  }
+}

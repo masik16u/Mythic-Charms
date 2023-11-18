@@ -1,6 +1,5 @@
 package net.masik.mythiccharms.mixin;
 
-import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.util.math.BlockPos;

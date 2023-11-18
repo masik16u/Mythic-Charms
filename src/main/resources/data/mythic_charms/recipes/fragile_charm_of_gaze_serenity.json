@@ -1,0 +1,24 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "ingredients": [
+    {
+      "item": "mythic_charms:fragile_charm_base"
+    },
+    {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    {
+      "item": "mythic_charms:glowstone_nugget"
+    }
+  ],
+  "result": {
+    "item": "mythic_charms:fragile_charm_of_gaze_serenity",
+    "count": 1
+  }
+}

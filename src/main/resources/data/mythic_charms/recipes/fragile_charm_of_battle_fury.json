@@ -1,0 +1,24 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "ingredients": [
+    {
+      "item": "mythic_charms:fragile_charm_base"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "mythic_charms:glowstone_nugget"
+    }
+  ],
+  "result": {
+    "item": "mythic_charms:fragile_charm_of_battle_fury",
+    "count": 1
+  }
+}

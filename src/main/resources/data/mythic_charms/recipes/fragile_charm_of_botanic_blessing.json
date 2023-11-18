@@ -1,0 +1,24 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "ingredients": [
+    {
+      "item": "mythic_charms:fragile_charm_base"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "mythic_charms:glowstone_nugget"
+    }
+  ],
+  "result": {
+    "item": "mythic_charms:fragile_charm_of_botanic_blessing",
+    "count": 1
+  }
+}

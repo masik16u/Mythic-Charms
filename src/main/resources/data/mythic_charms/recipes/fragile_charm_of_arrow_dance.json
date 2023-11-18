@@ -1,0 +1,24 @@
+{
+  "type": "mythic_charms:resonance_infusing",
+  "ingredients": [
+    {
+      "item": "mythic_charms:fragile_charm_base"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:rabbit_hide"
+    },
+    {
+      "item": "mythic_charms:glowstone_nugget"
+    }
+  ],
+  "result": {
+    "item": "mythic_charms:fragile_charm_of_arrow_dance",
+    "count": 1
+  }
+}

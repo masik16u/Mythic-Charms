@@ -6,12 +6,11 @@ import me.shedaniel.rei.api.common.display.Display;
 import me.shedaniel.rei.api.common.entry.EntryIngredient;
 import me.shedaniel.rei.api.common.util.EntryIngredients;
 import net.masik.mythiccharms.item.ModItems;
-import net.masik.mythiccharms.recipe.CharmRecipe;
+import net.masik.mythiccharms.recipe.ResonanceRecipe;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -25,15 +24,20 @@ public class ResonanceTableDisplay implements Display {
     private List<EntryIngredient> output;
     private List<EntryIngredient> input;
 
-    public ResonanceTableDisplay(CharmRecipe recipe) {
+    public ResonanceTableDisplay(ResonanceRecipe recipe) {
         ImmutableList.Builder<EntryIngredient> builder = ImmutableList.builder();
-        recipe.input.forEach(item ->
-                builder.add(EntryIngredients.of(item).map(stack -> stack.copy().tooltip(Text.translatable("category.mythic_charms.resonance.ingredient").formatted(Formatting.YELLOW)))));
+        recipe.getRecipeItems().forEach(item ->
+                builder.add(EntryIngredients.of(item.getMatchingStacks()[0]).map(stack -> stack.copy().tooltip(Text.translatable("category.mythic_charms.resonance.ingredient").formatted(Formatting.YELLOW)))));
+        if (recipe.getRecipeItems().size() < 5) {
+            for (int i = 0; i < 5 - recipe.getRecipeItems().size(); i++) {
+                builder.add(EntryIngredients.of(Items.AIR));
+            }
+        }
         builder.add(EXPERIENCE_BOTTLE);
         builder.add(RESONANCE_RING);
         this.input = builder.build();
 
-        this.output = Collections.singletonList(EntryIngredients.of(recipe.output).map(stack -> stack.copy().tooltip(Text.translatable("category.mythic_charms.resonance.output").formatted(Formatting.YELLOW))));
+        this.output = Collections.singletonList(EntryIngredients.of(recipe.getOutput(null)).map(stack -> stack.copy().tooltip(Text.translatable("category.mythic_charms.resonance.output").formatted(Formatting.YELLOW))));
 
     }
 

@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ModItems {
 
-    public static final Item RESONANCE_RING = registerItem("resonance_ring", new TooltipItem(new FabricItemSettings(),
+    public static final Item RESONANCE_RING = registerItem("resonance_ring", new TooltipItem(new FabricItemSettings().maxCount(1),
             "item.mythic_charms.resonance_ring.tooltip", true));
     public static final Item BROKEN_CHARM = registerItem("broken_charm", new TooltipItem(new FabricItemSettings(),
             "item.mythic_charms.broken_charm.tooltip", false));

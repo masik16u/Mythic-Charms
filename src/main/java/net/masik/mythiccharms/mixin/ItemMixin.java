@@ -9,7 +9,6 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.item.ThrowablePotionItem;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.ActionResult;
@@ -26,7 +25,7 @@ import java.util.Optional;
 @Mixin(Item.class)
 public class ItemMixin {
 
-    @Inject(method = "useOnBlock", at = @At("RETURN"))
+    @Inject(method = "useOnBlock", at = @At("HEAD"), cancellable = true)
     private void useOnResonanceTable(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         if (context.getPlayer() == null) return;
         PlayerEntity player = context.getPlayer();
@@ -48,7 +47,7 @@ public class ItemMixin {
         world.spawnEntity(itemEntity);
 
         context.getStack().decrement(1);
-        player.swingHand(context.getHand());
+        cir.setReturnValue(ActionResult.SUCCESS);
     }
 
 }
