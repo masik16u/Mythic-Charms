@@ -46,6 +46,7 @@
 	"item.mythic_charms.unbreakable_charm_of_quiet_presence": "Amuleto Inquebrável da Presença Silenciosa",
 
 
+
 	"item.mythic_charms.feathered_grace.tooltip": "Concede ao portador um efeito de queda lenta após uma queda de meio segundo e termina depois de dois segundos, funciona enquanto o portador não estiver agachando",
 
 	"item.mythic_charms.blazing_embrace.tooltip": "Concede ao portador efeito permanente de resistência ao fogo, mas a duração só é renovada quando o portador não está pegando fogo",
@@ -93,7 +94,7 @@
 	"item.mythic_charms.broken_charm.tooltip": "Este Amuleto se quebrou, e o poder de seu interior foi silenciado. Não pode ser equipado.",
 
 
-	"item.mythic_charms.fragile_charm_base": "Base do Amuleto Frágil",
+	"item.mythic_charms.fragile_charm_base": "Base de Amuleto Frágil",
 	
 
 	"item.mythic_charms.resonance_ring": "Anel de ressonância",
@@ -174,18 +175,18 @@
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Amuleto Combinação Ira Ecoante e Fúria dos Guerreiros Ativo",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Amuleto Combinação Presença Silenciosa e Divindade Alada Ativo",
 
-	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Número de mobs em volta, depois disso, não virá mais pepitas",
+	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Número de mobs em volta, depois disso, não virá mais pepitas"
 
 	"advancements.mythic_charms.story.root.title": "Mythic Charms",
-	"advancements.mythic_charms.story.root.desc": "Everything in your hands",
-	"advancements.mythic_charms.story.resonance_table.title": "Pretty Table",
-	"advancements.mythic_charms.story.resonance_table.desc": "Craft a Resonance Table",
-	"advancements.mythic_charms.story.fragile_charm_base.title": "That's Basics",
-	"advancements.mythic_charms.story.fragile_charm_base.desc": "Craft a Fragile Charm Base",
-	"advancements.mythic_charms.story.first_charm.title": "Charmcrafting 101",
-	"advancements.mythic_charms.story.first_charm.desc": "Create your first Charm",
-	"advancements.mythic_charms.story.first_unbreakable_charm.title": "You're Safe Now",
-	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Upgrade your charm for the first time",
-	"advancements.mythic_charms.story.every_charm.title": "Charmaster",
-	"advancements.mythic_charms.story.every_charm.desc": "Create every charm"
+	"advancements.mythic_charms.story.root.desc": "Tudo em mãos",
+	"advancements.mythic_charms.story.resonance_table.title": "Que mesa elegante",
+	"advancements.mythic_charms.story.resonance_table.desc": "Construa uma Mesa de Ressonância",
+	"advancements.mythic_charms.story.fragile_charm_base.title": "Apenas o básico",
+	"advancements.mythic_charms.story.fragile_charm_base.desc": "Faça uma Base de Amuleto Frágil",
+	"advancements.mythic_charms.story.first_charm.title": "Criação de amuletos 101",
+	"advancements.mythic_charms.story.first_charm.desc": "Crie seu primeiro Amuleto",
+	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Você está seguro agora",
+	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Melhore seu amuleto pela primeira vez",
+	"advancements.mythic_charms.story.every_charm.title": "Mestre dos Amuletos",
+	"advancements.mythic_charms.story.every_charm.desc": "Crie todos os amuletos"
 }
