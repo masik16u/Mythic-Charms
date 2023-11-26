@@ -175,7 +175,7 @@
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Amuleto Combinação Ira Ecoante e Fúria dos Guerreiros Ativo",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Amuleto Combinação Presença Silenciosa e Divindade Alada Ativo",
 
-	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Número de mobs em volta, depois disso, não virá mais pepitas"
+	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Número de mobs em volta, depois disso, não virá mais pepitas",
 
 	"advancements.mythic_charms.story.root.title": "Mythic Charms",
 	"advancements.mythic_charms.story.root.desc": "Tudo em mãos",
