@@ -1,22 +1,20 @@
 package net.masik.mythiccharms.item;
 
+import dev.emi.trinkets.api.*;
 import net.masik.mythiccharms.util.TooltipHelper;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class TooltipItem extends Item {
+public class TooltipTrinketItem extends TrinketItem {
 
     private final String tooltipKey;
     private final Boolean notNormal;
 
-    public TooltipItem(Settings settings, String tooltip, Boolean shift) {
+    public TooltipTrinketItem(Settings settings, String tooltip, Boolean shift) {
         super(settings);
         tooltipKey = tooltip;
         notNormal = shift;

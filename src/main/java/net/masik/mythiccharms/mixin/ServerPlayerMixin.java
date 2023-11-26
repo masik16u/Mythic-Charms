@@ -67,6 +67,8 @@ public abstract class ServerPlayerMixin {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 4, 0,
                     false, false, false));
 
+            //AdvancementsHelper.grantAdvancement(player, new Identifier("mythic_charms:story/charm_feathered_grace"));
+
         }
 
         if (this.ticksInAir >= 40 && this.ticksInAir < ticksInAirCap) {

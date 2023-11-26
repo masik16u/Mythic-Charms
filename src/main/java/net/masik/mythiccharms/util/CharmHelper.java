@@ -7,7 +7,7 @@ import net.masik.mythiccharms.item.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.masik.mythiccharms.util.MythicCharmsConfig;
 
-import java.util.Optional;
+import java.util.*;
 
 public class CharmHelper {
 
@@ -394,5 +394,22 @@ public class CharmHelper {
                         trinket.get().isEquipped(ModItems.UNBREAKABLE_CHARM_OF_FEATHERED_GRACE));
 
     }
+
+    public static ArrayList<Set<String>> combinations = new ArrayList<>() {{
+        add(new HashSet<>(List.of(new String[]{"feathered_grace", "high_bounds"})));
+        add(new HashSet<>(List.of(new String[]{"blazing_embrace", "battle_fury"})));
+        add(new HashSet<>(List.of(new String[]{"earths_order", "blazing_embrace"})));
+        add(new HashSet<>(List.of(new String[]{"earths_order", "drowned_freedom"})));
+        add(new HashSet<>(List.of(new String[]{"earths_order", "weightless_flow"})));
+        add(new HashSet<>(List.of(new String[]{"earths_order", "battle_fury"})));
+        add(new HashSet<>(List.of(new String[]{"botanic_blessing", "feathered_grace"})));
+        add(new HashSet<>(List.of(new String[]{"fleeting_strides", "high_bounds"})));
+        add(new HashSet<>(List.of(new String[]{"fleeting_strides", "battle_fury"})));
+        add(new HashSet<>(List.of(new String[]{"weightless_flow", "feathered_grace"})));
+        add(new HashSet<>(List.of(new String[]{"climbers_path", "high_bounds"})));
+        add(new HashSet<>(List.of(new String[]{"echoing_wrath", "blazing_embrace"})));
+        add(new HashSet<>(List.of(new String[]{"echoing_wrath", "battle_fury"})));
+        add(new HashSet<>(List.of(new String[]{"quiet_presence", "feathered_grace"})));
+    }};
 
 }

@@ -4,6 +4,7 @@ import dev.emi.trinkets.api.*;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.util.CharmHelper;
+import net.masik.mythiccharms.util.SoundHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -46,8 +47,7 @@ public class PlayerMixin {
 
             if (stack.isIn(TagKey.of(RegistryKeys.ITEM, new Identifier(MythicCharms.MOD_ID, "fragile_charms")))) {
 
-                player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
-                        SoundEvents.ENTITY_ITEM_BREAK, player.getSoundCategory(), 20.0F, 1.0F);
+                SoundHelper.playSoundAtEntity(player, SoundEvents.ENTITY_ITEM_BREAK, 20F);
 
                 ref.inventory().setStack(ref.index(), ModItems.BROKEN_CHARM.getDefaultStack());
 

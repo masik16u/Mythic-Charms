@@ -1,0 +1,317 @@
+{
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mythic_charms.story.every_charm.desc"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "mythic_charms:fragile_charm_of_enchanted_whispers"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mythic_charms.story.every_charm.title"
+    }
+  },
+  "parent": "mythic_charms:story/first_unbreakable_charm",
+  "criteria": {
+    "feathered_grace": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_feathered_grace"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "blazing_embrace": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_blazing_embrace"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "earths_order": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_earths_order"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "gaze_serenity": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_gaze_serenity"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "botanic_blessing": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_botanic_blessing"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "fleeting_strides": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_fleeting_strides"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "nights_guardian": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_nights_guardian"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "high_bounds": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_high_bounds"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "drowned_freedom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_drowned_freedom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "weightless_flow": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_weightless_flow"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "collectors_gift": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_collectors_gift"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "climbers_path": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_climbers_path"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "natures_call": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_natures_call"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "barters_pact": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_barters_pact"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "battle_fury": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_battle_fury"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "echoing_wrath": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_echoing_wrath"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "enchanted_whispers": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_enchanted_whispers"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "arrow_dance": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_arrow_dance"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "mountains_strength": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_mountains_strength"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "safe_territory": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_safe_territory"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },    "quiet_presence": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_of_quiet_presence"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "feathered_grace"
+    ],
+    [
+      "blazing_embrace"
+    ],
+    [
+      "earths_order"
+    ],
+    [
+      "gaze_serenity"
+    ],
+    [
+      "botanic_blessing"
+    ],
+    [
+      "fleeting_strides"
+    ],
+    [
+      "nights_guardian"
+    ],
+    [
+      "high_bounds"
+    ],
+    [
+      "drowned_freedom"
+    ],
+    [
+      "weightless_flow"
+    ],
+    [
+      "collectors_gift"
+    ],
+    [
+      "climbers_path"
+    ],
+    [
+      "natures_call"
+    ],
+    [
+      "barters_pact"
+    ],
+    [
+      "battle_fury"
+    ],
+    [
+      "echoing_wrath"
+    ],
+    [
+      "enchanted_whispers"
+    ],
+    [
+      "arrow_dance"
+    ],
+    [
+      "mountains_strength"
+    ],
+    [
+      "safe_territory"
+    ],
+    [
+      "quiet_presence"
+    ]
+  ]
+}

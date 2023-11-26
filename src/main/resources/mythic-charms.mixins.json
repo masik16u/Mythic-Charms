@@ -17,7 +17,8 @@
     "PiglinBrainMixin",
     "PlayerMixin",
     "ServerPlayerMixin",
-    "TemptGoalMixin"
+    "TemptGoalMixin",
+    "TrinketMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -174,5 +174,18 @@
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Комбінація талісманів Відлуння Гніву і Бойової Люті увімкнено",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Комбінація талісманів Тихої Присутності і Крилатої Грації увімкнено",
 
-	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Кількість мобів навколо, після якої самородок досвіду не випаде"
+	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Кількість мобів навколо, після якої самородок досвіду не випаде",
+
+	"advancements.mythic_charms.story.root.title": "Mythic Charms",
+	"advancements.mythic_charms.story.root.desc": "Усе в твоїх руках",
+	"advancements.mythic_charms.story.resonance_table.title": "Красивий столик",
+	"advancements.mythic_charms.story.resonance_table.desc": "Створіть стіл резонансу",
+	"advancements.mythic_charms.story.fragile_charm_base.title": "Це база",
+	"advancements.mythic_charms.story.fragile_charm_base.desc": "Створіть базу крихкого талісману",
+	"advancements.mythic_charms.story.first_charm.title": "Маг початківець",
+	"advancements.mythic_charms.story.first_charm.desc": "Створіть свій перший талісман",
+	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Тепер ти у безпеці",
+	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Покращьте свій талісман вперше",
+	"advancements.mythic_charms.story.every_charm.title": "Талісмайстер",
+	"advancements.mythic_charms.story.every_charm.desc": "Створіть кожен талісман"
 }

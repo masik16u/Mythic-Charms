@@ -5,6 +5,7 @@ import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
+import net.masik.mythiccharms.util.SoundHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
@@ -65,10 +66,8 @@ public class ExperienceBottleEntityMixin {
             result.setVelocity(0, 0.4, 0);
             world.spawnEntity(result);
 
-            world.playSound(null, player.getX(), player.getY(), player.getZ(),
-                    SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, player.getSoundCategory(), 40.0F, 1.0F);
-            world.playSound(null, player.getX(), player.getY(), player.getZ(),
-                    SoundEvents.ENTITY_PLAYER_LEVELUP, player.getSoundCategory(), 10.0F, 1.0F);
+            SoundHelper.playSoundAtEntity(player, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, 40F);
+            SoundHelper.playSoundAtEntity(player, SoundEvents.ENTITY_PLAYER_LEVELUP, 10F);
 
             if (player.getServer() != null) {
 

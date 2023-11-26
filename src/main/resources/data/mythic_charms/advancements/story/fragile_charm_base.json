@@ -1,0 +1,37 @@
+{
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mythic_charms.story.fragile_charm_base.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mythic_charms:fragile_charm_base"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mythic_charms.story.fragile_charm_base.title"
+    }
+  },
+  "parent": "mythic_charms:story/resonance_table",
+  "criteria": {
+    "fragile_charm_base": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:fragile_charm_base"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "fragile_charm_base"
+    ]
+  ]
+}

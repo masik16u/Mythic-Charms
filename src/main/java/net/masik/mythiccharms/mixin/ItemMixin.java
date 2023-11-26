@@ -25,7 +25,7 @@ import java.util.Optional;
 @Mixin(Item.class)
 public class ItemMixin {
 
-    @Inject(method = "useOnBlock", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "useOnBlock", at = @At("RETURN"), cancellable = true)
     private void useOnResonanceTable(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         if (context.getPlayer() == null) return;
         PlayerEntity player = context.getPlayer();

@@ -37,7 +37,7 @@ public class ExperienceOrbEntityMixin {
 
         java.util.Random rand = new java.util.Random();
 
-        if (rand.nextInt(10) >= 3) return;
+        if (rand.nextInt(10) >= 4) return;
 
         world.spawnEntity(new ItemEntity(world, pos.x, pos.y, pos.z, ModItems.EXPERIENCE_NUGGET.getDefaultStack()));
 
