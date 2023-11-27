@@ -1,0 +1,191 @@
+{
+	"trinkets.slot.mythic_charms.mythic_charm": "мистический амулет",
+
+	"item.mythic_charms.fragile_charm_of_feathered_grace": "Хрупкая Пернатая грация",
+	"item.mythic_charms.fragile_charm_of_blazing_embrace": "Хрупкие Пылающие объятия",
+	"item.mythic_charms.fragile_charm_of_gaze_serenity": "Хрупкий Безмятежный взор",
+	"item.mythic_charms.fragile_charm_of_earths_order": "Хрупкий Завет Земли",
+	"item.mythic_charms.fragile_charm_of_botanic_blessing": "Хрупкое Напутствие природы",
+	"item.mythic_charms.fragile_charm_of_fleeting_strides": "Хрупкая Летящая поступь",
+	"item.mythic_charms.fragile_charm_of_nights_guardian": "Хрупкий Хранитель ночи",
+	"item.mythic_charms.fragile_charm_of_high_bounds": "Хрупкий Высший рубеж",
+	"item.mythic_charms.fragile_charm_of_drowned_freedom": "Хрупкая Утопленная свобода",
+	"item.mythic_charms.fragile_charm_of_weightless_flow": "Хрупкая Небесная твердь",
+	"item.mythic_charms.fragile_charm_of_collectors_gift": "Хрупкий Дар коллекционера",
+	"item.mythic_charms.fragile_charm_of_climbers_path": "Хрупкая Техника скалолазов",
+	"item.mythic_charms.fragile_charm_of_natures_call": "Хрупкий Царь зверей",
+	"item.mythic_charms.fragile_charm_of_barters_pact": "Хрупкая Честная сделка",
+	"item.mythic_charms.fragile_charm_of_battle_fury": "Хрупкая Буря сражений",
+	"item.mythic_charms.fragile_charm_of_echoing_wrath": "Хрупкие Отголоски гнева",
+	"item.mythic_charms.fragile_charm_of_enchanted_whispers": "Хрупкий Чарующий шёпот",
+	"item.mythic_charms.fragile_charm_of_arrow_dance": "Хрупкий Танец стрел",
+	"item.mythic_charms.fragile_charm_of_mountains_strength": "Хрупкая Сила гор",
+	"item.mythic_charms.fragile_charm_of_safe_territory": "Хрупкое Личное пространство",
+	"item.mythic_charms.fragile_charm_of_quiet_presence": "Хрупкое Безмолвное присутствие",
+
+	"item.mythic_charms.unbreakable_charm_of_feathered_grace": "Нерушимая Пернатая грация",
+	"item.mythic_charms.unbreakable_charm_of_blazing_embrace": "Нерушимые Пылающие объятия",
+	"item.mythic_charms.unbreakable_charm_of_earths_order": "Нерушимый Завет Земли",
+	"item.mythic_charms.unbreakable_charm_of_gaze_serenity": "Нерушимый Безмятежный взор",
+	"item.mythic_charms.unbreakable_charm_of_botanic_blessing": "Нерушимое Напутствие природы",
+	"item.mythic_charms.unbreakable_charm_of_fleeting_strides": "Нерушимая Летящая поступь",
+	"item.mythic_charms.unbreakable_charm_of_nights_guardian": "Нерушимый Хранитель ночи",
+	"item.mythic_charms.unbreakable_charm_of_high_bounds": "Нерушимый Высший рубеж",
+	"item.mythic_charms.unbreakable_charm_of_drowned_freedom": "Нерушимая Утопленная свобода",
+	"item.mythic_charms.unbreakable_charm_of_weightless_flow": "Нерушимая Небесная твердь",
+	"item.mythic_charms.unbreakable_charm_of_collectors_gift": "Нерушимый Дар коллекционера",
+	"item.mythic_charms.unbreakable_charm_of_climbers_path": "Нерушимая Техника скалолазов",
+	"item.mythic_charms.unbreakable_charm_of_natures_call": "Нерушимый Царь зверей",
+	"item.mythic_charms.unbreakable_charm_of_barters_pact": "Нерушимая Честная сделка",
+	"item.mythic_charms.unbreakable_charm_of_battle_fury": "Нерушимая Буря сражений",
+	"item.mythic_charms.unbreakable_charm_of_echoing_wrath": "Нерушимые Отголоски гнева",
+	"item.mythic_charms.unbreakable_charm_of_enchanted_whispers": "Нерушимый Чарующий шёпот",
+	"item.mythic_charms.unbreakable_charm_of_arrow_dance": "Нерушимый Танец стрел",
+	"item.mythic_charms.unbreakable_charm_of_mountains_strength": "Нерушимая Сила гор",
+	"item.mythic_charms.unbreakable_charm_of_safe_territory": "Нерушимое Личное пространство",
+	"item.mythic_charms.unbreakable_charm_of_quiet_presence": "Нерушимое Безмолвное присутствие",
+
+
+	"item.mythic_charms.feathered_grace.tooltip": "После полусекундного падения владелец получает эффект плавного падения на 2 секунды, если не начнёт красться раньше",
+
+	"item.mythic_charms.blazing_embrace.tooltip": "Наделяет владельца огнестойкостью, однако длительность эффекта обновляется, только когда владелец не в огне",
+
+	"item.mythic_charms.earths_order.tooltip": "Наделяет владельца возможностью ломать блоки голыми руками",
+
+	"item.mythic_charms.gaze_serenity.tooltip": "Наделяет владельца способностью смотреть на эндерменов без последствий и не позволяет им телепортироваться во время боя",
+
+	"item.mythic_charms.botanic_blessing.tooltip": "Ускоряет рост культур в радиусе 2 блоков от владельца",
+
+	"item.mythic_charms.fleeting_strides.tooltip": "Ускоряет движения владельца при прыжках и беге, но силы истощаются быстрее",
+
+	"item.mythic_charms.nights_guardian.tooltip": "Защищает от появления фантомов, а даже если неподалёку будут фантомы, они будут игнорировать владельца",
+
+	"item.mythic_charms.high_bounds.tooltip": "Увеличивает высоту прыжка владельца и высоту безопасного приземления на один блок, однако силы истощаются быстрее",
+
+	"item.mythic_charms.drowned_freedom.tooltip": "Наделяет владельца способностью свободно перемещаться под водой, однако силы истощаются быстрее",
+
+	"item.mythic_charms.weightless_flow.tooltip": "Удерживает гравитацию владельца, позволяя стоять в воздухе и прыгать выше головы, пока владелец не начнёт красться",
+
+	"item.mythic_charms.collectors_gift.tooltip": "Притягивает предметы в радиусе двух блоков к владельцу",
+
+	"item.mythic_charms.climbers_path.tooltip": "Увеличивает высоту шага владельца на один блок, позволяя с лёгкостью преодолевать препятствия, но силы истощаются быстрее",
+
+	"item.mythic_charms.natures_call.tooltip": "Привлекает животных вблизи владельца, как если бы он держал в руках любимую еду существа, пока владелец не начнёт красться",
+
+	"item.mythic_charms.barters_pact.tooltip": "Владелец может открыть сундук и с вероятностью 70% не разозлить пиглинов",
+
+	"item.mythic_charms.battle_fury.tooltip": "Увеличивает силу атаки владельца с уменьшением его здоровья, достигает увеличения атаки в 3 раза на половине сердца",
+
+	"item.mythic_charms.echoing_wrath.tooltip": "Когда владельцу наносят повреждения, ранит существ неподалёку с вдвое меньшей силой, урон может достигать до трёх сердец, но владелец получает на четверть больше урона",
+
+	"item.mythic_charms.enchanted_whispers.tooltip": "Перемешивает зачарования при каждом взаимодействии владельца со столом зачарований, цена тому - 1 уровень",
+
+	"item.mythic_charms.arrow_dance.tooltip": "Наделяет владельца способностью с вероятностью 70% уклоняться от снарядов, но владелец получает на четверть больше урона",
+
+	"item.mythic_charms.mountains_strength.tooltip": "Наделяет владельца невосприимчивостью к отбрасыванию, но владелец получает на четверть больше урона",
+
+	"item.mythic_charms.safe_territory.tooltip": "Криперы в радиусе 3 блоков от владельца не смогут сломать блоки",
+
+	"item.mythic_charms.quiet_presence.tooltip": "Наделяет владельца способностью ходить, не активируя скалк-сенсоры",
+
+
+	"item.mythic_charms.broken_charm": "Сломанный амулет",
+	"item.mythic_charms.broken_charm.tooltip": "Однажды был целым амулетом",
+
+
+	"item.mythic_charms.fragile_charm_base": "Хрупкая основа",
+
+
+	"item.mythic_charms.resonance_ring": "Резонирующее кольцо",
+	"item.mythic_charms.resonance_ring.tooltip": "Позволяет владельцу пользоваться столом резонанса и увеличивает задержку поднятия выброшенных предметов",
+
+
+	"item.mythic_charms.deepslate_fragment": "Кусочек глубинного сланца",
+	"item.mythic_charms.deepslate_fragment.tooltip": "С небольшим шансом откалывается от глубинного сланца",
+
+
+	"item.mythic_charms.experience_nugget": "Кусочек опыта",
+	"item.mythic_charms.experience_nugget.tooltip": "Изредка появляется вместе с шариками опыта",
+
+
+	"item.mythic_charms.glowstone_nugget": "Кусочек светокамня",
+
+
+	"block.mythic_charms.resonance_table": "Стол резонанса",
+	"item.mythic_charms.resonance_table.tooltip": "Для использования наденьте резонирующее кольцо и поставьте лазуритовый блок снизу",
+
+
+	"util.mythic_charms.shift_tooltip": "Удерживайте §eSHIFT§r для подробностей",
+
+
+	"category.mythic_charms.resonance": "Создание резонанса",
+	"category.mythic_charms.resonance.ingredient": "Ингредиенты",
+	"category.mythic_charms.resonance.catalyst": "Катализаторы",
+	"category.mythic_charms.resonance.trinket": "Амулеты",
+	"category.mythic_charms.resonance.output": "Результат",
+
+
+	"tag.item.mythic_charms.fragile_charms": "Хрупкие амулеты",
+	"tag.item.mythic_charms.resonance_ingredients": "Звенья резонанса",
+
+	"emi.category.mythic_charms.resonance_infusing": "Создание резонанса",
+
+	"tag.item.trinkets.hand.ring": "Ring Trinket",
+	"tag.item.trinkets.mythic_charms.mythic_charm": "Мистические амулеты",
+
+
+	"text.config.mythic-charms-config.title": "Настройки Mythic Charms",
+	"text.config.mythic-charms-config.category.charmsEnabled": "Разрешить использование амулетов",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmFeatheredGraceEnabled": "Пернатая грация",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBlazingEmbraceEnabled": "Пылающие объятия",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEarthsOrderEnabled": "Завет Земли",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmGazeSerenityEnabled": "Безмятежный взор",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBotanicBlessingEnabled": "Напутствие природы",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmFleetingStridesEnabled": "Летящая поступь",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmNightsGuardianEnabled": "Хранитель ночи",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmHighBoundsEnabled": "Высший рубеж",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmDrownedFreedomEnabled": "Утопленная свобода",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmWeightlessFlowEnabled": "Небесная твердь",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmCollectorsGiftEnabled": "Дар коллекционера",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmClimbersPathEnabled": "Техника скалолазов",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmNaturesCallEnabled": "Царь зверей",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBartersPactEnabled": "Честный обмен",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmBattleFuryEnabled": "Буря сражений",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEchoingWrathEnabled": "Отголоски гнева",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmEnchantedWhispersEnabled": "Чарующий шёпот",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmArrowDanceEnabled": "Танец стрел",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmMountainsStrengthEnabled": "Сила гор",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmSafeTerritoryEnabled": "Личное пространство",
+	"text.config.mythic-charms-config.option.charmsEnabled.CharmQuietPresenceEnabled": "Безмолвное присутствие",
+
+	"text.config.mythic-charms-config.category.charmCombinationsEnabled": "Комбинации амулетов",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFeatheredGraceAndHighBoundsEnabled": "Пернатая грация + Высший рубеж",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationBlazingEmbraceAndBattleFuryEnabled": "Пылающие объятия + Буря сражений",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBlazingEmbraceEnabled": "Завет Земли + Пылающие объятия",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndDrownedFreedomEnabled": "Завет Земли + Утопленная свобода",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndWeightlessFlowEnabled": "Завет Земли + Небесная твердь",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBattleFuryEnabled": "Завет Земли + Буря сражений",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationBotanicBlessingAndFeatheredGraceEnabled": "Напутствие природы + Пернатая грация",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFleetingStridesAndHighBoundsEnabled": "Летящая поступь + Высший рубеж",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFleetingStridesAndBattleFuryEnabled": "Летящая поступь + Буря сражений",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationWeightlessFlowAndFeatheredGraceEnabled": "Небесная твердь + Пернатая грация",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationClimbersPathAndHighBoundsEnabled": "Техника скалолазов + Высший рубеж",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBlazingEmbraceEnabled": "Отголоски гнева + Пылающие объятия",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Отголоски гнева + Буря сражений",
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Безмолвное присутствие + Пернатая грация",
+
+	"text.config.mythic-charms-config.option.experienceNuggetMobCap": "Количество существ неподалёку, после которого перестают появляться кусочки опыта",
+
+	"advancements.mythic_charms.story.root.title": "Mythic Charms",
+	"advancements.mythic_charms.story.root.desc": "Всё в твоих руках",
+	"advancements.mythic_charms.story.resonance_table.title": "Милый столик",
+	"advancements.mythic_charms.story.resonance_table.desc": "Создайте стол резонанса",
+	"advancements.mythic_charms.story.fragile_charm_base.title": "Основы основ",
+	"advancements.mythic_charms.story.fragile_charm_base.desc": "Создайте хрупкую основу",
+	"advancements.mythic_charms.story.first_charm.title": "Амулетики для всех!",
+	"advancements.mythic_charms.story.first_charm.desc": "Создайте ваш первый амулет",
+	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Теперь ты в безопасности...",
+	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Впервые улучшите амулет",
+	"advancements.mythic_charms.story.every_charm.title": "Реликварий",
+	"advancements.mythic_charms.story.every_charm.desc": "Создайте все амулеты"
+}
