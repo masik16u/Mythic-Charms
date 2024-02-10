@@ -49,7 +49,7 @@
 
 	"item.mythic_charms.feathered_grace.tooltip": "Concede ao portador um efeito de queda lenta após uma queda de meio segundo e termina depois de dois segundos, funciona enquanto o portador não estiver agachando",
 
-	"item.mythic_charms.blazing_embrace.tooltip": "Concede ao portador efeito permanente de resistência ao fogo, mas a duração só é renovada quando o portador não está pegando fogo",
+	"item.mythic_charms.blazing_embrace.tooltip": "Concede ao portador efeito permanente de resistência ao fogo, mas a duração só renova quando o portador não está pegando fogo",
 
 	"item.mythic_charms.earths_order.tooltip": "Concede ao portador a capacidade de quebrar qualquer bloco quebrável sem ferramentas",
 
@@ -57,37 +57,37 @@
 
 	"item.mythic_charms.botanic_blessing.tooltip": "Acelera o crescimento das plantações em um raio de dois blocos ao redor do portador",
 
-	"item.mythic_charms.fleeting_strides.tooltip": "Melhora a velocidade do portador enquanto está pulando e correndo, mas adiciona exaustão",
+	"item.mythic_charms.fleeting_strides.tooltip": "Aumenta a velocidade do portador enquanto está pulando e correndo, mas adiciona exaustão",
 
 	"item.mythic_charms.nights_guardian.tooltip": "Impede que phantoms ataquem o portador, mesmo se tiverem phantoms por perto, eles irão ignorar o portador",
 
 	"item.mythic_charms.high_bounds.tooltip": "Aumenta a altura do pulo e a segurança da queda que o portador se salva por um bloco, mas adiciona exaustão",
 
-	"item.mythic_charms.drowned_freedom.tooltip": "Concede o portador a abilidade de ear embaixo da água como se fosse na superfície, mas adiciona exaustão",
+	"item.mythic_charms.drowned_freedom.tooltip": "Concede o portador a habilidade de andar embaixo da água como se fosse na superfície, mas adiciona exaustão",
 
-	"item.mythic_charms.weightless_flow.tooltip": "Mantém a gravidade do portador, permitindo ficar de pé no ar e saltar para o céu, funciona enquanto o portador não estiver agachado",
+	"item.mythic_charms.weightless_flow.tooltip": "Mantém a gravidade do portador, permitindo ficar parado no ar e saltar para o céu, funciona enquanto o portador não estiver agachado",
 
-	"item.mythic_charms.collectors_gift.tooltip": "Trás itens ao portador se estiverem à dois blocos de distância",
+	"item.mythic_charms.collectors_gift.tooltip": "Trás itens que estiverem à dois blocos de distância ao portador",
 
-	"item.mythic_charms.climbers_path.tooltip": "Aumenta a altura de caminhada por um bloco, permitindo subir blocos fácilmente, mas adiciona exaustão",
+	"item.mythic_charms.climbers_path.tooltip": "Permite subir blocos fácilmente, mas adiciona exaustão",
 
-	"item.mythic_charms.natures_call.tooltip": "Chama animais para perto do portador, como se estivesse segurando sua comida favorita, funciona enquanto não está agachado",
+	"item.mythic_charms.natures_call.tooltip": "Atrai animais para perto do portador, como se estivesse segurando sua comida favorita, funciona enquanto não está agachado",
 
 	"item.mythic_charms.barters_pact.tooltip": "O portador pode abrir um baú com setenta por cento de chance de não tornar os piglins agressivos",
 
-	"item.mythic_charms.battle_fury.tooltip": "Quando próximo a morte, a força do portador irá aumentar, limitando à três vezes o ataque normal quando só tem meio coração faltando",
+	"item.mythic_charms.battle_fury.tooltip": "Quando próximo a morte, o portador ficará mais forte gradativamente, limitando à três vezes o ataque normal quando só tem meio coração faltando",
 
-	"item.mythic_charms.echoing_wrath.tooltip": "Quando dano é recebido, também machuca inimigos próximos na metade da intensidade e até três corações de dano, mas o portador perde um quarto a mais de vida",
+	"item.mythic_charms.echoing_wrath.tooltip": "Reflete o dano para inimigos próximos na metade da intensidade e até três corações de dano, mas o portador perde um quarto a mais de vida",
 
-	"item.mythic_charms.enchanted_whispers.tooltip": "Muda os encantamentos aleatóriamente toda vez que o portador interage com uma mesa de encantamentos em troca de um nível",
+	"item.mythic_charms.enchanted_whispers.tooltip": "Muda os encantamentos aleatóriamente em troca de um nível toda vez que o portador interage com uma mesa de encantamentos",
 
 	"item.mythic_charms.arrow_dance.tooltip": "Concede ao portador setenta por cento de chance de esquivar de um projétil, porém, recebe um quarto a mais de dano",
 
 	"item.mythic_charms.mountains_strength.tooltip": "Concede ao portador imunidade à repulsão ou à ser empurrado, mas recebe um quarto a mais de dano",
 
-	"item.mythic_charms.safe_territory.tooltip": "Creeper três blocos de distância do portador não quebram blocos",
+	"item.mythic_charms.safe_territory.tooltip": "Creepers à três blocos ou mais de distância do portador não quebram blocos",
 
-	"item.mythic_charms.quiet_presence.tooltip": "Concede ao portador a abilidade de se mover sem ativar Sensores de sculk ao ear",
+	"item.mythic_charms.quiet_presence.tooltip": "Concede ao portador a habilidade de se mover sem ativar Sensores de Sculk",
 
 
 	"item.mythic_charms.broken_charm": "Amuleto Quebrado",
@@ -140,7 +140,7 @@
 
 
 	"text.config.mythic-charms-config.title": "Configurações do Mythic Charms",
-	"text.config.mythic-charms-config.category.charmsEnabled": "Amuleto s ativos",
+	"text.config.mythic-charms-config.category.charmsEnabled": "Amuletos ativos",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmFeatheredGraceEnabled": "Amuleto Divindade Alada Ativo",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmBlazingEmbraceEnabled": "Amuleto Abraço das Chamas Ativo",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmEarthsOrderEnabled": "Amuleto Ordem da Terra Ativo",
