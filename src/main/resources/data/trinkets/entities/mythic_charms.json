@@ -1,7 +1,7 @@
 {
   "entities": ["player"],
   "slots": [
-    "mythic_charms/mythic_charm",
+    "mythic_charm/mythic_charm",
     "hand/ring"
   ]
 }

@@ -14,6 +14,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -27,6 +28,8 @@ import java.util.Set;
 public interface TrinketMixin {
     @Inject(method = "onEquip", at = @At("RETURN"))
     private void onEquipCharm(ItemStack stack, SlotReference slot, LivingEntity entity, CallbackInfo ci) {
+
+        if (!stack.isIn(TagKey.of(RegistryKeys.ITEM, new Identifier("trinkets:mythic_charm/mythic_charm")))) return;
 
         if (stack.isIn(TagKey.of(RegistryKeys.ITEM, new Identifier(MythicCharms.MOD_ID, "fragile_charms")))) {
 
@@ -55,6 +58,8 @@ public interface TrinketMixin {
     @Inject(method = "onUnequip", at = @At("RETURN"))
     private void onUnequipCharm(ItemStack stack, SlotReference slot, LivingEntity entity, CallbackInfo ci) {
 
+        if (!stack.isIn(TagKey.of(RegistryKeys.ITEM, new Identifier("trinkets:mythic_charm/mythic_charm")))) return;
+
         if (stack.isIn(TagKey.of(RegistryKeys.ITEM, new Identifier(MythicCharms.MOD_ID, "fragile_charms")))) {
 
             entity.damage(entity.getDamageSources().magic(), 2);
@@ -71,6 +76,7 @@ public interface TrinketMixin {
         }
     }
 
+    @Unique
     private boolean checkCombo(LivingEntity entity) {
         Set<String> charmsEquipped = new HashSet<>();
 

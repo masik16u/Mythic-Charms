@@ -1,0 +1,21 @@
+{
+  "name": "Enchanted Whispers",
+  "icon": "mythic_charms:fragile_charm_of_enchanted_whispers",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " When the wearer opens an enchanting table all enchantments will refresh and the user will lose 1 level of their xp."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_enchanted_whispers",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:blaze_powder",
+      "ingredient4": "minecraft:echo_shard",
+      "ingredient5": "minecraft:glow_berries"
+    }
+  ]
+}

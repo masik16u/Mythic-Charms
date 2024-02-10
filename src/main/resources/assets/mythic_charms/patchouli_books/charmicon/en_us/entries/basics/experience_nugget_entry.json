@@ -1,0 +1,16 @@
+{
+  "name": "Experience Nugget",
+  "icon": "mythic_charms:experience_nugget",
+  "category": "mythic_charms:basics_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythic_charms:experience_nugget",
+      "text": " An experience nugget can appear with experience orb with sixty percent chance.$(br2) You can use it and gain a small amount of experience or craft a bottle of experience."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:experience_bottle"
+    }
+  ]
+}

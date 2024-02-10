@@ -1,0 +1,21 @@
+{
+  "name": "Climber's Path",
+  "icon": "mythic_charms:fragile_charm_of_climbers_path",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " The wearer's step height is increased to one block, so the user can walk on a block like on stairs or horses do on blocks. However, sprinting adds extra exhaustion."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_climbers_path",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:glow_ink_sac",
+      "ingredient4": "minecraft:rabbit_foot",
+      "ingredient5": "minecraft:slime_ball"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Climber's P. & High B.",
+  "icon": "mythic_charms:textures/climbers_path_and_high_bounds.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_climbers_path_entry)Climber's Path$() $(br)  and $(l:mythic_charms:charms/charm_of_high_bounds_entry)High Bounds$(): $(br2) Adds an additional 0.5 block to the step height."
+    }
+  ]
+}

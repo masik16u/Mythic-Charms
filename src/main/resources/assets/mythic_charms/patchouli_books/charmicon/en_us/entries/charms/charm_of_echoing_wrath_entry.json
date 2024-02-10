@@ -1,0 +1,21 @@
+{
+  "name": "Echoing Wrath",
+  "icon": "mythic_charms:fragile_charm_of_echoing_wrath",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " When an entity damages the wearer every entity around will receive half of this damage, up to 3 hearts of final damage. However, the user receives an additional 0.25 of the damage."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_echoing_wrath",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:echo_shard",
+      "ingredient4": "minecraft:fermented_spider_eye",
+      "ingredient5": "minecraft:green_dye"
+    }
+  ]
+}

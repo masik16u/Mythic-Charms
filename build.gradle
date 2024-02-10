@@ -21,6 +21,13 @@ repositories {
 	}
 	maven { url "https://maven.shedaniel.me" }
 	maven { url 'https://maven.wispforest.io' }
+
+//	maven {
+//		// location of the maven that hosts JEI files
+//		name = "Progwml6 maven"
+//		url = "https://dvs1.progwml6.com/files/maven/"
+//	}
+
 }
 
 dependencies {
@@ -43,7 +50,11 @@ dependencies {
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 
 	modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
-	modLocalRuntime "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
+
+	//modCompileOnly "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
+
+	modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+	//modLocalRuntime "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 
 	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
 }

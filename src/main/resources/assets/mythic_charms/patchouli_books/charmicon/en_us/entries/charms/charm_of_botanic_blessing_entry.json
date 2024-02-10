@@ -1,0 +1,21 @@
+{
+  "name": "Botanic Blessing",
+  "icon": "mythic_charms:fragile_charm_of_botanic_blessing",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " In area 5x5x5 around the wearer, all crops have a 60% chance of moving to the next stage. (only crops no sugar cane or cactus etc.)"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_botanic_blessing",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:bone",
+      "ingredient4": "minecraft:clay_ball",
+      "ingredient5": "minecraft:crimson_fungus"
+    }
+  ]
+}

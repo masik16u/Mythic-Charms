@@ -1,0 +1,12 @@
+{
+  "name": "Feathered G. & High B.",
+  "icon": "mythic_charms:textures/feathered_grace_and_high_bounds.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_feathered_grace_entry)Feathered Grace$() $(br)  and $(l:mythic_charms:charms/charm_of_high_bounds_entry)High Bounds$(): $(br2) Adds an additional 1 second for the slow falling effect and a bit of exhaustion during that second."
+    }
+  ]
+}

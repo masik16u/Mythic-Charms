@@ -1,5 +1,5 @@
 {
-	"trinkets.slot.mythic_charms.mythic_charm": "Mythic Charm",
+	"trinkets.slot.mythic_charm.mythic_charm": "Mythic Charm",
 
 	"item.mythic_charms.fragile_charm_of_feathered_grace": "Fragile Charm of Feathered Grace",
 	"item.mythic_charms.fragile_charm_of_blazing_embrace": "Fragile Charm of Blazing Embrace",
@@ -110,6 +110,9 @@
 
 	"item.mythic_charms.glowstone_nugget": "Glowstone Nugget",
 
+	"item.mythic_charms.charmicon": "Charmicon",
+	"mythic_charms.charmicon.landing": "Everything you need to know about Mythic Charms",
+
 
 	"block.mythic_charms.resonance_table": "Resonance Table",
 	"item.mythic_charms.resonance_table.tooltip": "Requires a Resonance Ring and a Block of Lapis Lazuli beneath it to work",
@@ -126,12 +129,13 @@
 
 
 	"tag.item.mythic_charms.fragile_charms": "Fragile Charms",
+	"tag.item.mythic_charms.unbreakable_charms": "Unbreakable Charms",
 	"tag.item.mythic_charms.resonance_ingredients": "Resonance Ingredients",
 
 	"emi.category.mythic_charms.resonance_infusing": "Resonance Infusing",
 
 	"tag.item.trinkets.hand.ring": "Ring Trinket",
-	"tag.item.trinkets.mythic_charms.mythic_charm": "Mythic Charm",
+	"tag.item.trinkets.mythic_charm.mythic_charm": "Mythic Charm",
 
 
 	"text.config.mythic-charms-config.title": "Mythic Charms Config",

@@ -1,0 +1,12 @@
+{
+  "name": "Echoing W. & Blazing E.",
+  "icon": "mythic_charms:textures/echoing_wrath_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_echoing_wrath_entry)Echoing Wrath$() $(br)  and $(l:mythic_charms:charms/charm_of_blazing_embrace_entry)Blazing Embrace$(): $(br2) Sets surrounding entities on fire, but the echo damage is decreased by half."
+    }
+  ]
+}

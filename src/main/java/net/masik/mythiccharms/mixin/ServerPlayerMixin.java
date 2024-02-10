@@ -147,4 +147,26 @@ public abstract class ServerPlayerMixin {
 
     }
 
+    //weightlessFlow
+    @Inject(method = "playerTick", at = @At("RETURN"))
+    private void weightlessFlowEffect(CallbackInfo info) {
+
+        ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
+
+
+        if (!CharmHelper.charmWeightlessFlowEquipped(player)) {
+            player.setNoGravity(false);
+            return;
+        }
+
+
+        if (player.isSneaking()) {
+            player.setNoGravity(false);
+            return;
+        }
+
+        player.setNoGravity(true);
+
+    }
+
 }

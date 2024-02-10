@@ -1,0 +1,12 @@
+{
+  "name": "Earth's O. & Battle F.",
+  "icon": "mythic_charms:textures/earths_order_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_earths_order_entry)Earth's Order$() $(br)  and $(l:mythic_charms:charms/charm_of_battle_fury_entry)Battle Fury$(): $(br2) Speed of breaking blocks with bare hand increases as the wearer's health decreases, up to x3 speed at half a heart."
+    }
+  ]
+}

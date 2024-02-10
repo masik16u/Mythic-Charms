@@ -1,0 +1,21 @@
+{
+  "name": "Earth's Order",
+  "icon": "mythic_charms:fragile_charm_of_earths_order",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " The wearer can break any breakable block. But only when they have nothing in their main hand."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_earths_order",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:blaze_powder",
+      "ingredient4": "minecraft:quartz",
+      "ingredient5": "minecraft:raw_iron"
+    }
+  ]
+}

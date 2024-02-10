@@ -1,0 +1,21 @@
+{
+  "name": "Quiet Presence",
+  "icon": "mythic_charms:fragile_charm_of_quiet_presence",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " When the wearer walks near a sculk sensor it won't trigger the sensor. (only walking, no sprinting or jumping)"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_quiet_presence",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:echo_shard",
+      "ingredient4": "minecraft:feather",
+      "ingredient5": "minecraft:slime_ball"
+    }
+  ]
+}

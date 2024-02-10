@@ -1,0 +1,16 @@
+{
+  "name": "Unbreakable Charms",
+  "icon": "minecraft:netherite_ingot",
+  "category": "mythic_charms:basics_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Unbreakable charms are the upgraded version of fragile ones. They don't break upon death and cannot be burned.$(br2) Equipping and unequipping unbreakable charms deals one point of magic damage."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(br) To upgrade a fragile charm to an unbreakable one you need to combine these ingredients on the resonance table: $(li)A charm you want to upgrade $(li)A deepslate fragment $(li)A netherite ingot"
+    }
+  ]
+}

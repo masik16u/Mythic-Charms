@@ -1,0 +1,18 @@
+{
+  "name": "Fragile Charms",
+  "icon": "mythic_charms:fragile_charm_base",
+  "category": "mythic_charms:basics_category",
+  "advancement": "mythic_charms:book/resonance_table",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:fragile_charm_base",
+      "text": " To craft a charm you need a fragile charm base.$(br2) Equipping and unequipping fragile charms deals two points of magic damage."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythic_charms:broken_charm",
+      "text": " If you die with fragile charm equipped it is replaced with broken charm.$(br2) Wandering trader can sell you a fragile charm for the cost of broken one and some emeralds."
+    }
+  ]
+}

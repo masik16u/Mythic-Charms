@@ -1,5 +1,5 @@
 {
-  "replace": true,
   "icon": "mythic_charms:gui/slots/mythic_charm",
+  "validator_predicates": [ "trinkets:tag" ],
   "amount": 3
 }

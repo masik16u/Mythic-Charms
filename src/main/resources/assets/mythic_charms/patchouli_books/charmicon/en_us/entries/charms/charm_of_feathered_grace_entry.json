@@ -1,0 +1,21 @@
+{
+  "name": "Feathered Grace",
+  "icon": "mythic_charms:fragile_charm_of_feathered_grace",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " After 0.5s of fall, the wearer will be receiving a slow falling effect. After 2s of fall, this effect won't apply. The effect can be canceled by sneaking."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_feathered_grace",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:feather",
+      "ingredient4": "minecraft:phantom_membrane",
+      "ingredient5": "minecraft:rabbit_hide"
+    }
+  ]
+}

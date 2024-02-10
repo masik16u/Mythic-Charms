@@ -1,0 +1,16 @@
+{
+  "name": "Resonance Table",
+  "icon": "mythic_charms:resonance_table",
+  "category": "mythic_charms:basics_category",
+  "advancement": "mythic_charms:book/resonance_ring",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " As you acquired a resonance ring, your next step is a resonance table.$(br2) To start crafting you need a lapis block underneath it and a resonance ring equipped. Than right-click with an ingredient(or throw on top) and throw a bottle of experience to finish a recipe."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:resonance_table"
+    }
+  ]
+}

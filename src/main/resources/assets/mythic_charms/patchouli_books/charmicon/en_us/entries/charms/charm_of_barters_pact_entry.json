@@ -1,0 +1,21 @@
+{
+  "name": "Barters Pact",
+  "icon": "mythic_charms:fragile_charm_of_barters_pact",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " When the wearer opens a chest or a shulker box near passive piglins there is a 70% chance that they will ignore it and won't start attacking."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_barters_pact",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:popped_chorus_fruit",
+      "ingredient4": "minecraft:glistering_melon_slice",
+      "ingredient5": "minecraft:raw_gold"
+    }
+  ]
+}

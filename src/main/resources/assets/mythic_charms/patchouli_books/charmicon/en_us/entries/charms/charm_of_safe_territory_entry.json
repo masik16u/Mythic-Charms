@@ -1,0 +1,21 @@
+{
+  "name": "Safe Territory",
+  "icon": "mythic_charms:fragile_charm_of_safe_territory",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Creepers that blow up in the area 3x3x3 around the wearer won't destroy any blocks."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_safe_territory",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:nautilus_shell",
+      "ingredient4": "minecraft:quartz",
+      "ingredient5": "minecraft:slime_ball"
+    }
+  ]
+}

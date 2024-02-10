@@ -1,0 +1,21 @@
+{
+  "name": "Drowned Freedom",
+  "icon": "mythic_charms:fragile_charm_of_drowned_freedom",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " The wearer will ignore water physics, so they can run underwater but not swim. However, the user can still drown underwater and sprinting adds additional exhaustion."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_drowned_freedom",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:clay_ball",
+      "ingredient4": "minecraft:dried_kelp",
+      "ingredient5": "minecraft:prismarine_crystals"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Weightless Flow",
+  "icon": "mythic_charms:fragile_charm_of_weightless_flow",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Preserves the wearer's gravity, while not sneaking. When the user stands still before preserving gravity they will be able to go straight on the air. If they jump right before preserving gravity they will leap to the sky."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_weightless_flow",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:ghast_tear",
+      "ingredient4": "minecraft:glow_ink_sac",
+      "ingredient5": "minecraft:phantom_membrane"
+    }
+  ]
+}

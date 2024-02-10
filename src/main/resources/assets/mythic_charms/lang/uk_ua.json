@@ -1,5 +1,5 @@
 {
-	"trinkets.slot.mythic_charms.mythic_charm": "Міфічний талісман",
+	"trinkets.slot.mythic_charm.mythic_charm": "Міфічний талісман",
 
 	"item.mythic_charms.fragile_charm_of_feathered_grace": "Крихкий талісман Крилатої Грації",
 	"item.mythic_charms.fragile_charm_of_blazing_embrace": "Крихкий талісман Палаючих Обіймів",
@@ -110,6 +110,9 @@
 
 	"item.mythic_charms.glowstone_nugget": "Самородок світлокаменю",
 
+	"item.mythic_charms.charmicon": "Charmicon",
+	"mythic_charms.charmicon.landing": "Все що потрібно знати про Mythic Charms",
+
 
 	"block.mythic_charms.resonance_table": "Стіл резонансу",
 	"item.mythic_charms.resonance_table.tooltip": "Для використання потрібен перстень резонансу та блок лазуриту під ним",
@@ -126,12 +129,13 @@
 
 
 	"tag.item.mythic_charms.fragile_charms": "Крихкі талісмани",
+	"tag.item.mythic_charms.unbreakable_charms": "Незламні талісмани",
 	"tag.item.mythic_charms.resonance_ingredients": "Інгредієнти резонансу",
 
 	"emi.category.mythic_charms.resonance_infusing": "Об'єднання резонансом",
 
 	"tag.item.trinkets.hand.ring": "Перстень",
-	"tag.item.trinkets.mythic_charms.mythic_charm": "Міфічний талісман",
+	"tag.item.trinkets.mythic_charm.mythic_charm": "Міфічний талісман",
 
 
 	"text.config.mythic-charms-config.title": "Налаштування Mythic Charms",

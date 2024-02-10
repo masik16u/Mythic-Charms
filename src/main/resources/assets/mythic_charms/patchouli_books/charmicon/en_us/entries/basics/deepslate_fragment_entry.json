@@ -1,0 +1,17 @@
+{
+  "name": "Deepslate Fragment",
+  "icon": "mythic_charms:deepslate_fragment",
+  "category": "mythic_charms:basics_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythic_charms:deepslate_fragment",
+      "text": " A deepslate fragment has a chance to drop from deepslate.$(br2) It is an ingredient that is needed to upgrade fragile charms.$(br2) Also, you can craft cobbled deepslate with it."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:cobbled_deepslate"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Collector's Gift",
+  "icon": "mythic_charms:fragile_charm_of_collectors_gift",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " In area 4x4x4 around the wearer all items that lay on the ground will draw to the user."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_collectors_gift",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:popped_chorus_fruit",
+      "ingredient4": "minecraft:glow_berries",
+      "ingredient5": "minecraft:crimson_fungus"
+    }
+  ]
+}

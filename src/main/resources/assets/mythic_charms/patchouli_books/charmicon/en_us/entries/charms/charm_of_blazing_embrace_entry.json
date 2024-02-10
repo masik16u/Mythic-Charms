@@ -1,0 +1,21 @@
+{
+  "name": "Blazing Embrace",
+  "icon": "mythic_charms:fragile_charm_of_blazing_embrace",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Works like a turtle helmet, while the wearer is not on fire it grants a permanent effect of fire resistance for 30 seconds. However, as the wearer catches on fire time starts running out and renews only when fire is extinguished."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_blazing_embrace",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:crimson_fungus",
+      "ingredient4": "minecraft:magma_cream",
+      "ingredient5": "minecraft:prismarine_crystals"
+    }
+  ]
+}

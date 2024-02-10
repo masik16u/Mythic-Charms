@@ -1,0 +1,21 @@
+{
+  "name": "Night's Guardian",
+  "icon": "mythic_charms:fragile_charm_of_nights_guardian",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Phantoms won't spawn for the wearer. Even if they spawned for someone else phantoms will ignore the user."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_nights_guardian",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:phantom_membrane",
+      "ingredient4": "minecraft:prismarine_crystals",
+      "ingredient5": "minecraft:nautilus_shell"
+    }
+  ]
+}

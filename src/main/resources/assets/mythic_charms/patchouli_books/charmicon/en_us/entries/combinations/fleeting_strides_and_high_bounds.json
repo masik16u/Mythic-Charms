@@ -1,0 +1,12 @@
+{
+  "name": "Fleeting S. & High B.",
+  "icon": "mythic_charms:textures/fleeting_strides_and_high_bounds.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_fleeting_strides_entry)Fleeting Strides$() $(br)  and $(l:mythic_charms:charms/charm_of_high_bounds_entry)High Bounds$(): $(br2) Increases jump speed while sprinting, jump height by 0.5 block, and exhaustion."
+    }
+  ]
+}

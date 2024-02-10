@@ -1,0 +1,63 @@
+{
+  "components": [
+    {
+      "type": "patchouli:header",
+      "text": "Recipe",
+      "x": 60,
+      "y": 0
+    },
+    {
+      "type": "patchouli:separator",
+      "x": 0,
+      "y": 12
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#result",
+      "framed": true,
+      "x": 50,
+      "y": 70
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient1",
+      "framed": true,
+      "x": 50,
+      "y": 40
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient2",
+      "framed": true,
+      "x": 21,
+      "y": 61
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient3",
+      "framed": true,
+      "x": 32,
+      "y": 96
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient4",
+      "framed": true,
+      "x": 68,
+      "y": 96
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient5",
+      "framed": true,
+      "x": 79,
+      "y": 61
+    },
+    {
+      "type": "patchouli:item",
+      "item": "mythic_charms:resonance_table",
+      "x": 79,
+      "y": 110
+    }
+  ]
+}

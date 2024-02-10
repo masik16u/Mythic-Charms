@@ -1,0 +1,21 @@
+{
+  "name": "High Bounds",
+  "icon": "mythic_charms:fragile_charm_of_high_bounds",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " The wearer's jump height increases to 2 blocks as well as a safe fall distance. However, jumping adds extra exhaustion."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_high_bounds",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:rabbit_foot",
+      "ingredient4": "minecraft:slime_ball",
+      "ingredient5": "minecraft:sugar"
+    }
+  ]
+}

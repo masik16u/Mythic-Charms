@@ -1,0 +1,21 @@
+{
+  "name": "Battle Fury",
+  "icon": "mythic_charms:fragile_charm_of_battle_fury",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/fragile_charm_base",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " The lower the wearer's health the higher their attack damage. At full health there is no additional damage, at half health the user deals x2 damage, and at half a heart x3 damage."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_battle_fury",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:glowstone_nugget",
+      "ingredient3": "minecraft:ghast_tear",
+      "ingredient4": "minecraft:magma_cream",
+      "ingredient5": "minecraft:prismarine_shard"
+    }
+  ]
+}

@@ -171,7 +171,7 @@ public class PlayerMixin {
             if (CharmHelper.charmBattleFuryEquipped(player) &&
                     CharmHelper.charmCombinationBlazingEmbraceAndBattleFuryEnabled(player)) {
 
-                duration *= ((((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20);
+                duration *= (1 + (((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH)) - player.getHealth()) / 20);
 
             }
 
@@ -258,7 +258,7 @@ public class PlayerMixin {
 
         if (CharmHelper.charmEchoingWrathEquipped(player)) multiplier += 0.25;
 
-        if (CharmHelper.charmArrowDanceEquipped(player)) multiplier += 0.5;
+        if (CharmHelper.charmArrowDanceEquipped(player)) multiplier += 0.25;
 
         return (float) (amount + multiplier * amount);
 

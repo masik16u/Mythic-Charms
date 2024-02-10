@@ -1,0 +1,15 @@
+{
+  "name": "Resonance Ring",
+  "icon": "mythic_charms:resonance_ring",
+  "category": "mythic_charms:basics_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Your first step is to craft a resonance ring and equip it in the trinket slot.$(br2) A resonance ring by itself has an ability: all dropped items will have an increased pick-up delay."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:resonance_ring"
+    }
+  ]
+}

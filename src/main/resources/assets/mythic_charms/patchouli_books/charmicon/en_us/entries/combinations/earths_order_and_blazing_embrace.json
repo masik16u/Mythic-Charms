@@ -1,0 +1,12 @@
+{
+  "name": "Earth's O. & Blazing E.",
+  "icon": "mythic_charms:textures/earths_order_and_blazing_embrace.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_earths_order_entry)Earth's Order$() $(br)  and $(l:mythic_charms:charms/charm_of_blazing_embrace_entry)Blazing Embrace$(): $(br2) Breaking blocks with bare hand drops smelting result of a block if it has such."
+    }
+  ]
+}

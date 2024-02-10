@@ -1,0 +1,12 @@
+{
+  "name": "Blazing E. & Battle F.",
+  "icon": "mythic_charms:textures/blazing_embrace_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_blazing_embrace_entry)Blazing Embrace$() $(br)  and $(l:mythic_charms:charms/charm_of_battle_fury_entry)Battle Fury$(): $(br2) Fire resistance effect time increases as the wearer's health decreases, up to x2 time at half a heart."
+    }
+  ]
+}

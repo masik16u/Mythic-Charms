@@ -1,5 +1,5 @@
 {
-	"trinkets.slot.mythic_charms.mythic_charm": "Mythic Charms",
+	"trinkets.slot.mythic_charm.mythic_charm": "Mythic Charms",
 
 	"item.mythic_charms.fragile_charm_of_feathered_grace": "Amuleto Frágil da Divindade Alada",
 	"item.mythic_charms.fragile_charm_of_blazing_embrace": "Amuleto Frágil do Abraço das Chamas",
@@ -111,6 +111,9 @@
 
 	"item.mythic_charms.glowstone_nugget": "Pepita de pedra luminosa",
 
+	"item.mythic_charms.charmicon": "Charmicon",
+	"mythic_charms.charmicon.landing": "Everything you need to know about Mythic Charms",
+
 
 	"block.mythic_charms.resonance_table": "Mesa de ressonância",
 	"item.mythic_charms.resonance_table.tooltip": "Requer um Anel de ressonância e precisa estar em cima de um Bloco de lápis-lazúli para funcionar",
@@ -127,12 +130,13 @@
 
 
 	"tag.item.mythic_charms.fragile_charms": "Amuletos Frágeis",
+	"tag.item.mythic_charms.unbreakable_charms": "Unbreakable Charms",
 	"tag.item.mythic_charms.resonance_ingredients": "Ingredientes para ressonância",
 
 	"emi.category.mythic_charms.resonance_infusing": "Infusão de ressonância",
 
 	"tag.item.trinkets.hand.ring": "Anel",
-	"tag.item.trinkets.mythic_charms.mythic_charm": "Amuleto Mítico",
+	"tag.item.trinkets.mythic_charm.mythic_charm": "Amuleto Mítico",
 
 
 	"text.config.mythic-charms-config.title": "Configurações do Mythic Charms",

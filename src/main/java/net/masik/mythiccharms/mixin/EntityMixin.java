@@ -53,22 +53,22 @@ public class EntityMixin {
     }
 
     //weightlessFlow
-    @Inject(method = "hasNoGravity", at = @At("RETURN"), cancellable = true)
-    private void weightlessFlowEffect(CallbackInfoReturnable<Boolean> cir) {
-
-        Entity entity = (Entity) (Object) this;
-
-        if (!entity.isPlayer()) return;
-
-
-        if (!CharmHelper.charmWeightlessFlowEquipped((LivingEntity) entity)) return;
-
-
-        if (entity.isSneaking()) return;
-
-        cir.setReturnValue(true);
-
-    }
+//    @Inject(method = "hasNoGravity", at = @At("HEAD"), cancellable = true)
+//    private void weightlessFlowEffect(CallbackInfoReturnable<Boolean> cir) {
+//
+//        Entity entity = (Entity) (Object) this;
+//
+//        if (!entity.isPlayer()) return;
+//
+//
+//        if (!CharmHelper.charmWeightlessFlowEquipped((LivingEntity) entity)) return;
+//
+//
+//        if (entity.isSneaking()) return;
+//
+//        cir.setReturnValue(true);
+//
+//    }
 
     //safeTerritory
     @Inject(method = "canExplosionDestroyBlock", at = @At("RETURN"), cancellable = true)

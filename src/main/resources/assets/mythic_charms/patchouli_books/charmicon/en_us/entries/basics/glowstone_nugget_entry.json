@@ -1,0 +1,17 @@
+{
+  "name": "Glowstone Nugget",
+  "icon": "mythic_charms:glowstone_nugget",
+  "category": "mythic_charms:basics_category",
+  "advancement": "mythic_charms:book/resonance_table",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "mythic_charms:glowstone_nugget",
+      "text": " A glowstone nugget is acquired by smelting a glowstone dust in a blasting furnace.$(br2) It is an ingredient that appears in every fragile charm craft.$(br2) Also, you can craft torches with it."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:torch"
+    }
+  ]
+}

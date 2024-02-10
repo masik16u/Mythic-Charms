@@ -1,0 +1,12 @@
+{
+  "name": "Weightless F. & Feathered G.",
+  "icon": "mythic_charms:textures/weightless_flow_and_feathered_grace.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:story/first_charm",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(l:mythic_charms:charms/charm_of_weightless_flow_entry)Weightless Flow$() $(br)  and $(l:mythic_charms:charms/charm_of_feathered_grace_entry)Feathered Grace$(): $(br2) Sneaking won't disable slow falling effect, it will only return you your normal gravity."
+    }
+  ]
+}
