@@ -264,6 +264,7 @@ public class PlayerMixin {
         return (float) (amount * 0.75);
     }
 
+    //mountainsStrength
     @ModifyArg(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), index = 1)
     private float mountainsStrengthReceiveMoreDamage(float amount) {
 
@@ -306,6 +307,7 @@ public class PlayerMixin {
 
     }
 
+    //climbersPath
     @Inject(method = "travel", at = @At("RETURN"))
     private void climbersPathHungerWhileRunning(Vec3d movementInput, CallbackInfo ci) {
 
@@ -321,6 +323,7 @@ public class PlayerMixin {
 
     }
 
+    //weightlessFlow
     @Inject(method = "travel", at = @At("RETURN"))
     private void weightlessFlowHungerWhileRunning(Vec3d movementInput, CallbackInfo ci) {
 
@@ -336,6 +339,7 @@ public class PlayerMixin {
 
     }
 
+    //drownedFreedom
     @Inject(method = "travel", at = @At("RETURN"))
     private void drownedFreedomHungerWhileRunning(Vec3d movementInput, CallbackInfo ci) {
 

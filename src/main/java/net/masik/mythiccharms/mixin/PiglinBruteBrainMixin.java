@@ -18,6 +18,7 @@ import java.util.Optional;
 @Mixin(PiglinBruteBrain.class)
 public class PiglinBruteBrainMixin {
 
+    //change this logic in the future
     @Inject(method = "getTarget", at = @At(value = "RETURN"), cancellable = true)
     private static void bartersPactEffect(AbstractPiglinEntity piglin, CallbackInfoReturnable<Optional<? extends LivingEntity>> cir) {
 

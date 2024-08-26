@@ -1,5 +1,6 @@
 package net.masik.mythiccharms.mixin;
 
+import com.llamalad7.mixinextras.sugar.Local;
 import net.masik.mythiccharms.util.CharmHelper;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.EnchantmentScreen;
@@ -22,8 +23,8 @@ import java.util.List;
 public class EnchantmentScreenMixin {
 
     @SuppressWarnings("unchecked")
-    @Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/Enchantment;getName(I)Lnet/minecraft/text/Text;"), locals = LocalCapture.CAPTURE_FAILHARD)
-    private void enchantedWhispersEffect(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci, boolean bl, int i, int j, int k, Enchantment enchantment, int l, int m, List list) {
+    @Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/Enchantment;getName(I)Lnet/minecraft/text/Text;"))
+    private void enchantedWhispersEffect(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci, @Local(ordinal = 3) int j, @Local List list) {
 
         EnchantmentScreen screen = (EnchantmentScreen) (Object) this;
         EnchantmentScreenHandler screenHandler = screen.getScreenHandler();
