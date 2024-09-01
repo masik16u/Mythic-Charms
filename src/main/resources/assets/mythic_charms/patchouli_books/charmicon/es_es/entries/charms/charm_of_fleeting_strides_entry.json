@@ -1,0 +1,22 @@
+{
+  "name": "Pasos Fugazes",
+  "icon": "mythic_charms:fragile_charm_of_fleeting_strides",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/fleeting_strides",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) La velocidad de salto del portador mientras corre aumenta. Sin embargo, correr aumenta el cansancio."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_fleeting_strides",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_fleeting_strides",
+      "ingredient3": "minecraft:blaze_powder",
+      "ingredient4": "minecraft:rabbit_hide",
+      "ingredient5": "minecraft:sugar"
+    }
+  ]
+}

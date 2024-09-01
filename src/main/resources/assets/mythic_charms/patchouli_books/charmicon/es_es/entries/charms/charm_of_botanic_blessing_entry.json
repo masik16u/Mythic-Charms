@@ -1,0 +1,22 @@
+{
+  "name": "Bendición Botánica",
+  "icon": "mythic_charms:fragile_charm_of_botanic_blessing",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/botanic_blessing",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) Se acelera el crecimiento de todos los cultivos dentro de un radio de 4 bloques alrededor del usuario y aumenta la cantidad de items al cosechar los cultivos."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_botanic_blessing",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_botanic_blessing",
+      "ingredient3": "minecraft:bone",
+      "ingredient4": "minecraft:cocoa_beans",
+      "ingredient5": "minecraft:crimson_fungus"
+    }
+  ]
+}

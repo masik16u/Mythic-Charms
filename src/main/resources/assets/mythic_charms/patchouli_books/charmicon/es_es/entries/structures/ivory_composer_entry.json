@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Márfil",
+  "icon": "minecraft:white_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/ivory_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada dice:$(br2)$(o) En el puerto de Territorio Seguro, la Mirada de Calma de una Presencia Serena ofrece consuelo y tranquilidad, tejiendo un capullo de paz en medio de las corrientes turbulentas de la vida.$(br2) Márfil."
+    }
+  ]
+}

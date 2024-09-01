@@ -1,0 +1,34 @@
+{
+  "name": "Aldea Subterránea",
+  "icon": "minecraft:stone_bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Aquí es donde deberían haber estado los Sound Carvers, pero ahora está todo enterrado en grava y piedra.$(br) $(o)¿No podían hacer nada para evitar que esto ocurriera?$()$(br2) También hay un plano del pueblo a la entrada, es antiguo pero legible."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/uvillage1.png"
+      ],
+      "text": " El primer piso es la entrada al pueblo y no tiene muchas habitaciones."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/uvillage2.png"
+      ],
+      "text": " El segundo piso tiene cuatro habitaciones con el mismo símbolo, debe ser un piso residencial."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/uvillage3.png"
+      ],
+      "text": " El tercer piso debe ser un piso industrial."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Senda E. y Ascensión E.",
+  "icon": "mythic_charms:textures/climbers_path_and_high_bounds.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/climbers_path_and_high_bounds",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_climbers_path_entry)Senda del Escalador$() y $(l:mythic_charms:charms/charm_of_high_bounds_entry)Ascensión Eminente$(), agrega 0,5 bloques adicionales a la altura de paso."
+    }
+  ]
+}

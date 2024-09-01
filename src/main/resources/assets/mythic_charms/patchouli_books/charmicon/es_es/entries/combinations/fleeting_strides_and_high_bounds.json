@@ -1,0 +1,13 @@
+{
+  "name": "Pasos F. y Ascensión E.",
+  "icon": "mythic_charms:textures/fleeting_strides_and_high_bounds.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/fleeting_strides_and_high_bounds",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_fleeting_strides_entry)Pasos Fugaces$() y $(l:mythic_charms:charms/charm_of_high_bounds_entry)Ascensión Eminente$(), aumenta la velocidad de salto mientras corres, la altura del salto en 0,5 bloques y el agotamiento."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Aguamarina",
+  "icon": "minecraft:light_blue_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/aquamarine_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada dice:$(br2)$(o) En la Corriente Ligera del tiempo, la Libertad Sumergida emerge, revelando su belleza y fuerza ocultas.$(br2) Aguamarina."
+    }
+  ]
+}

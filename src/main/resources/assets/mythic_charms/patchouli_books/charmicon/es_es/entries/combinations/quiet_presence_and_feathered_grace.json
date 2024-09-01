@@ -1,0 +1,13 @@
+{
+  "name": "Presencia S. y Pluma L.",
+  "icon": "mythic_charms:textures/quiet_presence_and_feathered_grace.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/quiet_presence_and_feathered_grace",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_quiet_presence_entry)Presencia Serena$() y $(l:mythic_charms:charms/charm_of_feathered_grace_entry)Pluma Ligera$(), saltar no activará un sensor sculk."
+    }
+  ]
+}

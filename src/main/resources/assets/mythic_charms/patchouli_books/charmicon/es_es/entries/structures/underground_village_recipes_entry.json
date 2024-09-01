@@ -1,0 +1,17 @@
+{
+  "name": "Aldea Subterránea: Recetas",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composer_map",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La habitación con el símbolo de un círculo debe ser una habitación para exploradores porque tiene un mapa que conduce a una especie de compositor, como dice en la parte posterior.$(br2)$(o) Este tiene que ser el lugar donde crean las recetas de amuletos."
+    },
+    {
+      "type": "patchouli:text",
+      "text": " Tiene una leyenda:$(br2) Aguamarina - Libertad$(br) Oro - Montaña$(br) Indigo - Ayuda$(br) Márfil - Seguridad$(br) Cal - Naturaleza$(br) Granate - Calor$(br) Plata - Lucha$(br) Teal - Crecimiento$(br) Violeta - Fantasma$(br2) Después de investigar este pueblo, debería dirigirme allí."
+    }
+  ]
+}

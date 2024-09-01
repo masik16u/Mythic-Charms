@@ -1,0 +1,22 @@
+{
+  "name": "Territorio Seguro",
+  "icon": "mythic_charms:fragile_charm_of_safe_territory",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/safe_territory",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) Los Creepers en un radio de 4 bloques alrededor del usuario no romperán bloques."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_safe_territory",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_safe_territory",
+      "ingredient3": "minecraft:nautilus_shell",
+      "ingredient4": "minecraft:quartz",
+      "ingredient5": "minecraft:slime_ball"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Abrazo Ardiente",
+  "icon": "mythic_charms:fragile_charm_of_blazing_embrace",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/blazing_embrace",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) El portador recibe un efecto de resistencia al fuego durante 20 segundos. El tiempo comienza cuando el portador está en llamas y se reanuda cuando el fuego se extingue."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_blazing_embrace",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_blazing_embrace",
+      "ingredient3": "minecraft:crimson_fungus",
+      "ingredient4": "minecraft:magma_cream",
+      "ingredient5": "minecraft:prismarine_crystals"
+    }
+  ]
+}

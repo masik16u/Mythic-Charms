@@ -1,0 +1,18 @@
+{
+  "name": "Base de Amuleto",
+  "icon": "mythic_charms:fragile_charm_base",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/structures/underground_village_carving_room",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Supongo que este amuleto es el ingrediente principal para hacer un amuleto.$(br) Hay algunos de estos tirados en la sala de tallado de sonido, pero la mayoría están rotos, creo que son muy frágiles. $(o)¿Tan frágiles son los amuletos?$()$(br) Además, hay algo escrito en el borde de una base de encanto que encontré en la habitación: \"La muerte causa destrucción\"$(br2) Los rotos se pueden reparar con toba."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:fragile_charm_base",
+      "recipe2": "mythic_charms:fragile_charm_base_from_broken_charm"
+    }
+  ]
+}

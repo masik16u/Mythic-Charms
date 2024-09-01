@@ -1,0 +1,13 @@
+{
+  "name": "Aldea Subte.Prof: Misterio",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/hideout_map",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " En un piso que no estaba en el plano, descubrí un mapa antiguo y misterioso. El texto que contiene es ilegible y la única forma de descubrir sus secretos es seguirlo."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Pacto de Tierra",
+  "icon": "mythic_charms:fragile_charm_of_earths_order",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/earths_order",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) El usuario puede romper cualquier bloque rompible cuando no sostiene ninguna herramienta en su mano principal."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_earths_order",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_earths_order",
+      "ingredient3": "minecraft:blaze_powder",
+      "ingredient4": "minecraft:quartz",
+      "ingredient5": "minecraft:raw_iron"
+    }
+  ]
+}

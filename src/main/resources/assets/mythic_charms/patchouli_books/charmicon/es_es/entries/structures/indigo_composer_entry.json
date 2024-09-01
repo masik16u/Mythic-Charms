@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Indigo",
+  "icon": "minecraft:purple_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/indigo_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada dice:$(br2)$(o) En el suave abrazo del apoyo, los Susurros Encantados tejen un tapiz de resiliencia, convirtiendo cada desafío en el Don del Coleccionista marcado por el crecimiento y la fortaleza.$(br2) Indigo."
+    }
+  ]
+}

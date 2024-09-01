@@ -1,0 +1,13 @@
+{
+  "name": "Aldea Subterránea: Almacén",
+  "icon": "minecraft:stone_brick_stairs",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village_storage",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La habitación marcada con el símbolo de un triángulo debe ser un almacén. Además, la ventana cerca de la entrada debe ser un punto de recepción.$(br2) Hay un montón de estantes y cosas al azar por todos lados. $(o)¿Por qué necesitarían todas estas cosas?"
+    }
+  ]
+}

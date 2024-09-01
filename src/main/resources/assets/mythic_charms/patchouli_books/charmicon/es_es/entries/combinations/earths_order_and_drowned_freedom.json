@@ -1,0 +1,13 @@
+{
+  "name": "Pacto T. y Libertad S.",
+  "icon": "mythic_charms:textures/earths_order_and_drowned_freedom.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/earths_order_and_drowned_freedom",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_earths_order_entry)Pacto de Tierra$() y $(l:mythic_charms:charms/charm_of_drowned_freedom_entry)Libertad Sumergida$(), la velocidad de romper bloques sin herramienta bajo el agua es la misma que en la superficie."
+    }
+  ]
+}

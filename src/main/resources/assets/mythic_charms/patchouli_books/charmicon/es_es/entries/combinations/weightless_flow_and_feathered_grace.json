@@ -1,0 +1,13 @@
+{
+  "name": "Corriente L. y Pluma L.",
+  "icon": "mythic_charms:textures/weightless_flow_and_feathered_grace.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/weightless_flow_and_feathered_grace",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_weightless_flow_entry)Corriente Ligera$() y $(l:mythic_charms:charms/charm_of_feathered_grace_entry)Pluma Ligera$(), Agacharse no desactivará el efecto de caída lenta, solo te devolverá a tu gravedad normal."
+    }
+  ]
+}

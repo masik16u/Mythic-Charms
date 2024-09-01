@@ -1,0 +1,13 @@
+{
+  "name": "Eco I. y Abrazo A.",
+  "icon": "mythic_charms:textures/echoing_wrath_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/echoing_wrath_and_battle_fury",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_echoing_wrath_entry)Eco de Ira$() y $(l:mythic_charms:charms/charm_of_blazing_embrace_entry)Abrazo Ardiente$(), pone a las entidades cercanasen llamas, pero el daño del eco se reduce a la mitad."
+    }
+  ]
+}

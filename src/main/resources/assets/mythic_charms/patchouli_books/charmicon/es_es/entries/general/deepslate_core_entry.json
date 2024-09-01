@@ -1,0 +1,18 @@
+{
+  "name": "Núcleo de Pizarra Profunda",
+  "icon": "mythic_charms:deepslate_core",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/deepslate_core",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Este es el item que me permitirá mejorar la durabilidad de los amuletos.$(br2) Parece similar a la plantilla de herrería de mejora de Netherite, creo que los amuletos se actualizan de manera similar, en la mesa de herrería."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:deepslate_core",
+      "text": "Al igual que las plantillas de herrería, se puede duplicar."
+    }
+  ]
+}

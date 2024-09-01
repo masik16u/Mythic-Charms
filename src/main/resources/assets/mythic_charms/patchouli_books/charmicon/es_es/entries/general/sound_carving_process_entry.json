@@ -1,0 +1,25 @@
+{
+  "name": "Proceso de los Sound Carving",
+  "icon": "mythic_charms:resonance_table",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/structures/underground_village_carving_room",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La primera cosa importante es un bloque de lapislázuli. Debe colocarse debajo de la mesa, $(o)Parece una especie de catalizador$().$(br) A continuación se encuentra un anillo de hierro con amatista incrustada. Cuando se trabaja en una mesa de resonancia, se debe tenerlo siempre a mano.$(br2) Por último, pon todos los ingredientes sobre la mesa y tira una botella de experiencia para rematarlo."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/general/sound_carving_process.png"
+      ],
+      "text": " $(o)Pero donde puedo conseguir las recetas de los amuletos?"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:resonance_table",
+      "recipe2": "mythic_charms:resonance_ring"
+    }
+  ]
+}

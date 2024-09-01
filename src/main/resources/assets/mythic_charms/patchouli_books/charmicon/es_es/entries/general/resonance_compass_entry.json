@@ -1,0 +1,20 @@
+{
+  "name": "Compás de Resonancia",
+  "icon": "mythic_charms:resonance_compass",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/resonance_compass",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Este dispositivo es antiguo, pero parece que nadie lo había usado antes. Incluso hay una nota sobre cómo usarlo.$(br2) Creo que los exploradores de este pueblo usaban esta brújula de resonancia en lugar de un mapa. Resuena hacia la estructura de los Carvers más cercana y, cuando se usa, emite un sonido en dirección a una estructura. Cuando quedan 8 bloques hasta la estructura, emite un sonido diferente."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/general/resonance_compass.png"
+      ],
+      "text": "$(o) Definitivamente tengo que probarlo."
+    }
+  ]
+}

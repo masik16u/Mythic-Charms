@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Teal",
+  "icon": "minecraft:cyan_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/teal_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada dice:$(br2)$(o) Con Pasos Fugaces, las aspiraciones van más allá de la Ascensión eminente, ya que el impulso de mejorar revela un potencial ilimitado en cada esfuerzo.$(br2) Teal."
+    }
+  ]
+}

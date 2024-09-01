@@ -1,0 +1,17 @@
+{
+  "name": "Aldea Subterránea: Sala de tallado de sonido",
+  "icon": "minecraft:chiseled_stone_bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village_carving_room",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La habitación con un símbolo cuadrado es la habitación donde los Sound Carvers crean amuletos.$(br2) Hay una mesa incrustada con amatistas en el centro de la habitación e instrucciones sobre cómo usarla.$(br2) También hay muchas cosas de la habitación de almacenamiento, $(o)Estos deben ser ingredientes."
+    },
+    {
+      "type": "patchouli:text",
+      "text": " Hay una nota grabada en la pared, en la esquina de la habitación. Dice:$(br2)$(o) Han pasado dos semanas desde el último encargo y todos estamos nerviosos.$(br) Ayer todas las luces comenzaron a oscurecerse y hemos perdido el contacto con los demás.$(br) ¿Es este nuestro fin?"
+    }
+  ]
+}

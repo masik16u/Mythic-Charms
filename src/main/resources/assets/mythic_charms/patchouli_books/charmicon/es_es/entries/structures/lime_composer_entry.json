@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Cal",
+  "icon": "minecraft:lime_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/lime_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada:$(br2)$(o) El Llamado de Naturaleza resuena con una Bendición Botánica, invitando a las almas a abrazar la danza sagrada de la vida entrelazada con los ritmos de la tierra.$(br2) Cal."
+    }
+  ]
+}

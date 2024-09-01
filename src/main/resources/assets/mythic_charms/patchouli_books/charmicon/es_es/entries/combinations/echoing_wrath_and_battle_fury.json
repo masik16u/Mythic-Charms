@@ -1,0 +1,13 @@
+{
+  "name": "Eco I. y Furia G.",
+  "icon": "mythic_charms:textures/echoing_wrath_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/echoing_wrath_and_battle_fury",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_echoing_wrath_entry)Eco de Ira$() y $(l:mythic_charms:charms/charm_of_battle_fury_entry)Furia Guerrera$(), cuanto menor sea la salud del usuario, mayor será el daño del eco."
+    }
+  ]
+}

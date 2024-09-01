@@ -1,0 +1,23 @@
+{
+  "name": "Descripción General de los Amuletos",
+  "icon": "mythic_charms:fragile_charm_base",
+  "category": "mythic_charms:charms_category",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Son artefactos muy valiosos que rara vez caen en manos de los habitantes de la superficie..$(br2) Nunca he visto uno, pero sé que contienen un gran poder. Se describen como objetos circulares hechos de piedra con un símbolo brillante en el centro. $(o)Pero, ¿cómo los hacen los Carvers y por qué?"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/charms/charms.png"
+      ],
+      "text": " $(o)Creo que encontraré todas las respuestas en las aldeas de los Carvers.."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)$(br) Estoy en un callejón sin salida.$(br2) No encuentro nada más, ni siquiera la más mínima pista, nada..$(br2) Parece que me puse una meta demasiado alta..."
+    }
+  ]
+}

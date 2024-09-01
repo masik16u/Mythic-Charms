@@ -1,0 +1,18 @@
+{
+  "name": "Grabado de Eco",
+  "icon": "mythic_charms:sound_carving_pattern_feathered_grace",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/any_pattern",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Estos también son ingredientes necesarios para hacer amuletos. Se pueden encontrar en diferentes estructuras de compositores.$(br2) Algunos comerciantes errantes también tienen estos grabados, pero solo intercambiarán uno por otro del mismo compositor."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:sound_carving_pattern_feathered_grace",
+      "text": "$(br2) Parece que la tinta de su patrón brilla, para copiarlo, debería usar uno similar."
+    }
+  ]
+}

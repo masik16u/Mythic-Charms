@@ -1,0 +1,13 @@
+{
+  "name": "Aldea Subterránea: Profundidades",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/deep_underground_village_map",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " En la sala de tallado de sonido, encontré otro mapa. También conduce a una aldea, pero este es mucho más profunda. $(br2) $(o)Es extraño que haya encontrado este mapa aquí, tal vez los talladores de sonido también vivieron allí y están conectados de alguna manera con el proceso de fabricación de amuletos".
+    }
+  ]
+}

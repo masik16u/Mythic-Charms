@@ -1,0 +1,19 @@
+{
+  "name": "Campamento",
+  "icon": "minecraft:campfire",
+  "category": "mythic_charms:structures_category",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " En todo el mundo, los Sound Carvers establecen campamentos para descansar durante sus viajes.$(br) A veces, por la noche, se puede ver una luz en lo profundo del bosque, pero a medida que te acercas, se atenúa. $(o)¿Qué es esta luz? ¿Algún tipo de dispositivo?$()$(br) Tuve la suerte de encontrar uno de estos campamentos, pero lo único que quedó fue un bloque de amatista encerrado en piedra. Siento que no era lo único que quedó allí."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/camp.png"
+      ],
+      "text": " $(o)Quizás la amatista era la fuente de la luz, pero no produce luz..."
+    }
+  ]
+}

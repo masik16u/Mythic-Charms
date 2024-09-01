@@ -1,0 +1,13 @@
+{
+  "name": "Combinación de Amuletos",
+  "icon": "mythic_charms:fragile_charm_base",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/any_charm",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Algunos encantos pueden resonar entre sí y dar lugar a efectos especiales.$(br) Apenas se puede escuchar un sonido corto cuando resuenan.$(br2)$(o) Eso es genial, tengo que probar cada combinación!"
+    }
+  ]
+}

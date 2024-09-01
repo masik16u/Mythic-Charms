@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Violeta",
+  "icon": "minecraft:magenta_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/violet_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada dice:$(br2)$(o) Como un Guardián Nocturno, el fantasma se desliza como una Pluma Ligera, tejiendo susurros de cuentos olvidados bajo la atenta mirada de la luna.$(br2) Violeta."
+    }
+  ]
+}

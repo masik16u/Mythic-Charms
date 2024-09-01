@@ -1,0 +1,13 @@
+{
+  "name": "Pluma L. y Ascensión E.",
+  "icon": "mythic_charms:textures/feathered_grace_and_high_bounds.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/feathered_grace_and_high_bounds",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Al combinar $(l:mythic_charms:charms/charm_of_feathered_grace_entry)Pluma Ligera$() y $(l:mythic_charms:charms/charm_of_high_bounds_entry)Ascensión Eminente$(), agrega 1 segundo adicional para el efecto de caída lenta y un poco de agotamiento durante ese segundo."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Presencia Serena",
+  "icon": "mythic_charms:fragile_charm_of_quiet_presence",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/quiet_presence",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) El usuario puede caminar cerca de un sensor Sculk sin que se active, pero solo puede caminar, no correr ni saltar."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_quiet_presence",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_quiet_presence",
+      "ingredient3": "minecraft:echo_shard",
+      "ingredient4": "minecraft:feather",
+      "ingredient5": "minecraft:slime_ball"
+    }
+  ]
+}

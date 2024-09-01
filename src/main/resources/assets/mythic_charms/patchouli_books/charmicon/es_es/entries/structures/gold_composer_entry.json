@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Oro",
+  "icon": "minecraft:yellow_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/gold_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel en la entrada dice:$(br2)$(o) En la majestuosidad de las altas cumbres, la Fortaleza de la Montaña es un testimonio del Pacto de Tierra, marcando la Senda del escalador con firmeza y silenciosa sabiduría.$(br2) Oro."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Corriente Ligera",
+  "icon": "mythic_charms:fragile_charm_of_weightless_flow",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/weightless_flow",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " The description on the back of the scroll says:$(br2)  Mientras el portador no esté agachado, la gravedad del portador se conserva. Si está de pie antes de activarse, el portador puede caminar en el aire. Si salta directamente antes de la activación, el portador saltará al cielo."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_weightless_flow",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_weightless_flow",
+      "ingredient3": "minecraft:ghast_tear",
+      "ingredient4": "minecraft:glow_ink_sac",
+      "ingredient5": "minecraft:phantom_membrane"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Llamado de Naturaleza",
+  "icon": "mythic_charms:fragile_charm_of_natures_call",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/natures_call",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) Mientras el usuario no esté agachado, todos los animales lo seguirán."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_natures_call",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_natures_call",
+      "ingredient3": "minecraft:bone",
+      "ingredient4": "minecraft:glow_ink_sac",
+      "ingredient5": "minecraft:honey_bottle"
+    }
+  ]
+}

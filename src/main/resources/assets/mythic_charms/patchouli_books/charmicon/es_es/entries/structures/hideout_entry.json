@@ -1,0 +1,14 @@
+{
+  "name": "Escondite",
+  "icon": "minecraft:bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/hideout",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El misterioso mapa que encontré anteriormente conduce a una sala de investigación cerca de la bedrock. No parece una estructura de un sound carver.$(br2)$(o) ¿Quién construyó esto y qué relación tienen con los Sound Carvers?$()$(br2) Noté que los libros están colocados en un patrón determinado. $(o)¿Esto significa algo?"
+
+    }
+  ]
+}

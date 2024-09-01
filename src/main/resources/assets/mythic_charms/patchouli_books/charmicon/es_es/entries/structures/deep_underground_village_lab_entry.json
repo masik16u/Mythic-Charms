@@ -1,0 +1,17 @@
+{
+  "name": "Aldea Subte.Prof: Laboratorio",
+  "icon": "minecraft:deepslate_tiles",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/deep_underground_village_lab",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La habitación con el símbolo cuadrado debe ser un laboratorio.$(br2) Parece que intentaron mejorar la durabilidad de los amuletos aquí.$(br) $(o)Lo cual no es sorprendente, ya que las bases de amuletos que he visto eran muy frágiles."
+    },
+    {
+      "type": "patchouli:text",
+      "text": " Hay una nota grabada en la mesa que dice:$(br2)$(o) Algo extraño está pasando, las lámparas casi no emiten luz y nuestro jefe ha perdido la cabeza, está corriendo y gritando todo tipo de tonterías:$(br) Travesía Oscuridad Danza Oculto Sombra Perdida Energía Ruina Etéreo Cenizas Eco Realidad Eclipse Mente Ocaso Silencio Noche Universo Espera Soledad Tiempo Remanente Origen Sombras Destino Infinito Ocaso Señal Estrella Sol Horizonte Abismo Niebla Caos Alma Inocente Deseo Oda"
+    }
+  ]
+}

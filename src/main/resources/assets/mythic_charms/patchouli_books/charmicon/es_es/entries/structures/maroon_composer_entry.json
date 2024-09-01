@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Granate",
+  "icon": "minecraft:red_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/maroon_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada dice:$(br2)$(o) En el Abrazo Ardiente del fuego, se forja un Acuerdo de Trueque entre el calor y la destrucción, encendiendo una danza primitiva de renovación y transformación.$(br2) Granate."
+    }
+  ]
+}

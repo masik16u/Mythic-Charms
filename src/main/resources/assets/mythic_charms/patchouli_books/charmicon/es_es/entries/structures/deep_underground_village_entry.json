@@ -1,0 +1,27 @@
+{
+  "name": "Aldea Subterránea Profunda",
+  "icon": "minecraft:deepslate_bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/deep_underground_village",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Este es el lugar al que llevaba el mapa del pueblo anterior. Este está en el nivel de la pizarra profunda en lugar de la piedra.$(br2) También tiene un plano de la aldea, más pequeño que el anterior."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/duvillage1.png"
+      ],
+      "text": " El primer piso se ve muy vacío."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/duvillage2.png"
+      ],
+      "text": " El segundo piso es una mezcla de salas técnicas y residenciales. $(o)Extraño, tiene un símbolo abajo de las escaleras, pero el plano no incluye un tercer piso.."
+    }
+  ]
+}

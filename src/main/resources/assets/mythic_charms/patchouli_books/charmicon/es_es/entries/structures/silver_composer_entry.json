@@ -1,0 +1,13 @@
+{
+  "name": "Compositor de Plata",
+  "icon": "minecraft:light_gray_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/silver_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " El cartel de la entrada dice:$(br2)$(o) En el corazón de la batalla, entre el Eco de Ira y la Danza de flechas de la Furia Guerrera, los guerreros se funden en una sinfonía de valor y resistencia.$(br2) Plata."
+    }
+  ]
+}

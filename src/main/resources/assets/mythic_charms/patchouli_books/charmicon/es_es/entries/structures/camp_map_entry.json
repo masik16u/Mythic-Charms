@@ -1,0 +1,13 @@
+{
+  "name": "Camp: Mapa",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village_map",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " $(o)¡La investigación del autor no fue en vano!$()$(br2) Entre los fragmentos de amatista, las pepitas de oro y las botellas de vidrio, encontré un mapa.$(br) Probablemente conduce al pueblo de los Carvers, así que ese será mi próximo objetivo."
+    }
+  ]
+}

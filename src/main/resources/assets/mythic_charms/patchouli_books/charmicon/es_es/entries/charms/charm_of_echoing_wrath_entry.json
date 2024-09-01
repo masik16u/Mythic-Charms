@@ -1,0 +1,22 @@
+{
+  "name": "Eco de Ira",
+  "icon": "mythic_charms:fragile_charm_of_echoing_wrath",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/echoing_wrath",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " La descripción que hay detrás del pergamino dice:$(br2) Cuando una entidad daña al portador, las entidades cercanas sufren la mitad del daño, con un máximo de 10 puntos. Sin embargo, el portador inflige una cuarta parte del daño menos."
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_echoing_wrath",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_echoing_wrath",
+      "ingredient3": "minecraft:echo_shard",
+      "ingredient4": "minecraft:fermented_spider_eye",
+      "ingredient5": "minecraft:green_dye"
+    }
+  ]
+}
