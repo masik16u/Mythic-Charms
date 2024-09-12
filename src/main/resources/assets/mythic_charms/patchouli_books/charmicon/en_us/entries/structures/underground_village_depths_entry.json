@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " In the sound carving room, I found another map. It also leads to a village, but this one is much deeper.$(br2) $(o)It's strange that I found this map here, maybe Sound Carvers also lived there and they are somehow connected with the process of making charms."
+      "text": " In the sound carving room, I found another map. It also leads to a village, but this one is much deeper. On the map it is indicated that it is located approximately at an altitude of -24.$(br2) $(o)It's strange that I found this map here, maybe Sound Carvers also lived there and they are somehow connected with the process of making charms."
     }
   ]
 }

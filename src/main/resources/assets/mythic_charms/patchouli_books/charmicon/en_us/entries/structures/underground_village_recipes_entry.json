@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " The room with a circle symbol must be a room for explorers because it has a map that leads to some sort of a composer, as it says on the back.$(br2)$(o) This has to be the place were they create charm recipes."
+      "text": " The room with a circle symbol must be a room for explorers because it has a map that leads to some sort of a composer, as it says on the back. On the map it is indicated that it is located approximately at an altitude of -10.$(br2)$(o) This has to be the place were they create charm recipes."
     },
     {
       "type": "patchouli:text",

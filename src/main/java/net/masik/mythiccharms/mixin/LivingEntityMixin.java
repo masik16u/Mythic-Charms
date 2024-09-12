@@ -1,8 +1,12 @@
 package net.masik.mythiccharms.mixin;
 
+import net.masik.mythiccharms.particle.ModParticles;
+import net.masik.mythiccharms.util.BattleFuryHelper;
 import net.masik.mythiccharms.util.CharmHelper;
+import net.masik.mythiccharms.util.ParticleHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -14,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class LivingEntityMixin {
 
     //highBounds
-    @Inject(method = "getJumpVelocity", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getJumpBoostVelocityModifier()F"), cancellable = true)
+    @Inject(method = "getJumpVelocity", at = @At(value = "RETURN"), cancellable = true)
     private void highBoundsEffectJump(CallbackInfoReturnable<Float> cir) {
 
         LivingEntity entity = (LivingEntity) (Object) this;
@@ -25,13 +29,26 @@ public class LivingEntityMixin {
         if (!CharmHelper.charmHighBoundsEquipped(entity)) return;
 
 
-        ((PlayerEntity) entity).addExhaustion(0.1F);
+        PlayerEntity player = (PlayerEntity) entity;
+
+        player.addExhaustion(0.1F);
 
         float high = 0.6F;
 
         //featheredGrace combo
         if (CharmHelper.charmFeatheredGraceEquipped(entity) &&
                 CharmHelper.charmCombinationFeatheredGraceAndHighBoundsEnabled(entity)) high += 0.05F;
+
+        //PARTICLE
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 7) {
+            ParticleHelper.spawnParticle(player, ModParticles.HIGH_BOUNDS_EFFECT_PARTICLE,
+                    player.getX() + (double) random.nextBetween(-2, 2) / 10,
+                    player.getY(),
+                    player.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                    random.nextBetween(3, 5), 0.1, 0, 0.1, 0.07);
+        }
 
         cir.setReturnValue(entity.getJumpBoostVelocityModifier() + high);
 
@@ -52,6 +69,53 @@ public class LivingEntityMixin {
 
     }
 
+    //fleetingStrides
+    @Inject(method = "jump", at = @At("RETURN"))
+    private void fleetingStridesHungerOnJump(CallbackInfo ci) {
+
+        LivingEntity entity = (LivingEntity) (Object) this;
+
+        if (!entity.isPlayer()) return;
+
+
+        if (!CharmHelper.charmFleetingStridesEquipped(entity)) return;
+
+
+        PlayerEntity player = (PlayerEntity) entity;
+
+        if (!player.isSprinting() || player.getAbilities().flying) return;
+
+        float exhaustion = 0.1F;
+
+        //highBounds combo
+        if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(player)) {
+
+            exhaustion += 0.05F;
+
+        }
+
+        //battleFury combo
+        if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndBattleFuryEnabled(player)) {
+
+            exhaustion += (float) (0.1F * BattleFuryHelper.getMultiplier(player));
+
+        }
+
+        //PARTICLE
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 7) {
+            ParticleHelper.spawnParticle(player, ModParticles.FLEETING_STRIDES_EFFECT_PARTICLE,
+                    player.getX() + (double) random.nextBetween(-2, 2) / 10,
+                    player.getY(),
+                    player.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                    random.nextBetween(3, 5), 0.1, 0, 0.1, 0.07);
+        }
+
+        player.addExhaustion(exhaustion);
+
+    }
+
     //climbersPath
     @Inject(method = "getStepHeight", at = @At("RETURN"), cancellable = true)
     private void climbersPathEffect(CallbackInfoReturnable<Float> cir) {
@@ -69,6 +133,19 @@ public class LivingEntityMixin {
         //highBounds combo
         if (CharmHelper.charmHighBoundsEquipped(entity) &&
                 CharmHelper.charmCombinationClimbersPathAndHighBoundsEnabled(entity)) height += 0.5F;
+
+        //PARTICLE
+        PlayerEntity player = (PlayerEntity) entity;
+
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 1 && player.isOnGround()) {
+            ParticleHelper.spawnParticle(player, ModParticles.CLIMBERS_PATH_EFFECT_PARTICLE,
+                    player.getX() + (double) random.nextBetween(-2, 2) / 10,
+                    player.getY(),
+                    player.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                    1, 0.1, 0.1, 0.1, 0.01);
+        }
 
         cir.setReturnValue(height);
 

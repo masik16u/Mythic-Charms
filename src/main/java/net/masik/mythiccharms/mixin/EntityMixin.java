@@ -1,12 +1,15 @@
 package net.masik.mythiccharms.mixin;
 
+import net.masik.mythiccharms.particle.ModParticles;
 import net.masik.mythiccharms.util.CharmHelper;
+import net.masik.mythiccharms.util.ParticleHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.explosion.Explosion;
 import org.spongepowered.asm.mixin.Mixin;
@@ -31,6 +34,19 @@ public class EntityMixin {
 
         if (!CharmHelper.charmDrownedFreedomEquipped((LivingEntity) entity)) return;
 
+
+        //PARTICLE
+        PlayerEntity player = (PlayerEntity) entity;
+
+        Random random = Random.create();
+
+        if (random.nextInt(90) < 1 && cir.getReturnValue()) {
+            ParticleHelper.spawnParticle(player, ModParticles.DROWNED_FREEDOM_EFFECT_PARTICLE,
+                    player.getX() + (double) random.nextBetween(-5, 5) / 10,
+                    player.getY() + (double) random.nextBetween(2, 15) / 10,
+                    player.getZ() + (double) random.nextBetween(-5, 5) / 10,
+                    1, 0.1, 0.1, 0.1, 0.01);
+        }
 
         cir.setReturnValue(false);
 
@@ -59,13 +75,24 @@ public class EntityMixin {
 
         Box box = Box.from(entity.getPos()).expand(4);
 
-        List<Entity> players = new ArrayList<>(entity.getWorld().getEntitiesByClass(PlayerEntity.class, box, player -> true));
+        List<PlayerEntity> players = new ArrayList<>(entity.getWorld().getEntitiesByClass(PlayerEntity.class, box, player -> true));
 
         players.forEach(player -> {
 
 
-            if (!CharmHelper.charmSafeTerritoryEquipped((LivingEntity) player)) return;
+            if (!CharmHelper.charmSafeTerritoryEquipped(player)) return;
 
+
+            //PARTICLE
+            Random random = Random.create();
+
+            if (random.nextInt(250) < 1) {
+                ParticleHelper.spawnParticle(player, ModParticles.SAFE_TERRITORY_EFFECT_PARTICLE,
+                        entity.getX() + (double) random.nextBetween(-5, 5) / 10,
+                        entity.getY() + (double) random.nextBetween(2, 15) / 10,
+                        entity.getZ() + (double) random.nextBetween(-5, 5) / 10,
+                        1, 0.1, 0.1, 0.1, 0.08);
+            }
 
             cir.setReturnValue(false);
 
@@ -91,6 +118,19 @@ public class EntityMixin {
         if (!entity.isOnGround() && (!CharmHelper.charmCombinationQuietPresenceAndFeatheredGraceEnabled((LivingEntity) entity) ||
                 (!CharmHelper.charmFeatheredGraceEquipped((LivingEntity) entity) &&
                         CharmHelper.charmCombinationQuietPresenceAndFeatheredGraceEnabled((LivingEntity) entity)))) return;
+
+        //PARTICLE
+        PlayerEntity player = (PlayerEntity) entity;
+
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 8) {
+            ParticleHelper.spawnParticle(player, ModParticles.QUIET_PRESENCE_EFFECT_PARTICLE,
+                    player.getX() + (double) random.nextBetween(-2, 2) / 10,
+                    player.getY(),
+                    player.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                    1, 0.1, 0.1, 0.1, 0.01);
+        }
 
         cir.setReturnValue(true);
 

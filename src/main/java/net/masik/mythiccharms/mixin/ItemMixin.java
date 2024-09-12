@@ -11,6 +11,7 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.HoneycombItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -44,13 +45,16 @@ public class ItemMixin {
 
         if (!context.getStack().isIn(TagKey.of(RegistryKeys.ITEM, new Identifier(MythicCharms.MOD_ID, "resonance_ingredients")))) return;
 
+        ItemStack stack = context.getStack().copy();
+        stack.setCount(1);
+
         ItemEntity itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1, blockPos.getZ() + 0.5,
-                context.getStack().getItem().getDefaultStack());
+                stack);
         itemEntity.setVelocity(0,0,0);
         itemEntity.setPickupDelay(60);
         world.spawnEntity(itemEntity);
 
-        context.getStack().decrement(1);
+        if (!player.getAbilities().creativeMode) context.getStack().decrement(1);
         cir.setReturnValue(ActionResult.SUCCESS);
     }
 

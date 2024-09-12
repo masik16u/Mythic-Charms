@@ -137,10 +137,10 @@
 	"item.mythic_charms.prophecy_pottery_sherd": "Fragmento de Cerámica de Profecía",
 	"item.mythic_charms.freedom_pottery_sherd": "Fragmento de Cerámica de Libertad",
 	"item.mythic_charms.mountain_pottery_sherd": "Fragmento de Cerámica de Montaña",
-	"item.mythic_charms.aid_pottery_sherd": "Fragmento de Cerámica de Puntería",
+	"item.mythic_charms.aid_pottery_sherd": "Fragmento de Cerámica de Ayuda",
 	"item.mythic_charms.safety_pottery_sherd": "Fragmento de Cerámica de Seguridad",
 	"item.mythic_charms.nature_pottery_sherd": "Fragmento de Cerámica de Naturaleza",
-	"item.mythic_charms.heat_pottery_sherd": "Fragmento de Cerámica de calor",
+	"item.mythic_charms.heat_pottery_sherd": "Fragmento de Cerámica de Calor",
 	"item.mythic_charms.fight_pottery_sherd": "Fragmento de Cerámica de Lucha",
 	"item.mythic_charms.growth_pottery_sherd": "Fragmento de Cerámica de Crecimiento",
 	"item.mythic_charms.ghost_pottery_sherd": "Fragmento de Cerámica de Fantasma",
@@ -186,7 +186,7 @@
 	"advancements.mythic_charms.story.underground_village.desc": "Entra a una Aldea de Sound Carvers",
 	"advancements.mythic_charms.story.map_to_deep_underground_village.title": "Camino a las Profundidades Ocultas",
 	"advancements.mythic_charms.story.map_to_deep_underground_village.desc": "Encuentra un mapa que lleve a las Profundidades del Mundo",
-	"advancements.mythic_charms.story.resonance_pottery_sherd.title": "Si solo Sonríes",
+	"advancements.mythic_charms.story.resonance_pottery_sherd.title": "Sonríe, tú alma se iluminará",
 	"advancements.mythic_charms.story.resonance_pottery_sherd.desc": "Obtén un Fragmento de Cerámica de Resonancia",
 	"advancements.mythic_charms.story.prepare_for_carving.title": "Aprendiz de Sound Carver",
 	"advancements.mythic_charms.story.prepare_for_carving.desc": "Prepárese para Tallar reuniendo: Mesa de Resonancia, Anillo de Resonancia y Base de Amuleto",
@@ -202,7 +202,7 @@
 
 	"advancements.mythic_charms.story.sound_carving_pattern.title": "El Secreto del Creador de Melodías",
 	"advancements.mythic_charms.story.sound_carving_pattern.desc": "Obtén un Grabado de Eco",
-	"advancements.mythic_charms.story.first_charm.title": "Charmcrafting 101",
+	"advancements.mythic_charms.story.first_charm.title": "Escultor novato",
 	"advancements.mythic_charms.story.first_charm.desc": "Crea tu Primer Amuleto",
 
 	"advancements.mythic_charms.story.every_composer.title": "Orquesta",
@@ -210,7 +210,7 @@
 
 	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Carcasa Robusta",
 	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Mejora tu Amuleto por Primera Vez",
-	"advancements.mythic_charms.story.every_charm.title": "Charmaster",
+	"advancements.mythic_charms.story.every_charm.title": "Amulestro",
 	"advancements.mythic_charms.story.every_charm.desc": "Crea todos los Amuletos",
 
 	"advancements.mythic_charms.story.map_to_hideout.title": "Detective",
@@ -226,6 +226,28 @@
 	"tag.item.mythic_charms.resonance_ingredients": "Ingredientes de Resonancia",
 	"tag.item.trinkets.hand.ring": "Ring Trinket",
 	"tag.item.trinkets.mythic_charm.mythic_charm": "Mythic Charm",
+
+	"tag.item.mythic_charms.charms.feathered_grace": "Pluma Ligera",
+	"tag.item.mythic_charms.charms.blazing_embrace": "Abrazo Ardiente",
+	"tag.item.mythic_charms.charms.gaze_serenity": "Mirada de Calma",
+	"tag.item.mythic_charms.charms.earths_order": "Pacto de Tierra",
+	"tag.item.mythic_charms.charms.botanic_blessing": "Bendición Botánica",
+	"tag.item.mythic_charms.charms.fleeting_strides": "Pasos Fugazes",
+	"tag.item.mythic_charms.charms.nights_guardian": "Guardián Nocturno",
+	"tag.item.mythic_charms.charms.high_bounds": "Ascensión Eminente",
+	"tag.item.mythic_charms.charms.drowned_freedom": "Libertad Sumergida",
+	"tag.item.mythic_charms.charms.weightless_flow": "Corriente Ligera",
+	"tag.item.mythic_charms.charms.collectors_gift": "Don del Coleccionista",
+	"tag.item.mythic_charms.charms.climbers_path": "Senda del Escalador",
+	"tag.item.mythic_charms.charms.natures_call": "Llamado de Naturaleza",
+	"tag.item.mythic_charms.charms.barters_pact": "Acuerdo de Trueque",
+	"tag.item.mythic_charms.charms.battle_fury": "Furia Guerrera",
+	"tag.item.mythic_charms.charms.echoing_wrath": "Eco de Ira",
+	"tag.item.mythic_charms.charms.enchanted_whispers": "Susurros Encantados",
+	"tag.item.mythic_charms.charms.arrow_dance": "Danza de Flechas",
+	"tag.item.mythic_charms.charms.mountains_strength": "Fortaleza de la montaña",
+	"tag.item.mythic_charms.charms.safe_territory": "Territorio Seguro",
+	"tag.item.mythic_charms.charms.quiet_presence": "Presencia Serena",
 
 
 

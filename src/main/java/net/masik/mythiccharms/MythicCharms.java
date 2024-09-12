@@ -9,6 +9,7 @@ import net.masik.mythiccharms.enchantment.ModEnchantments;
 import net.masik.mythiccharms.item.ModItemGroups;
 import net.masik.mythiccharms.item.ModItems;
 
+import net.masik.mythiccharms.particle.ModParticles;
 import net.masik.mythiccharms.pottery.ModDecoratedPotPatterns;
 import net.masik.mythiccharms.processor.ModStructureProcessorType;
 import net.masik.mythiccharms.recipe.ModRecipes;
@@ -43,5 +44,7 @@ public class MythicCharms implements ModInitializer {
 		ModRegistries.registerRegistries();
 
 		ModRecipes.registerRecipes();
+
+		ModParticles.registerParticles();
 	}
 }

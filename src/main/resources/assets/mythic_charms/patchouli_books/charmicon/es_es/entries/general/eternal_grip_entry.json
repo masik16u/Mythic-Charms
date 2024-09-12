@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " This enchanted book is the thing that someone was hiding in the mysterious room.$(br2) Había una nota cerca y creo que el libro solo se puede aplicar a un hechizo. Sin embargo, el amuleto debe ser \"Suficientemente robusto para soportar un encantamiento\".$(br) Y el amuleto \"estará contigo para siempre\" como dice la nota."
+      "text": " Este libro encantado es lo que alguien había estado escondiendo en esa habitación misteriosa.$(br2) Había una nota cerca y creo que el libro solo se puede aplicar a un hechizo. Sin embargo, el amuleto debe ser \"Suficientemente robusto para soportar un encantamiento\".$(br) Y el amuleto \"estará contigo para siempre\" como dice la nota."
     }
   ]
 }

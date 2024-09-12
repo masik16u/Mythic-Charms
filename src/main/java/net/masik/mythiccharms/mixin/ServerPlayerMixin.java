@@ -1,19 +1,24 @@
 package net.masik.mythiccharms.mixin;
 
 import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.particle.ModParticles;
+import net.masik.mythiccharms.util.BattleFuryHelper;
 import net.masik.mythiccharms.util.BotanicBlessingHelper;
 import net.masik.mythiccharms.util.CharmHelper;
+import net.masik.mythiccharms.util.ParticleHelper;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -73,6 +78,17 @@ public abstract class ServerPlayerMixin {
 
             //AdvancementsHelper.grantAdvancement(player, new Identifier("mythic_charms:story/charm_feathered_grace"));
 
+            //PARTICLE
+            Random random = Random.create();
+
+            if (random.nextInt(10) < 3) {
+                ParticleHelper.spawnParticle(player, ModParticles.FEATHERED_GRACE_EFFECT_PARTICLE,
+                        player.getX() + (double) random.nextBetween(-2, 2) / 10,
+                        player.getY(),
+                        player.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                        1, 0.1, 0.1, 0.1, 0.01);
+            }
+
         }
 
         if (this.ticksInAir >= 40 && this.ticksInAir < ticksInAirCap) {
@@ -103,6 +119,17 @@ public abstract class ServerPlayerMixin {
 
             item.velocityModified = true;
 
+            //PARTICLE
+            Random random = Random.create();
+
+            if (random.nextInt(10) < 1) {
+                ParticleHelper.spawnParticle(player, ModParticles.COLLECTORS_GIFT_EFFECT_PARTICLE,
+                        item.getX() + (double) random.nextBetween(-1, 1) / 10,
+                        item.getY() + 0.5F,
+                        item.getZ() + (double) random.nextBetween(-1, 1) / 10,
+                        1, 0.1, 0.1, 0.1, 0.01);
+            }
+
         });
 
     }
@@ -113,7 +140,7 @@ public abstract class ServerPlayerMixin {
 
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
 
-        java.util.Random rand = new java.util.Random();
+        Random random = Random.create();
 
 
         if (!CharmHelper.charmBotanicBlessingEquipped(player)) return;
@@ -125,7 +152,7 @@ public abstract class ServerPlayerMixin {
 
             for (BlockPos pos : BlockPos.iterate(new BlockPos(-4, 0, -4), new BlockPos(4, 1, 4))) {
 
-                if (rand.nextInt(10) < 4) {
+                if (random.nextInt(10) < 4) {
 
                     BlockPos blockPos = player.getBlockPos().add(pos);
 
@@ -134,6 +161,15 @@ public abstract class ServerPlayerMixin {
                     if (blockState.getBlock() instanceof CropBlock cropBlock) {
 
                         if (!cropBlock.isMature(blockState)) {
+
+                            //PARTICLE
+                            if (random.nextInt(10) < 8) {
+                                ParticleHelper.spawnParticle(player, ModParticles.BOTANIC_BLESSING_EFFECT_PARTICLE,
+                                        blockPos.getX() + (double) random.nextBetween(-2, 2) / 10,
+                                        blockPos.getY() + 1,
+                                        blockPos.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                                        1, 0.1, 0.1, 0.1, 0.01);
+                            }
 
                             player.getWorld().setBlockState(blockPos, cropBlock.withAge(cropBlock.getAge(blockState) + 1));
 
@@ -191,8 +227,72 @@ public abstract class ServerPlayerMixin {
             return;
         }
 
+        //PARTICLE
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 2) {
+            ParticleHelper.spawnParticle(player, ModParticles.WEIGHTLESS_FLOW_EFFECT_PARTICLE,
+                    player.getX() + (double) random.nextBetween(-2, 2) / 10,
+                    player.getY(),
+                    player.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                    1, 0.1, 0.1, 0.1, 0.01);
+        }
+
         player.setNoGravity(true);
 
+    }
+
+    //battleFury
+    @Inject(method = "playerTick", at = @At("RETURN"))
+    private void battleFuryEffectParticle(CallbackInfo info) {
+
+        ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
+
+
+        if (!CharmHelper.charmBattleFuryEquipped(player)) return;
+
+        //PARTICLE
+        Random random = Random.create();
+
+        if (random.nextInt((int) (16 - 2 * BattleFuryHelper.getMultiplier(player))) < 1 && BattleFuryHelper.getMultiplier(player) > 1) {
+            ParticleHelper.spawnParticle(player, ModParticles.BATTLE_FURY_EFFECT_PARTICLE,
+                    player.getX() + (double) random.nextBetween(-5, 5) / 10,
+                    player.getY() + (double) random.nextBetween(2, 15) / 10,
+                    player.getZ() + (double) random.nextBetween(-5, 5) / 10,
+                    1, 0.1, 0.1, 0.1, 0.01 * BattleFuryHelper.getMultiplier(player));
+        }
+
+    }
+
+    //enchantedWhispers
+    @Inject(method = "playerTick", at = @At("RETURN"))
+    private void enchantedWhispersEffectParticle(CallbackInfo info){
+
+        ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
+
+
+        if (!CharmHelper.charmEnchantedWhispersEquipped(player)) return;
+
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 4) {
+            for (BlockPos pos : BlockPos.iterate(new BlockPos(-2, -1, -2), new BlockPos(2, 1, 2))) {
+
+                BlockPos blockPos = player.getBlockPos().add(pos);
+
+                if (player.getWorld().getBlockState(blockPos).getBlock() instanceof EnchantingTableBlock) {
+
+                    //PARTICLE
+                    if (random.nextInt(10) < 1) {
+                        ParticleHelper.spawnParticle(player, ModParticles.ENCHANTED_WHISPERS_EFFECT_PARTICLE,
+                                blockPos.getX() + (double) random.nextBetween(-2, 2) / 10,
+                                blockPos.getY() + 1,
+                                blockPos.getZ() + (double) random.nextBetween(-2, 2) / 10,
+                                1, 0.1, 0.1, 0.1, 0.01);
+                    }
+                }
+            }
+        }
     }
 
 }

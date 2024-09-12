@@ -3,8 +3,10 @@ package net.masik.mythiccharms.mixin;
 import dev.emi.trinkets.api.*;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.item.ModItems;
+import net.masik.mythiccharms.particle.ModParticles;
 import net.masik.mythiccharms.util.BattleFuryHelper;
 import net.masik.mythiccharms.util.CharmHelper;
+import net.masik.mythiccharms.util.ParticleHelper;
 import net.masik.mythiccharms.util.SoundHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.EnchantingTableBlock;
@@ -134,17 +136,14 @@ public class PlayerMixin {
         if (!CharmHelper.charmFleetingStridesEquipped(player)) return;
 
 
-        if (!player.isSprinting()) return;
+        if (!player.isSprinting() || player.getAbilities().flying) return;
 
         float speed = 0.035F;
-
-        float exhaustion = 0.1F;
 
         //highBounds combo
         if (CharmHelper.charmHighBoundsEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(player)) {
 
             speed += 0.01F;
-            exhaustion += 0.05F;
 
         }
 
@@ -152,11 +151,8 @@ public class PlayerMixin {
         if (CharmHelper.charmBattleFuryEquipped(player) && CharmHelper.charmCombinationFleetingStridesAndBattleFuryEnabled(player)) {
 
             speed += (float) (0.02F * BattleFuryHelper.getMultiplier(player));
-            exhaustion += (float) (0.1F * BattleFuryHelper.getMultiplier(player));
 
         }
-
-        player.addExhaustion(exhaustion);
 
         cir.setReturnValue(speed);
 
@@ -186,6 +182,20 @@ public class PlayerMixin {
 
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, (int) duration, 0,
                     false, false, true));
+
+        }
+        else {
+
+            //PARTICLE
+            if (!player.wasOnFire) {
+
+                ParticleHelper.spawnParticle(player, ModParticles.BLAZING_EMBRACE_EFFECT_PARTICLE,
+                        player.getX(),
+                        player.getY() + 1F,
+                        player.getZ(),
+                        20, 0.1, 0.1, 0.1, 0.06);
+
+            }
 
         }
 
@@ -248,6 +258,17 @@ public class PlayerMixin {
             entity.setVelocity(entity.getVelocity().add(player.getPos().subtract(entity.getPos()).multiply(-0.3F)));
             entity.velocityModified = true;
 
+            //PARTICLE
+            Random random = Random.create();
+
+            if (random.nextInt(10) < 7) {
+            ParticleHelper.spawnParticle(player, ModParticles.ECHOING_WRATH_EFFECT_PARTICLE,
+                    player.getX(),
+                    player.getY() + 1F,
+                    player.getZ(),
+                    random.nextBetween(4, 8), 0.1, 0.1, 0.1, 0.08);
+            }
+
         });
 
     }
@@ -274,6 +295,17 @@ public class PlayerMixin {
         if (!CharmHelper.charmMountainsStrengthEquipped(player)) return amount;
 
 
+        //PARTICLE
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 4) {
+            ParticleHelper.spawnParticle(player, ModParticles.MOUNTAINS_STRENGTH_EFFECT_PARTICLE,
+                    player.getX(),
+                    player.getY() + 1F,
+                    player.getZ(),
+                    1, 0.1, 0.1, 0.1, 0.06);
+        }
+
         return (float) (amount * 1.25);
 
     }
@@ -289,6 +321,17 @@ public class PlayerMixin {
 
 
         if (!player.isSneaking()) return;
+
+        //PARTICLE
+        Random random = Random.create();
+
+        if (random.nextInt(10) < 3) {
+            ParticleHelper.spawnParticle(player, ModParticles.ARROW_DANCE_EFFECT_PARTICLE,
+                    player.getX(),
+                    player.getY() + 1F,
+                    player.getZ(),
+                    random.nextBetween(3, 6), 0.1, 0.1, 0.1, 0.06);
+        }
 
         cir.setReturnValue(false);
 

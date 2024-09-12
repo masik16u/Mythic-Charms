@@ -1,6 +1,5 @@
 package net.masik.mythiccharms.util;
 
-import net.masik.mythiccharms.MythicCharms;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 
