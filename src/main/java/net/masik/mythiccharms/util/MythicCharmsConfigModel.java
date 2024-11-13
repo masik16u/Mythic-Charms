@@ -19,6 +19,9 @@ public class MythicCharmsConfigModel {
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
     public boolean giveCharmiconOnSpawn = true;
 
+    @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+    public boolean requirePatternToCraftCharm = true;
+
     @Nest
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
     public CharmsEnabled charmsEnabled = new CharmsEnabled();

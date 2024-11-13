@@ -111,6 +111,8 @@ public class ModItemGroups {
                         entries.add(ModItems.GROWTH_POTTERY_SHERD);
                         entries.add(ModItems.GHOST_POTTERY_SHERD);
 
+                        entries.add(ModItems.MUSIC_DISC_MYTH);
+
                     }).build());
 
     public static void registerItemGroups() {

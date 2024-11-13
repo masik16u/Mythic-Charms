@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 public class ModSounds {
 
     public static final SoundEvent MUSIC_DISC_RESONANCE = registerSoundEvent("music_disc.resonance");
+    public static final SoundEvent MUSIC_DISC_MYTH = registerSoundEvent("music_disc.myth");
 
     private static SoundEvent registerSoundEvent(String name) {
 

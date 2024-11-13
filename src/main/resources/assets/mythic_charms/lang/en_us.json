@@ -128,6 +128,9 @@
 	"item.mythic_charms.disc_fragment_resonance": "Disc Fragment",
 	"item.mythic_charms.disc_fragment_resonance.tooltip": "Music Disc - Resonance",
 
+	"item.mythic_charms.music_disc_myth": "Music Disc",
+	"item.mythic_charms.music_disc_myth.desc": "Masik16u - Myth",
+
 	"item.mythic_charms.resonance_pottery_sherd": "Resonance Pottery Sherd",
 	"item.mythic_charms.crystal_pottery_sherd": "Crystal Pottery Sherd",
 	"item.mythic_charms.core_pottery_sherd": "Core Pottery Sherd",
@@ -223,6 +226,7 @@
 
 	"tag.item.mythic_charms.fragile_charms": "Fragile Charms",
 	"tag.item.mythic_charms.unbreakable_charms": "Unbreakable Charms",
+	"tag.item.mythic_charms.sound_carving_patterns": "Sound Carving Patterns",
 	"tag.item.mythic_charms.resonance_ingredients": "Resonance Ingredients",
 	"tag.item.trinkets.hand.ring": "Ring Trinket",
 	"tag.item.trinkets.mythic_charm.mythic_charm": "Mythic Charm",
@@ -263,6 +267,7 @@
 
 	"text.config.mythic-charms-config.title": "Mythic Charms Config",
 	"text.config.mythic-charms-config.option.giveCharmiconOnSpawn": "Give Charmicon on the first world load",
+	"text.config.mythic-charms-config.option.requirePatternToCraftCharm": "Require sound carving pattern to craft charm",
 	"text.config.mythic-charms-config.category.charmsEnabled": "Charms Enabled",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmFeatheredGraceEnabled": "Charm Feathered Grace Enabled",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmBlazingEmbraceEnabled": "Charm Blazing Embrace Enabled",

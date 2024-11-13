@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mythic_charms:music_disc_resonance"
+    "mythic_charms:music_disc_resonance",
+    "mythic_charms:music_disc_myth"
   ]
 }

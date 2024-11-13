@@ -9,6 +9,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
@@ -101,7 +104,9 @@ public class ResonanceRecipe implements Recipe<SimpleInventory> {
             for(int i = 0; i < json.size(); ++i) {
                 Ingredient ingredient = Ingredient.fromJson(json.get(i), false);
                 if (!ingredient.isEmpty()) {
-                    defaultedList.add(ingredient);
+                    if (MythicCharms.CONFIG.requirePatternToCraftCharm() || !ingredient.getMatchingStacks()[0].isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of(MythicCharms.MOD_ID, "sound_carving_patterns")))) {
+                        defaultedList.add(ingredient);
+                    }
                 }
             }
 

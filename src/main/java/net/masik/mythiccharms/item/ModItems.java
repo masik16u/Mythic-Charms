@@ -46,6 +46,9 @@ public class ModItems {
     public static final Item MUSIC_DISC_RESONANCE = registerItem("music_disc_resonance", new MusicDiscItem(
             9, ModSounds.MUSIC_DISC_RESONANCE, new FabricItemSettings().maxCount(1).rarity(Rarity.RARE),
             45));
+    public static final Item MUSIC_DISC_MYTH = registerItem("music_disc_myth", new MusicDiscItem(
+            13, ModSounds.MUSIC_DISC_MYTH, new FabricItemSettings().maxCount(1).rarity(Rarity.RARE),
+            43));
 
 
 
