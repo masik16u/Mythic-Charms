@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " The first important thing is a lapis lazuli block. It must be placed under the table, $(o)seems like some sort of catalyst$().$(br) Next is an iron ring embedded with amethyst. When working on a resonance table it should be equipped all the time.$(br2) Finally, put all the ingredients on the table and throw a bottle of experience to finish it."
+      "text": " The first important thing is a $(l)lapis lazuli block$(). It must be placed under the table, $(o)seems like some sort of catalyst$().$(br) Next is an $(l)iron ring embedded with amethyst$(). When working on a resonance table it should be equipped all the time.$(br2) Finally, put all the ingredients on the table and throw a $(l)bottle of experience$() to finish it."
     },
     {
       "type": "patchouli:image",

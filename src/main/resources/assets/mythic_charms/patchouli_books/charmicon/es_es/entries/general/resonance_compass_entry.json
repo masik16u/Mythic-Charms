@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " Este dispositivo es antiguo, pero parece que nadie lo había usado antes. Incluso hay una nota sobre cómo usarlo.$(br2) Creo que los exploradores de este pueblo usaban esta brújula de resonancia en lugar de un mapa. Resuena hacia la estructura de los Carvers más cercana y, cuando se usa, emite un sonido en dirección a una estructura. Cuando quedan 8 bloques hasta la estructura, emite un sonido diferente."
+      "text": " Este dispositivo es antiguo, pero parece que nadie lo había usado antes. Incluso hay una nota sobre cómo usarlo.$(br2) Creo que los exploradores de este pueblo usaban esta brújula de resonancia en lugar de un mapa. Resuena hacia la $(l)estructura de los Carvers más cercana$() y, cuando se usa, emite un sonido en dirección a una estructura. Cuando quedan $(l)8 bloques$() hasta la estructura, emite un sonido diferente."
     },
     {
       "type": "patchouli:image",

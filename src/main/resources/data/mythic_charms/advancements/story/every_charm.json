@@ -1,5 +1,5 @@
 {
-  "parent": "mythic_charms:story/first_charm",
+  "parent": "mythic_charms:story/equip_combination",
   "display": {
     "icon": {
       "item": "mythic_charms:fragile_charm_of_enchanted_whispers"

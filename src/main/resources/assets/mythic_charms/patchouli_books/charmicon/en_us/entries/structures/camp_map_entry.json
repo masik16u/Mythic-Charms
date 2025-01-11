@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " $(o)The author's research was not in vain!$()$(br2) Among the amethyst shards, gold nuggets, and glass bottles, I found a map.$(br) It probably leads to the Carver's village, so that will be my next goal. On the map it is indicated that it is located approximately at an altitude of 38."
+      "text": " $(o)The author's research was not in vain!$()$(br2) Among the amethyst shards, gold nuggets, and other resources, I found a map.$(br) It probably leads to the $(l)Carver's village$(), so that will be my next goal. On the map it is indicated that it is located approximately at an $(l)altitude of 38$()."
     }
   ]
 }

@@ -7,27 +7,56 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
+          "name": "minecraft:gold_ingot",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
+          "name": "minecraft:iron_nugget",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
           "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dead_bush"
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:amethyst_shard",
-          "weight": 4
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
-          "weight": 4
+          "name": "mythic_charms:amethyst_core",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:lapis_lazuli",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:experience_bottle",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
           "weight": 3
         },
         {
@@ -48,7 +77,7 @@
         {
           "type": "minecraft:item",
           "name": "mythic_charms:aid_pottery_sherd",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
@@ -58,6 +87,17 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:echo_shard"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 60,
+              "treasure": false
+            }
+          ]
         }
       ]
     }

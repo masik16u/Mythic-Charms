@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mythic_charms:block/amethyst_embedded_chiseled_deepslate"
+    },
+    "facing=south": {
+      "model": "mythic_charms:block/amethyst_embedded_chiseled_deepslate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mythic_charms:block/amethyst_embedded_chiseled_deepslate",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "mythic_charms:block/amethyst_embedded_chiseled_deepslate",
+      "y": 90
+    }
+  }
+}

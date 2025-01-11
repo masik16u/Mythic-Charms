@@ -41,7 +41,7 @@
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
             "block": "minecraft:cyan_terracotta",
-            "probability": 0.3
+            "probability": 0.7
           },
           "output_state": {
             "Name": "minecraft:suspicious_gravel",
@@ -61,38 +61,6 @@
           "input_predicate": {
             "predicate_type": "minecraft:block_match",
             "block": "minecraft:cyan_terracotta"
-          },
-          "output_state": {
-            "Name": "minecraft:gravel"
-          }
-        },
-        {
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "input_predicate": {
-            "predicate_type": "minecraft:random_block_match",
-            "block": "minecraft:magenta_terracotta",
-            "probability": 0.15
-          },
-          "output_state": {
-            "Name": "minecraft:suspicious_gravel",
-            "Properties": {
-              "dusted": "0"
-            }
-          },
-          "block_entity_modifier": {
-            "type": "minecraft:append_loot",
-            "loot_table": "mythic_charms:archaeology/underground_village/family_room"
-          }
-        },
-        {
-          "location_predicate": {
-            "predicate_type": "minecraft:always_true"
-          },
-          "input_predicate": {
-            "predicate_type": "minecraft:block_match",
-            "block": "minecraft:magenta_terracotta"
           },
           "output_state": {
             "Name": "minecraft:gravel"

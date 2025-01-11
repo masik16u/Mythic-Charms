@@ -15,7 +15,7 @@
       "weight": 3,
       "element": {
         "location": "mythic_charms:underground_village/family_room1",
-        "processors": "mythic_charms:underground_village/family_room1",
+        "processors": "mythic_charms:underground_village/family_room",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -33,7 +33,7 @@
       "weight": 1,
       "element": {
         "location": "mythic_charms:underground_village/family_room1_destroyed",
-        "processors": "mythic_charms:underground_village/family_room1_destroyed",
+        "processors": "mythic_charms:underground_village/family_room_destroyed",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -124,15 +124,6 @@
       "element": {
         "location": "mythic_charms:underground_village/storage_room",
         "processors": "mythic_charms:underground_village/storage_room",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "mythic_charms:underground_village/storage_room_destroyed",
-        "processors": "mythic_charms:underground_village/storage_room_destroyed",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

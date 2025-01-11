@@ -7,23 +7,42 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
+          "name": "minecraft:gold_ingot",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
+          "name": "minecraft:iron_nugget",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
           "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dead_bush"
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:amethyst_shard",
-          "weight": 4
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
-          "weight": 4
+          "name": "mythic_charms:amethyst_core",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -52,13 +71,18 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
           "name": "mythic_charms:crystal_pottery_sherd",
           "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "mythic_charms:safety_pottery_sherd",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
@@ -72,6 +96,83 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:echo_shard"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.2,
+                "max": 0.5
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:blast_protection"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.2,
+                "max": 0.5
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:swift_sneak"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.2,
+                "max": 0.5
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:swift_sneak"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.8
+                }
+              ]
+            }
+          ]
         }
       ]
     }

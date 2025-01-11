@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mythic_charms:camp",
+              "decoration": "red_x",
+              "search_radius": 50,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {"translate":"item.mythic_charms.forest_camp_map"}
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ]
+    }
+  ]
+}

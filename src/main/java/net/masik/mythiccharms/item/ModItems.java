@@ -34,7 +34,7 @@ public class ModItems {
 
     //OTHER ITEMS
     public static final Item RESONANCE_RING = registerItem("resonance_ring",
-            new TrinketItem(new FabricItemSettings().maxCount(1)));
+            new TooltipTrinketItem(new FabricItemSettings().maxCount(1), false));
     public static final Item RESONANCE_COMPASS = registerItem("resonance_compass",
             new ResonanceCompassItem(new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC)));
     public static final Item BROKEN_CHARM = registerItem("broken_charm",
@@ -49,6 +49,10 @@ public class ModItems {
     public static final Item MUSIC_DISC_MYTH = registerItem("music_disc_myth", new MusicDiscItem(
             13, ModSounds.MUSIC_DISC_MYTH, new FabricItemSettings().maxCount(1).rarity(Rarity.RARE),
             43));
+    public static final Item AMETHYST_CORE = registerItem("amethyst_core",
+            new Item(new FabricItemSettings()));
+    public static final Item ANCIENT_CODEX = registerItem("ancient_codex",
+            new AncientCodexItem(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
 
 
 
@@ -230,18 +234,7 @@ public class ModItems {
 
     }
 
-//    private static void addItemsToToolsTabItemGroup(FabricItemGroupEntries entries) {
-//        entries.add(RESONANCE_RING);
-//    }
-
-//    private static void addItemsToIngredientsTabItemGroup(FabricItemGroupEntries entries) {
-//        entries.add(DEEPSLATE_FRAGMENT);
-//    }
-
     public static void registerModItems() {
-
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTabItemGroup);
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientsTabItemGroup);
 
     }
 

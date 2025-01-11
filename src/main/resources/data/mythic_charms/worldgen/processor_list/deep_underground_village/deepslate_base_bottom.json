@@ -13,7 +13,7 @@
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
             "block": "minecraft:cyan_terracotta",
-            "probability": 0.15
+            "probability": 0.3
           },
           "output_state": {
             "Name": "minecraft:suspicious_gravel",
@@ -23,7 +23,7 @@
           },
           "block_entity_modifier": {
             "type": "minecraft:append_loot",
-            "loot_table": "mythic_charms:archaeology/underground_village/family_room"
+            "loot_table": "mythic_charms:archaeology/deep_underground_village/hallway"
           }
         },
         {
@@ -37,15 +37,48 @@
           "output_state": {
             "Name": "minecraft:gravel"
           }
-        },
+        }
+      ]
+    },
+    {
+      "processor_type": "minecraft:capped",
+      "limit": 1,
+      "delegate": {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:gravel"
+            },
+            "output_state": {
+              "Name": "minecraft:suspicious_gravel",
+              "Properties": {
+                "dusted": "0"
+              }
+            },
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "mythic_charms:archaeology/deep_underground_village/hideout_map"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
         {
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
-            "block": "minecraft:magenta_terracotta",
-            "probability": 0.1
+            "block": "minecraft:blue_terracotta",
+            "probability": 0.35
           },
           "output_state": {
             "Name": "minecraft:suspicious_gravel",
@@ -55,7 +88,7 @@
           },
           "block_entity_modifier": {
             "type": "minecraft:append_loot",
-            "loot_table": "mythic_charms:archaeology/underground_village/storage_room"
+            "loot_table": "mythic_charms:archaeology/deep_underground_village/herald"
           }
         },
         {
@@ -64,7 +97,7 @@
           },
           "input_predicate": {
             "predicate_type": "minecraft:block_match",
-            "block": "minecraft:magenta_terracotta"
+            "block": "minecraft:blue_terracotta"
           },
           "output_state": {
             "Name": "minecraft:gravel"

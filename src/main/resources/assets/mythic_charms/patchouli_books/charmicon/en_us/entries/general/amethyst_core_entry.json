@@ -1,0 +1,30 @@
+{
+  "name": "Amethyst Core",
+  "icon": "mythic_charms:amethyst_core",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/amethyst_core",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " It is a strong amethyst material that can sometimes be obtained from mining a fully grown $(l)Amethyst Cluster$(). Carvers often used it to make decoration blocks like pillars or signs."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:amethyst_embedded_stone_pillar",
+      "recipe2": "mythic_charms:amethyst_embedded_deepslate_pillar"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:amethyst_embedded_chiseled_stone",
+      "recipe2": "mythic_charms:amethyst_embedded_chiseled_deepslate"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "mythic_charms:amethyst_lamp",
+        "text": " An interesting block that seems to react to the amount of people that are alive no matter the distance. It looks like the redstone comparator is able to catch the impulse of the lamp and turn it into a redstone signal.$(br)$(o) But why would carvers use such a device as a light source?$()"
+      }
+    }
+  ]
+}

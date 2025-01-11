@@ -1,0 +1,35 @@
+{
+  "parent": "mythic_charms:book/root",
+  "criteria": {
+    "ancient_codex": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:ancient_codex"
+            ]
+          }
+        ]
+      }
+    },
+    "any_pattern": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "mythic_charms:sound_carving_patterns"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ancient_codex"
+    ],
+    [
+      "any_pattern"
+    ]
+  ]
+}

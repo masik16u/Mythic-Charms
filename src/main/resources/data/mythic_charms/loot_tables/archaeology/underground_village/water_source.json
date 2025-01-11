@@ -7,23 +7,28 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:amethyst_shard",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:bucket",
           "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
+          "name": "minecraft:leather",
           "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_iron",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mythic_charms:amethyst_core",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:amethyst_shard",
+          "weight": 2
         },
         {
           "type": "minecraft:item",

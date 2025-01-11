@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " La primera cosa importante es un bloque de lapislázuli. Debe colocarse debajo de la mesa, $(o)Parece una especie de catalizador$().$(br) A continuación se encuentra un anillo de hierro con amatista incrustada. Cuando se trabaja en una mesa de resonancia, se debe tenerlo siempre a mano.$(br2) Por último, pon todos los ingredientes sobre la mesa y tira una botella de experiencia para rematarlo."
+      "text": " La primera cosa importante es un $(l)bloque de lapislázuli$(). Debe colocarse debajo de la mesa, $(o)Parece una especie de catalizador$().$(br) A continuación se encuentra un $(l)anillo de hierro con amatista incrustada$(). Cuando se trabaja en una mesa de resonancia, se debe tenerlo siempre a mano.$(br2) Por último, pon todos los ingredientes sobre la mesa y tira una $(l)botella de experiencia$() para rematarlo."
     },
     {
       "type": "patchouli:image",

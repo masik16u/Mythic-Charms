@@ -6,14 +6,14 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " Estas misteriosas criaturas con forma humana viven bajo tierra. A veces, se las puede ver en la superficie durante sus expediciones. Incluso es posible que las veas en el Nether o en el End, aunque los Carvers solo descansan en el Overworld.$(br2) Una vez vi uno desde lejos y su cuerpo brillaba al sol."
+      "text": " Estas misteriosas criaturas con forma humana viven bajo tierra. A veces, se las puede ver en la superficie durante sus expediciones. Incluso es posible que las veas en el Nether o en el End, aunque los Carvers solo descansan en el $(l)Overworld$().$(br2) Una vez vi uno desde lejos y su cuerpo brillaba al sol."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/general/sound_carvers1.png"
       ],
-      "text": " Desafortunadamente, desapareció en el bosque antes de que pudiera verlo más de cerca.."
+      "text": " Desafortunadamente, desapareció en el $(l)bosque$() antes de que pudiera verlo más de cerca."
     },
     {
       "type": "patchouli:text",

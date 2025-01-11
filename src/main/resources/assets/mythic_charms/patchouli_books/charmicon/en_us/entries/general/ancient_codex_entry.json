@@ -1,0 +1,17 @@
+{
+  "name": "Ancient Codex",
+  "icon": "mythic_charms:ancient_codex",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/ancient_codex",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " It is said that this book appears to be connected with an ancient library that stores everything that was physically written but no one could ever enter it.$(br) Although this book is rare it's not unique and can be found in some dungeons like $(l)Abandoned Mineshaft$() or $(l)Ancient City$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": " Using it is actually very easy: I need to hold $(l)the codex$() in my $(l)main hand$() and in your $(l)second hand$() - a carving pattern that I want to rewrite. After that, open the codex and it will transform into a different pattern $(l)consuming one in my second hand$()."
+    }
+  ]
+}

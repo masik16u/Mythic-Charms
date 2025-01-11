@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mythic_charms:block/amethyst_embedded_stone_pillar_top",
+    "side": "mythic_charms:block/amethyst_embedded_stone_pillar"
+  }
+}

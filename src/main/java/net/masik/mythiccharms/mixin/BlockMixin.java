@@ -17,6 +17,7 @@ import net.minecraft.recipe.RecipeType;
 import net.minecraft.recipe.SmeltingRecipe;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,7 +28,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 
 @Mixin(Block.class)
 public class BlockMixin {
@@ -41,7 +41,7 @@ public class BlockMixin {
         if (player.getMainHandStack().isDamageable()) return;
 
         //PARTICLE
-        net.minecraft.util.math.random.Random random = net.minecraft.util.math.random.Random.create();
+        Random random = Random.create();
 
         if (random.nextInt(10) < 5) {
             ParticleHelper.spawnParticle(player, ModParticles.EARTHS_ORDER_EFFECT_PARTICLE,
@@ -95,11 +95,11 @@ public class BlockMixin {
 
         if (!(state.getBlock() instanceof CropBlock)) return;
 
-        Random rand = new Random();
+        Random random = Random.create();
 
         List<ItemStack> itemStacks = cir.getReturnValue();
 
-        itemStacks.forEach(itemStack -> itemStack.increment(rand.nextInt(0,2)));
+        itemStacks.forEach(itemStack -> itemStack.increment(random.nextBetween(0,2)));
 
         cir.setReturnValue(itemStacks);
 

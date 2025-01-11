@@ -4,10 +4,7 @@ import dev.emi.trinkets.api.*;
 import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.particle.ModParticles;
-import net.masik.mythiccharms.util.BattleFuryHelper;
-import net.masik.mythiccharms.util.CharmHelper;
-import net.masik.mythiccharms.util.ParticleHelper;
-import net.masik.mythiccharms.util.SoundHelper;
+import net.masik.mythiccharms.util.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.EnchantingTableBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -59,6 +56,9 @@ public class PlayerMixin {
                 SoundHelper.playSoundAtEntity(player, SoundEvents.ENTITY_ITEM_BREAK, 20F);
 
                 ref.inventory().setStack(ref.index(), ModItems.BROKEN_CHARM.getDefaultStack());
+
+                // Give advancement
+                AdvancementsHelper.grantAdvancement(player, new Identifier(MythicCharms.MOD_ID, "story/broken_charm"));
 
             }
 

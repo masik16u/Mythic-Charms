@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " La habitación con un símbolo cuadrado es la habitación donde los Sound Carvers crean amuletos.$(br2) Hay una mesa incrustada con amatistas en el centro de la habitación e instrucciones sobre cómo usarla.$(br2) También hay muchas cosas de la habitación de almacenamiento, $(o)Estos deben ser ingredientes."
+      "text": " La habitación con un símbolo cuadrado es la habitación donde los Sound Carvers crean amuletos.$(br2) Hay unas instrucciones de como usar una mesa incrustada con amatistas pero no hay mesa en sí.$(br2) También hay muchas cosas de la habitación de almacenamiento, $(o)Estos deben ser ingredientes."
     },
     {
       "type": "patchouli:text",

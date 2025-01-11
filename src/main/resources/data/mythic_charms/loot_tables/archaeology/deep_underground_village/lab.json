@@ -38,17 +38,17 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:amethyst_shard",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
-          "weight": 3
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "mythic_charms:body_pottery_sherd",
-          "weight": 2
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mythic_charms:amethyst_core",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -63,7 +63,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:item",

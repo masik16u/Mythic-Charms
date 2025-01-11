@@ -6,14 +6,14 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " Throughout the world, Sound Carvers set up camps to rest during their journeys.$(br) Sometimes at night, you can see a light deep in the forest, but as you approach, it dims. $(o)What is this light? Some sort of device?$()$(br) I was lucky enough to find one of these camps, but all that remained was an amethyst block encased in stone. I feel like it wasn't the only thing left there."
+      "text": " Throughout the world, Sound Carvers set up camps to rest during their journeys.$(br) Sometimes at night, you can see a light deep in the $(l)forest$(), but as you approach, it dims. $(o)What is this light? Some sort of device?$()$(br) I was lucky enough to find one of these camps, but all that remained was a strange amethyst block encased in stone. I feel like it wasn't the only thing left there."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/camp.png"
       ],
-      "text": " $(o)Maybe the amethyst was the source of the light, but it doesn't produce light..."
+      "text": " $(o)Maybe that amethyst block was the source of the light, but amethyst doesn't naturally produce light..."
     }
   ]
 }

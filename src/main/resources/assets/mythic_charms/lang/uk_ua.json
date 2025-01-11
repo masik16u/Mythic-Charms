@@ -114,10 +114,13 @@
 	"item.mythic_charms.broken_charm.tooltip": "Колись був придатним талісманом",
 
 	"item.mythic_charms.fragile_charm_base": "База крихкого талісману",
-
 	"item.mythic_charms.resonance_ring": "Перстень резонансу",
-
+	"item.mythic_charms.resonance_ring.tooltip": "Can sometimes nullify the damage dealt from equipping charms",
 	"item.mythic_charms.resonance_compass": "Компас резонансу",
+
+	"item.mythic_charms.amethyst_core": "Amethyst Core",
+
+	"item.mythic_charms.ancient_codex": "Ancient Codex",
 
 	"item.mythic_charms.deepslate_core": "Глибосланцеве ядро",
 	"item.mythic_charms.deepslate_core.applies_to": "Крихкі талісмани",
@@ -150,6 +153,7 @@
 	"item.mythic_charms.growth_pottery_sherd": "Гончарний черепок «Розвиток»",
 	"item.mythic_charms.ghost_pottery_sherd": "Гончарний черепок «Привид»",
 
+	"item.mythic_charms.forest_camp_map": "Forest Camp Map",
 	"item.mythic_charms.underground_village_map": "Мапа підземного селища",
 	"item.mythic_charms.deep_underground_village_map": "Мапа глибокого підземного селища",
 	"item.mythic_charms.aquamarine_composer": "Мапа аквамаринового композитора",
@@ -168,6 +172,11 @@
 
 
 	"block.mythic_charms.resonance_table": "Стіл резонансу",
+	"block.mythic_charms.amethyst_lamp": "Amethyst Lamp",
+	"block.mythic_charms.amethyst_embedded_stone_pillar": "Amethyst Embedded Stone Pillar",
+	"block.mythic_charms.amethyst_embedded_deepslate_pillar": "Amethyst Embedded Deepslate Pillar",
+	"block.mythic_charms.amethyst_embedded_chiseled_stone": "Amethyst Embedded Chiseled Stone",
+	"block.mythic_charms.amethyst_embedded_chiseled_deepslate": "Amethyst Embedded Chiseled Deepslate",
 
 
 	"enchantment.mythic_charms.eternal_grip": "Вічна хватка",
@@ -209,9 +218,15 @@
 	"advancements.mythic_charms.story.sound_carving_pattern.desc": "Отримайте звуковий візерунок різьблення",
 	"advancements.mythic_charms.story.first_charm.title": "Різьбяр початківець",
 	"advancements.mythic_charms.story.first_charm.desc": "Створіть свій перший талісман",
+	"advancements.mythic_charms.story.broken_charm.title": "My Precious!!",
+	"advancements.mythic_charms.story.broken_charm.desc": "Lose a charm in an unfortunate situation",
+	"advancements.mythic_charms.story.equip_combination.title": "Perfect Synergy",
+	"advancements.mythic_charms.story.equip_combination.desc": "Equip two charms that have a special combination effect",
 
 	"advancements.mythic_charms.story.every_composer.title": "Оркестр",
 	"advancements.mythic_charms.story.every_composer.desc": "Відвідайте кожного композитора",
+	"advancements.mythic_charms.story.ancient_codex.title": "Ancient Knowledge",
+	"advancements.mythic_charms.story.ancient_codex.desc": "Exchange a Sound Carving Pattern using an Ancient Codex",
 
 	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Міцна оболонка",
 	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Покращіть свій талісман вперше",
@@ -228,6 +243,7 @@
 
 	"tag.item.mythic_charms.fragile_charms": "Крихкі талісмани",
 	"tag.item.mythic_charms.unbreakable_charms": "Незламні талісмани",
+	"tag.item.mythic_charms.sound_carving_patterns": "Sound Carving Patterns",
 	"tag.item.mythic_charms.resonance_ingredients": "Інгредієнти резонансу",
 	"tag.item.trinkets.hand.ring": "Перстень",
 	"tag.item.trinkets.mythic_charm.mythic_charm": "Міфічний талісман",
@@ -268,6 +284,7 @@
 
 	"text.config.mythic-charms-config.title": "Налаштування Mythic Charms",
 	"text.config.mythic-charms-config.option.giveCharmiconOnSpawn": "Видавати Charmicon при першому заході у світ",
+	"text.config.mythic-charms-config.option.requirePatternToCraftCharm": "Require sound carving pattern to craft charm",
 	"text.config.mythic-charms-config.category.charmsEnabled": "Увімкнені талісмани",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmFeatheredGraceEnabled": "Талісман Крилатої Грації увімкнено",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmBlazingEmbraceEnabled": "Талісман Палаючих Обіймів увімкнено",

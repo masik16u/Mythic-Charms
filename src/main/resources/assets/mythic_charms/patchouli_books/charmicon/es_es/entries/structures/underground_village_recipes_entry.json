@@ -7,11 +7,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " La habitación con el símbolo de un círculo debe ser una habitación para exploradores porque tiene un mapa que conduce a una especie de compositor, como dice en la parte posterior. En el mapa está indicado que se encuentra en una altura aproximada de -10.$(br2)$(o) Este tiene que ser el lugar donde crean las recetas de amuletos."
+      "text": " La habitación con el símbolo de un círculo debe ser una habitación para exploradores porque tiene un mapa que conduce a una especie de $(l)compositor$(), como dice en la parte posterior. En el mapa está indicado que se encuentra en una $(l)altura aproximada de -10$().$(br2)$(o) Este tiene que ser el lugar donde crean las recetas de amuletos."
     },
     {
       "type": "patchouli:text",
-      "text": " Tiene una leyenda:$(br2) Aguamarina - Libertad$(br) Oro - Montaña$(br) Indigo - Ayuda$(br) Márfil - Seguridad$(br) Cal - Naturaleza$(br) Granate - Calor$(br) Plata - Lucha$(br) Teal - Crecimiento$(br) Violeta - Fantasma$(br2) Después de investigar este pueblo, debería dirigirme allí."
+      "text": " Tiene una leyenda:$(br2) $(l)Aguamarina - Libertad$(br) Oro - Montaña$(br) Indigo - Ayuda$(br) Márfil - Seguridad$(br) Cal - Naturaleza$(br) Granate - Calor$(br) Plata - Lucha$(br) Teal - Crecimiento$(br) Violeta - Fantasma$()$(br2) Después de investigar este pueblo, debería dirigirme allí."
     }
   ]
 }

@@ -1,11 +1,17 @@
 package net.masik.mythiccharms.mixin;
 
+import dev.emi.trinkets.api.TrinketsApi;
+import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.particle.ModParticles;
-import net.masik.mythiccharms.util.BattleFuryHelper;
-import net.masik.mythiccharms.util.CharmHelper;
-import net.masik.mythiccharms.util.ParticleHelper;
+import net.masik.mythiccharms.util.*;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,6 +22,35 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
+
+    //fragile charms
+    @Inject(method = "tryUseTotem",  at = @At("RETURN"))
+    private void destroyFragileCharms(DamageSource source, CallbackInfoReturnable<Boolean> cir) {
+
+        if (cir.getReturnValue()) {
+
+            LivingEntity player = (LivingEntity) (Object) this;
+
+            TrinketsApi.getTrinketComponent(player).ifPresent(trinkets -> trinkets.forEach((ref, stack) -> {
+
+                if (stack.isIn(TagKey.of(RegistryKeys.ITEM, new Identifier(MythicCharms.MOD_ID, "fragile_charms")))) {
+
+                    // Play break sound
+                    SoundHelper.playSoundAtEntity(player, SoundEvents.ENTITY_ITEM_BREAK, 20F);
+
+                    // Replace with broken charms
+                    ref.inventory().setStack(ref.index(), ModItems.BROKEN_CHARM.getDefaultStack());
+
+                    // Give advancement
+                    AdvancementsHelper.grantAdvancement(player, new Identifier(MythicCharms.MOD_ID, "story/broken_charm"));
+
+                }
+
+            }));
+
+        }
+
+    }
 
     //highBounds
     @Inject(method = "getJumpVelocity", at = @At(value = "RETURN"), cancellable = true)

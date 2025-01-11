@@ -6,14 +6,14 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " These mysterious, human-shaped creatures live underground. Sometimes, they can be seen on the surface during their expeditions. You might even spot them in the Nether or End, although Carvers rest only in the Overworld.$(br2) I once saw one from afar and its body was shining in the sun."
+      "text": " These mysterious, human-shaped creatures live underground. Sometimes, they can be seen on the surface during their expeditions. You might even spot them in the Nether or End, although Carvers rest only in the $(l)Overworld$().$(br2) I once saw one from afar and its body was shining in the sun."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/general/sound_carvers1.png"
       ],
-      "text": " Unfortunately, it disappeared into the forest before I could get a closer look."
+      "text": " Unfortunately, it disappeared into the $(l)forest$() before I could get a closer look."
     },
     {
       "type": "patchouli:text",

@@ -12,12 +12,12 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:amethyst_shard",
+          "name": "minecraft:leather",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
+          "name": "minecraft:bone",
           "weight": 4
         },
         {
@@ -27,22 +27,27 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
+          "name": "minecraft:string",
           "weight": 3
         },
         {
           "type": "minecraft:item",
           "name": "mythic_charms:farmer_pottery_sherd",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:item",
           "name": "mythic_charms:farmland_pottery_sherd",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:item",
           "name": "mythic_charms:crystal_pottery_sherd",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mythic_charms:amethyst_core",
           "weight": 2
         },
         {
@@ -52,7 +57,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
+          "name": "minecraft:dead_bush",
           "weight": 2
         },
         {

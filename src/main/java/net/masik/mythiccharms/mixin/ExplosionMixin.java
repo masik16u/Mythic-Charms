@@ -30,9 +30,8 @@ public class ExplosionMixin {
 
         if (!entity.isPlayer()) return true;
 
-        if (!CharmHelper.charmMountainsStrengthEquipped((LivingEntity) entity)) return true;
+        return !CharmHelper.charmMountainsStrengthEquipped((LivingEntity) entity);
 
-        return false;
     }
 
 }

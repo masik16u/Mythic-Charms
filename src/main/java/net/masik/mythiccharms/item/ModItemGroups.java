@@ -17,13 +17,21 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModBlocks.RESONANCE_TABLE)).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.RESONANCE_TABLE);
+                        entries.add(ModBlocks.AMETHYST_LAMP);
+                        entries.add(ModBlocks.AMETHYST_EMBEDDED_STONE_PILLAR);
+                        entries.add(ModBlocks.AMETHYST_EMBEDDED_DEEPSLATE_PILLAR);
+                        entries.add(ModBlocks.AMETHYST_EMBEDDED_CHISELED_STONE);
+                        entries.add(ModBlocks.AMETHYST_EMBEDDED_CHISELED_DEEPSLATE);
 
                         entries.add(ModItems.RESONANCE_RING);
                         entries.add(ModItems.RESONANCE_COMPASS);
                         entries.add(ModItems.BROKEN_CHARM);
                         entries.add(ModItems.FRAGILE_CHARM_BASE);
+                        entries.add(ModItems.AMETHYST_CORE);
 
                         entries.add(ModItems.DEEPSLATE_CORE);
+
+                        entries.add(ModItems.ANCIENT_CODEX);
 
                         entries.add(ModItems.SOUND_CARVING_PATTERN_FEATHERED_GRACE);
                         entries.add(ModItems.SOUND_CARVING_PATTERN_BLAZING_EMBRACE);

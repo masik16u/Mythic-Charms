@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:amethyst_core"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "mythic_charms:charmicon",
+      "mythic_charms:amethyst_lamp",
+      "mythic_charms:amethyst_embedded_stone_pillar",
+      "mythic_charms:amethyst_embedded_deepslate_pillar",
+      "mythic_charms:amethyst_embedded_chiseled_stone",
+      "mythic_charms:amethyst_embedded_chiseled_deepslate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

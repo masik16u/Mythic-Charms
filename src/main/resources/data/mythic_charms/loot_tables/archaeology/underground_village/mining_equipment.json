@@ -7,34 +7,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:raw_gold",
-          "weight": 3
+          "name": "minecraft:raw_gold"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:coal",
-          "weight": 3
+          "name": "minecraft:coal"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:raw_iron",
-          "weight": 3
+          "name": "minecraft:raw_iron"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:amethyst_shard",
-          "weight": 3
+          "name": "mythic_charms:amethyst_core"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:gold_nugget",
-          "weight": 3
-        },
-
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
-          "weight": 3
+          "name": "minecraft:gold_nugget"
         },
         {
           "type": "minecraft:item",
@@ -52,6 +41,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 12,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
             }
           ]
         },
@@ -66,6 +66,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 12,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
             }
           ]
         },
@@ -80,6 +91,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 12,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
             }
           ]
         },
@@ -94,6 +116,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 12,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
             }
           ]
         },
@@ -108,6 +141,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 12,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
             }
           ]
         },
@@ -122,6 +166,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 24,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
             }
           ]
         },
@@ -136,6 +191,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 24,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
             }
           ]
         },

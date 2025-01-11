@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " The room with a square symbol is the room where Sound Carvers make charms.$(br2) There is a table embedded with amethysts in the center of the room and an instruction on how to use it.$(br2) There are also a lot of things from the storage room, $(o)these must be ingredients."
+      "text": " The room with a square symbol is the room where Sound Carvers make charms.$(br2) There is an instruction on how to use a table embedded with amethysts but no table itself.$(br2) There are also a lot of things from the storage room, $(o)these must be ingredients."
     },
     {
       "type": "patchouli:text",

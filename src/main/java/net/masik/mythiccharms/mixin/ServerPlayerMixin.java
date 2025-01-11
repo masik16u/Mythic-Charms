@@ -1,9 +1,7 @@
 package net.masik.mythiccharms.mixin;
 
-import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.particle.ModParticles;
 import net.masik.mythiccharms.util.BattleFuryHelper;
-import net.masik.mythiccharms.util.BotanicBlessingHelper;
 import net.masik.mythiccharms.util.CharmHelper;
 import net.masik.mythiccharms.util.ParticleHelper;
 import net.minecraft.block.*;
@@ -11,11 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.random.Random;

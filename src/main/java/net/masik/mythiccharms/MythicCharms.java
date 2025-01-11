@@ -1,9 +1,7 @@
 package net.masik.mythiccharms;
 
-import dev.emi.trinkets.api.TrinketsApi;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.util.TriState;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.enchantment.ModEnchantments;
 import net.masik.mythiccharms.item.ModItemGroups;
@@ -16,9 +14,6 @@ import net.masik.mythiccharms.recipe.ModRecipes;
 import net.masik.mythiccharms.util.ModLootTableModifiers;
 import net.masik.mythiccharms.util.ModRegistries;
 import net.masik.mythiccharms.util.MythicCharmsConfig;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

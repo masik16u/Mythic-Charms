@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
+          "name": "minecraft:iron_ingot",
           "weight": 4
         },
         {
@@ -23,17 +23,17 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:amethyst_shard",
-          "weight": 4
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
+          "name": "mythic_charms:amethyst_core",
           "weight": 3
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:coal",
-          "weight": 3
+          "weight": 2
         },
         {
           "type": "minecraft:item",
@@ -42,18 +42,16 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
+          "name": "minecraft:quartz",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:bucket",
-          "weight": 2
+          "name": "minecraft:bucket"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:compass",
-          "weight": 2
+          "name": "minecraft:compass"
         },
         {
           "type": "minecraft:item",

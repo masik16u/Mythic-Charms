@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " I assume that this charm base is the main ingredient to make a charm.$(br) There are some of these lying around in the carving room but most of them are broken, I think these are very fragile. $(o)Are charms also that fragile?$()$(br) Also, there is something written on the edge of a charm base I found in the room: \"Death Causes Destruction\"$(br2) Broken ones can be repaired with tuff."
+      "text": " I assume that this charm base is the main ingredient to make a charm.$(br) There are some of these lying around in the carving room but most of them are broken, I think these are very $(l)fragile$(). $(o)Are charms also that fragile?$()$(br) Also, there is something written on the edge of a charm base I found in the room: \"Death Causes Destruction\"$(br2) Broken ones can be repaired with $(l)tuff$()."
     },
     {
       "type": "patchouli:crafting",

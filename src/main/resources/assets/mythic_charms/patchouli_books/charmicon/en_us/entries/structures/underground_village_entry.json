@@ -14,21 +14,21 @@
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage1.png"
       ],
-      "text": " First floor is an entrance to the village and doesn't have a lot of rooms."
+      "text": " $(l)Top floor$() is an entrance to the village and doesn't have a lot of rooms."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage2.png"
       ],
-      "text": " Second floor has four rooms with the same symbol, it must be a residential floor."
+      "text": " $(l)Middle floor$() has four rooms with the same symbol, it must be a residential floor."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage3.png"
       ],
-      "text": " Third floor must be an industrial floor."
+      "text": " $(l)Bottom floor$() must be an industrial floor."
     }
   ]
 }

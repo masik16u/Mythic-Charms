@@ -115,7 +115,12 @@
 
 	"item.mythic_charms.fragile_charm_base": "Base de Amuleto Frágil",
 	"item.mythic_charms.resonance_ring": "Anillo de Resonancia",
+	"item.mythic_charms.resonance_ring.tooltip": "Can sometimes nullify the damage dealt from equipping charms",
 	"item.mythic_charms.resonance_compass": "Compás de Resonancia",
+
+	"item.mythic_charms.amethyst_core": "Amethyst Core",
+
+	"item.mythic_charms.ancient_codex": "Ancient Codex",
 
 	"item.mythic_charms.deepslate_core": "Núcleo de Pizarra Profunda",
 	"item.mythic_charms.deepslate_core.applies_to": "Amuletos Frágiles",
@@ -148,6 +153,7 @@
 	"item.mythic_charms.growth_pottery_sherd": "Fragmento de Cerámica de Crecimiento",
 	"item.mythic_charms.ghost_pottery_sherd": "Fragmento de Cerámica de Fantasma",
 
+	"item.mythic_charms.forest_camp_map": "Forest Camp Map",
 	"item.mythic_charms.underground_village_map": "Mapa de Aldea Subterránea",
 	"item.mythic_charms.deep_underground_village_map": "Mapa de Aldea Subterránea Profunda",
 	"item.mythic_charms.aquamarine_composer": "Mapa del Compositor de Aguamarina",
@@ -166,6 +172,11 @@
 
 
 	"block.mythic_charms.resonance_table": "Mesa de Resonancia",
+	"block.mythic_charms.amethyst_lamp": "Amethyst Lamp",
+	"block.mythic_charms.amethyst_embedded_stone_pillar": "Amethyst Embedded Stone Pillar",
+	"block.mythic_charms.amethyst_embedded_deepslate_pillar": "Amethyst Embedded Deepslate Pillar",
+	"block.mythic_charms.amethyst_embedded_chiseled_stone": "Amethyst Embedded Chiseled Stone",
+	"block.mythic_charms.amethyst_embedded_chiseled_deepslate": "Amethyst Embedded Chiseled Deepslate",
 
 
 	"enchantment.mythic_charms.eternal_grip": "Lazo Eterno",
@@ -207,9 +218,15 @@
 	"advancements.mythic_charms.story.sound_carving_pattern.desc": "Obtén un Grabado de Eco",
 	"advancements.mythic_charms.story.first_charm.title": "Escultor novato",
 	"advancements.mythic_charms.story.first_charm.desc": "Crea tu Primer Amuleto",
+	"advancements.mythic_charms.story.broken_charm.title": "My Precious!!",
+	"advancements.mythic_charms.story.broken_charm.desc": "Lose a charm in an unfortunate situation",
+	"advancements.mythic_charms.story.equip_combination.title": "Perfect Synergy",
+	"advancements.mythic_charms.story.equip_combination.desc": "Equip two charms that have a special combination effect",
 
 	"advancements.mythic_charms.story.every_composer.title": "Orquesta",
 	"advancements.mythic_charms.story.every_composer.desc": "Visita cada Compositor",
+	"advancements.mythic_charms.story.ancient_codex.title": "Ancient Knowledge",
+	"advancements.mythic_charms.story.ancient_codex.desc": "Exchange a Sound Carving Pattern using an Ancient Codex",
 
 	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Carcasa Robusta",
 	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Mejora tu Amuleto por Primera Vez",
@@ -226,6 +243,7 @@
 
 	"tag.item.mythic_charms.fragile_charms": "Amuletos Frágiles",
 	"tag.item.mythic_charms.unbreakable_charms": "Amuletos Irrompibles",
+	"tag.item.mythic_charms.sound_carving_patterns": "Sound Carving Patterns",
 	"tag.item.mythic_charms.resonance_ingredients": "Ingredientes de Resonancia",
 	"tag.item.trinkets.hand.ring": "Ring Trinket",
 	"tag.item.trinkets.mythic_charm.mythic_charm": "Mythic Charm",
@@ -266,6 +284,7 @@
 
 	"text.config.mythic-charms-config.title": "Mythic Charms Config",
 	"text.config.mythic-charms-config.option.giveCharmiconOnSpawn": "Dar el Charmicon al cargar por Primera vez el Mundo",
+	"text.config.mythic-charms-config.option.requirePatternToCraftCharm": "Require sound carving pattern to craft charm",
 	"text.config.mythic-charms-config.category.charmsEnabled": "Amuletos Activados",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmFeatheredGraceEnabled": "Amuleto Pluma Ligera Activado",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmBlazingEmbraceEnabled": "Amuleto Abrazo Ardiente Activado",

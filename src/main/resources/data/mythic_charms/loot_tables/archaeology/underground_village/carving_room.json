@@ -12,18 +12,18 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:gold_nugget",
-          "weight": 4
+          "name": "minecraft:amethyst_shard",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:amethyst_shard",
-          "weight": 4
+          "name": "mythic_charms:amethyst_core",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:experience_bottle",
-          "weight": 4
+          "weight": 6
         },
         {
           "type": "minecraft:item",
@@ -38,7 +38,7 @@
         {
           "type": "minecraft:item",
           "name": "mythic_charms:resonance_pottery_sherd",
-          "weight": 3
+          "weight": 4
         },
         {
           "type": "minecraft:item",
@@ -52,38 +52,27 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:green_dye",
-          "weight": 2
+          "name": "minecraft:green_dye"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:bone",
-          "weight": 2
+          "name": "minecraft:bone"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:coal",
-          "weight": 2
+          "name": "minecraft:coal"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
-          "weight": 2
+          "name": "minecraft:raw_iron"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:raw_iron",
-          "weight": 2
+          "name": "minecraft:raw_gold"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:raw_gold",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:quartz",
-          "weight": 2
+          "name": "minecraft:quartz"
         },
         {
           "type": "minecraft:item",

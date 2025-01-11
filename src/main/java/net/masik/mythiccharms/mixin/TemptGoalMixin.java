@@ -7,7 +7,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -20,6 +19,8 @@ public abstract class TemptGoalMixin {
 
     @Shadow public abstract boolean canStart();
 
+    // Nature's Call charm effect
+    // Runs when animal checks weather it is tempted
     @Inject(method = "isTemptedBy", at = @At("RETURN"), cancellable = true)
     private void naturesCallEffect(LivingEntity entity, CallbackInfoReturnable<Boolean> cir) {
 
@@ -31,7 +32,8 @@ public abstract class TemptGoalMixin {
 
         if (entity.isSneaking()) return;
 
-        //PARTICLE
+        // PARTICLE
+        // Summon particle around tempted animal
         TemptGoal goal = (TemptGoal) (Object) this;
         PathAwareEntity pathAwareEntity = goal.mob;
         PlayerEntity player = (PlayerEntity) entity;
@@ -46,6 +48,7 @@ public abstract class TemptGoalMixin {
                     1, 0.1, 0.1, 0.1, 0.01);
         }
 
+        // If charm equipped returns 'true' (animal is tempted by player)
         cir.setReturnValue(true);
 
     }

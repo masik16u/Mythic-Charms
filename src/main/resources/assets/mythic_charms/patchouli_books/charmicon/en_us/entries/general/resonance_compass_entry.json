@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " This device is old but it looks like nobody used this one before. There is even a note on how to use it.$(br2) I think explorers from this village used this Resonance Compass instead of a map. It resonates to the nearest Carver's structure and when used, it makes a sound in the direction of a structure. When there are 8 blocks left to the structure it makes a different sound."
+      "text": " This device is old but it looks like nobody used this one before. There is even a note on how to use it.$(br2) I think explorers from this village used this Resonance Compass instead of a map. It resonates to the $(l)nearest Carver's structure$() and when used, it makes a sound in the direction of a structure. When there are $(l)8 blocks$() left to the structure it makes a different sound."
     },
     {
       "type": "patchouli:image",

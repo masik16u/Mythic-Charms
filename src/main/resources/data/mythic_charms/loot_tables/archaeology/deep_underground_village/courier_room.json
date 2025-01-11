@@ -7,17 +7,17 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
+          "name": "minecraft:leather",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:gold_nugget",
+          "name": "minecraft:gold_ingot",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
+          "name": "minecraft:iron_ingot",
           "weight": 4
         },
         {
@@ -27,12 +27,12 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
+          "name": "minecraft:coal",
           "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:coal",
+          "name": "minecraft:string",
           "weight": 3
         },
         {
@@ -42,8 +42,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:compass",
-          "weight": 2
+          "name": "minecraft:compass"
         },
         {
           "type": "minecraft:item",
@@ -56,6 +55,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -70,6 +80,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -84,6 +105,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -95,7 +127,7 @@
         {
           "type": "minecraft:item",
           "name": "mythic_charms:music_disc_myth",
-          "weight": 1
+          "weight": 2
         }
       ]
     }

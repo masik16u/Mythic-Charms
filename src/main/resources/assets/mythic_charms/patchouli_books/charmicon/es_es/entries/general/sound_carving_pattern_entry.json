@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " Estos también son ingredientes necesarios para hacer amuletos. Se pueden encontrar en diferentes estructuras de compositores.$(br2) Algunos comerciantes errantes también tienen estos grabados, pero solo intercambiarán uno por otro del mismo compositor."
+      "text": " Estos también son ingredientes necesarios para hacer amuletos. Se pueden encontrar en diferentes estructuras de compositores.$(br2) Algunos $(l)comerciantes errantes$() también tienen estos grabados, pero solo intercambiarán uno por otro del $(l)mismo$() compositor."
     },
     {
       "type": "patchouli:crafting",

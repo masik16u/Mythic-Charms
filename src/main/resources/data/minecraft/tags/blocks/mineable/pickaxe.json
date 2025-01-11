@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "mythic_charms:resonance_table"
+    "mythic_charms:resonance_table",
+    "mythic_charms:amethyst_lamp",
+    "mythic_charms:amethyst_embedded_stone_pillar",
+    "mythic_charms:amethyst_embedded_deepslate_pillar",
+    "mythic_charms:amethyst_embedded_chiseled_deepslate",
+    "mythic_charms:amethyst_embedded_chiseled_stone"
   ]
 }

@@ -13,7 +13,7 @@
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
             "block": "minecraft:cyan_terracotta",
-            "probability": 0.3
+            "probability": 0.7
           },
           "output_state": {
             "Name": "minecraft:suspicious_gravel",

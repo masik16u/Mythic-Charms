@@ -1,0 +1,23 @@
+{
+  "parent": "mythic_charms:story/sound_carving_pattern",
+  "display": {
+    "icon": {
+      "item": "mythic_charms:ancient_codex"
+    },
+    "title": {
+      "translate": "advancements.mythic_charms.story.ancient_codex.title"
+    },
+    "description": {
+      "translate": "advancements.mythic_charms.story.ancient_codex.desc"
+    },
+    "frame": "goal",
+    "announce_to_chat": true,
+    "show_toast": true,
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

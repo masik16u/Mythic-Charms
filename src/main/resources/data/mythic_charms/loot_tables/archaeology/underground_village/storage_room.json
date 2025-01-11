@@ -17,11 +17,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:quartz",
           "weight": 4
         },
@@ -32,12 +27,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:amethyst_shard",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bone_meal",
+          "name": "mythic_charms:amethyst_core",
           "weight": 4
         },
         {
@@ -52,13 +42,17 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:gold_nugget",
+          "name": "minecraft:gold_ingot",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:ghast_tear",
-          "weight": 2
+          "name": "minecraft:iron_ingot",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ghast_tear"
         },
         {
           "type": "minecraft:item",
@@ -87,8 +81,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:nether_wart",
-          "weight": 2
+          "name": "minecraft:nether_wart"
         }
       ]
     }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    "BAB",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "mythic_charms:amethyst_core"
+    },
+    "B": {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "result": {
+    "item": "mythic_charms:amethyst_embedded_stone_pillar",
+    "count": 4
+  }
+}

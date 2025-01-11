@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "ACA",
-    "B B",
+    "BDB",
     "BCB"
   ],
   "key": {
@@ -14,6 +14,9 @@
     },
     "C": {
       "item": "minecraft:smooth_stone"
+    },
+    "D": {
+      "item": "mythic_charms:amethyst_core"
     }
   },
   "result": {

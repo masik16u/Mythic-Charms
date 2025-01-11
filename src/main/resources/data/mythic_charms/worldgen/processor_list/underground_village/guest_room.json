@@ -5,7 +5,13 @@
     },
     {
       "processor_type": "minecraft:capped",
-      "limit": 2,
+      "limit": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 2,
+          "max_inclusive": 3
+        }
+      },
       "delegate": {
         "processor_type": "minecraft:rule",
         "rules": [
@@ -41,7 +47,7 @@
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
             "block": "minecraft:cyan_terracotta",
-            "probability": 0.2
+            "probability": 0.5
           },
           "output_state": {
             "Name": "minecraft:suspicious_gravel",

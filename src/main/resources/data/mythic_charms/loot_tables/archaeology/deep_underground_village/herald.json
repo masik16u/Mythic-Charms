@@ -7,23 +7,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:amethyst_shard",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mythic_charms:amethyst_core",
           "weight": 3
         },
         {
           "type": "minecraft:item",
           "name": "mythic_charms:prophecy_pottery_sherd",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -33,12 +28,31 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_gold",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:clock",
           "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dead_bush"
         }
       ]
     }

@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " The mysterious map I found previously leads to a research room near bedrock. It doesn't look like a sound carver's structure.$(br2)$(o) Who built this and how they are related to sound carvers?$()$(br2) I noticed that the books are placed in a certain pattern. $(o)Does this mean something?"
+      "text": " The mysterious map I found previously leads to a research room near bedrock. It doesn't look like a sound carver's structure.$(br2)$(o) Who built this and how they are related to sound carvers?$()$(br2) I noticed that the books are placed in a $(l)certain pattern$(). $(o)Does this mean something?"
     }
   ]
 }

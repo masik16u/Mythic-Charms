@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " En la sala de tallado de sonido, encontré otro mapa. También conduce a una aldea, pero este es mucho más profunda. En el mapa está indicado que se encuentra en una altura aproximada de -24.$(br2)$(o) Es extraño que haya encontrado este mapa aquí, tal vez los talladores de sonido también vivieron allí y están conectados de alguna manera con el proceso de fabricación de amuletos."
+      "text": " En la sala de tallado de sonido, encontré otro mapa. También conduce a una aldea, pero este es mucho más profunda. En el mapa está indicado que se encuentra en una $(l)altura aproximada de -24$().$(br2)$(o) Es extraño que haya encontrado este mapa aquí, tal vez los talladores de sonido también vivieron allí y están conectados de alguna manera con el proceso de fabricación de amuletos."
     }
   ]
 }

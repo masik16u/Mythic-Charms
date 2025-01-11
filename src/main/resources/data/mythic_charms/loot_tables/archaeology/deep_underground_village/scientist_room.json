@@ -17,7 +17,12 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
+          "name": "minecraft:leather",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mythic_charms:amethyst_core",
           "weight": 3
         },
         {
@@ -32,13 +37,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:bucket",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
-          "weight": 2
+          "name": "minecraft:bucket"
         },
         {
           "type": "minecraft:item",
@@ -51,6 +50,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 12,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -72,6 +82,10 @@
           "type": "minecraft:item",
           "name": "minecraft:name_tag",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dead_bush"
         }
       ]
     }

@@ -7,23 +7,42 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dead_bush",
+          "name": "minecraft:gold_ingot",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
+          "name": "minecraft:iron_nugget",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
           "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dead_bush"
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:amethyst_shard",
-          "weight": 4
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
-          "weight": 4
+          "name": "mythic_charms:amethyst_core",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -33,11 +52,6 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:raw_iron",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:flint",
           "weight": 3
         },
         {
@@ -63,12 +77,145 @@
         {
           "type": "minecraft:item",
           "name": "mythic_charms:mountain_pottery_sherd",
-          "weight": 2
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
           "name": "mythic_charms:archaeology/composer/pattern/gold_composer",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:saddle",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_pickaxe",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.2,
+                "max": 0.5
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:efficiency"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:unbreaking"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.2,
+                "max": 0.5
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:efficiency"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.8
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:unbreaking"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.2,
+                "max": 0.5
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0.2,
+                "max": 0.5
+              }
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.8
+                }
+              ]
+            }
+          ]
         }
       ]
     }

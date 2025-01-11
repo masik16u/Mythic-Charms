@@ -3,8 +3,10 @@ package net.masik.mythiccharms.util;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.particle.ModParticles;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.RegistryKeys;
@@ -284,6 +286,30 @@ public class CharmHelper {
         put(MOUNTAINS_STRENGTH, ModParticles.MOUNTAINS_STRENGTH_EQUIP_PARTICLE);
         put(SAFE_TERRITORY, ModParticles.SAFE_TERRITORY_EQUIP_PARTICLE);
         put(QUIET_PRESENCE, ModParticles.QUIET_PRESENCE_EQUIP_PARTICLE);
+    }};
+
+    public static final ArrayList<Item> PATTERNS = new ArrayList<>() {{
+        add(ModItems.SOUND_CARVING_PATTERN_ARROW_DANCE);
+        add(ModItems.SOUND_CARVING_PATTERN_FEATHERED_GRACE);
+        add(ModItems.SOUND_CARVING_PATTERN_BLAZING_EMBRACE);
+        add(ModItems.SOUND_CARVING_PATTERN_QUIET_PRESENCE);
+        add(ModItems.SOUND_CARVING_PATTERN_BARTERS_PACT);
+        add(ModItems.SOUND_CARVING_PATTERN_BOTANIC_BLESSING);
+        add(ModItems.SOUND_CARVING_PATTERN_BATTLE_FURY);
+        add(ModItems.SOUND_CARVING_PATTERN_CLIMBERS_PATH);
+        add(ModItems.SOUND_CARVING_PATTERN_DROWNED_FREEDOM);
+        add(ModItems.SOUND_CARVING_PATTERN_COLLECTORS_GIFT);
+        add(ModItems.SOUND_CARVING_PATTERN_EARTHS_ORDER);
+        add(ModItems.SOUND_CARVING_PATTERN_ECHOING_WRATH);
+        add(ModItems.SOUND_CARVING_PATTERN_ENCHANTED_WHISPERS);
+        add(ModItems.SOUND_CARVING_PATTERN_FLEETING_STRIDES);
+        add(ModItems.SOUND_CARVING_PATTERN_GAZE_SERENITY);
+        add(ModItems.SOUND_CARVING_PATTERN_HIGH_BOUNDS);
+        add(ModItems.SOUND_CARVING_PATTERN_MOUNTAINS_STRENGTH);
+        add(ModItems.SOUND_CARVING_PATTERN_NATURES_CALL);
+        add(ModItems.SOUND_CARVING_PATTERN_NIGHTS_GUARDIAN);
+        add(ModItems.SOUND_CARVING_PATTERN_SAFE_TERRITORY);
+        add(ModItems.SOUND_CARVING_PATTERN_WEIGHTLESS_FLOW);
     }};
 
 }

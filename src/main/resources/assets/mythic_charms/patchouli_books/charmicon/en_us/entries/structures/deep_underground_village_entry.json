@@ -14,14 +14,14 @@
       "images": [
         "mythic_charms:textures/gui/entries/structures/duvillage1.png"
       ],
-      "text": " First floor looks very empty."
+      "text": " $(l)Top floor$() looks very empty."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/duvillage2.png"
       ],
-      "text": " Second floor is a mix of technical and residential rooms. $(o)Strange, it has a downstairs symbol, but the plan doesn't include a third floor."
+      "text": " $(l)Middle floor$() is a mix of technical and residential rooms. $(o)Strange, it has a downstairs symbol, but the plan doesn't include a $(l)bottom floor$()."
     }
   ]
 }

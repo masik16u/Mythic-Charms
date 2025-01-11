@@ -1,0 +1,35 @@
+{
+  "parent": "mythic_charms:book/root",
+  "criteria": {
+    "amethyst_core": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythic_charms:amethyst_core"
+            ]
+          }
+        ]
+      }
+    },
+    "camp": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "mythic_charms:camp"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "amethyst_core"
+    ],
+    [
+      "camp"
+    ]
+  ]
+}

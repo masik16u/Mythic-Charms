@@ -1,0 +1,23 @@
+{
+  "parent": "mythic_charms:story/first_charm",
+  "display": {
+    "icon": {
+      "item": "mythic_charms:broken_charm"
+    },
+    "title": {
+      "translate": "advancements.mythic_charms.story.broken_charm.title"
+    },
+    "description": {
+      "translate": "advancements.mythic_charms.story.broken_charm.desc"
+    },
+    "frame": "task",
+    "announce_to_chat": true,
+    "show_toast": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

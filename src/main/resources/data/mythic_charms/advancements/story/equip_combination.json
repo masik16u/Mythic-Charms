@@ -1,0 +1,23 @@
+{
+  "parent": "mythic_charms:story/first_charm",
+  "display": {
+    "icon": {
+      "item": "mythic_charms:fragile_charm_of_high_bounds"
+    },
+    "title": {
+      "translate": "advancements.mythic_charms.story.equip_combination.title"
+    },
+    "description": {
+      "translate": "advancements.mythic_charms.story.equip_combination.desc"
+    },
+    "frame": "task",
+    "announce_to_chat": true,
+    "show_toast": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

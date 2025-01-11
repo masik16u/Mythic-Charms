@@ -7,13 +7,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:amethyst_shard",
-          "weight": 4
+          "name": "minecraft:amethyst_shard"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:coal",
-          "weight": 4
+          "name": "minecraft:coal"
         },
         {
           "type": "minecraft:item",
@@ -26,6 +24,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -40,6 +49,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -54,6 +74,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -68,6 +99,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -82,6 +124,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -96,6 +149,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -110,6 +174,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -128,6 +203,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -141,6 +227,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -154,6 +251,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -167,6 +275,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -180,6 +299,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -193,6 +323,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         },
@@ -206,6 +347,17 @@
                 "min": 0.2,
                 "max": 0.5
               }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30,
+              "treasure": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.4
+                }
+              ]
             }
           ]
         }

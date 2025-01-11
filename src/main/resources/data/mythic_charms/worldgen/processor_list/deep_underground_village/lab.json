@@ -4,6 +4,34 @@
       "processor_type": "mythic_charms:waterlogged"
     },
     {
+      "processor_type": "minecraft:capped",
+      "limit": 1,
+      "delegate": {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:gravel"
+            },
+            "output_state": {
+              "Name": "minecraft:suspicious_gravel",
+              "Properties": {
+                "dusted": "0"
+              }
+            },
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "mythic_charms:archaeology/deep_underground_village/deepslate_core"
+            }
+          }
+        ]
+      }
+    },
+    {
       "processor_type": "minecraft:rule",
       "rules": [
         {
@@ -13,7 +41,7 @@
           "input_predicate": {
             "predicate_type": "minecraft:random_block_match",
             "block": "minecraft:cyan_terracotta",
-            "probability": 0.2
+            "probability": 0.5
           },
           "output_state": {
             "Name": "minecraft:suspicious_gravel",

@@ -115,7 +115,12 @@
 
 	"item.mythic_charms.fragile_charm_base": "Fragile Charm Base",
 	"item.mythic_charms.resonance_ring": "Resonance Ring",
+	"item.mythic_charms.resonance_ring.tooltip": "Can sometimes nullify the damage dealt from equipping charms",
 	"item.mythic_charms.resonance_compass": "Resonance Compass",
+
+	"item.mythic_charms.amethyst_core": "Amethyst Core",
+
+	"item.mythic_charms.ancient_codex": "Ancient Codex",
 
 	"item.mythic_charms.deepslate_core": "Deepslate Core",
 	"item.mythic_charms.deepslate_core.applies_to": "Fragile Charms",
@@ -148,6 +153,7 @@
 	"item.mythic_charms.growth_pottery_sherd": "Growth Pottery Sherd",
 	"item.mythic_charms.ghost_pottery_sherd": "Ghost Pottery Sherd",
 
+	"item.mythic_charms.forest_camp_map": "Forest Camp Map",
 	"item.mythic_charms.underground_village_map": "Underground Village Map",
 	"item.mythic_charms.deep_underground_village_map": "Deep Underground Village Map",
 	"item.mythic_charms.aquamarine_composer": "Aquamarine Composer Map",
@@ -166,6 +172,11 @@
 
 
 	"block.mythic_charms.resonance_table": "Resonance Table",
+	"block.mythic_charms.amethyst_lamp": "Amethyst Lamp",
+	"block.mythic_charms.amethyst_embedded_stone_pillar": "Amethyst Embedded Stone Pillar",
+	"block.mythic_charms.amethyst_embedded_deepslate_pillar": "Amethyst Embedded Deepslate Pillar",
+	"block.mythic_charms.amethyst_embedded_chiseled_stone": "Amethyst Embedded Chiseled Stone",
+	"block.mythic_charms.amethyst_embedded_chiseled_deepslate": "Amethyst Embedded Chiseled Deepslate",
 
 
 	"enchantment.mythic_charms.eternal_grip": "Eternal Grip",
@@ -207,9 +218,15 @@
 	"advancements.mythic_charms.story.sound_carving_pattern.desc": "Obtain a sound carving pattern",
 	"advancements.mythic_charms.story.first_charm.title": "Charmcrafting 101",
 	"advancements.mythic_charms.story.first_charm.desc": "Create your first Charm",
+	"advancements.mythic_charms.story.broken_charm.title": "My Precious!!",
+	"advancements.mythic_charms.story.broken_charm.desc": "Lose a charm in an unfortunate situation",
+	"advancements.mythic_charms.story.equip_combination.title": "Perfect Synergy",
+	"advancements.mythic_charms.story.equip_combination.desc": "Equip two charms that have a special combination effect",
 
 	"advancements.mythic_charms.story.every_composer.title": "Orchestra",
 	"advancements.mythic_charms.story.every_composer.desc": "Visit every composer",
+	"advancements.mythic_charms.story.ancient_codex.title": "Ancient Knowledge",
+	"advancements.mythic_charms.story.ancient_codex.desc": "Exchange a Sound Carving Pattern using an Ancient Codex",
 
 	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Sturdy Shell",
 	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Upgrade your charm for the first time",

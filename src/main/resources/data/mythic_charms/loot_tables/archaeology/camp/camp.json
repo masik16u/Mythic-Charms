@@ -7,22 +7,22 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:gold_nugget",
+          "name": "minecraft:raw_gold",
           "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clay_ball",
+          "name": "minecraft:raw_iron",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mythic_charms:amethyst_core",
           "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:amethyst_shard",
-          "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:glass_bottle",
           "weight": 3
         },
         {
@@ -32,7 +32,12 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:compass",
+          "name": "minecraft:leather",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone",
           "weight": 3
         }
       ]
