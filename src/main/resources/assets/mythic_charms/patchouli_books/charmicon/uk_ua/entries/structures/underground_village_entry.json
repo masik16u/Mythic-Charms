@@ -14,21 +14,21 @@
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage1.png"
       ],
-      "text": " Перший поверх є входом до селища і не має багато кімнат."
+      "text": " $(l)Верхній поверх$() є входом до селища і не має багато кімнат."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage2.png"
       ],
-      "text": " Другий поверх має чотири кімнати з однаковим символом, це має бути житловий поверх."
+      "text": " $(l)Середній поверх$() має чотири кімнати з однаковим символом, це має бути житловий поверх."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage3.png"
       ],
-      "text": " Третій поверх повинен бути промисловим."
+      "text": " $(l)Нижній поверх$() повинен бути промисловим."
     }
   ]
 }

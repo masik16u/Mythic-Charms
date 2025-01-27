@@ -1,0 +1,17 @@
+{
+  "name": "Manuscrito Antiguo",
+  "icon": "mythic_charms:ancient_codex",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/ancient_codex",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Se dice que este libro parece estar conectado con una antigua biblioteca que almacena todo lo que fue escrito físicamente pero nadie podría entrar jamás.$(br) Aunque el libro sea raro no es único y se puede encontrar en algunas mazmorras como $(l)Mina Abandonada$() or $(l)Ciudad Antigua$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": " Usar esto es bastante fácil: Necesito mantener $(l)el manuscrito$() en mi $(l)mano principal$() y en la $(l)mano secundaria$() - un grabado de eco que quiero reescribir. Tras eso, abre el manuscrito y se transformará en un grabado diferente $(l)consumiendo el de mi mano secundaria$()."
+    }
+  ]
+}

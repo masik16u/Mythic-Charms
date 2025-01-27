@@ -14,14 +14,14 @@
       "images": [
         "mythic_charms:textures/gui/entries/structures/duvillage1.png"
       ],
-      "text": " El primer piso se ve muy vacío."
+      "text": " $(l)El piso superior$() se ve muy vacío."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/duvillage2.png"
       ],
-      "text": " El segundo piso es una mezcla de salas técnicas y residenciales. $(o)Extraño, tiene un símbolo abajo de las escaleras, pero el plano no incluye un tercer piso.."
+      "text": " $(l)El piso del medio$() es una mezcla de salas técnicas y residenciales. $(o)Extraño, tiene un símbolo abajo de las escaleras, pero el plano no incluye el $(l)piso inferior$()."
     }
   ]
 }

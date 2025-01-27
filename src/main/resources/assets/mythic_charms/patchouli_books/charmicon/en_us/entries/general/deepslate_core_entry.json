@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " This is the item which will allow me to make charms unbreakable, unable to be burnt in lava, and don't deal damage to me when equipping them.$(br2) It looks similar to netherite upgrade smithing template, I think charms are upgraded in similar way, on the $(l)smithing table$()."
+      "text": " This is the item that will allow me to make talismans unbreakable, unable to be burnt in lava, and not deal damage to me when equipping them.$(br2) It looks similar to netherite upgrade smithing template, I think charms are upgraded in similar way, on the $(l)smithing table$()."
     },
     {
       "type": "patchouli:crafting",

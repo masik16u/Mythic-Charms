@@ -1,6 +1,7 @@
 package net.masik.mythiccharms.item;
 
 import net.masik.mythiccharms.MythicCharms;
+import net.masik.mythiccharms.util.ParticleHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.EnderPearlItem;
 import net.minecraft.item.FishingRodItem;
@@ -26,7 +27,7 @@ public class ResonanceCompassItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
-        if (world.getDimensionKey() == DimensionTypes.OVERWORLD && !world.isClient) {
+        if (world.getDimensionKey() == DimensionTypes.OVERWORLD && !world.isClient && world.getServer() != null) {
 
             BlockPos structurePos = world.getServer().getOverworld().locateStructure(TagKey.of(RegistryKeys.STRUCTURE, new Identifier(MythicCharms.MOD_ID, "carvers_structures")), user.getBlockPos(), 50, false);
 
@@ -57,8 +58,9 @@ public class ResonanceCompassItem extends Item {
                     modifierX = Math.cos(angle) * 6;
                     modifierZ = Math.sin(angle) * 6;
 
-                    user.getServer().getWorld(user.getWorld().getRegistryKey()).spawnParticles(ParticleTypes.WAX_OFF,
-                            user.getX() + Math.cos(angle) * 2, user.getY() + 2, user.getZ() + Math.sin(angle) * 2, 1, 0.1, 0.1, 0.1, 1);
+                    ParticleHelper.spawnParticle(user, ParticleTypes.WAX_OFF,
+                            user.getX() + Math.cos(angle) * 2, user.getY() + 2, user.getZ() + Math.sin(angle) * 2,
+                            1, 0.1, 0.1, 0.1, 1);
 
                 }
 

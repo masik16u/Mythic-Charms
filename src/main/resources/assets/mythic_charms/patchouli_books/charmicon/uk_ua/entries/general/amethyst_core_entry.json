@@ -1,0 +1,30 @@
+{
+  "name": "Аметистове ядро",
+  "icon": "mythic_charms:amethyst_core",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/amethyst_core",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " Це міцний аметистовий матеріал, який іноді можна отримати, видобуваючи повністю вирощену $(l)аметистову друзу(). Різьбярі часто використовували його для виготовлення декоративних блоків, таких як колони чи знаки."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:amethyst_embedded_stone_pillar",
+      "recipe2": "mythic_charms:amethyst_embedded_deepslate_pillar"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:amethyst_embedded_chiseled_stone",
+      "recipe2": "mythic_charms:amethyst_embedded_chiseled_deepslate"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "mythic_charms:amethyst_lamp",
+        "text": " Це цікавий блок, який, здається, реагує на кількість живих людей незалежно від відстані. Схоже, редстоуновий компаратор може вловити імпульс лампи та перетворити його на сигнал.$(br)$(o) Але навіщо різьбярам використовувати такий пристрій як джерело світла?$()"
+      }
+    }
+  ]
+}

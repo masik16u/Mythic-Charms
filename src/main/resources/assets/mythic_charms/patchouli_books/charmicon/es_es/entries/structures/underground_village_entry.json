@@ -14,21 +14,21 @@
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage1.png"
       ],
-      "text": " El primer piso es la entrada al pueblo y no tiene muchas habitaciones."
+      "text": " $(l)El piso superior$() es la entrada al pueblo y no tiene muchas habitaciones."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage2.png"
       ],
-      "text": " El segundo piso tiene cuatro habitaciones con el mismo símbolo, debe ser un piso residencial."
+      "text": " $(l)El piso del medio$() tiene cuatro habitaciones con el mismo símbolo, debe ser un piso residencial."
     },
     {
       "type": "patchouli:image",
       "images": [
         "mythic_charms:textures/gui/entries/structures/uvillage3.png"
       ],
-      "text": " El tercer piso debe ser un piso industrial."
+      "text": " $(l)El piso inferior$() debe ser un piso industrial."
     }
   ]
 }

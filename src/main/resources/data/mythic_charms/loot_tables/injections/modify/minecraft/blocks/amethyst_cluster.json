@@ -25,16 +25,16 @@
                   }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "mythic_charms:amethyst_core",
-          "conditions": [
+            },
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.3
+              "type": "minecraft:item",
+              "name": "mythic_charms:amethyst_core",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3
+                }
+              ]
             }
           ]
         }

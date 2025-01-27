@@ -115,12 +115,12 @@
 
 	"item.mythic_charms.fragile_charm_base": "Base de Amuleto Frágil",
 	"item.mythic_charms.resonance_ring": "Anillo de Resonancia",
-	"item.mythic_charms.resonance_ring.tooltip": "Can sometimes nullify the damage dealt from equipping charms",
+	"item.mythic_charms.resonance_ring.tooltip": "A veces puede anular el daño causado al equipar amuletos",
 	"item.mythic_charms.resonance_compass": "Compás de Resonancia",
 
-	"item.mythic_charms.amethyst_core": "Amethyst Core",
+	"item.mythic_charms.amethyst_core": "Núcleo de Amatista",
 
-	"item.mythic_charms.ancient_codex": "Ancient Codex",
+	"item.mythic_charms.ancient_codex": "Manuscrito Antiguo",
 
 	"item.mythic_charms.deepslate_core": "Núcleo de Pizarra Profunda",
 	"item.mythic_charms.deepslate_core.applies_to": "Amuletos Frágiles",
@@ -153,7 +153,7 @@
 	"item.mythic_charms.growth_pottery_sherd": "Fragmento de Cerámica de Crecimiento",
 	"item.mythic_charms.ghost_pottery_sherd": "Fragmento de Cerámica de Fantasma",
 
-	"item.mythic_charms.forest_camp_map": "Forest Camp Map",
+	"item.mythic_charms.forest_camp_map": "Mapa de Campamento del Bosque",
 	"item.mythic_charms.underground_village_map": "Mapa de Aldea Subterránea",
 	"item.mythic_charms.deep_underground_village_map": "Mapa de Aldea Subterránea Profunda",
 	"item.mythic_charms.aquamarine_composer": "Mapa del Compositor de Aguamarina",
@@ -172,11 +172,11 @@
 
 
 	"block.mythic_charms.resonance_table": "Mesa de Resonancia",
-	"block.mythic_charms.amethyst_lamp": "Amethyst Lamp",
-	"block.mythic_charms.amethyst_embedded_stone_pillar": "Amethyst Embedded Stone Pillar",
-	"block.mythic_charms.amethyst_embedded_deepslate_pillar": "Amethyst Embedded Deepslate Pillar",
-	"block.mythic_charms.amethyst_embedded_chiseled_stone": "Amethyst Embedded Chiseled Stone",
-	"block.mythic_charms.amethyst_embedded_chiseled_deepslate": "Amethyst Embedded Chiseled Deepslate",
+	"block.mythic_charms.amethyst_lamp": "Lámpara de Amatista",
+	"block.mythic_charms.amethyst_embedded_stone_pillar": "Pilar de Piedra Incrustado de Amatista",
+	"block.mythic_charms.amethyst_embedded_deepslate_pillar": "Pilar de Pizarra Profunda Incrustado de Amatista",
+	"block.mythic_charms.amethyst_embedded_chiseled_stone": "Piedra Cincelada Incrustada de Amatista",
+	"block.mythic_charms.amethyst_embedded_chiseled_deepslate": "Pizarra Profunda Cincelada Incrustada de Amatista",
 
 
 	"enchantment.mythic_charms.eternal_grip": "Lazo Eterno",
@@ -218,15 +218,15 @@
 	"advancements.mythic_charms.story.sound_carving_pattern.desc": "Obtén un Grabado de Eco",
 	"advancements.mythic_charms.story.first_charm.title": "Escultor novato",
 	"advancements.mythic_charms.story.first_charm.desc": "Crea tu Primer Amuleto",
-	"advancements.mythic_charms.story.broken_charm.title": "My Precious!!",
-	"advancements.mythic_charms.story.broken_charm.desc": "Lose a charm in an unfortunate situation",
-	"advancements.mythic_charms.story.equip_combination.title": "Perfect Synergy",
-	"advancements.mythic_charms.story.equip_combination.desc": "Equip two charms that have a special combination effect",
+	"advancements.mythic_charms.story.broken_charm.title": "¡¡Mi Tesoro!!",
+	"advancements.mythic_charms.story.broken_charm.desc": "Pierde un amuleto en una situación desafortunada",
+	"advancements.mythic_charms.story.equip_combination.title": "Sinergia Perfecta",
+	"advancements.mythic_charms.story.equip_combination.desc": "Equipa dos amuletos que tienen una combinación especial.",
 
 	"advancements.mythic_charms.story.every_composer.title": "Orquesta",
 	"advancements.mythic_charms.story.every_composer.desc": "Visita cada Compositor",
-	"advancements.mythic_charms.story.ancient_codex.title": "Ancient Knowledge",
-	"advancements.mythic_charms.story.ancient_codex.desc": "Exchange a Sound Carving Pattern using an Ancient Codex",
+	"advancements.mythic_charms.story.ancient_codex.title": "Sabiduría Ancestral",
+	"advancements.mythic_charms.story.ancient_codex.desc": "Intercambia un Grabado de Eco usando un Manuscrito Antiguo",
 
 	"advancements.mythic_charms.story.first_unbreakable_charm.title": "Carcasa Robusta",
 	"advancements.mythic_charms.story.first_unbreakable_charm.desc": "Mejora tu Amuleto por Primera Vez",
@@ -243,9 +243,9 @@
 
 	"tag.item.mythic_charms.fragile_charms": "Amuletos Frágiles",
 	"tag.item.mythic_charms.unbreakable_charms": "Amuletos Irrompibles",
-	"tag.item.mythic_charms.sound_carving_patterns": "Sound Carving Patterns",
+	"tag.item.mythic_charms.sound_carving_patterns": "Grabados de Eco",
 	"tag.item.mythic_charms.resonance_ingredients": "Ingredientes de Resonancia",
-	"tag.item.trinkets.hand.ring": "Ring Trinket",
+	"tag.item.trinkets.hand.ring": "Trinket de Anillo",
 	"tag.item.trinkets.mythic_charm.mythic_charm": "Mythic Charm",
 
 	"tag.item.mythic_charms.charms.feathered_grace": "Pluma Ligera",
@@ -282,7 +282,7 @@
 
 
 
-	"text.config.mythic-charms-config.title": "Mythic Charms Config",
+	"text.config.mythic-charms-config.title": "Mythic Charms Configuración",
 	"text.config.mythic-charms-config.option.giveCharmiconOnSpawn": "Dar el Charmicon al cargar por Primera vez el Mundo",
 	"text.config.mythic-charms-config.option.requirePatternToCraftCharm": "Require sound carving pattern to craft charm",
 	"text.config.mythic-charms-config.category.charmsEnabled": "Amuletos Activados",
@@ -308,7 +308,7 @@
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmSafeTerritoryEnabled": "Amuleto Territorio Seguro Activado",
 	"text.config.mythic-charms-config.option.charmsEnabled.CharmQuietPresenceEnabled": "Amuleto Presencia Serena Activado",
 
-	"text.config.mythic-charms-config.category.charmCombinationsEnabled": "Charm Combinations Enabled",
+	"text.config.mythic-charms-config.category.charmCombinationsEnabled": "Combinación de Amuletos Activada",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationFeatheredGraceAndHighBoundsEnabled": "Combinación de Amuletos Pluma Ligera y Ascensión Eminente Activado",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationBlazingEmbraceAndBattleFuryEnabled": "Combinación de Amuletos Abrazo Ardiente y Furia Guerrera Activado",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEarthsOrderAndBlazingEmbraceEnabled": "Combinación de Amuletos Pacto de Tierra y Abrazo Ardiente Activado",
@@ -322,5 +322,5 @@
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationClimbersPathAndHighBoundsEnabled": "Combinación de Amuletos Senda del Escalador y Ascensión Eminente Activado",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBlazingEmbraceEnabled": "Combinación de Amuletos Eco de Ira y Abrazo Ardiente Activado",
 	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationEchoingWrathAndBattleFuryEnabled": "Combinación de Amuletos Eco de Ira y Furia Guerrera Activado",
-	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Combinación de AmuletosPresencia Serena y Pluma Ligera Activado"
+	"text.config.mythic-charms-config.option.charmCombinationsEnabled.CharmCombinationQuietPresenceAndFeatheredGraceEnabled": "Combinación de Amuletos Presencia Serena y Pluma Ligera Activado"
 }

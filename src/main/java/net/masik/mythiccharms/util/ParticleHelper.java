@@ -2,6 +2,7 @@ package net.masik.mythiccharms.util;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.server.world.ServerWorld;
 
 public class ParticleHelper {
 
@@ -10,8 +11,13 @@ public class ParticleHelper {
 
         if (player.getServer() != null) {
 
-            player.getServer().getWorld(player.getWorld().getRegistryKey()).spawnParticles(particle,
-                    x, y, z, count, deltaX, deltaY, deltaZ, speed);
+            ServerWorld world = player.getServer().getWorld(player.getWorld().getRegistryKey());
+
+            if (world != null) {
+
+                world.spawnParticles(particle, x, y, z, count, deltaX, deltaY, deltaZ, speed);
+
+            }
 
         }
 

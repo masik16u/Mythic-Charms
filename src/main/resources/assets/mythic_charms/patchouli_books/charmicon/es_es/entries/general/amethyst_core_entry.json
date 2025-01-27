@@ -1,5 +1,5 @@
 {
-  "name": "Amethyst Core",
+  "name": "Núcleo de Amatista",
   "icon": "mythic_charms:amethyst_core",
   "category": "mythic_charms:general_category",
   "advancement": "mythic_charms:book/amethyst_core",
@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": " It is a strong amethyst material that can sometimes be obtained from mining a fully grown $(l)Amethyst Cluster$(). Carvers often used it to make decoration blocks like pillars or signs."
+      "text": " Es un material fuerte de amatista que se puede obtener a veces al minar un $(l)Brote de Amatista$() totalmente crecido. Los Carvers a veces lo usaban para bloques decorativos como pilares o señales."
     },
     {
       "type": "patchouli:crafting",
@@ -22,8 +22,8 @@
     {
       "type": "patchouli:spotlight",
       "item": {
-        "item": "mythic_charms:amethyst_lamp",
-        "text": " It is an interesting block that seems to react to the amount of people that are alive no matter the distance. It looks like the redstone comparator can catch the lamp's impulse and turn it into a redstone signal.$(br)$(o) But why would carvers use such a device as a light source?$()"
+        "item": "mythic_charmsamethyst_lamp",
+        "text": " Un bloque interesante que parece reacionar a la cantidad de personas que estan vivas sin importar su distancia. Parece que un comparador de redstone podría convertir su energía en una señal de redstone.$(br)$(o) ¿Pero porqué los Sound Carvers necesitarían ese tipo de luz?But why would carvers use such a device as a light source?$()"
       }
     }
   ]
