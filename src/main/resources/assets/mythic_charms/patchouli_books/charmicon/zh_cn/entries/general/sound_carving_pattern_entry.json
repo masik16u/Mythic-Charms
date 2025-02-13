@@ -1,0 +1,18 @@
+{
+  "name": "音律雕刻图案",
+  "icon": "mythic_charms:sound_carving_pattern_feathered_grace",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/any_pattern",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这些也是制作护符的必要材料，它们可以在不同的作曲家建筑中找到。$(br2)有些$(l)流浪商人$()也有这些图案，但只能交换另一个来自$(l)同一位$()作曲家的图案。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:sound_carving_pattern_feathered_grace",
+      "text": "$(br2)图案上的墨水似乎在发光，要想复制它，我应该用一个类似的东西。"
+    }
+  ]
+}

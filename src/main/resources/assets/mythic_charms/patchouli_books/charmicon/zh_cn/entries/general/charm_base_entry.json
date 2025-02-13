@@ -1,0 +1,18 @@
+{
+  "name": "护符底座",
+  "icon": "mythic_charms:fragile_charm_base",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/structures/underground_village_carving_room",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "我猜这个护符底座是制作护符的主要材料。$(br)音律雕刻室里有一些这样的底座，但大多数都坏了，我觉得这些底座非常$(l)脆弱$()。$(o)护符也会这么脆弱吗？$()$(br)另外，我在房间里找到的一个护符底座边缘上写着：「死亡导致毁灭」。$(br2)坏了的可以用$(l)凝灰岩$()修复。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:fragile_charm_base",
+      "recipe2": "mythic_charms:fragile_charm_base_from_broken_charm"
+    }
+  ]
+}

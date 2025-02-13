@@ -1,0 +1,22 @@
+{
+  "name": "平静凝视",
+  "icon": "mythic_charms:fragile_charm_of_gaze_serenity",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/gaze_serenity",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)佩戴者可以直视末影人的眼睛而不用担心任何后果。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_gaze_serenity",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_gaze_serenity",
+      "ingredient3": "minecraft:popped_chorus_fruit",
+      "ingredient4": "minecraft:fermented_spider_eye",
+      "ingredient5": "minecraft:glistering_melon_slice"
+    }
+  ]
+}

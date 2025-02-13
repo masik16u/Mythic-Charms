@@ -1,0 +1,30 @@
+{
+  "name": "紫水晶核心",
+  "icon": "mythic_charms:amethyst_core",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/amethyst_core",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这是一种强大的紫水晶材料，有时可以从完全生长的$(l)紫水晶簇$()中开采获得。音律雕刻师通常用它来制作装饰方块，比如柱子或标识之类的。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:amethyst_embedded_stone_pillar",
+      "recipe2": "mythic_charms:amethyst_embedded_deepslate_pillar"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:amethyst_embedded_chiseled_stone",
+      "recipe2": "mythic_charms:amethyst_embedded_chiseled_deepslate"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "mythic_charms:amethyst_lamp",
+        "text": "这是一种有趣的方块，似乎会对活着的人的数量产生反应，无论距离有多远。看起来红石比较器可以捕捉到灯的状态，并将其转化为红石信号。$(br)$(o)但为什么音律雕刻师会用这样的装置作为光源呢？$()"
+      }
+    }
+  ]
+}

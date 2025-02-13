@@ -10,6 +10,7 @@
     "minecraft:dark_forest",
     "minecraft:jungle",
     "minecraft:sparse_jungle",
-    "minecraft:cherry_grove"
+    "minecraft:cherry_grove",
+    "#minecraft:is_forest"
   ]
 }

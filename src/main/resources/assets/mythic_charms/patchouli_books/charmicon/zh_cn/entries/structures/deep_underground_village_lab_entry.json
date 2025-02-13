@@ -1,0 +1,17 @@
+{
+  "name": "深层地下村庄：实验室",
+  "icon": "minecraft:deepslate_tiles",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/deep_underground_village_lab",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "带有方形符号的房间一定是实验室。$(br2)他们似乎在这里尝试增强护符的耐用性能。$(br)$(o)这并不奇怪，因为我见过的护符底座都非常脆弱。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "桌子上刻着一个留言，它写道：$(br2)$(o)有些奇怪的事情发生了，灯几乎不发光了，我们的首领失去了理智，他跑来跑去，大喊大叫各种胡话：$(br)呃啊啊等待执行行动长时间损失警告无辜失去线条痛苦努力雨在银色历史老联盟根源恩典观察者职责停留空气保持永恒衰败眼艺术滴落天哪……"
+    }
+  ]
+}

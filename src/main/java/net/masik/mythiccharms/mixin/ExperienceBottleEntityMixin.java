@@ -2,12 +2,14 @@ package net.masik.mythiccharms.mixin;
 
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
+import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
 import net.masik.mythiccharms.util.ParticleHelper;
 import net.masik.mythiccharms.util.SoundHelper;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
@@ -17,7 +19,11 @@ import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
@@ -81,9 +87,11 @@ public class ExperienceBottleEntityMixin {
     @Unique
     private boolean checkResonanceTable(BlockPos bottlePos, World world) {
         for (BlockPos pos : BlockPos.iterate(new BlockPos(-1, -1, -1), new BlockPos(1, 1, 1))) {
+            BlockState top = world.getBlockState(bottlePos.add(pos).up());
             Block oneDown = world.getBlockState(bottlePos.add(pos)).getBlock();
-            Block twoDown = world.getBlockState(bottlePos.add(pos).down(1)).getBlock();
-            if (oneDown.equals(ModBlocks.RESONANCE_TABLE) && twoDown.equals(Blocks.LAPIS_BLOCK)) return true;
+            Block twoDown = world.getBlockState(bottlePos.add(pos).down()).getBlock();
+            if (top.isIn(TagKey.of(RegistryKeys.BLOCK, new Identifier("air"))) &&
+                    oneDown.equals(ModBlocks.RESONANCE_TABLE) && twoDown.equals(Blocks.LAPIS_BLOCK)) return true;
         }
         return false;
     }

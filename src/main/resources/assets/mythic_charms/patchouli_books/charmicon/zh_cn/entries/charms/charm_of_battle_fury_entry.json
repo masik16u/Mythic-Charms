@@ -1,0 +1,22 @@
+{
+  "name": "战斗狂怒",
+  "icon": "mythic_charms:fragile_charm_of_battle_fury",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/battle_fury",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)佩戴者的生命值越低，攻击伤害越高。在生命值最低时，最多可增加3倍伤害。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_battle_fury",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_battle_fury",
+      "ingredient3": "minecraft:ghast_tear",
+      "ingredient4": "minecraft:magma_cream",
+      "ingredient5": "minecraft:prismarine_shard"
+    }
+  ]
+}

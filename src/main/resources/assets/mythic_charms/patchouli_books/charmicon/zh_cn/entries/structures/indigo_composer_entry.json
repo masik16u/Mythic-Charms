@@ -1,0 +1,13 @@
+{
+  "name": "靛蓝作曲家",
+  "icon": "minecraft:purple_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/indigo_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)附魔低语编织出坚韧的画卷，将每一个挑战转化为给予勇者成长与力量的藏家馈赠。$(br2)靛蓝。"
+    }
+  ]
+}

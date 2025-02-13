@@ -1,0 +1,13 @@
+{
+  "name": "护符组合",
+  "icon": "mythic_charms:fragile_charm_base",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/any_charm",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "一些护符可以相互共鸣，产生特殊效果。$(br)当它们共鸣时，可以听到一个短暂的声音。$(br2)$(o)太酷了，我得试试每一种组合！"
+    }
+  ]
+}

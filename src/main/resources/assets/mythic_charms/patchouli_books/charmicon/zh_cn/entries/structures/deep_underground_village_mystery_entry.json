@@ -1,0 +1,13 @@
+{
+  "name": "深层地下村庄：谜团",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/hideout_map",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "在规划上没有标明的层里，我发现了一张古老而神秘的地图。上面的文字无法辨认，揭开其秘密的唯一方法就是跟随它。"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "炽热拥抱与战斗狂怒",
+  "icon": "mythic_charms:textures/blazing_embrace_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/blazing_embrace_and_battle_fury",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_blazing_embrace_entry)炽热拥抱$()和$(l:mythic_charms:charms/charm_of_battle_fury_entry)战斗狂怒$()时，佩戴者的生命值越低，抗火效果持续的时间越长，生命值最低时可延长至2倍时间。"
+    }
+  ]
+}

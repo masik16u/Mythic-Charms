@@ -1,0 +1,13 @@
+{
+  "name": "蓝紫作曲家",
+  "icon": "minecraft:magenta_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/violet_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)我们的暗夜守卫，幽灵，挥动着它的优雅羽翼而飘荡，编织着在月光注视下被遗忘的古老传说。$(br2)蓝紫。"
+    }
+  ]
+}

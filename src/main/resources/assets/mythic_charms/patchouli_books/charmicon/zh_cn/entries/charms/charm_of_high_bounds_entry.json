@@ -1,0 +1,22 @@
+{
+  "name": "高远之跃",
+  "icon": "mythic_charms:fragile_charm_of_high_bounds",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/high_bounds",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)佩戴者的跳跃高度增加到2格，并且有安全的坠落距离，然而跳跃会额外消耗体力。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_high_bounds",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_high_bounds",
+      "ingredient3": "minecraft:rabbit_foot",
+      "ingredient4": "minecraft:slime_ball",
+      "ingredient5": "minecraft:sugar"
+    }
+  ]
+}

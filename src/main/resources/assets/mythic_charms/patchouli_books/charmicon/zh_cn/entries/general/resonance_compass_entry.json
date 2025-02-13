@@ -1,0 +1,20 @@
+{
+  "name": "共鸣指针",
+  "icon": "mythic_charms:resonance_compass",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/resonance_compass",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这个装置虽然古老，但看起来没有人用过。上面甚至还有使用说明。$(br2)我觉得这个村庄的探险家是用这个共鸣指针代替地图。它会与$(l)最近的音律雕刻师的建筑结构$()产生共鸣，使用时会朝建筑方向发出声音。当距离建筑还有$(l)8格$()时，它会发出不一样的声音。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/general/resonance_compass_zhcn.png"
+      ],
+      "text": "$(o)我一定要试试！"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "鹰击长空与优雅羽翼",
+  "icon": "mythic_charms:textures/weightless_flow_and_feathered_grace.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/weightless_flow_and_feathered_grace",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_weightless_flow_entry)鹰击长空$()和$(l:mythic_charms:charms/charm_of_feathered_grace_entry)优雅羽翼$()时，潜行不会取消缓降效果，只会恢复正常的重力。"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "回响之愤",
+  "icon": "mythic_charms:fragile_charm_of_echoing_wrath",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/echoing_wrath",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)当佩戴者被实体伤害时，附近的实体会受到一半强度的伤害，最多10点，然而佩戴者造成的伤害减少1/4。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_echoing_wrath",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_echoing_wrath",
+      "ingredient3": "minecraft:echo_shard",
+      "ingredient4": "minecraft:fermented_spider_eye",
+      "ingredient5": "minecraft:green_dye"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "大地秩序与炽热拥抱",
+  "icon": "mythic_charms:textures/earths_order_and_blazing_embrace.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/earths_order_and_blazing_embrace",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_earths_order_entry)大地秩序$()和$(l:mythic_charms:charms/charm_of_blazing_embrace_entry)炽热拥抱$()时，徒手破坏方块会掉落它的烧炼后产物（如果有的话）。"
+    }
+  ]
+}

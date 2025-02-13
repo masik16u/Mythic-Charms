@@ -1,0 +1,19 @@
+{
+  "name": "营地",
+  "icon": "minecraft:campfire",
+  "category": "mythic_charms:structures_category",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "在世界各地，音律雕刻师在旅途中设立了营地以供休息。$(br)有时在夜晚，你可以看到森林深处有一缕光，但当你靠近时它又会变暗。$(o)这是什么光？某种装置吗？$()$(br)我很幸运地找到了这样一个营地，但剩下的只有一块被石头包裹的奇怪紫水晶。我觉得那里不止留下了这一样东西。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/camp_zhcn.png"
+      ],
+      "text": "$(o)也许那块紫水晶就是光的来源，但紫水晶本身并不会自然发光……"
+    }
+  ]
+}

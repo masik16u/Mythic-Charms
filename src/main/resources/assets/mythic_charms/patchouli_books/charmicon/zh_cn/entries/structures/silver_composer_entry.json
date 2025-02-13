@@ -1,0 +1,13 @@
+{
+  "name": "银白作曲家",
+  "icon": "minecraft:light_gray_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/silver_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)战士的眼中燃烧着战斗狂怒，他每次挥剑都带着回响之愤，射出的箭矢舞蹈迅猛而强劲，令对手不寒而栗。$(br2)银白。"
+    }
+  ]
+}

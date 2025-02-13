@@ -71,8 +71,8 @@ public class LivingEntityMixin {
         float high = 0.6F;
 
         //featheredGrace combo
-        if (CharmHelper.charmFeatheredGraceEquipped(entity) &&
-                CharmHelper.charmCombinationFeatheredGraceAndHighBoundsEnabled(entity)) high += 0.05F;
+        if (CharmHelper.charmFleetingStridesEquipped(entity) &&
+                CharmHelper.charmCombinationFleetingStridesAndHighBoundsEnabled(entity)) high += 0.05F;
 
         //PARTICLE
         Random random = Random.create();

@@ -1,0 +1,17 @@
+{
+  "name": "地下村庄：配方",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composer_map",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "带有圆形符号的房间一定是探险者的房间，因为这有一张指向某种$(l)作曲家$()的地图（地图背面就是这么写的）。地图上标明它大致位于$(l)海拔-10$()。$(br2)$(o)这一定是他们创造护符配方的地方。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "它有一个图例：$(br2) $(l)海蓝 - 自由$(br) 金黄 - 山岳$(br) 靛蓝 - 援助$(br) 乳白 - 安全$(br) 黄绿 - 自然$(br) 褐红 - 热量$(br) 银白 - 战斗$(br) 蓝绿 - 成长$(br) 蓝紫 - 幽灵$()$(br2)调查完这个村庄后，我应该前往那里。"
+    }
+  ]
+}

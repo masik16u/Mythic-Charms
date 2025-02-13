@@ -1,0 +1,17 @@
+{
+  "name": "地下村庄：雕刻室",
+  "icon": "minecraft:chiseled_stone_bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village_carving_room",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "带有方形符号的房间是音律雕刻师制作护符的地方。$(br2)这里有关于如何使用紫水晶镶嵌的台子的说明，但没有台子本身。$(br2)这儿还有许多来自储藏室的东西，$(o)这些一定是材料。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "房间的墙角刻着一个留言，它写道：$(br2)$(o)距离上次指示已经过去两周了，大家都很紧张。$(br)昨天所有的灯都开始变暗，我们失去了与其他人的联系。$(br)这就是我们的结局了吗？"
+    }
+  ]
+}

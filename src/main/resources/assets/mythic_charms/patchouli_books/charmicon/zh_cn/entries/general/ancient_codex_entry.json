@@ -1,0 +1,17 @@
+{
+  "name": "远古法典",
+  "icon": "mythic_charms:ancient_codex",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/ancient_codex",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "据说这本书与一个古老的图书馆有关，那里保存了所有曾经存在的文字和典籍，但没有人能够进入它。$(br)尽管这本书很稀有，但它并不是独一无二的，可以在一些地牢中找到，比如$(l)废弃矿井$()或$(l)远古城市$()。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "使用它其实非常简单：我需要在$(l)主手$()拿着$(l)法典$()，在我的$(l)副手$()拿着我想重做的音律雕刻图案。之后打开法典，它就会将图案转换为另一种，$(l)代替我副手中原来的那个$()。"
+    }
+  ]
+}

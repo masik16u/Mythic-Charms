@@ -1,0 +1,22 @@
+{
+  "name": "藏家馈赠",
+  "icon": "mythic_charms:fragile_charm_of_collectors_gift",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/collectors_gift",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)周围2格范围内的所有掉落物都会被吸引到佩戴者身边。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_collectors_gift",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_collectors_gift",
+      "ingredient3": "minecraft:popped_chorus_fruit",
+      "ingredient4": "minecraft:glow_berries",
+      "ingredient5": "minecraft:warped_fungus"
+    }
+  ]
+}

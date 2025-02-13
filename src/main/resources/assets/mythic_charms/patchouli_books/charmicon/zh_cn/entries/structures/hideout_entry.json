@@ -1,0 +1,13 @@
+{
+  "name": "秘密藏身处",
+  "icon": "minecraft:bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/hideout",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "我之前发现的那张神秘地图指向了一个靠近基岩的研究室，它看起来并不像是音律雕刻师的建筑。$(br2)$(o)究竟是谁建造了这个地方，它又与音律雕刻师有何关联？$()$(br2)我注意到书本是按照$(l)某种特定的模式$()摆放的。$(o)这是否意味着什么？"
+    }
+  ]
+}

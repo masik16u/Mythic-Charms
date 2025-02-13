@@ -1,0 +1,27 @@
+{
+  "name": "深层地下村庄",
+  "icon": "minecraft:deepslate_bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/deep_underground_village",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这是上一个村庄地图所指向的地方。这个村庄位于深板岩层，而不是普通石头层。$(br2)它也有一个村庄规划，比上一个村庄小。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/duvillage1.png"
+      ],
+      "text": "$(l)顶层$()看起来非常空旷。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/duvillage2.png"
+      ],
+      "text": "$(l)中层$()是技术房间和住宅的混合区域。$(o)奇怪的是，它有一个向下的符号，但规划没有包含$(l)底层$()。"
+    }
+  ]
+}

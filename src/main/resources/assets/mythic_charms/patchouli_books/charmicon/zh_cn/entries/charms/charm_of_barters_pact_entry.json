@@ -1,0 +1,22 @@
+{
+  "name": "交易契约",
+  "icon": "mythic_charms:fragile_charm_of_barters_pact",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/barters_pact",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)如果附近没有敌对的猪灵，猪灵蛮兵会无视佩戴者。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_barters_pact",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_barters_pact",
+      "ingredient3": "minecraft:popped_chorus_fruit",
+      "ingredient4": "minecraft:glistering_melon_slice",
+      "ingredient5": "minecraft:raw_gold"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "勇攀高峰与高远之跃",
+  "icon": "mythic_charms:textures/climbers_path_and_high_bounds.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/climbers_path_and_high_bounds",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_climbers_path_entry)勇攀高峰$()和$(l:mythic_charms:charms/charm_of_high_bounds_entry)高远之跃$()时，增加额外的半格跨越高度。"
+    }
+  ]
+}

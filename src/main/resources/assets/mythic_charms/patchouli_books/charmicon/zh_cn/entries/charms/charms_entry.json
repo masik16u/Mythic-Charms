@@ -1,0 +1,23 @@
+{
+  "name": "护符概览",
+  "icon": "mythic_charms:fragile_charm_base",
+  "category": "mythic_charms:charms_category",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这些是非常珍贵的神器，很少落入地表居民手中。$(br2)我从未见过一个，但我知道它们内部蕴含着强大的能量。它们被描述为由石头制成的圆形物体，中间有一个发光的记号。$(o)不过音律雕刻师是如何制作它们的，又是为什么制作呢？"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/charms/charms.png"
+      ],
+      "text": " $(o)我想我可以在音律雕刻师的村庄中找到所有答案。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)$(br)这是个死胡同！$(br2)我找不到任何别的东西啦！甚至是最微小的暗示，什么都没有……$(br2)看来我的期望太高了吗……"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "自然呼唤",
+  "icon": "mythic_charms:fragile_charm_of_natures_call",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/natures_call",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)当佩戴者不潜行时，所有动物都会跟随佩戴者。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_natures_call",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_natures_call",
+      "ingredient3": "minecraft:bone",
+      "ingredient4": "minecraft:glow_ink_sac",
+      "ingredient5": "minecraft:honey_bottle"
+    }
+  ]
+}

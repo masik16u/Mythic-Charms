@@ -1,0 +1,22 @@
+{
+  "name": "附魔低语",
+  "icon": "mythic_charms:fragile_charm_of_enchanted_whispers",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/enchanted_whispers",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)佩戴者可以看到附魔台上将作用于物品的一个额外附魔。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_enchanted_whispers",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_enchanted_whispers",
+      "ingredient3": "minecraft:blaze_powder",
+      "ingredient4": "minecraft:lapis_lazuli",
+      "ingredient5": "minecraft:glow_berries"
+    }
+  ]
+}

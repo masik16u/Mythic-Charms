@@ -1,0 +1,13 @@
+{
+  "name": "静谧存在与优雅羽翼",
+  "icon": "mythic_charms:textures/quiet_presence_and_feathered_grace.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/quiet_presence_and_feathered_grace",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_quiet_presence_entry)静谧存在$()和$(l:mythic_charms:charms/charm_of_feathered_grace_entry)优雅羽翼$()时，跳跃不会触发幽匿感测体。"
+    }
+  ]
+}

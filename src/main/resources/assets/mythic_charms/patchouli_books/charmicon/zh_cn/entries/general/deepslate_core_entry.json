@@ -1,0 +1,18 @@
+{
+  "name": "深板岩核心",
+  "icon": "mythic_charms:deepslate_core",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/deepslate_core",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这个物品可以让我制作出无法破坏、不会在岩浆中燃烧，且装备时不会对我造成伤害的护符。$(br2)它看起来有点像下界合金升级模板，我估计护符也是通过类似的方式在$(l)锻造台$()上升级的。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mythic_charms:deepslate_core",
+      "text": "像锻造模板一样，它也可以被复制。"
+    }
+  ]
+}

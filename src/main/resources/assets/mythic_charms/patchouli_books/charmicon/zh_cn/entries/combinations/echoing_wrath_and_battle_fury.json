@@ -1,0 +1,13 @@
+{
+  "name": "回响之愤与战斗狂怒",
+  "icon": "mythic_charms:textures/echoing_wrath_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/echoing_wrath_and_battle_fury",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_echoing_wrath_entry)回响之愤$()和$(l:mythic_charms:charms/charm_of_battle_fury_entry)战斗狂怒$()时，佩戴者的生命值越低，回响伤害越高。"
+    }
+  ]
+}

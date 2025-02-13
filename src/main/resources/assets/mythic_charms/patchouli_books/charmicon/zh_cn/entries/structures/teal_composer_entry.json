@@ -1,0 +1,13 @@
+{
+  "name": "蓝绿作曲家",
+  "icon": "minecraft:cyan_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/teal_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)曾经的光荣与梦想没有成为过眼云烟，而是成为了勇者高远之跃的动力。$(br2)蓝绿。"
+    }
+  ]
+}

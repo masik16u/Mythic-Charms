@@ -1,0 +1,13 @@
+{
+  "name": "过眼云烟与战斗狂怒",
+  "icon": "mythic_charms:textures/fleeting_strides_and_battle_fury.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/fleeting_strides_and_battle_fury",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_fleeting_strides_entry)过眼云烟$()和$(l:mythic_charms:charms/charm_of_battle_fury_entry)战斗狂怒$()时，佩戴者的生命值越低，疾跑时的跳跃速度越快，同时也会造成更多的体力消耗。"
+    }
+  ]
+}

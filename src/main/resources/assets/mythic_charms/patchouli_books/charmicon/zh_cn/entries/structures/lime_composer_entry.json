@@ -1,0 +1,13 @@
+{
+  "name": "黄绿作曲家",
+  "icon": "minecraft:lime_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/lime_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)自然呼唤带着万物竞发的祝福，邀请世间灵魂和谐共舞。$(br2)黄绿。"
+    }
+  ]
+}

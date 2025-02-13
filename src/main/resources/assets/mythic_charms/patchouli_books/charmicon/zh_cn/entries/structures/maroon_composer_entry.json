@@ -1,0 +1,13 @@
+{
+  "name": "褐红作曲家",
+  "icon": "minecraft:red_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/maroon_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)在烈焰的炽热拥抱中，交易契约于热量与毁灭间锻造。$(br2)褐红。"
+    }
+  ]
+}

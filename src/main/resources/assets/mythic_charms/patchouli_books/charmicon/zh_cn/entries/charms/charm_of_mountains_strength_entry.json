@@ -1,0 +1,22 @@
+{
+  "name": "岿然不动",
+  "icon": "mythic_charms:fragile_charm_of_mountains_strength",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/mountains_strength",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)佩戴者免疫击退或推动，然而佩戴者会受到额外1/4的伤害。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_mountains_strength",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_mountains_strength",
+      "ingredient3": "minecraft:glistering_melon_slice",
+      "ingredient4": "minecraft:nautilus_shell",
+      "ingredient5": "minecraft:quartz"
+    }
+  ]
+}

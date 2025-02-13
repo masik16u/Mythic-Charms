@@ -1,0 +1,13 @@
+{
+  "name": "地下村庄：储藏室",
+  "icon": "minecraft:stone_brick_stairs",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village_storage",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "带有三角符号的房间一定是储藏室，此外入口附近的窗户一定是接收处。$(br2)到处都是货架和各种杂物，$(o)他们为什么需要所有这些东西？"
+    }
+  ]
+}

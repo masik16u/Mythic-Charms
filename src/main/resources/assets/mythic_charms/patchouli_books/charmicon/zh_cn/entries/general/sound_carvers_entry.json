@@ -1,0 +1,29 @@
+{
+  "name": "音律雕刻师",
+  "icon": "minecraft:leather_helmet",
+  "category": "mythic_charms:general_category",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这些神秘的人形生物生活在地下，他们有时会在探险时来到地面。尽管音律雕刻师只在$(l)主世界$()休憩，但你甚至可能在下界或末地看到他们。$(br2)我曾经远远地看到过一个，他的身体在阳光下闪闪发光。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/general/sound_carvers1_zhcn.png"
+      ],
+      "text": "可惜的是，在我靠近之前，他就消失在$(l)森林$()里了。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(br)那么为什么他们被称为「音律雕刻师」呢？传说中，他们可以用声音塑造音律并在石头上雕刻。$(br)这些生物手里常常拿着一块紫水晶碎片，$(o)他们是不是用它来雕刻石头呢？$()$(br2)完成工作后，他们会钻入地下，不留任何痕迹。因此，我没能亲眼看到他们工作。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/general/sound_carvers2_zhcn.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "地下村庄：深处",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/deep_underground_village_map",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "在音律雕刻室里，我又找到了一张地图。它也指向一个村庄，但这个村庄要深得多。地图上标明它大致位于$(l)海拔-24$()。$(br2)$(o)奇怪的是，我在这里发现了这张地图，也许音律雕刻师也住在那里，他们与制作护符的过程有着某种联系。"
+    }
+  ]
+}

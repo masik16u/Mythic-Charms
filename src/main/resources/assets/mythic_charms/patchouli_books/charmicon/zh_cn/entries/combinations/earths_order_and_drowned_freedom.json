@@ -1,0 +1,13 @@
+{
+  "name": "大地秩序与鱼翔浅底",
+  "icon": "mythic_charms:textures/earths_order_and_drowned_freedom.png",
+  "category": "mythic_charms:combinations_category",
+  "advancement": "mythic_charms:book/combinations/earths_order_and_drowned_freedom",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "当组合$(l:mythic_charms:charms/charm_of_earths_order_entry)大地秩序$()和$(l:mythic_charms:charms/charm_of_drowned_freedom_entry)鱼翔浅底$()时，水下徒手破坏方块的速度与在地面上相同。"
+    }
+  ]
+}

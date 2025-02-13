@@ -1,0 +1,22 @@
+{
+  "name": "万物竞发",
+  "icon": "mythic_charms:fragile_charm_of_botanic_blessing",
+  "category": "mythic_charms:charms_category",
+  "advancement": "mythic_charms:book/charms/botanic_blessing",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "卷轴背面写道：$(br2)佩戴者周围4格范围内的所有农作物的生长速度加快，收获时掉落的物品数量增加。"
+    },
+    {
+      "type": "mythic_charms:resonance_infusing",
+      "result": "mythic_charms:fragile_charm_of_botanic_blessing",
+      "ingredient1": "mythic_charms:fragile_charm_base",
+      "ingredient2": "mythic_charms:sound_carving_pattern_botanic_blessing",
+      "ingredient3": "minecraft:bone",
+      "ingredient4": "minecraft:cocoa_beans",
+      "ingredient5": "minecraft:crimson_fungus"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "永恒之握",
+  "icon": "minecraft:enchanted_book",
+  "category": "mythic_charms:general_category",
+  "advancement": "mythic_charms:book/eternal_grip",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这本附魔书藏在神秘房间里。$(br2)它旁边有一张纸条，我猜测这本书只能用于护符。不过护符必须「足够坚固，能够承受附魔过程」。$(br)而且正如纸条上说的，护符「将永远与你相伴」。"
+    }
+  ]
+}

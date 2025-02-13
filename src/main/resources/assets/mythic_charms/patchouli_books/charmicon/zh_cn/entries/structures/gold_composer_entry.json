@@ -1,0 +1,13 @@
+{
+  "name": "金黄作曲家",
+  "icon": "minecraft:yellow_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/gold_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)雄伟的高山是大地秩序的见证，只有在逆境中岿然不动的强者才能勇攀高峰。$(br2)金黄。"
+    }
+  ]
+}

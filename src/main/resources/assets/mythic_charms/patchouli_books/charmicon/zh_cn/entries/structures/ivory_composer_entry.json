@@ -1,0 +1,13 @@
+{
+  "name": "乳白作曲家",
+  "icon": "minecraft:white_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/ivory_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)在看不到的地方，静谧存在着温柔，它平静凝视着你，给予你周边安全，将你包裹在舒适的茧里。$(br2)乳白。"
+    }
+  ]
+}

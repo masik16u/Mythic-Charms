@@ -1,0 +1,13 @@
+{
+  "name": "海蓝作曲家",
+  "icon": "minecraft:light_blue_terracotta",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/composers/aquamarine_composer",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "入口处的牌子上写着：$(br2)$(o)鹰击长空，鱼翔浅底，万类霜天竞自由。$(br2)海蓝。"
+    }
+  ]
+}

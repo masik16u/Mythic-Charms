@@ -1,0 +1,34 @@
+{
+  "name": "地下村庄",
+  "icon": "minecraft:stone_bricks",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这里本应是音律雕刻师生活的地方，但现在一切都埋在碎石瓦砾之下。$(br)$(o)难道他们无法阻止这一切发生吗？$()$(br2)入口处还有一个村庄规划，它很古老但还能辨认。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/uvillage1.png"
+      ],
+      "text": "$(l)顶层$()是村庄的入口，没有太多房间。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/uvillage2.png"
+      ],
+      "text": "$(l)中层$()有四个带有相同符号的房间，这一定是住宅层。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "mythic_charms:textures/gui/entries/structures/uvillage3.png"
+      ],
+      "text": "$(l)底层$()一定是工业层。"
+    }
+  ]
+}

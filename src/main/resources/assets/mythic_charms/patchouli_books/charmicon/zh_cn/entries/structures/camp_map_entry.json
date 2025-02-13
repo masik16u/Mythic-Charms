@@ -1,0 +1,13 @@
+{
+  "name": "营地：地图",
+  "icon": "minecraft:filled_map",
+  "category": "mythic_charms:structures_category",
+  "advancement": "mythic_charms:book/structures/underground_village_map",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(o)作者的研究并非徒劳！$()$(br2)在紫水晶碎片、金粒和其他资源中，我找到了一张地图。$(br)它可能指向$(l)音律雕刻师的村庄$()，这将是我的下一个目标。地图上标明它大致位于$(l)海拔38$()。"
+    }
+  ]
+}
