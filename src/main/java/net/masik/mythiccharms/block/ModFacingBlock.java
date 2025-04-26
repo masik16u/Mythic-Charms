@@ -8,6 +8,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.util.math.Direction;
 import org.jetbrains.annotations.Nullable;
 
+// Pillar
 public class ModFacingBlock extends FacingBlock {
     protected ModFacingBlock(Settings settings) {
         super(settings);

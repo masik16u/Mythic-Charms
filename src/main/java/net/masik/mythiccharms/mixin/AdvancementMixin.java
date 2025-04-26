@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Advancement.class)
 public class AdvancementMixin {
 
+    // mixin to add the ability to disable charmicon on join
     @Inject(method = "getRewards", at = @At("RETURN"), cancellable = true)
     private void cancelReward(CallbackInfoReturnable<AdvancementRewards> cir) {
 

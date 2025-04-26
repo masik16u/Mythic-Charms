@@ -15,13 +15,13 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.List;
 
 @Mixin(EnchantmentScreen.class)
 public class EnchantmentScreenMixin {
 
+    // Show additional enchantments for EW
     @SuppressWarnings("unchecked")
     @Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/Enchantment;getName(I)Lnet/minecraft/text/Text;"))
     private void enchantedWhispersEffect(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci, @Local(ordinal = 3) int j, @Local List list) {

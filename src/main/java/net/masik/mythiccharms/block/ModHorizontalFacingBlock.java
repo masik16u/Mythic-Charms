@@ -8,6 +8,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.util.math.Direction;
 import org.jetbrains.annotations.Nullable;
 
+// Pillar that has different faces and depends on placement always facing up
 public class ModHorizontalFacingBlock extends HorizontalFacingBlock {
     protected ModHorizontalFacingBlock(Settings settings) {
         super(settings);

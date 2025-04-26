@@ -2,14 +2,12 @@ package net.masik.mythiccharms.mixin;
 
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
-import net.masik.mythiccharms.MythicCharms;
 import net.masik.mythiccharms.block.ModBlocks;
 import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.recipe.ResonanceRecipe;
 import net.masik.mythiccharms.util.ParticleHelper;
 import net.masik.mythiccharms.util.SoundHelper;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
@@ -19,11 +17,7 @@ import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
@@ -55,6 +49,7 @@ public class ExperienceBottleEntityMixin {
         World world = bottle.getWorld();
         if (!checkResonanceTable(bottle.getBlockPos(), world)) return;
 
+        // get all items on a table and put them into an "inventory"
         Box box = Box.from(bottle.getPos()).expand(1);
         List<ItemEntity> entities = world.getEntitiesByType(EntityType.ITEM, box, item -> true);
 
@@ -63,12 +58,15 @@ public class ExperienceBottleEntityMixin {
 
         if (inventory.isEmpty()) return;
 
+        // find recipe that corresponds these ingredients
         Optional<ResonanceRecipe> recipe = world.getRecipeManager().getFirstMatch(ResonanceRecipe.Type.INSTANCE, inventory, world);
 
         if (recipe.isPresent()) {
 
+            // -1 each item
             entities.forEach(entity -> entity.getStack().decrement(1));
 
+            // spawn a result
             ItemEntity result = new ItemEntity(world, bottle.getX(), bottle.getY(), bottle.getZ(), recipe.get().getOutput(null));
             result.setVelocity(0, 0.4, 0);
             result.setPickupDelay(30);
@@ -84,14 +82,19 @@ public class ExperienceBottleEntityMixin {
 
     }
 
+    // check if resonance table setup is correct
     @Unique
     private boolean checkResonanceTable(BlockPos bottlePos, World world) {
         for (BlockPos pos : BlockPos.iterate(new BlockPos(-1, -1, -1), new BlockPos(1, 1, 1))) {
-            BlockState top = world.getBlockState(bottlePos.add(pos).up());
+
+//            BlockState top = world.getBlockState(bottlePos.add(pos).up());
+            boolean hasNoObstructionTop = world.isSpaceEmpty(new Box(bottlePos.add(pos).up()));
             Block oneDown = world.getBlockState(bottlePos.add(pos)).getBlock();
             Block twoDown = world.getBlockState(bottlePos.add(pos).down()).getBlock();
-            if (top.isIn(TagKey.of(RegistryKeys.BLOCK, new Identifier("air"))) &&
-                    oneDown.equals(ModBlocks.RESONANCE_TABLE) && twoDown.equals(Blocks.LAPIS_BLOCK)) return true;
+            //!top.isSolidBlock(world, bottlePos.add(pos).up()) &&
+            if (hasNoObstructionTop &&
+                    oneDown.equals(ModBlocks.RESONANCE_TABLE) &&
+                    twoDown.equals(Blocks.LAPIS_BLOCK)) return true;
         }
         return false;
     }

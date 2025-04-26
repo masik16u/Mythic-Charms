@@ -27,6 +27,7 @@ public class FarmlandBlockMixin {
 //
 //    }
 
+    // don't trample the farmland for BB & FG
     @WrapWithCondition(method = "onLandedUpon", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/FarmlandBlock;setToDirt(Lnet/minecraft/entity/Entity;Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V"))
     private boolean botanicBlessingAndFeatheredGraceEffect(Entity entity, BlockState state, World world, BlockPos pos) {
 

@@ -17,6 +17,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -28,6 +29,7 @@ import java.util.Optional;
 @Mixin(AbstractBlock.class)
 public class AbstractBlockMixin {
 
+    // mixin to make blocks like warped fungus be able to place on resonance table
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     private void useOnResonanceTable(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (player == null) return;
@@ -38,6 +40,8 @@ public class AbstractBlockMixin {
         BlockPos blockPos = hit.getBlockPos();
 
         if (!world.getBlockState(blockPos).getBlock().equals(ModBlocks.RESONANCE_TABLE)) return;
+
+        if (!world.isSpaceEmpty(new Box(blockPos.up()))) return;
 
         ItemStack itemStack = player.getStackInHand(hand).copy();
         itemStack.setCount(1);

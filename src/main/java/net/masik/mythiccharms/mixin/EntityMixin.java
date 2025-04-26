@@ -24,6 +24,7 @@ import java.util.List;
 public class EntityMixin {
 
     //drownedFreedom
+    // tell MC that player is not touching water for DF
     @Inject(method = "isTouchingWater", at = @At("RETURN"), cancellable = true)
     private void drownedFreedomEffectTouch(CallbackInfoReturnable<Boolean> cir) {
 
@@ -52,6 +53,7 @@ public class EntityMixin {
 
     }
 
+    // disable swimming for DF
     @Inject(method = "isSwimming", at = @At("RETURN"), cancellable = true)
     private void drownedFreedomEffectSwim(CallbackInfoReturnable<Boolean> cir) {
 
@@ -68,6 +70,7 @@ public class EntityMixin {
     }
 
     //safeTerritory
+    // don't allow entities destroy blocks for ST
     @Inject(method = "canExplosionDestroyBlock", at = @At("RETURN"), cancellable = true)
     private void safeTerritoryEffect(Explosion explosion, BlockView world, BlockPos pos, BlockState state, float explosionPower, CallbackInfoReturnable<Boolean> cir) {
 
@@ -101,6 +104,7 @@ public class EntityMixin {
     }
 
     //quietPresence
+    // ignore vibration effect for QP
     @Inject(method = "bypassesSteppingEffects", at = @At("RETURN"), cancellable = true)
     private void quietPresenceEffect(CallbackInfoReturnable<Boolean> cir) {
 

@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block RESONANCE_TABLE = registerBlock("resonance_table", new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    // Luminance depends on LIGHT LEVEL property
     public static final Block AMETHYST_LAMP = registerBlock("amethyst_lamp", new AmethystLampBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).luminance(state -> state.get(ModBlockProperties.LIGHT_LEVEL))));
 
     public static final Block AMETHYST_EMBEDDED_STONE_PILLAR = registerBlock("amethyst_embedded_stone_pillar", new ModFacingBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));

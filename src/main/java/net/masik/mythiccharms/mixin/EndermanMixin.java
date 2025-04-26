@@ -3,9 +3,7 @@ package net.masik.mythiccharms.mixin;
 import net.masik.mythiccharms.particle.ModParticles;
 import net.masik.mythiccharms.util.CharmHelper;
 import net.masik.mythiccharms.util.ParticleHelper;
-import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.mob.EndermanEntity;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,6 +17,7 @@ public abstract class EndermanMixin {
 
     @Shadow public abstract boolean isAngry();
 
+    // spawn particles and ignore player staring for GS
     @Inject(method = "isPlayerStaring", at = @At("RETURN"), cancellable = true)
     private void gazeSerenityEffect(PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
 

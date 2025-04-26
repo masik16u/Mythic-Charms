@@ -32,6 +32,7 @@ public abstract class ServerPlayerMixin {
     private int cropGrowTimer = 0;
 
     //featheredGrace
+    // give feather falling for FG
     @Inject(method = "playerTick", at = @At("RETURN"))
     private void featheredGraceEffect(CallbackInfo info) {
 
@@ -94,6 +95,7 @@ public abstract class ServerPlayerMixin {
     }
 
     //collectorsGift
+    // add velocity to items towards player for CG
     @Inject(method = "playerTick", at = @At("RETURN"))
     private void collectorsGiftEffect(CallbackInfo info) {
 
@@ -129,6 +131,7 @@ public abstract class ServerPlayerMixin {
     }
 
     //botanicBlessing
+    // randomly grow crops around for BB
     @Inject(method = "playerTick", at = @At("RETURN"))
     private void botanicBlessingEffect(CallbackInfo info){
 
@@ -204,6 +207,7 @@ public abstract class ServerPlayerMixin {
     }
 
     //weightlessFlow
+    // disable gravity for WF
     @Inject(method = "playerTick", at = @At("RETURN"))
     private void weightlessFlowEffect(CallbackInfo info) {
 
@@ -237,6 +241,7 @@ public abstract class ServerPlayerMixin {
     }
 
     //battleFury
+    // particles for BF
     @Inject(method = "playerTick", at = @At("RETURN"))
     private void battleFuryEffectParticle(CallbackInfo info) {
 
@@ -259,6 +264,7 @@ public abstract class ServerPlayerMixin {
     }
 
     //enchantedWhispers
+    // particles for EW
     @Inject(method = "playerTick", at = @At("RETURN"))
     private void enchantedWhispersEffectParticle(CallbackInfo info){
 

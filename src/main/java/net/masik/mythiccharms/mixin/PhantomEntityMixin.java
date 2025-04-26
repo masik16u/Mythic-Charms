@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(PhantomEntity.class)
 public class PhantomEntityMixin {
 
+    // make phantoms ignore player for NG
     @Inject(method = "canTarget", at = @At("RETURN"), cancellable = true)
     private void nightsGuardianEffect(EntityType<?> type, CallbackInfoReturnable<Boolean> cir) {
 

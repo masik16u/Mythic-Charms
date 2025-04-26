@@ -4,11 +4,9 @@ import com.google.common.collect.ImmutableList;
 import net.masik.mythiccharms.particle.ModParticles;
 import net.masik.mythiccharms.util.CharmHelper;
 import net.masik.mythiccharms.util.ParticleHelper;
-import net.minecraft.client.gui.screen.ingame.EnchantmentScreen;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.mob.AbstractPiglinEntity;
-import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.mob.PiglinBruteBrain;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.random.Random;
@@ -23,6 +21,7 @@ import java.util.Optional;
 @Mixin(PiglinBruteBrain.class)
 public class PiglinBruteBrainMixin {
 
+    // make brutes not hostile for BP
     //change this logic in the future
     @Inject(method = "getTarget", at = @At(value = "RETURN"), cancellable = true)
     private static void bartersPactEffect(AbstractPiglinEntity piglin, CallbackInfoReturnable<Optional<? extends LivingEntity>> cir) {

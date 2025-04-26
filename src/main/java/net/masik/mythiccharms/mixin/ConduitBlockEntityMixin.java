@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 @Mixin(ConduitBlockEntity.class)
 public class ConduitBlockEntityMixin {
 
+    // continue to give conduit effects when DF equipped
     @WrapOperation(method = "givePlayersEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;isTouchingWaterOrRain()Z"))
     private static boolean drownedFreedomEffectConduit(PlayerEntity instance, Operation<Boolean> original) {
 

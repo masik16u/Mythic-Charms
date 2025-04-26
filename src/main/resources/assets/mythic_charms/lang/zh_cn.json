@@ -114,7 +114,7 @@
     "item.mythic_charms.broken_charm.tooltip":"曾经是一个可用的护符",
 
     "item.mythic_charms.fragile_charm_base":"脆弱的护符底座",
-    "item.mythic_charms.resonance_ring":"共鸣指环",
+    "item.mythic_charms.resonance_ring":"共鸣戒指",
     "item.mythic_charms.resonance_ring.tooltip":"有时可以抵消佩戴护符造成的伤害",
     "item.mythic_charms.resonance_compass":"共鸣指针",
 
@@ -203,7 +203,7 @@
     "advancements.mythic_charms.story.resonance_pottery_sherd.title":"如果你微笑",
     "advancements.mythic_charms.story.resonance_pottery_sherd.desc":"获得一个共鸣纹样陶片",
     "advancements.mythic_charms.story.prepare_for_carving.title":"音律雕刻师的学徒",
-    "advancements.mythic_charms.story.prepare_for_carving.desc":"通过收集共鸣台、共鸣指环和护符底座来准备雕刻",
+    "advancements.mythic_charms.story.prepare_for_carving.desc":"通过收集共鸣台、共鸣戒指和护符底座来准备雕刻",
 
     "advancements.mythic_charms.story.deep_underground_village.title":"一切开始的地方",
     "advancements.mythic_charms.story.deep_underground_village.desc":"进入一个深层地下村庄",
@@ -244,8 +244,8 @@
     "tag.item.mythic_charms.fragile_charms":"脆弱的护符",
     "tag.item.mythic_charms.unbreakable_charms":"坚固的护符",
     "tag.item.mythic_charms.sound_carving_patterns":"音律雕刻图案",
-    "tag.item.mythic_charms.resonance_ingredients":"共鸣材料",
-    "tag.item.trinkets.hand.ring":"指环饰品",
+    "tag.item.mythic_charms.resonance_ingredients":"共鸣原材料",
+    "tag.item.trinkets.hand.ring":"戒指饰品",
     "tag.item.trinkets.mythic_charm.mythic_charm":"神话护符",
 
     "tag.item.mythic_charms.charms.feathered_grace":"优雅羽翼",
@@ -273,7 +273,7 @@
 
 
     "category.mythic_charms.resonance":"共鸣注入",
-    "category.mythic_charms.resonance.ingredient":"材料",
+    "category.mythic_charms.resonance.ingredient":"原材料",
     "category.mythic_charms.resonance.catalyst":"催化剂",
     "category.mythic_charms.resonance.trinket":"饰品",
     "category.mythic_charms.resonance.output":"产物",

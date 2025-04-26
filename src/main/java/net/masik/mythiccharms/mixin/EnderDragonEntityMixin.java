@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 @Mixin(EnderDragonEntity.class)
 public class EnderDragonEntityMixin {
 
+    // disable knockback of the dragon for MS
     @WrapWithCondition(method = "launchLivingEntities", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;addVelocity(DDD)V"))
     private boolean mountainsStrengthEffectDragon(Entity entity, double deltaX, double deltaY, double deltaZ) {
 

@@ -6,22 +6,14 @@ import net.masik.mythiccharms.item.ModItems;
 import net.masik.mythiccharms.particle.ModParticles;
 import net.masik.mythiccharms.util.*;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.EnchantingTableBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageSources;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvents;
@@ -38,11 +30,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Mixin(PlayerEntity.class)
 public class PlayerMixin {
 
+    // break fragile
     //fragile charms
     @Inject(method = "dropInventory",  at = @At("HEAD"))
     private void destroyFragileCharms(CallbackInfo info){
@@ -67,6 +59,7 @@ public class PlayerMixin {
     }
 
     //earthsOrder
+    // allow breaking of any block for EO
     @Inject(method = "canHarvest", at = @At("RETURN"), cancellable = true)
     private void earthsOrderEffect(BlockState state, CallbackInfoReturnable<Boolean> cir) {
 
@@ -82,6 +75,7 @@ public class PlayerMixin {
 
     }
 
+    // increase breaking speed for EO
     @Inject(method = "getBlockBreakingSpeed", at = @At("RETURN"), cancellable = true)
     private void earthsOrderEffectSpeed(BlockState block, CallbackInfoReturnable<Float> cir) {
 
@@ -127,6 +121,7 @@ public class PlayerMixin {
     }
 
     //fleetingStrides
+    // increase speed when jump running for FS
     @Inject(method = "getOffGroundSpeed", at = @At("RETURN"), cancellable = true)
     private void fleetingStridesEffect(CallbackInfoReturnable<Float> cir) {
 
@@ -159,6 +154,7 @@ public class PlayerMixin {
     }
 
     //blazingEmbrace
+    // give fire resistance for BE
     @Inject(method = "setFireTicks", at = @At("RETURN"))
     private void blazingEmbraceEffect(int fireTicks, CallbackInfo ci) {
 
@@ -202,6 +198,7 @@ public class PlayerMixin {
     }
 
     //battleFury
+    // increase attack dmg for BF
     @ModifyArg(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), index = 1)
     private float battleFuryEffect(float amount) {
 
@@ -215,6 +212,7 @@ public class PlayerMixin {
     }
 
     //echoingWrath
+    // damage entities around for EW
     @Inject(method = "damage", at = @At("RETURN"))
     private void echoingWrathEffect(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
 
@@ -273,6 +271,7 @@ public class PlayerMixin {
 
     }
 
+    // decrease base hand dmg for EW
     @ModifyArg(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), index = 1)
     private float echoingWrathDealLessDamage(float amount) {
 
@@ -286,6 +285,7 @@ public class PlayerMixin {
     }
 
     //mountainsStrength
+    // increase received dmg for MS
     @ModifyArg(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), index = 1)
     private float mountainsStrengthReceiveMoreDamage(float amount) {
 
@@ -311,6 +311,7 @@ public class PlayerMixin {
     }
 
     //arrowDance
+    // ignore projectiles for AD
     @Inject(method = "canBeHitByProjectile", at = @At("RETURN"), cancellable = true)
     private void arrowDanceEffect(CallbackInfoReturnable<Boolean> cir) {
 
@@ -337,6 +338,7 @@ public class PlayerMixin {
 
     }
 
+    // increase received dmg for AD
     @ModifyArg(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), index = 1)
     private float arrowDanceReceiveMoreDamage(float amount) {
 
@@ -351,6 +353,7 @@ public class PlayerMixin {
     }
 
     //climbersPath
+    // add more hunger when running for CP
     @Inject(method = "travel", at = @At("RETURN"))
     private void climbersPathHungerWhileRunning(Vec3d movementInput, CallbackInfo ci) {
 
@@ -367,6 +370,7 @@ public class PlayerMixin {
     }
 
     //weightlessFlow
+    // add more hunger when running for WF
     @Inject(method = "travel", at = @At("RETURN"))
     private void weightlessFlowHungerWhileRunning(Vec3d movementInput, CallbackInfo ci) {
 
@@ -383,6 +387,7 @@ public class PlayerMixin {
     }
 
     //drownedFreedom
+    // add more hunger when running for DF
     @Inject(method = "travel", at = @At("RETURN"))
     private void drownedFreedomHungerWhileRunning(Vec3d movementInput, CallbackInfo ci) {
 

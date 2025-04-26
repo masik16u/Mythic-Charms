@@ -23,6 +23,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
 
+    // break fragile when totem used
     //fragile charms
     @Inject(method = "tryUseTotem",  at = @At("RETURN"))
     private void destroyFragileCharms(DamageSource source, CallbackInfoReturnable<Boolean> cir) {
@@ -53,6 +54,7 @@ public class LivingEntityMixin {
     }
 
     //highBounds
+    // increase jump velocity for HB
     @Inject(method = "getJumpVelocity", at = @At(value = "RETURN"), cancellable = true)
     private void highBoundsEffectJump(CallbackInfoReturnable<Float> cir) {
 
@@ -89,6 +91,7 @@ public class LivingEntityMixin {
 
     }
 
+    // lower fall damage for HB
     @ModifyArg(method = "computeFallDamage", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/MathHelper;ceil(F)I"), index = 0)
     private float highBoundsEffectFall(float value) {
 
@@ -105,6 +108,7 @@ public class LivingEntityMixin {
     }
 
     //fleetingStrides
+    // increase hunger reduction when jump running for FS
     @Inject(method = "jump", at = @At("RETURN"))
     private void fleetingStridesHungerOnJump(CallbackInfo ci) {
 
@@ -152,6 +156,7 @@ public class LivingEntityMixin {
     }
 
     //climbersPath
+    // increase step height to 1.5b for CP
     @Inject(method = "getStepHeight", at = @At("RETURN"), cancellable = true)
     private void climbersPathEffect(CallbackInfoReturnable<Float> cir) {
 
@@ -187,6 +192,7 @@ public class LivingEntityMixin {
     }
 
     //mountainsStrength
+    // disable knockback for MS
     @Inject(method = "takeKnockback", at = @At(value = "HEAD"), cancellable = true)
     private void mountainsStrengthEffectKnock(double strength, double x, double z, CallbackInfo ci) {
 
@@ -202,6 +208,7 @@ public class LivingEntityMixin {
 
     }
 
+    // disable pushing for MS
     @Inject(method = "isPushable", at = @At("RETURN"), cancellable = true)
     private void mountainsStrengthEffectPush(CallbackInfoReturnable<Boolean> cir) {
 

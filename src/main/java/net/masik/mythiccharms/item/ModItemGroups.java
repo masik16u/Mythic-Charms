@@ -16,6 +16,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.mythic_charms"))
                     .icon(() -> new ItemStack(ModBlocks.RESONANCE_TABLE)).entries((displayContext, entries) -> {
 
+                        // Blocks
                         entries.add(ModBlocks.RESONANCE_TABLE);
                         entries.add(ModBlocks.AMETHYST_LAMP);
                         entries.add(ModBlocks.AMETHYST_EMBEDDED_STONE_PILLAR);
@@ -23,6 +24,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AMETHYST_EMBEDDED_CHISELED_STONE);
                         entries.add(ModBlocks.AMETHYST_EMBEDDED_CHISELED_DEEPSLATE);
 
+                        // Useful items
                         entries.add(ModItems.RESONANCE_RING);
                         entries.add(ModItems.RESONANCE_COMPASS);
                         entries.add(ModItems.BROKEN_CHARM);
@@ -33,6 +35,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.ANCIENT_CODEX);
 
+                        // Patterns
                         entries.add(ModItems.SOUND_CARVING_PATTERN_FEATHERED_GRACE);
                         entries.add(ModItems.SOUND_CARVING_PATTERN_BLAZING_EMBRACE);
                         entries.add(ModItems.SOUND_CARVING_PATTERN_EARTHS_ORDER);
@@ -55,6 +58,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SOUND_CARVING_PATTERN_SAFE_TERRITORY);
                         entries.add(ModItems.SOUND_CARVING_PATTERN_QUIET_PRESENCE);
 
+                        // CHarms
                         entries.add(ModItems.FRAGILE_CHARM_OF_FEATHERED_GRACE);
                         entries.add(ModItems.FRAGILE_CHARM_OF_BLAZING_EMBRACE);
                         entries.add(ModItems.FRAGILE_CHARM_OF_EARTHS_ORDER);
@@ -99,9 +103,13 @@ public class ModItemGroups {
                         entries.add(ModItems.UNBREAKABLE_CHARM_OF_SAFE_TERRITORY);
                         entries.add(ModItems.UNBREAKABLE_CHARM_OF_QUIET_PRESENCE);
 
+                        // Music
                         entries.add(ModItems.DISC_FRAGMENT_RESONANCE);
                         entries.add(ModItems.MUSIC_DISC_RESONANCE);
 
+                        entries.add(ModItems.MUSIC_DISC_MYTH);
+
+                        // Sherds
                         entries.add(ModItems.RESONANCE_POTTERY_SHERD);
                         entries.add(ModItems.CRYSTAL_POTTERY_SHERD);
                         entries.add(ModItems.CORE_POTTERY_SHERD);
@@ -118,8 +126,6 @@ public class ModItemGroups {
                         entries.add(ModItems.FIGHT_POTTERY_SHERD);
                         entries.add(ModItems.GROWTH_POTTERY_SHERD);
                         entries.add(ModItems.GHOST_POTTERY_SHERD);
-
-                        entries.add(ModItems.MUSIC_DISC_MYTH);
 
                     }).build());
 

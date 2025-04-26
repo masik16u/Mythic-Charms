@@ -19,6 +19,7 @@ public class AmethystLampBlock extends Block {
         this.setDefaultState(this.stateManager.getDefaultState().with(LIGHT_LEVEL, 4));
     }
 
+    // Update block on placement
     @Override
     public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
         if (!world.isClient) {
@@ -31,12 +32,15 @@ public class AmethystLampBlock extends Block {
         world.scheduleBlockTick(pos, this, 20);
     }
 
+    // On tick scheduled update
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        // Set light level to 4 + num of players (max 15)
         world.setBlockState(pos, state.with(LIGHT_LEVEL, Math.min(4 + world.getPlayers().size(), 15)));
         world.scheduleBlockTick(pos, this, 20);
     }
 
+    // To work with comparator
     @Override
     public boolean hasComparatorOutput(BlockState state) {
         return true;

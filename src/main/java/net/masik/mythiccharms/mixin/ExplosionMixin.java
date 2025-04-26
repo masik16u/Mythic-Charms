@@ -25,6 +25,7 @@ public class ExplosionMixin {
 //
 //    }
 
+    // remove knockback of explosions for MS
     @WrapWithCondition(method = "collectBlocksAndDamageEntities", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;setVelocity(Lnet/minecraft/util/math/Vec3d;)V"))
     private boolean mountainsStrengthEffectExplosion(Entity entity, Vec3d velocity) {
 
