@@ -22,7 +22,7 @@
     {
       "type": "patchouli:spotlight",
       "item": {
-        "item": "mythic_charmsamethyst_lamp",
+        "item": "mythic_charms:amethyst_lamp",
         "text": " Un bloque interesante que parece reacionar a la cantidad de personas que estan vivas sin importar su distancia. Parece que un comparador de redstone podría convertir su energía en una señal de redstone.$(br)$(o) ¿Pero porqué los Sound Carvers necesitarían ese tipo de luz?But why would carvers use such a device as a light source?$()"
       }
     }
